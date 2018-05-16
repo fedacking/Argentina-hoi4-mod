@@ -1,0 +1,9 @@
+#################
+### ARGENTINA ###
+#################
+
+ARG_integrate_malvinas_category = {
+	allowed = {
+		original_tag = ARG
+	}
+}

@@ -1,0 +1,1476 @@
+﻿###########################
+######Argentina Events#####
+###########################
+add_namespace = arg
+
+country_event = {
+	id = arg.2
+	title = arg.2.t
+	desc = arg.2.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1940.6.27
+		has_country_flag = ARG_ortiz_wins
+	}
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.2.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		create_country_leader = {
+			name = "Ramon S. Castillo"
+			desc = "POLITICS_RAMON_S_CASTILLO_DESC"
+			picture = "Portrait_Argentine_Ramon_Castillo.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {}
+		}
+		hidden_effect = {
+			set_country_flag = ARG_castillo_president
+		}
+	}
+}
+
+country_event = {
+	id = arg.3
+	title = arg.3.t
+	desc = arg.3.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1942.3.23
+		has_country_flag = ARG_alvear_wins
+	}
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.3.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		create_country_leader = {
+			name = "Enrique Mosca"
+			desc = "POLITICS_ENRIQUEE_MOSCA_DESC"
+			picture = "Portrait_Argentine_Enrique_Mosca.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+	}
+}
+
+country_event = {
+	id = arg.4
+	title = arg.4.t
+	desc = arg.4.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1943.7.4
+		has_country_flag = ARG_ortiz_wins
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.4.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+			}
+		}
+		add_ideas = {ARG_gou}
+		create_country_leader = {
+			name = "Pedro Pablo Ramírez"
+			desc = "POLITICS_PEDRO_PABLO_RAMIREZ_DESC"
+			picture = "Portrait_Argentine_Pablo_Ramirez.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {}
+		}
+		set_country_flag = ARG_gou_coup
+		set_politics = {
+			ruling_party = fascism
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 7
+				}
+				fascism = {
+					popularity = 80
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.4.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = arg.5
+	title = arg.5.t
+	desc = arg.5.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1944.3.9
+		has_country_flag = ARG_gou_coup
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.5.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		create_country_leader = {
+			name = "Edelmiro Farrell"
+			desc = "POLITICS_EDELMIRO_FARREL_DESC"
+			picture = "Portrait_Argentine_Edelmiro_Farrell.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {}
+		}
+	}
+	option = {
+		name = arg.5.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = arg.6
+	title = arg.6.t
+	desc = arg.6.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1946.6.4
+		has_country_flag = ARG_gou_coup
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.6.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+			}
+			create_country_leader = {
+				name = "José Pascual Tamborini"
+				desc = "POLITICS_JOSE_TAMBORINI_DESC"
+				picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {}
+			}
+		}
+		set_country_flag = ARG_peron_wins
+		add_ideas = {ARG_pj}
+		create_country_leader = {
+			name = "Juan Domingo Perón"
+			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+			picture = "Portrait_Argentine_Domingo_Peron.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				political_dancer		
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 7
+				}
+				fascism = {
+					popularity = 80
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.6.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+			}
+			create_country_leader = {
+				name = "Juan Domingo Perón"
+				desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+				picture = "Portrait_Argentine_Domingo_Peron.tga"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					political_dancer		
+				}
+			}
+		}
+		add_ideas = {ARG_ucr}
+		create_country_leader = {
+			name = "José Pascual Tamborini"
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = arg.7
+	title = arg.7.t
+	desc = arg.7.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1951.11.11
+		has_country_flag = ARG_gou_coup
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.7.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+			}
+			create_country_leader = {
+				name = "Ricardo Balbín"
+				desc = "POLITICS_RICARDO_BALBIN_DESC"
+				picture = "Portrait_Argentine_Ricardo_Balbin.tga"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {}
+			}
+		}
+		add_ideas = {ARG_pj}
+		create_country_leader = {
+			name = "Juan Domingo Perón"
+			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+			picture = "Portrait_Argentine_Domingo_Peron.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				political_dancer		
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 7
+				}
+				fascism = {
+					popularity = 80
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.7.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_ucr}
+		create_country_leader = {
+			name = "Ricardo Balbín"
+			desc = "POLITICS_RICARDO_BALBIN_DESC"
+			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.7.c
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_pdn}
+		create_country_leader = {
+			name = "Reynaldo Pastor"
+			desc = "POLITICS_REYNALDO_PASTOR_DESC"
+			picture = "Portrait_Argentine_Reynaldo_Pastor.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.7.e
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_ps}
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = arg.8
+	title = arg.8.t
+	desc = arg.8.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1955.9.23
+		has_country_flag = ARG_peron_wins
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.8.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_mj}
+		create_country_leader = {
+			name = "Eduardo Lonardi"
+			desc = "POLITICS_EDUARDO_LONARDI_DESC"
+			picture = "Portrait_Argentine_Eduardo_Lonardi.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {}
+		}
+		set_country_flag = ARG_revolucion_libertadora
+		set_politics = {
+			ruling_party = neutrality
+			parties = {
+				neutrality = {
+					popularity = 80
+				}
+				democratic = {
+					popularity = 7
+				}
+				fascism = {
+					popularity = 5
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	option = {
+		name = arg.8.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = arg.9
+	title = arg.9.t
+	desc = arg.9.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1955.11.13
+		has_country_flag = ARG_revolucion_libertadora
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.9.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		create_country_leader = {
+			name = "Pedro Eugenio Aramburu"
+			desc = "POLITICS_PEDRO_EUGENIO_ARAMBURU_DESC"
+			picture = "Portrait_ARG_Aramburu.tga"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {}
+		}
+	}
+	option = {
+		name = arg.9.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = arg.10
+	title = arg.10.t
+	desc = arg.10.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_emperor_justo
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.10.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+			set_cosmetic_tag = ARG_Empire
+		}
+		add_ideas = {ARG_ae}
+		create_country_leader = {
+			name = "Agustín Pedro Justo"
+			desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
+			picture = "Portrait_Argentina_Agustin_Pedro_Justo.dds"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = fascism
+			parties = {
+				neutrality = {
+					popularity = 0
+				}
+				democratic = {
+					popularity = 0
+				}
+				fascism = {
+					popularity = 100
+				}
+				communism = {
+					popularity = 0
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = arg.11
+	title = arg.11.t
+	desc = arg.11.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1936.12.1
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.11.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		set_country_flag = ARG_fraude_patriotico
+	}
+	option = {
+		name = arg.11.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		set_country_flag = ARG_ban_cgt
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+	}
+}
+
+country_event = { #General Strike
+	id = arg.12
+	title = arg.12.t
+	desc = arg.12.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_ban_cgt
+		date > 1937.1.1
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.12.a
+		ai_chance = {
+			factor = 34
+		}
+		set_country_flag = ARG_crack_down
+	}
+	option = {
+		name = arg.12.b
+		ai_chance = {
+			factor = 34
+		}
+		set_country_flag = ARG_token_reform
+	}
+	option = {
+		name = arg.12.c
+		ai_chance = {
+			factor = 32
+		}
+		set_country_flag = ARG_march
+	}
+}
+
+country_event = { #Terror plot
+	id = arg.13
+	title = arg.13.t
+	desc = arg.13.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_crack_down
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.13.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_execute_order_66
+		add_ideas = {ARG_idea_revolution}
+	}
+	option = {
+		name = arg.13.b
+		ai_chance = {
+			factor = 50
+		}
+		add_ideas = {ARG_idea_revolution}
+		hidden_effect = {
+			random_list = {
+				1 = { 
+					set_country_flag = ARG_emperor_justo
+				}
+				99 = {
+					set_country_flag = ARG_justo_ded
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Strong Leader
+	id = arg.14
+	title = arg.14.t
+	desc = arg.14.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_justo_ded
+	}
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.14.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ramon S. Castillo"
+				desc = "POLITICS_RAMON_S_CASTILLO_DESC"
+				picture = "Portrait_Argentine_Ramon_Castillo.tga"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {}
+			}
+			remove_ideas = {ARG_concordancia}
+			set_cosmetic_tag = ARF
+			set_country_flag = ARG_fresco_wins
+		}
+		URG = {
+			country_event = { id = arg.29 }
+		}
+		add_ideas = {ARG_upa}
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = fascism
+			parties = {
+				neutrality = {
+					popularity = 2
+				}
+				democratic = {
+					popularity = 20
+				}
+				fascism = {
+					popularity = 70
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Unrest
+	id = arg.15
+	title = arg.15.t
+	desc = arg.15.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_execute_order_66
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.15.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = { 
+			country_event = { 
+				id = arg.16 
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = { #Commie agitations
+	id = arg.16
+	title = arg.16.t
+	desc = arg.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = arg.16.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = { 
+			country_event = { 
+				id = arg.17 
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = { #Weapon smuggling
+	id = arg.17
+	title = arg.17.t
+	desc = arg.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = arg.17.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = { 
+			country_event = { 
+				id = arg.18 
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = { #Communist takeover
+	id = arg.18
+	title = arg.18.t
+	desc = arg.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = arg.18.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+		}
+		set_country_flag = ARG_ghioldi_wins
+		add_ideas = {ARG_pc}
+		set_politics = {
+			ruling_party = communism
+			parties = {
+				neutrality = {
+					popularity = 0
+				}
+				democratic = {
+					popularity = 15
+				}
+				fascism = {
+					popularity = 15
+				}
+				communism = {
+					popularity = 70
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Ortiz wins
+	id = arg.19
+	title = arg.19.t
+	desc = arg.19.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_fraude_patriotico
+	}
+	option = {
+		name = arg.19.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = ARG_ortiz_wins
+		create_country_leader = {
+			name = "Roberto M. Ortiz"
+			desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
+			picture = "Portrait_Argentine_Roberto_Ortiz.tga"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			parties = {
+				neutrality = {
+					popularity = 70
+				}
+				democratic = {
+					popularity = 12
+				}
+				fascism = {
+					popularity = 9
+				}
+				communism = {
+					popularity = 9
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Alvear wins
+	id = arg.20
+	title = arg.20.t
+	desc = arg.20.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_token_reform
+	}
+	option = {
+		name = arg.20.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = ARG_alvear_wins
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+		}
+		add_ideas = {ARG_ucr}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Repetto wins
+	id = arg.21
+	title = arg.21.t
+	desc = arg.21.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_march
+	}
+
+	option = {
+		name = arg.21.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+			set_country_flag = ARG_repetto_wins
+		}
+		add_ideas = {ARG_ps}
+		create_country_leader = {
+			name = "Nicolas Repetto"
+			desc = "POLITICS_NICOLAS_REPETTO_DESC"
+			picture = "Portrait_Argentine_Nicolas_Repetto.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Fresco La Plata
+	id = arg.22
+	title = arg.22.t
+	desc = arg.22.d
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		OR = {
+			tag = ARG
+			tag = PAR
+			tag = URG
+		}
+		has_country_flag = ARG_Fresco
+		has_country_flag = ARG_United_Provinces
+	}
+	
+	option = {
+		name = arg.22.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			set_cosmetic_tag = UPPF
+		}
+	}
+}
+
+country_event = { #de la Torre dies
+	id = arg.23
+	title = arg.23.t
+	desc = arg.23.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1939.1.5
+		has_country_flag = ARG_ortiz_wins
+	}
+	option = {
+		name = arg.23.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = ARG_delatorre_dead
+	}
+}
+
+country_event = {
+	id = arg.24
+	title = arg.24.t
+	desc = arg.24.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_alvear_wins
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.24.a
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = ARG_tamborini_wins_1943
+		create_country_leader = {
+			name = "José Pascual Tamborini"
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}		
+		}
+	}
+
+	option = {
+		name = arg.24.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_palacios_wins_1943
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+	}
+	
+	option = {
+		name = arg.24.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_pdn}
+		}
+		set_country_flag = ARG_costas_wins_1943
+		create_country_leader = {
+			name = "Robustiano Patrón Costas"
+			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
+			picture = "Portrait_Argentine_Robustiano_Costas.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+	}
+}
+
+country_event = {
+	id = arg.25
+	title = arg.25.t
+	desc = arg.25.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_repetto_wins
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.25.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_palacios_wins_1943
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+	}
+	
+	option = {
+		name = arg.25.b
+		ai_chance = {
+			factor = 30
+		}
+		set_country_flag = ARG_tamborini_wins_1943
+		create_country_leader = {
+			name = "José Pascual Tamborini"
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}		
+		}
+	}
+	
+	option = {
+		name = arg.25.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_pdn}
+		}
+		set_country_flag = ARG_costas_wins_1943
+		create_country_leader = {
+			name = "Robustiano Patrón Costas"
+			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
+			picture = "Portrait_Argentine_Robustiano_Costas.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+	}
+}
+
+# Uruguay is asked about re-joining Argentina
+country_event = {
+	id = arg.26
+	title = arg.26.t
+	desc = arg.26.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.26.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 80
+				URG = { has_government = fascism }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.28 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = arg.26.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -80
+				URG = { has_government = fascism }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.27 }
+		}
+	}
+}
+
+# Uruguay declines
+country_event = {
+	id = arg.27
+	title = arg.27.t
+	desc = arg.27.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.27.a
+		add_state_claim = 300
+		create_wargoal = {
+			type = take_state_focus
+			target = URG
+			generator = { 300 }
+		}
+	}
+}
+
+# Uruguay accepts
+country_event = {
+	id = arg.28
+	title = arg.28.t
+	desc = arg.28.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.28.a
+		annex_country = { target = URG }
+	}
+}
+
+# Neighboring fascism
+country_event = {
+	id = arg.29
+	title = arg.29.t
+	desc = arg.29.d
+	is_triggered_only = yes
+	option = {
+		name = arg.29.a
+		add_ideas = {ARG_idea_NFascism}
+	}
+}
+
+# Paraguay is invited into the new socialist state
+country_event = {
+	id = arg.30
+	title = arg.30.t
+	desc = arg.30.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.30.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 80
+				URG = { has_government = communism }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.32 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = arg.30.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -80
+				URG = { has_government = communism }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.31 }
+		}
+	}
+}
+
+# Paraguay declines
+country_event = {
+	id = arg.31
+	title = arg.31.t
+	desc = arg.31.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.31.a
+		add_state_claim = 301
+		add_state_claim = 688
+		create_wargoal = {
+			type = take_state_focus
+			target = PAR
+			generator = { 301 688 }
+		}
+	}
+}
+
+# Paraguay accepts
+country_event = {
+	id = arg.32
+	title = arg.32.t
+	desc = arg.32.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.32.a
+		annex_country = { target = PAR }
+	}
+}
+
+# Malvinas or war
+country_event = {
+	id = arg.33
+	title = arg.33.t
+	desc = arg.33.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.33.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = {
+				id = arg.35
+			}
+		}
+		effect_tooltip = {
+			ARG = {
+				transfer_state = 299
+				transfer_state = 720
+			}
+		}
+	}
+	option = { # Refuse
+		name = arg.33.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.34 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.34
+	title = arg.34.t
+	desc = arg.34.d
+	is_triggered_only = yes	
+	option = {
+		name = arg.34.a
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			generator = { 299 720 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.35
+	title = arg.35.t
+	desc = arg.35.d
+	is_triggered_only = yes
+	option = {
+		name = arg.35.a
+		transfer_state = 299	
+		transfer_state = 720
+	}
+}

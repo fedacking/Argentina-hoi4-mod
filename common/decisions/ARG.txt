@@ -1,0 +1,22 @@
+ARG_integrate_malvinas_category = {
+	ARG_integrate_malvinas = {
+		icon = 
+		allowed = {
+			original_tag = ARG
+			has_dlc = "Waking the Tiger"
+		}
+		available = {
+			controls_state = 299
+			controls_state = 720
+		}
+		visible = { original_tag = ARG }
+		complete_effect = {
+			299 = { add_core_of = ROOT }
+			720 = { add_core_of = ROOT }
+			299 = { set_state_name = "Islas Malvinas" }
+			720 = { set_state_name = "Isla San Pedro" }
+			add_timed_idea = { idea = ARG_idea_integration_malvinas days = 180 }
+		}
+		ai_will_do = { factor = 200 }
+	}
+}

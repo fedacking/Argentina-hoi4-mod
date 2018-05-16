@@ -1,0 +1,469 @@
+ideas = {
+	# MILITARY
+
+
+	political_advisor = {
+
+		ARG_ramon_castillo = {
+
+			picture = generic_political_advisor_south_america_2
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { quartermaster_general }
+		}
+
+		ARG_luis_podesta_costa = {
+
+			picture = generic_political_advisor_south_america_1
+				
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		ARG_manuel_maria_de_iriondo = {
+
+			picture = generic_political_advisor_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}
+
+	army_chief = {
+
+		ARG_manuel_a_rodriguez = {
+
+			picture = generic_army_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}		
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_pedro_pablo_ramirez = {
+
+			picture = generic_army_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		ARG_antonio_parodi = {
+
+			picture = generic_air_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_jose_tamborni = {
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		ARG_pedro_s_casal = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_heriberto_la_galine = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		ARG_francisco_m_velez = {
+			
+			picture = generic_army_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ARG_thomas_martinez = {
+
+			picture = generic_army_south_america_4
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_uribaldi_diaz_brittenberg = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_eleazar_videla = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	theorist = {
+		ARG_agustin_pedro_justo = {
+			
+			picture = generic_army_south_america_5
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		ARG_edelmiro_farrell = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}	
+
+		ARG_hortensio_quijano = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+
+	country = {
+		##Parties
+		ARG_concordancia = {
+			picture = generic_spy_coup
+			modifier = {
+				political_power_gain = -0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+		ARG_gou = {
+			picture = ARG_GOU
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		ARG_ucr = {
+			picture = ARG_UCR
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+		ARG_ps = {
+			picture = ARG_PS
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+		ARG_pj = {
+			picture = ARG_PJ
+			modifier = {
+				foreign_subversive_activites = +0.1
+				political_power_gain = 1
+				consumer_goods_factor = 0.05
+			}
+		}
+		ARG_pdn = {
+			picture = ARG_PDN
+		}
+		ARG_mj = {
+			picture = generic_manpower_bonus
+			modifier = {
+				political_power_gain = -0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+		ARG_ae = {
+			picture = ARG_AE
+			modifier = {
+				political_power_gain = 1
+				consumer_goods_factor = -0.20
+			}
+		}
+		ARG_pc = {
+			picture = ARG_PC
+			modifier = {
+				foreign_subversive_activites = +0.1
+				consumer_goods_factor = 0.03
+				industrial_capacity_factory = -0.03
+				conscription = 0.03
+				political_power_gain = 0.5
+				democratic_drift = -0.05
+			}
+		}
+		ARG_upa = {
+			picture = vittoria_mutilata
+			modifier = {
+				foreign_subversive_activites = -0.1
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.5
+				democratic_drift = -0.05
+			}
+		}
+		
+		##Economic ideas
+		ARG_idea_german_engineering = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		ARG_idea_argentine_first = {
+			picture = generic_production_bonus
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		
+		ARG_idea_argentine_construction = {
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		
+		ARG_idea_british_treaty = {
+			picture = CAN_wartime_prices_and_trade_board
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+                industrial_capacity_factory = 0.2
+			}
+		}
+
+		ARG_idea_inmigration1 = {
+			picture = generic_infantry_bonus
+			modifier = {
+				monthly_population = 0.8
+				conscription_factor = 0.03
+			}
+		}
+		
+		ARG_idea_inmigration2 = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_dockyard = 0.08
+				monthly_population = 0.8
+				conscription_factor = 0.03
+			}
+		}
+		
+		##Political_ideas
+		ARG_idea_military_budget = {
+			picture = general_staff
+			modifier = {
+				army_org_Factor = 0.1
+				military_leader_cost_factor = -0.5
+			}
+		}
+		
+		ARG_idea_political_liberties1 = {
+			picture = generic_research_bonus
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+			}
+		}
+		
+		ARG_idea_political_liberties2 = {
+			picture = generic_research_bonus
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				research_time_factor = -0.03
+			}
+		}
+
+		ARG_idea_social_reform = {
+			picture = generic_research_bonus
+			modifier = {
+				conscription = 0.01
+			}
+		}
+
+		ARG_idea_ban_communism = {
+			picture = trotskyite_plot
+			modifier = {
+				communism_drift = -0.05
+			}
+		}
+		
+		ARG_idea_ban_fascism = {
+			picture = generic_fascism_banned
+			modifier = {
+				fascism_drift = -0.05
+			}
+		}
+		
+		ARG_idea_ideology_expansion = {
+			picture = air_war_plans_division_focus
+			modifier = {
+				justify_war_goal_time = -0.2
+				conscription = 0.01
+			}
+		}
+		
+		ARG_idea_revolution = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				communism_drift = +0.05
+				fascism_drift = +0.05
+				democratic_drift = -0.05
+				neutrality_drift = -0.05
+				consumer_goods_factor = 0.1
+				monthly_population = -0.2
+			}
+		}
+
+		ARG_idea_faithless_research = {
+			picture = generic_research_bonus
+			modifier = {
+				research_time_factor = -0.03
+			}
+		}
+		
+		##Other
+		ARG_idea_integration_malvinas = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		ARG_idea_NFascism = {
+			picture = vittoria_mutilata
+			modifier = {
+				fascism_drift = +0.05
+			}
+		}
+	}
+}

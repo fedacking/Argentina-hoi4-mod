@@ -1,0 +1,191 @@
+﻿division_template = {
+	name = "División de Infantaria"
+	division_names_group = SPAN_INF_02
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infantería de Montaña"
+	division_names_group = SPAN_MTN_02
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "División de Caballería"  	# Cavalry Division
+	division_names_group = SPAN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		#name = "Regimiento N*10 'General Racedo'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 2199
+		division_template = "Infantería de Montaña"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*11 'General Las Heras'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10992
+		division_template = "Infantería de Montaña"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*3 'General Belgrano'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1568
+		division_template = "Division de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*5 'General de Olazábal'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 2172
+		division_template = "Division de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*6 'General Viamonte'"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 5184
+		division_template = "Division de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*4"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 8187
+		division_template = "Division de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division = {
+		#name = "Regimiento N*7"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12351
+		division_template = "Division de Infantaria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		name = "R. de Caballería 'Coronel Brandsen'"
+		location = 2172
+		division_template = "División de Caballería"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "R. de Caballería 'General Paz'"
+		location = 12394
+		division_template = "División de Caballería"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+navy = {
+	name = "Armada Argentina"
+	base = 12364
+	location = 12364
+	ship = { name = "ARP 'Argentina'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Rivadavia'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Moreno'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Pueyrredon'" definition = heavy_cruiser equipment = { heavy_cruiser_pre = { amount = 1 owner = ARG } }}
+	ship = { name = "ARP 'Almirante Brown'" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ARG } }}
+	ship = { name = "ARP 'Veintecinco de Mayo'" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ARG } }}
+	ship = { name = "ARP 'Catamarca'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Cervantes'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Santa Fé'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Eva'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Christina'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Buenos'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Aires'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "ARP 'Christiana'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "SS-100" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "SS-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "SS-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ARG } } }
+	ship = { name = "SS-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ARG } } }
+}
+
+air_wings = {
+	278 = {
+		fighter_equipment_0 = {
+			owner = "ARG"
+			amount = 50
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.39
+		efficiency = 40
+	}
+}
