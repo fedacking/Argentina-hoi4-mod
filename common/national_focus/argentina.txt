@@ -1332,6 +1332,7 @@ focus_tree = {
 		y = 7
 		cost = 8
 		available = {
+			has_completed_focus = ARG_industrial_development
 		}
 		completion_reward = {
 			army_experience = 20
@@ -1744,6 +1745,7 @@ focus_tree = {
 		y = 8
 		cost = 5
 		available = {
+			has_completed_focus = ARG_industrial_development
 		}
 		completion_reward = {
 			navy_experience = 20
