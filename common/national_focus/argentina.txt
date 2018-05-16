@@ -1984,7 +1984,7 @@ focus_tree = {
 			has_completed_focus = ARG_new_state
 			}
 		}
-		x = 36
+		x = 37
 		y = 0
 		completion_reward = {
 		}
@@ -2004,14 +2004,13 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ARG_ally_diplomacy
-			focus = ARG_communist_diplomacy
-			focus = ARG_fascist_diplomacy
+			focus = ARG_collectivist_diplomacy
 		}
 		prerequisite = {
 			focus = ARG_diplomacy
 		}
 		relative_position_id = ARG_diplomacy
-		x = -5
+		x = -6
 		y = 1
 		completion_reward = {
 		}
@@ -2028,14 +2027,13 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ARG_neutrality_diplomacy
-			focus = ARG_communist_diplomacy
-			focus = ARG_fascist_diplomacy
+			focus = ARG_collectivist_diplomacy
 		}
 		prerequisite = {
 			focus = ARG_diplomacy
 		}
 		relative_position_id = ARG_diplomacy
-		x = -2
+		x = -1
 		y = 1
 		completion_reward = {
 		}
@@ -2054,17 +2052,18 @@ focus_tree = {
 			focus = ARG_ally_diplomacy
 		}
 		relative_position_id = ARG_ally_diplomacy
-		x = -1
+		x = -2
 		y = 1
 		completion_reward = {
-			all_neighbor_country = {
+			every_neighbor_country = {
 				limit = { has_government = democratic}
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ARG_economic_treaty
+					modifier = ARG_preserve_democracy
 				}
 			}
 			set_rule = { can_create_factions = yes }
+			create_faction = ARG_south_democracy_faction
 		}
 	}
 	
@@ -2086,102 +2085,124 @@ focus_tree = {
 			focus = ARG_ally_diplomacy
 		}
 		relative_position_id = ARG_ally_diplomacy
-		x = 1
+		x = 2
 		y = 1
 		completion_reward = {
 		}
 	}
 	
-#fascist
+	focus = {
+		id = ARG_usa_designer
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 8
+		available = {
+			USA = {
+				has_government = democratic
+				has_war = yes
+			}
+		}
+		prerequisite = {
+			focus = ARG_ask_politely_malvinas
+		}
+		relative_position_id = ARG_ask_politely_malvinas
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
 	
 	focus = {
-		id = ARG_fascist_diplomacy
+		id = ARG_marine_trainers
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_usa_designer
+		}
+		relative_position_id = ARG_usa_designer
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_commonwealth_convoys
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_ask_politely_malvinas
+		}
+		relative_position_id = ARG_ask_politely_malvinas
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.40
+				uses = 1
+				category = dd_tech
+			}
+			add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = USA }
+		}
+	}
+	
+	focus = {
+		id = ARG_combined_scientist
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_commonwealth_convoys
+		}
+		relative_position_id = ARG_commonwealth_convoys
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+#collectivist diplomacy
+	
+	focus = {
+		id = ARG_collectivist_diplomacy
 		icon = GFX_goal_support_fascism
 		cost = 8
 		available = {
-			has_government = fascism 
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
 		}
 		mutually_exclusive = {
-			focus = ARG_neutrality_diplomacy
-			focus = ARG_communist_diplomacy
+			focus = ARG_neutrality_diplomacy`
 			focus = ARG_ally_diplomacy
 		}
 		prerequisite = {
 			focus = ARG_diplomacy
 		}
 		relative_position_id = ARG_diplomacy
-		x = 2
+		x = 7
 		y = 1
 		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = ARG_uruguay_annexation
-		icon = GFX_goal_uruguay
-		cost = 8
-		available = { has_completed_focus = ARG_ideological_expansion }
-		bypass = {
-			URG = {
-				exists = no 
-			}
-		}
-		prerequisite = {
-			focus = ARG_fascist_diplomacy
-		}
-		relative_position_id = ARG_fascist_diplomacy
-		x = -1
-		y = 2
-		completion_reward = {
-			URG = {
-				country_event = arg.26
-			}				
-		}
-	}
-	
-#Faction nazi or own way or commies
-	
-	focus = {
-		id = ARG_german_diplomacy
-		icon = GFX_focus_ger_reichskommisariats
-		cost = 8
-		available = {
-			GER = { has_government = fascism }
-		}		
-		mutually_exclusive = {
-			focus = ARG_comintern_alliance
-			focus = ARG_own_way
-		}
-		prerequisite = {
-			focus = ARG_fascist_diplomacy
-		}
-		relative_position_id = ARG_fascist_diplomacy
-		x = 0
-		y = 1
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = ARG_own_way
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 8
-		available = {
-			has_government = democratic
-		}		
-		mutually_exclusive = {
-			focus = ARG_german_diplomacy
-			focus = ARG_comintern_alliance
-		}
-		prerequisite = {
-			focus = ARG_communist_diplomacy
-			focus = ARG_fascist_diplomacy
-		}
-		relative_position_id = ARG_fascist_diplomacy
-		x = 2
-		y = 1
-		completion_reward = {
-		set_rule = { can_create_factions = yes }
 		}
 	}
 	
@@ -2197,10 +2218,53 @@ focus_tree = {
 			focus = ARG_own_way
 		}
 		prerequisite = {
-			focus = ARG_communist_diplomacy
+			focus = ARG_collectivist_diplomacy
 		}
-		relative_position_id = ARG_communist_diplomacy
+		relative_position_id = ARG_collectivist_diplomacy
+		x = -2
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_own_way
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8
+		available = {
+		}		
+		mutually_exclusive = {
+			focus = ARG_german_diplomacy
+			focus = ARG_comintern_alliance
+		}
+		prerequisite = {
+			focus = ARG_communist_diplomacy
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
 		x = 0
+		y = 1
+		completion_reward = {
+		set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	focus = {
+		id = ARG_german_diplomacy
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 8
+		available = {
+			GER = { has_government = fascism }
+		}		
+		mutually_exclusive = {
+			focus = ARG_comintern_alliance
+			focus = ARG_own_way
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
+		x = 2
 		y = 1
 		completion_reward = {
 		}
@@ -2208,7 +2272,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_malvinas_or_war
-		icon = GFX_goal_malvinas
+		icon = GFX_focus_AST_never_gallipoli
 		cost = 8
 		prerequisite = {
 			focus = ARG_german_diplomacy
@@ -2225,30 +2289,6 @@ focus_tree = {
 		}
 	}
 	
-#commies
-	
-	focus = {
-		id = ARG_communist_diplomacy
-		icon = GFX_goal_generic_war_with_comintern
-		cost = 8
-		available = {
-			has_government = communism
-		}
-		mutually_exclusive = {
-			focus = ARG_ally_diplomacy
-			focus = ARG_neutrality_diplomacy
-			focus = ARG_fascist_diplomacy
-		}
-		prerequisite = {
-			focus = ARG_diplomacy
-		}
-		relative_position_id = ARG_diplomacy
-		x = 6
-		y = 1
-		completion_reward = {
-		}
-	}
-	
 	focus = {
 		id = ARG_paraguay_invitation
 		icon = GFX_goal_paraguay
@@ -2260,15 +2300,84 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = ARG_communist_diplomacy
+			focus = ARG_collectivist_diplomacy
 		}
-		relative_position_id = ARG_communist_diplomacy
-		x = 1
+		relative_position_id = ARG_collectivist_diplomacy
+		x = -3
 		y = 2
 		completion_reward = {
 			PAR = {
 				country_event = arg.30
 			}
+		}
+	}
+	
+	focus = {
+		id = ARG_uruguay_annexation
+		icon = GFX_goal_uruguay
+		cost = 8
+		available = { has_completed_focus = ARG_ideological_expansion }
+		bypass = {
+			URG = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
+		x = 3
+		y = 2
+		completion_reward = {
+			URG = {
+				country_event = arg.26
+			}				
+		}
+	}
+	
+	focus = {
+		id = ARG_andean_crisis
+		icon = GFX_goal_chile
+		cost = 8
+		available = {}
+		bypass = {
+			URG = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		relative_position_id = ARG_paraguay_invitation
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_rio_grande_demands
+		icon = GFX_goal_brazil
+		cost = 8
+		available = {}
+		bypass = {
+			URG = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		relative_position_id = ARG_uruguay_annexation
+		x = -1
+		y = 1
+		completion_reward = {		
 		}
 	}
 }
