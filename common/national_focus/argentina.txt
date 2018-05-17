@@ -31,7 +31,7 @@ focus_tree = {
 				has_country_flag = ARG_repetto_wins
 			}
 		}
-		x = 4
+		x = 5
 		y = 0
 		cost = 10
 		
@@ -49,13 +49,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_1937_elections
 		}
+		relative_position_id = ARG_1937_elections
 		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_president_alvear
 			focus = ARG_president_repetto
 		}
 		bypass = { has_country_flag = ARG_concordancia_wins }
-		x = 1
+		x = -4
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = ARG_ortiz_victory_tooltip				
@@ -67,63 +68,105 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		cost = 10
 		prerequisite = { focus = ARG_president_ortiz }
-		x = 0
-		y = 2
+		relative_position_id = ARG_president_ortiz
+		x = -1
+		y = 1
 		completion_reward = {
 			add_stability = 0.05
 		}
 	}
 	
 	focus = {
-		id = ARG_empower_the_landowners
+		id = ARG_reinstate_the_secret_ballot
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = { focus = ARG_stop_the_fraud }
+		relative_position_id = ARG_stop_the_fraud
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = ARG_start_the_reforms
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 10
 		prerequisite = { focus = ARG_president_ortiz }
-		x = 2
-		y = 2
+		relative_position_id = ARG_president_ortiz
+		x = 1
+		y = 1
 		completion_reward = {
 			add_political_power = 50
 		}
 	}
 	
 	focus = {
-		id = ARG_conservative_reaction
-		icon = GFX_goal_generic_political_pressure
+		id = ARG_centrist_path
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 10
-		available = { always = no }
-		prerequisite = { focus = ARG_empower_the_landowners }
-		prerequisite = { focus = ARG_stop_the_fraud }
-		bypass = { has_country_flag = ARG_castillo_president }
-		x = 1
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = ARG_military_budget
-		icon = GFX_goal_generic_axis_build_infantry
-		cost = 10
-		prerequisite = { focus = ARG_conservative_reaction }
-		x = 2
-		y = 4
-		completion_reward = {
-			add_ideas = ARG_idea_military_budget
-		}
-	}
-	
-	focus = {
-		id = ARG_defang_the_intelectuals
-		icon = GFX_focus_renounce_the_treaty_of_trianon
-		cost = 10
-		prerequisite = { focus = ARG_conservative_reaction }
+		prerequisite = { focus = ARG_start_the_reforms }
+		relative_position_id = ARG_start_the_reforms
 		x = 0
-		y = 4
+		y = 1
 		completion_reward = {
-			add_war_support = 0.1
-			add_political_power = -25
+			add_stability = 0.05
 		}
 	}
+	
+	focus = {
+		id = ARG_reach_out_oposition
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = { focus = ARG_reinstate_the_secret_ballot }
+		prerequisite = { focus = ARG_centrist_path }
+		relative_position_id = ARG_centrist_path
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+#	focus = {
+#		id = ARG_conservative_reaction
+#		icon = GFX_goal_generic_political_pressure
+#		cost = 10
+#		available = { always = no }
+#		prerequisite = { focus = ARG_empower_the_landowners }
+#		prerequisite = { focus = ARG_stop_the_fraud }
+#		bypass = { has_country_flag = ARG_castillo_president }
+#		x = 1
+#		y = 3
+#		completion_reward = {
+#		}
+#	}
+#	
+#	focus = {
+#		id = ARG_military_budget
+#		icon = GFX_goal_generic_axis_build_infantry
+#		cost = 10
+#		prerequisite = { focus = ARG_conservative_reaction }
+#		x = 2
+#		y = 4
+#		completion_reward = {
+#			add_ideas = ARG_idea_military_budget
+#		}
+#	}
+#	
+#	focus = {
+#		id = ARG_defang_the_intelectuals
+#		icon = GFX_focus_renounce_the_treaty_of_trianon
+#		cost = 10
+#		prerequisite = { focus = ARG_conservative_reaction }
+#		x = 0
+#		y = 4
+#		completion_reward = {
+#			add_war_support = 0.1
+#			add_political_power = -25
+#		}
+#	}
 	
 	## President Alvear
 	
@@ -134,13 +177,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_1937_elections
 		}
+		relative_position_id = ARG_1937_elections
 		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_president_ortiz
 			focus = ARG_president_repetto
 		}
 		bypass = { has_country_flag = ARG_alvear_wins }
-		x = 4
+		x = `0
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = ARG_alvear_victory_tooltip				
@@ -152,8 +196,9 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
 		prerequisite = { focus = ARG_president_alvear }
-		x = 4
-		y = 2
+		relative_position_id = ARG_president_alvear
+		x = 0
+		y = 1
 		completion_reward = {
 			add_ideas = ARG_idea_political_liberties1
 		}
@@ -164,8 +209,9 @@ focus_tree = {
 		icon = GFX_focus_research
 		cost = 10
 		prerequisite = { focus = ARG_restore_political_liberties }
-		x = 3
-		y = 3
+		relative_position_id = ARG_restore_political_liberties
+		x = -1
+		y = 1
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ARG_idea_political_liberties1
@@ -179,8 +225,9 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		cost = 10
 		prerequisite = { focus = ARG_restore_political_liberties }
-		x = 5
-		y = 3
+		relative_position_id = ARG_restore_political_liberties
+		x = 1
+		y = 1
 		completion_reward = {
 			army_experience = -10
 			add_political_power = 70
@@ -196,13 +243,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_1937_elections
 		}
+		relative_position_id = ARG_1937_elections
 		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_president_ortiz
 			focus = ARG_president_alvear
 		}
 		bypass = { has_country_flag = ARG_repetto_wins }
-		x = 8
+		x = 4
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = ARG_alvear_victory_tooltip				
@@ -214,8 +262,9 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		cost = 10
 		prerequisite = { focus = ARG_president_repetto }
-		x = 8
-		y = 2
+		relative_position_id = ARG_president_repetto
+		x = 0
+		y = 1
 		completion_reward = {
 			add_ideas = ARG_idea_social_reform
 		}
@@ -226,8 +275,9 @@ focus_tree = {
 		icon = GFX_focus_AST_squander_bug
 		cost = 10
 		prerequisite = { focus = ARG_social_reform }
-		x = 7
-		y = 3
+		relative_position_id = ARG_social_reform
+		x = -1
+		y = 1
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = 100
@@ -239,8 +289,9 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
 		prerequisite = { focus = ARG_social_reform }
-		x = 9
-		y = 3
+		relative_position_id = ARG_social_reform
+		x = 1
+		y = 1
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = 0.1
@@ -257,8 +308,9 @@ focus_tree = {
 		focus = ARG_president_alvear 
 		focus = ARG_president_repetto
 		}
-		x = 6
-		y = 2
+		relative_position_id = ARG_president_alvear
+		x = 2
+		y = 1
 		completion_reward = {
 			add_stability = 0.1
 		}
@@ -274,8 +326,9 @@ focus_tree = {
 			focus = ARG_defang_the_army
 			focus = ARG_uba_independence
 		}
-		x = 6
-		y = 4
+		relative_position_id = ARG_defang_the_army
+		x = 1
+		y = 1
 		completion_reward = {
 			add_stability = 0.2
 		}
@@ -1328,11 +1381,13 @@ focus_tree = {
 	focus = {
 		id = ARG_review_military
 		icon = GFX_goal_generic_axis_build_infantry
+		available = {
+			has_completed_focus = ARG_industrial_development
+ 		}
 		x = 14
 		y = 7
 		cost = 8
 		available = {
-			has_completed_focus = ARG_industrial_development
 		}
 		completion_reward = {
 			army_experience = 20
@@ -1741,11 +1796,13 @@ focus_tree = {
 	focus = {
 		id = ARG_review_navy
 		icon = GFX_goal_generic_build_navy
+		available = {
+			has_completed_focus = ARG_industrial_development
+ 		}
 		x = 32
 		y = 8
 		cost = 5
 		available = {
-			has_completed_focus = ARG_industrial_development
 		}
 		completion_reward = {
 			navy_experience = 20
@@ -1981,7 +2038,7 @@ focus_tree = {
 		cost = 8
 		available = {
 			OR = {
-			has_completed_focus = ARG_defang_the_intelectuals
+			has_completed_focus = ARG_reach_out_oposition
 			has_completed_focus = ARG_new_republic
 			has_completed_focus = ARG_new_state
 			}
@@ -2140,6 +2197,27 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ARG_full_mobilisation
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_marine_trainers
+			focus = ARG_combined_scientist
+		}
+		mutually_exclusive = {
+			focus = ARG_embrace_lend_lease
+		}
+		relative_position_id = ARG_marine_trainers
+		x = 0
+		y = 1
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
 		id = ARG_commonwealth_convoys
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 8
@@ -2179,6 +2257,27 @@ focus_tree = {
 				uses = 2
 				category = electronics
 			}
+		}
+	}
+	
+	focus = {
+		id = ARG_embrace_lend_lease
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_marine_trainers
+			focus = ARG_combined_scientist
+		}
+		mutually_exclusive = {
+			focus = ARG_full_mobilisation
+		}
+		relative_position_id = ARG_combined_scientist
+		x = 0
+		y = 1
+		completion_reward = {
+
 		}
 	}
 	
