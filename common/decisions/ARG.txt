@@ -15,7 +15,46 @@ ARG_integrate_malvinas_category = {
 			720 = { add_core_of = ROOT }
 			299 = { set_state_name = "Islas Malvinas" }
 			720 = { set_state_name = "Isla San Pedro" }
-			add_timed_idea = { idea = ARG_idea_integration_malvinas days = 180 }
+			add_timed_idea = { idea = ARG_idea_integration days = 60 }
+		}
+		ai_will_do = { factor = 200 }
+	}
+}
+
+ARG_integrate_magallanes_category = {
+	ARG_integrate_malvinas = {
+		icon = 
+		allowed = {
+			original_tag = ARG
+			has_dlc = "Waking the Tiger"
+		}
+		available = {
+			owns_state = 507
+		}
+		visible = { original_tag = ARG }
+		complete_effect = {
+			507 = { add_core_of = ROOT }
+			add_timed_idea = { idea = ARG_idea_integration days = 90 }
+		}
+		ai_will_do = { factor = 200 }
+	}
+}
+
+ARG_integrate_riogrande_category = {
+	ARG_integrate_riogrande = {
+		icon = 
+		allowed = {
+			original_tag = ARG
+			has_dlc = "Waking the Tiger"
+		}
+		available = {
+			owns_state = 502
+		}
+		visible = { original_tag = ARG }
+		complete_effect = {
+			502 = { add_core_of = ROOT }
+			502 = { set_state_name = "Río Grande" }
+			add_timed_idea = { idea = ARG_idea_integration days = 180 }
 		}
 		ai_will_do = { factor = 200 }
 	}
