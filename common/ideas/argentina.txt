@@ -453,7 +453,7 @@ ideas = {
 		}
 		
 		##Other
-		ARG_idea_integration_malvinas = {
+		ARG_idea_integration = {
 			picture = 
 			modifier = {
 				consumer_goods_factor = 0.5
