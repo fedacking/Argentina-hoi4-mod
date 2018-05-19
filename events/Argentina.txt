@@ -1474,3 +1474,124 @@ country_event = {
 		transfer_state = 720
 	}
 }
+
+# Andean Crisis
+country_event = {
+	id = arg.36
+	title = arg.36.t
+	desc = arg.36.d	
+	is_triggered_only = yes	
+	
+	option = { # Accept
+		name = arg.36.a
+		ai_chance = {
+			base = 60
+		}
+		ARG = {
+			country_event = {
+				id = arg.38
+			}
+		}
+		effect_tooltip = {
+			ARG = {
+				transfer_state = 507
+			}
+		}
+	}
+	option = { # Refuse
+		name = arg.36.b
+		ai_chance = {
+			base = 40
+		}
+		ARG = {
+			country_event = { id = arg.37 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.37
+	title = arg.37.t
+	desc = arg.37.d
+	is_triggered_only = yes	
+	option = {
+		name = arg.37.a
+		create_wargoal = {
+			type = take_state_focus
+			target = CHL
+			generator = { 507 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.38
+	title = arg.38.t
+	desc = arg.38.d
+	is_triggered_only = yes
+	option = {
+		name = arg.38.a
+		transfer_state = 507
+	}
+}
+
+
+# Rio Grande demands
+country_event = {
+	id = arg.39
+	title = arg.39.t
+	desc = arg.39.d	
+	is_triggered_only = yes	
+	
+	option = { # Accept
+		name = arg.39.a
+		ai_chance = {
+			base = 20
+		}
+		ARG = {
+			country_event = {
+				id = arg.41
+			}
+		}
+		effect_tooltip = {
+			ARG = {
+				transfer_state = 502
+			}
+		}
+	}
+	option = { # Refuse
+		name = arg.39.b
+		ai_chance = {
+			base = 80
+		}
+		ARG = {
+			country_event = { id = arg.40 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.40
+	title = arg.40.t
+	desc = arg.40.d
+	is_triggered_only = yes	
+	option = {
+		name = arg.40.a
+		create_wargoal = {
+			type = take_state_focus
+			target = BRA
+			generator = { 502 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.41
+	title = arg.41.t
+	desc = arg.41.d
+	is_triggered_only = yes
+	option = {
+		name = arg.41.a
+		transfer_state = 502
+	}
+}
