@@ -2375,6 +2375,11 @@ focus_tree = {
 		id = ARG_malvinas_or_war
 		icon = GFX_focus_AST_never_gallipoli
 		cost = 8
+		bypass = {
+			ENG = {
+				exists = no 
+			}
+		}
 		prerequisite = {
 			focus = ARG_german_diplomacy
 			focus = ARG_own_way
@@ -2432,7 +2437,34 @@ focus_tree = {
 		completion_reward = {
 			URG = {
 				country_event = arg.26
-			}				
+			}
+		}
+	}	
+	
+	focus = {
+		id = ARG_war_bolivia
+		icon = GFX_goal_bolivia
+		cost = 8
+		available = {}
+		bypass = {
+			BOL = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
 		}
 	}
 	
@@ -2442,7 +2474,7 @@ focus_tree = {
 		cost = 8
 		available = {}
 		bypass = {
-			URG = {
+			CHL = {
 				exists = no 
 			}
 		}
@@ -2456,16 +2488,43 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			CHL = {
+				country_event = arg.36
+			}
 		}
 	}
 	
+	focus = {
+		id = ARG_war_chile
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 8
+		available = {}
+		bypass = {
+			CHL = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_andean_crisis
+		}
+		relative_position_id = ARG_andean_crisis
+		x = 1
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHL
+			}
+		}
+	}
+
 	focus = {
 		id = ARG_rio_grande_demands
 		icon = GFX_goal_brazil
 		cost = 8
 		available = {}
 		bypass = {
-			URG = {
+			BRA = {
 				exists = no 
 			}
 		}
@@ -2478,7 +2537,34 @@ focus_tree = {
 		relative_position_id = ARG_uruguay_annexation
 		x = -1
 		y = 1
-		completion_reward = {		
+		completion_reward = {	
+			BRA = {
+				country_event = arg.39
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_war_brazil
+		icon = GFX_goal_generic_major_war
+		cost = 8
+		available = {}
+		bypass = {
+			BRA = {
+				exists = no 
+			}
+		}
+		prerequisite = {
+			focus = ARG_rio_grande_demands
+		}
+		relative_position_id = ARG_rio_grande_demands
+		x = -1
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BRA
+			}
 		}
 	}
 }
