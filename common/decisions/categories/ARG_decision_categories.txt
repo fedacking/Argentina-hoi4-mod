@@ -7,3 +7,15 @@ ARG_integrate_malvinas_category = {
 		original_tag = ARG
 	}
 }
+
+ARG_integrate_magallanes_category = {
+	allowed = {
+		original_tag = ARG
+	}
+}
+
+ARG_integrate_riogrande_category = {
+	allowed = {
+		original_tag = ARG
+	}
+}
