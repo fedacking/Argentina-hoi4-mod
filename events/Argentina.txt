@@ -92,8 +92,6 @@ country_event = {
 		hidden_effect = {
 			remove_ideas = {
 				ARG_concordancia
-				ARG_ucr
-				ARG_ps
 			}
 		}
 		add_ideas = {ARG_gou}
@@ -133,6 +131,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
+		set_country_flag = ARG_gou_coup_fails
 	}
 }
 
@@ -1196,9 +1195,6 @@ country_event = {
 			factor = 60
 		}
 		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
 			add_ideas = {ARG_ps}
 		}
 		set_country_flag = ARG_palacios_wins_1943
@@ -1216,6 +1212,11 @@ country_event = {
 		name = arg.25.b
 		ai_chance = {
 			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
 		}
 		set_country_flag = ARG_tamborini_wins_1943
 		create_country_leader = {
@@ -1235,7 +1236,7 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_ideas = {
-				ARG_ucr
+				ARG_ps
 			}
 			add_ideas = {ARG_pdn}
 		}
@@ -1593,5 +1594,197 @@ country_event = {
 	option = {
 		name = arg.41.a
 		transfer_state = 502
+	}
+}
+
+country_event = {
+	id = arg.42
+	title = arg.42.t
+	desc = arg.42.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1949.9.5
+		has_country_flag = ARG_repetto_wins
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = arg.42.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+				ARG_ps
+				ARG_pdn
+			}
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_mdejusto_wins_1949
+		create_country_leader = {
+			name = "Alicia Moreau de Justo"
+			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
+			picture = "Portrait_Argentine_Alicia_Justo.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+	}
+	
+	option = {
+		name = arg.42.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+				ARG_ps
+				ARG_pdn
+			}
+			add_ideas = {ARG_ucr}
+		}
+		set_country_flag = ARG_balbin_wins_1949
+		create_country_leader = {
+			name = "Ricardo Balbín"
+			desc = "POLITICS_RICARDO_BALBIN_DESC"
+			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+	}
+	
+	option = {
+		name = arg.42.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+				ARG_ps
+				ARG_pdn
+			}
+			add_ideas = {ARG_pdn}
+		}
+		set_country_flag = ARG_pastor_wins_1949
+		create_country_leader = {
+			name = "Reynaldo Pastor"
+			desc = "POLITICS_REYNALDO_PASTOR_DESC"
+			picture = "Portrait_Argentine_Reynaldo_Pastor.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {}
+		}
+	}
+}
+
+country_event = {
+	id = arg.43
+	title = arg.43.t
+	desc = arg.43.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_gou_coup_fails
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = arg.43.a
+		ai_chance = {
+			factor = 80
+		}
+		set_country_flag = ARG_concordancia_wins_1943
+		create_country_leader = {
+			name = "Robustiano Patrón Costas"
+			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
+			picture = "Portrait_Argentine_Robustiano_Costas.tga"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {}
+		}
+	}
+	
+	option = {
+		name = arg.43.b
+		ai_chance = {
+			factor = 15
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ucr}
+		}
+		set_country_flag = ARG_ucr_wins_1943
+		create_country_leader = {
+			name = "José Pascual Tamborini"
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = arg.43.c
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_ps_wins_1943
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+			parties = {
+				neutrality = {
+					popularity = 5
+				}
+				democratic = {
+					popularity = 80
+				}
+				fascism = {
+					popularity = 7
+				}
+				communism = {
+					popularity = 8
+				}
+			}
+		}
 	}
 }
