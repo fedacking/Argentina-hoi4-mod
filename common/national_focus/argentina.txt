@@ -348,7 +348,7 @@ focus_tree = {
 				has_country_flag = ARG_ghioldi_wins
 			}
 		}
-		x = 14
+		x = 15
 		y = 0
 		cost = 10	
 		completion_reward = {
@@ -370,10 +370,10 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_ghioldi
 		}
-		x = 16
+		x = 17
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = ARG_fresco_takeover_tooltip				
+			custom_effect_tooltip = ARG_fresco_takeover_tooltip
 		}
 	}
 
@@ -384,7 +384,7 @@ focus_tree = {
 		prerequisite = { 
 		focus = ARG_president_fresco
 		}
-		x = 15
+		x = 16
 		y = 2
 		completion_reward = {
 			add_ideas = ARG_idea_ban_communism
@@ -398,7 +398,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = ARG_president_fresco
 		}
-		x = 17
+		x = 18
 		y = 2		
 		completion_reward = {
 			add_stability = 0.2
@@ -413,7 +413,7 @@ focus_tree = {
 			focus = ARG_ban_communism
 			focus = ARG_state_catholicism
 		}
-		x = 16
+		x = 17
 		y = 3
 		completion_reward = {
 			add_political_power = 150
@@ -435,7 +435,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_fresco
 		}
-		x = 12
+		x = 13
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = ARG_ghioldi_takeover_tooltip				
@@ -449,7 +449,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = ARG_president_ghioldi
 		}
-		x = 13
+		x = 14
 		y = 2
 		completion_reward = {
 			add_ideas = ARG_idea_ban_fascism
@@ -463,7 +463,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = ARG_president_ghioldi
 		}
-		x = 11
+		x = 12
 		y = 2
 		completion_reward = {
 			add_stability = -0.1
@@ -473,13 +473,13 @@ focus_tree = {
 
 	focus = {
 		id = ARG_workers_congress
-		icon = GFX_goal_commie_politics
+		icon = GFX_focus_generic_soviet_politics
 		cost = 10
 		prerequisite = { 
 			focus = ARG_ban_fascism
 			focus = ARG_state_atheism
 		}
-		x = 12
+		x = 13
 		y = 3
 		completion_reward = {
 			add_political_power = 150
@@ -495,7 +495,7 @@ focus_tree = {
 			focus = ARG_ban_communism
 			focus = ARG_ban_fascism
 		}
-		x = 14
+		x = 15
 		y = 3
 		completion_reward = {
 			add_war_support = 0.1
@@ -513,7 +513,7 @@ focus_tree = {
 			focus = ARG_technical_parliament
 			focus = ARG_workers_congress
 		}
-		x = 14
+		x = 15
 		y = 4
 		completion_reward = {
 			add_stability = 0.1
@@ -1822,12 +1822,11 @@ focus_tree = {
 		relative_position_id = ARG_review_navy
 		x = -2
 		y = 1
-		completion_reward = {
+		completion_reward = {			
 			add_tech_bonus = {
-				name = ca_tech_bonus
 				bonus = 0.5
 				uses = 1
-				category = cl_tech
+				category = fleet_in_being_tree
 			}
 		}
 	}

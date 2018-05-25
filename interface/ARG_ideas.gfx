@@ -1,0 +1,76 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_ARG_UCR"
+		texturefile = "gfx/interface/ideas/ARG/ARG_UCR.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_PS"
+		texturefile = "gfx/interface/ideas/ARG/ARG_PS.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_PJ"
+		texturefile = "gfx/interface/ideas/ARG/ARG_PJ.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_PDN"
+		texturefile = "gfx/interface/ideas/ARG/ARG_PDN.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_GOU"
+		texturefile = "gfx/interface/ideas/ARG/ARG_GOU.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_AE"
+		texturefile = "gfx/interface/ideas/ARG/ARG_AE.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_PC"
+		texturefile = "gfx/interface/ideas/ARG/ARG_PC.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_ramon_castillo"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Ramon_Castillo.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_juan_domingo_peron"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Juan_Domingo_Peron.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_manuel_maria_de_iriondo"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Manuel_Maria_de_Iriondo.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_cesar_ameghino"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Cesar_Ameghino.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_arturo_frondizi"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Arturo_Frondizi.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_diogenes_taboada"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Diogenes_Taboada.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_julio_roca"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Julio_AP_Roca.tga"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_carlos_saavedra_lamas"
+		texturefile = "gfx/interface/ministers/ARG/ARG_Carlos_Saavedra_Lamas.tga"
+	}
+}
