@@ -42,23 +42,6 @@ ideas = {
 		}
 
 		ARG_arturo_frondizi = {
-=======
-			picture = generic_political_advisor_south_america_3			
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { prince_of_terror }
-		}
-
-		ARG_cesar_ameghino = {
-			picture = generic_political_advisor_south_america_3
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { war_industrialist }
-		}
-
-		ARG_arturo_frondizi = {
 			picture = generic_political_advisor_south_america_3
 >>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
@@ -479,17 +462,43 @@ ideas = {
 		
 		
 		##Other
-		ARG_idea_integration = {
-			picture = 
-			modifier = {
-				consumer_goods_factor = 0.5
-			}
-		}
 		
 		ARG_idea_NFascism = {
 			picture = vittoria_mutilata
 			modifier = {
 				fascism_drift = +0.05
+			}
+		}
+		
+		##Integration
+		ARG_idea_integration_malvinas = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		ARG_idea_integration_magallanes = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		ARG_idea_integration_riogrande = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		ARG_idea_integration_chile = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+		ARG_idea_integration_bolivia = {
+			picture = 
+			modifier = {
+				consumer_goods_factor = 0.5
 			}
 		}
 	}
