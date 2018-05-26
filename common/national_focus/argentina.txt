@@ -26,9 +26,9 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				has_country_flag = ARG_ortiz_wins
-				has_country_flag = ARG_alvear_wins
-				has_country_flag = ARG_repetto_wins
+				has_country_flag = ARG_fraude_patriotico
+				has_country_flag = ARG_token_reform
+				has_country_flag = ARG_march
 			}
 		}
 		x = 5
@@ -44,7 +44,7 @@ focus_tree = {
 
 	focus = {
 		id = ARG_president_ortiz
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_goal_ideology_authoritarian_democrat
 		cost = 10
 		prerequisite = {
 			focus = ARG_1937_elections
@@ -55,7 +55,7 @@ focus_tree = {
 			focus = ARG_president_alvear
 			focus = ARG_president_repetto
 		}
-		bypass = { has_country_flag = ARG_concordancia_wins }
+		bypass = { has_country_flag = ARG_ortiz_wins }
 		x = -4
 		y = 1
 		completion_reward = {
@@ -172,7 +172,7 @@ focus_tree = {
 	
 		focus = {
 		id = ARG_president_alvear
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_ideology_social_liberal
 		cost = 10
 		prerequisite = {
 			focus = ARG_1937_elections
@@ -238,7 +238,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_president_repetto
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_ideology_social_democrat
 		cost = 10
 		prerequisite = {
 			focus = ARG_1937_elections
@@ -253,7 +253,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = ARG_alvear_victory_tooltip				
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
 		}
 	}
 	
@@ -320,12 +320,14 @@ focus_tree = {
 		id = ARG_new_republic
 		icon = GFX_goal_support_democracy
 		cost = 10
-		prerequisite = { 
-			focus = ARG_empower_the_unions 
-			focus = ARG_wyoming_suffrage
-			focus = ARG_defang_the_army
-			focus = ARG_uba_independence
-		}
+		prerequisite = {
+            focus = ARG_empower_the_unions
+            focus = ARG_uba_independence
+        }
+        prerequisite = {
+            focus = ARG_defang_the_army
+            focus = ARG_wyoming_suffrage 
+        }
 		relative_position_id = ARG_defang_the_army
 		x = 1
 		y = 1
@@ -343,16 +345,13 @@ focus_tree = {
 			always = no 
 		}
 		bypass = {
-			OR = {
-				has_country_flag = ARG_fresco_wins
-				has_country_flag = ARG_ghioldi_wins
-			}
+			has_country_flag = ARG_crack_down
 		}
 		x = 15
 		y = 0
 		cost = 10	
 		completion_reward = {
-			custom_effect_tooltip = ARG_tooltip_focus_1937_coup_effect
+			custom_effect_tooltip = ARG_tooltip_focus_1937_revolution_effect
 		}
 	}
 	
@@ -409,8 +408,10 @@ focus_tree = {
 		id = ARG_technical_parliament
 		icon = GFX_goal_government_icon
 		cost = 10
-		prerequisite = { 
+		prerequisite = {
 			focus = ARG_ban_communism
+		}
+		prerequisite = {
 			focus = ARG_state_catholicism
 		}
 		x = 17
@@ -475,8 +476,10 @@ focus_tree = {
 		id = ARG_workers_congress
 		icon = GFX_focus_generic_soviet_politics
 		cost = 10
-		prerequisite = { 
+		prerequisite = {
 			focus = ARG_ban_fascism
+		}
+		prerequisite = {
 			focus = ARG_state_atheism
 		}
 		x = 13
