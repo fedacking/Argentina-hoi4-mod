@@ -2,19 +2,7 @@
 ### ARGENTINA ###
 #################
 
-ARG_integrate_malvinas_category = {
-	allowed = {
-		original_tag = ARG
-	}
-}
-
-ARG_integrate_magallanes_category = {
-	allowed = {
-		original_tag = ARG
-	}
-}
-
-ARG_integrate_riogrande_category = {
+ARG_integrate_territory_category = {
 	allowed = {
 		original_tag = ARG
 	}
