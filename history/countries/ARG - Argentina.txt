@@ -91,15 +91,15 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 32
+			popularity = 36
 		}
 
 		fascism = {
-			popularity = 8
+			popularity = 11
 		}
 		
 		communism = {
-			popularity = 8
+			popularity = 1
 		}
 		
 		neutrality = { 
@@ -118,7 +118,7 @@ create_country_leader = {
 	desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
 	picture = "gfx/leaders/ARG/Portrait_Argentine_Agustin_Justo.tga"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = oligarchism
 	traits = {
 		#
 	}
@@ -189,7 +189,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Rodolfo Ghioldi"
 	desc = "POLITICS_RODOLFO_GHIOLDI_DESC"
-	picture = "Portrait_Argentine_Rodolfo_Ghioldi.tga"
+	picture = "Portrait_Argentine_Rodolfo_Ghioldi.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -346,7 +346,7 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Eleazar Videla"
 	picture = "Portrait_Argentine_Eleazar_Videla.tga"
-	traits = { sea_wolf }
+	traits = { seawolf }
 	skill = 3
 }
 
