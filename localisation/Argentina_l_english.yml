@@ -93,21 +93,6 @@ ARG_repetto_victory_tooltip:0 "Nicolas Repetto has managed to win the election."
 ARG_tooltip_focus_1937_revolution_effect:0 "Democracy did not prevail."
 ARG_fresco_takeover_tooltip:0 "Manuel Fresco has seized the apparatus of the state."
 ARG_ghioldi_takeover_tooltip:0 "Rodolfo Ghioldi has seized the apparatus of the state."
-
-### Country names ###
-
- ARG_fascism:0 "Argentina"
- ARG_fascism_DEF:0 "the Argentine Republic"
- ARG_democratic:0 "Argentina"
- ARG_democratic_DEF:0 "the Argentine Republic"
- ARG_neutrality:0 "Argentina"
- ARG_neutrality_DEF:0 "the Argentine Republic"
- ARG_communism:0 "Argentina SR"
- ARG_communism_DEF:0 "the Argentine Socialist Republic"
- ARG_fascism_ADJ:0 "Argentine"
- ARG_democratic_ADJ:0 "Argentine"
- ARG_neutrality_ADJ:0 "Argentine"
- ARG_communism_ADJ:0 "Argentine"
  
  ### Cosmetic names ###
  
@@ -160,6 +145,12 @@ ARG_ideological_expansion_desc:0 "With the growing influence of the USA, the sou
 ARG_new_state:0 "The New State"
 ARG_new_state_desc:0 "With the implementation of the new government policies, the political instability is finally over."
 
+##Diplomatic tree
+
+
+
+##Army tree
+
 ARG_review_military:0 "Reorganize the Army"
 ARG_review_military_desc:0 "The argetinean army has come a long way from it's humble beginnings in 1806. It is now time for it to undergo one last evolution and push the nation into the forefront of international politics"
 ARG_mobile_warfare:0 "San Jorge Plan"
@@ -199,6 +190,8 @@ ARG_gbp_bonus_desc:0 "An officer in the argentinean army should be a modern knig
 ARG_final_gbp_doctrine:0 "A Proud Military"
 ARG_final_gbp_doctrine_desc:0 "From the lowliest of privates to the highest of field-marshalls every member of the army is part of awell oiled machine and proud to be so. Our high command creates brilliant yet reallistic plans that our troops are ready and willing to see to completion. And while none of the individual parts is particularly worthy of praise the total sum is an army that is always ready, always prepared"
 
+##Navy tree
+
 ARG_review_navy:0 "A Navy for the Nation"
 ARG_review_navy_desc:0 " "
 ARG_fleet_being:0 "Royal Navy Doctrine"
@@ -232,7 +225,7 @@ arg.3.t:0 "The death of Alvear"
 arg.3.d:0 "Struck down by a cardiac crisis, Marcelo Torcuato de Alvear died next to his wife Regina Pacini in his house of Don Torcuato. A large number of people moved to the town to give the last goodbye to the old president"
 arg.3.a:0 "Goodbye Pelado"
 arg.4.t:0 "The GOU Coup"
-arg.4.d:0 "Today is the end of the Concordancia. The GOU has decided to step in and install a more nationalistic goverment"
+arg.4.d:0 "Today is the end of the Concordancia. The GOU has decided to step in and install a more nationalistic government"
 arg.4.a:0 "The coup succeeds!"
 arg.4.b:0 "The coup fails!"
 arg.5.t:0 "The GOU has decided to replace Ramírez"
@@ -322,3 +315,12 @@ arg.43.d:0 " - "
 arg.43.a:0 "Concordancia - Robustiano Costas"
 arg.43.b:0 "UCR - José P. Tamborini"
 arg.43.c:0 "PS - Alfredo Palacios"
+arg.44.t:0 "Brazil calls for an armistice!"
+arg.44.d:0 "Since they see no way to win the war, the brazilians are offering us to surrender."
+arg.44.a:0 "Take Río Grande and puppet their government"
+arg.44.b:0 "Just puppet their government"
+arg.44.c:0 "We will keep this war going until there's no more Brazil left!"
+arg.45.t:0 "Brazil calls for an armistice!"
+arg.45.d:0 "Since they see no way to win the war, the brazilians are offering us to surrender."
+arg.45.a:0 "Puppet their government"
+arg.45.b:0 "We will keep this war going until there's no more Brazil left!"
