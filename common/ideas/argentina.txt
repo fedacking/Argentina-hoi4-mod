@@ -43,10 +43,7 @@ ideas = {
 		}
 
 		ARG_diogenes_taboada = {
-<<<<<<< HEAD
-=======
 			picture = generic_political_advisor_south_america_3
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
@@ -54,10 +51,7 @@ ideas = {
 		}
 
 		ARG_julio_roca = {
-<<<<<<< HEAD
-=======
 			picture = generic_political_advisor_south_america_3
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
@@ -65,10 +59,7 @@ ideas = {
 		}
 
 		ARG_carlos_saavedra_lamas = {
-<<<<<<< HEAD
-=======
 			picture = generic_political_advisor_south_america_3
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
