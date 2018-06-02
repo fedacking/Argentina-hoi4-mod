@@ -5,10 +5,7 @@ ideas = {
 	political_advisor = {
 
 		ARG_ramon_castillo = {
-<<<<<<< HEAD
-=======
 			picture = generic_political_advisor_south_america_2
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
@@ -16,10 +13,7 @@ ideas = {
 		}
 
 		ARG_juan_domingo_peron = {
-<<<<<<< HEAD
-=======
 			picture = generic_political_advisor_south_america_1
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
@@ -27,7 +21,6 @@ ideas = {
 		}
 
 		ARG_manuel_maria_de_iriondo = {
-<<<<<<< HEAD
 			allowed = {
 				original_tag = ARG
 			}
@@ -43,7 +36,6 @@ ideas = {
 
 		ARG_arturo_frondizi = {
 			picture = generic_political_advisor_south_america_3
->>>>>>> 778cde797d220d1e3f559c7c88a7621361e080a4
 			allowed = {
 				original_tag = ARG
 			}
