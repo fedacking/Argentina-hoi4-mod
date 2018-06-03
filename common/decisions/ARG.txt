@@ -1,6 +1,6 @@
 ARG_integrate_territory_category = {
 	ARG_integrate_malvinas = {
-		icon = 
+		icon = generic_form_nation
 		allowed = {
 			original_tag = ARG
 			has_dlc = "Waking the Tiger"
@@ -20,7 +20,7 @@ ARG_integrate_territory_category = {
 		ai_will_do = { factor = 200 }
 	}
 	ARG_integrate_magallanes = {
-		icon = 
+		icon = generic_form_nation
 		allowed = {
 			original_tag = ARG
 			has_dlc = "Waking the Tiger"
@@ -36,7 +36,7 @@ ARG_integrate_territory_category = {
 		ai_will_do = { factor = 200 }
 	}
 	ARG_integrate_riogrande = {
-		icon = 
+		icon = generic_form_nation
 		allowed = {
 			original_tag = ARG
 			has_dlc = "Waking the Tiger"
@@ -53,7 +53,7 @@ ARG_integrate_territory_category = {
 		ai_will_do = { factor = 200 }
 	}
 	ARG_integrate_chile = {
-		icon = 
+		icon = generic_form_nation
 		allowed = {
 			original_tag = ARG
 			has_dlc = "Waking the Tiger"
@@ -71,7 +71,7 @@ ARG_integrate_territory_category = {
 		ai_will_do = { factor = 200 }
 	}
 	ARG_integrate_bolivia = {
-		icon = 
+		icon = generic_form_nation
 		allowed = {
 			original_tag = ARG
 			has_dlc = "Waking the Tiger"

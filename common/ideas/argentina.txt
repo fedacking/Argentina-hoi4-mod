@@ -119,17 +119,6 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		ARG_eleazar_videla = {
-			picture = generic_navy_south_america_1
-			allowed = {
-				original_tag = ARG
-			}					
-			traits = { navy_chief_commerce_raiding_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	}
 
 	high_command = {
@@ -190,28 +179,6 @@ ideas = {
 				land_doctrine = 0.07
 			}
 			traits = { military_theorist }
-		}
-		
-		ARG_eleazar_videla = {
-			picture = generic_navy_south_america_1
-			allowed = {
-				original_tag = ARG
-			}
-			research_bonus = {
-				naval_doctrine = 0.07
-			}
-			traits = { naval_theorist }
-		}	
-
-		ARG_antonio_parodi = {
-			picture = generic_air_south_america_1
-			allowed = {
-				original_tag = ARG
-			}
-			research_bonus = {
-				air_doctrine = 0.07
-			}
-			traits = { air_warfare_theorist }
 		}
 	}
 
@@ -423,14 +390,15 @@ ideas = {
 		}
 
 		ARG_idea_artillery = {
-                picture = generic_intel_bonus
-                modifier = {
-					army_artillery_attack_factor = 0.15
-					army_infantry_defence_factor = 0.15
-				}
-				equipment_bonus = {
-					recon = { 
-                    recon = 1 instant = yes 
+            picture = generic_intel_bonus
+            modifier = {
+				army_artillery_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+			equipment_bonus = {
+				recon = { 
+					recon = 1 
+					instant = yes 
 				}
             }
         }		
@@ -456,31 +424,31 @@ ideas = {
 		
 		##Integration
 		ARG_idea_integration_malvinas = {
-			picture = 
+			picture = vittoria_mutilata
 			modifier = {
 				consumer_goods_factor = 0.5
 			}
 		}
 		ARG_idea_integration_magallanes = {
-			picture = 
+			picture = vittoria_mutilata
 			modifier = {
 				consumer_goods_factor = 0.5
 			}
 		}
 		ARG_idea_integration_riogrande = {
-			picture = 
+			picture = vittoria_mutilata
 			modifier = {
 				consumer_goods_factor = 0.5
 			}
 		}
 		ARG_idea_integration_chile = {
-			picture = 
+			picture = vittoria_mutilata
 			modifier = {
 				consumer_goods_factor = 0.5
 			}
 		}
 		ARG_idea_integration_bolivia = {
-			picture = 
+			picture = vittoria_mutilata
 			modifier = {
 				consumer_goods_factor = 0.5
 			}
