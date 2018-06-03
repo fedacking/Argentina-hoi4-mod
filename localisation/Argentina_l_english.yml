@@ -120,6 +120,8 @@ ARG_ghioldi_takeover_tooltip:0 "Rodolfo Ghioldi has seized the apparatus of the 
   
 ### Focuses ###
 
+
+
 ##Revolution
 
 ARG_1937_revolution:0 "The 1937 Revolution"
@@ -144,6 +146,14 @@ ARG_ideological_expansion:0 "Ideological Crusade"
 ARG_ideological_expansion_desc:0 "With the growing influence of the USA, the south american region is getting filled with democracies. To secure the good of the people we must expand the borders of our ideology."
 ARG_new_state:0 "The New State"
 ARG_new_state_desc:0 "With the implementation of the new government policies, the political instability is finally over."
+
+## Economics
+ARG_renegotiate_treaty:0 "Eden-Malbran Treaty"
+ARG_renegotiate_treaty_desc:0 "We are still in the proces of getting acces to the british markets. We must send a delegation to continue and expand the Roca-Runciman treaty."
+ARG_port_madero:0 "Expand Puerto Madero"
+ARG_port_madero_desc:0 "After reducing tariffs to entice the British new shipments are coming in from Europe. We need to expand our docks capabilities to keep up with the new traffic."
+ARG_breadbasket:0 "Granary of the World"
+ARG_breadbasket_desc:0 "With the arrival of new investments and ."
 
 ##Diplomatic tree
 
