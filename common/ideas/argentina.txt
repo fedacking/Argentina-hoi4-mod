@@ -167,7 +167,7 @@ ideas = {
 			}
 		}
 
-		ARG_segundo_storni = {
+		ARG_segundo_r_storni = {
 			picture = generic_navy_south_america_2
 			allowed = {
 				original_tag = ARG
