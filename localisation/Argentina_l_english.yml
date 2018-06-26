@@ -61,6 +61,24 @@
  ARG_diogenes_taboada:0 "Diógenes Taboada"
  ARG_julio_roca:0 "Julio A. Pascual Roca"
  ARG_carlos_saavedra_lamas:0 "Carlos Saavedra Lamas"
+ ARG_domingo_mercante:0 "Domingo Mercante"
+ ARG_pedro_pablo_ramirez:0 "Pedro Pablo Ramírez"
+ ARG_antonio_parodi:0 "Antonio Parodi"
+ ARG_gabriel_a_hermansson:0 "Gabriel A. Hermansson"
+ ARG_eleazar_videla:0 "Eleazar Videla"
+ ARG_heriberto_la_galine:0 "Heriberto La Galine"
+ ARG_jorge_manni:0 "Jorge Manni"
+ ARG_thomas_martinez:0 "Thomas Martinez"
+ ARG_edelmiro_farrell:0 "Edelmiro Farrell"
+ ARG_carlos_maurino:0 "Carlos Maurino"
+ ARG_uribaldi_diaz_brittenberg:0 "Uribaldi Diaz Brittenberg"
+ ARG_hector_del_riva:0 "Hector del Riva"
+ ARG_luis_silva_carrasco:0 "Luis Silva Carrasco"
+ ARG_pedro_grosso_soto:0 "Pedro Grosso Soto"
+ ARG_segundo_storni:0 "Segundo R. Storni"
+ ARG_agustin_pedro_justo_th:0 "Agustín Pedro Justo"
+ ARG_eleazar_videla_th:0 "Eleazar Videla"
+ ARG_antonio_parodi_th:0 "Antonio Parodi"
  
 ### Opinion Modifiers ###
 
@@ -93,6 +111,13 @@ ARG_repetto_victory_tooltip:0 "Nicolas Repetto has managed to win the election."
 ARG_tooltip_focus_1937_revolution_effect:0 "Democracy did not prevail."
 ARG_fresco_takeover_tooltip:0 "Manuel Fresco has seized the apparatus of the state."
 ARG_ghioldi_takeover_tooltip:0 "Rodolfo Ghioldi has seized the apparatus of the state."
+ARG_fraude_patriotico_tooltip:0 "Concordancia will win the upcoming elections. (NEUTRALITY PATH)"
+ARG_ban_cgt_tooltip:0 "You'll get the chance to get another party in power. (DEMOCRATIC, FASCIST AND COMMUNIST PATH)"
+ARG_terror_plot_tooltip:0 "A terror plot to assassinate President Justo will take place. (FASCIST AND COMMUNIST PATH)"
+ARG_ucr_wins_tooltip:0 "UCR will win the election. (DEMOCRATIC PATH)"
+ARG_ps_wins_tooltip:0 "Partido Socialista will win the election. (DEMOCRATIC PATH)"
+ARG_commie_revolution_tooltip:0 "A communist revolution will begin. (COMMUNIST PATH)"
+ARG_fascist_takeover_tooltip:0 "A strong leader will takeover. (FASCIST PATH)"
  
  ### Cosmetic names ###
  
@@ -120,8 +145,6 @@ ARG_ghioldi_takeover_tooltip:0 "Rodolfo Ghioldi has seized the apparatus of the 
   
 ### Focuses ###
 
-
-
 ##Revolution
 
 ARG_1937_revolution:0 "The 1937 Revolution"
@@ -146,14 +169,6 @@ ARG_ideological_expansion:0 "Ideological Crusade"
 ARG_ideological_expansion_desc:0 "With the growing influence of the USA, the south american region is getting filled with democracies. To secure the good of the people we must expand the borders of our ideology."
 ARG_new_state:0 "The New State"
 ARG_new_state_desc:0 "With the implementation of the new government policies, the political instability is finally over."
-
-## Economics
-ARG_renegotiate_treaty:0 "Eden-Malbran Treaty"
-ARG_renegotiate_treaty_desc:0 "We are still in the proces of getting acces to the british markets. We must send a delegation to continue and expand the Roca-Runciman treaty."
-ARG_port_madero:0 "Expand Puerto Madero"
-ARG_port_madero_desc:0 "After reducing tariffs to entice the British new shipments are coming in from Europe. We need to expand our docks capabilities to keep up with the new traffic."
-ARG_breadbasket:0 "Granary of the World"
-ARG_breadbasket_desc:0 "With the arrival of new investments and ."
 
 ##Diplomatic tree
 
@@ -315,6 +330,19 @@ arg.25.d:0 " - "
 arg.25.a:0 "PS - Alfredo Palacios"
 arg.25.b:0 "UCR - José Pascual Tamborini"
 arg.25.c:0 "PDN - Pastor and Solano Lima"
+arg.26.t:0 "Argentina demands a referemdum"
+arg.26.d:0 "The Argentine goverment has demanded a referemdum to decide if we are going to remain independant or if we'll re-join Argentina as a province."
+arg.26.a:0 "Yes, we'll gladly rejoin our brothers."
+arg.26.b:0 "We left for a reason..."
+arg.27.t:0 "Uruguay declines!"
+arg.27.d:0 "The Uruguayan goverment has declined our demands."
+arg.27.a:0 "Uruguay will become a province whether they like it or not"
+arg.28.t:0 "The referemdum succeeds!"
+arg.28.d:0 "The Uruguayan people has voted in favor of re-joining us."
+arg.28.a:0 "Welcome back"
+arg.29.t:0 "Neighboring fascism"
+arg.29.d:0 "Recent political changes in our neighbor Argentina are beginning to influence our politics."
+arg.29.a:0 "Sad!"
 arg.42.t:0 "Argentine presidential election, 1949"
 arg.42.d:0 " - "
 arg.42.a:0 "PS - Alicia Moreau de Justo"
