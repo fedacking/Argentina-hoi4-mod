@@ -9,13 +9,17 @@ ARG_integrate_territory_category = {
 			controls_state = 299
 			controls_state = 720
 		}
-		visible = { original_tag = ARG }
+		visible = {
+			original_tag = ARG
+			NOT = { has_global_flag = malvinas_integrated_flag }
+		}
 		complete_effect = {
 			299 = { add_core_of = ROOT }
 			720 = { add_core_of = ROOT }
 			299 = { set_state_name = "Islas Malvinas" }
 			720 = { set_state_name = "Isla San Pedro" }
 			add_timed_idea = { idea = ARG_idea_integration_malvinas days = 30 }
+			set_global_flag = malvinas_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -28,10 +32,14 @@ ARG_integrate_territory_category = {
 		available = {
 			owns_state = 507
 		}
-		visible = { original_tag = ARG }
+		visible = {
+			original_tag = ARG
+			NOT = { has_global_flag = magallanes_integrated_flag }
+		}
 		complete_effect = {
 			507 = { add_core_of = ROOT }
 			add_timed_idea = { idea = ARG_idea_integration_magallanes days = 60 }
+			set_global_flag = magallanes_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -44,11 +52,15 @@ ARG_integrate_territory_category = {
 		available = {
 			owns_state = 502
 		}
-		visible = { original_tag = ARG }
+		visible = {
+			original_tag = ARG
+			NOT = { has_global_flag = riogrande_integrated_flag }
+		}
 		complete_effect = {
 			502 = { add_core_of = ROOT }
 			502 = { set_state_name = "Río Grande" }
 			add_timed_idea = { idea = ARG_idea_integration_riogrande days = 180 }
+			set_global_flag = riogrande_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -62,11 +74,15 @@ ARG_integrate_territory_category = {
 			owns_state = 279
 			owns_state = 506
 		}
-		visible = { original_tag = ARG }
+		visible = {
+			original_tag = ARG
+			NOT = { has_global_flag = chile_integrated_flag }
+		}
 		complete_effect = {
 			279 = { add_core_of = ROOT }
 			506 = { add_core_of = ROOT }			
 			add_timed_idea = { idea = ARG_idea_integration_chile days = 300 }
+			set_global_flag = chile_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -80,12 +96,105 @@ ARG_integrate_territory_category = {
 			owns_state = 302
 			owns_state = 487
 		}
-		visible = { original_tag = ARG }
+		visible = {
+			original_tag = ARG
+			NOT = { has_global_flag = bolivia_integrated_flag }
+		}
 		complete_effect = {
 			302 = { add_core_of = ROOT }
 			487 = { add_core_of = ROOT }			
 			add_timed_idea = { idea = ARG_idea_integration_bolivia days = 240 }
+			set_global_flag = bolivia_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
+	}
+}
+
+form_united_provinces_category = {
+	
+	form_united_provinces = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			# Argentina
+			custom_trigger_tooltip = {
+				tooltip = form_country_argentina_required_states_tt
+				controls_state = 512
+				controls_state = 278
+				controls_state = 511
+				controls_state = 508
+				controls_state = 509
+				controls_state = 510
+			}
+			# Uruguay
+			custom_trigger_tooltip = {
+				tooltip = form_country_uruguay_required_states_tt
+				controls_state = 300
+			}
+			# Paraguay
+			custom_trigger_tooltip = {
+				tooltip = form_country_paraguay_required_states_tt
+				controls_state = 301
+				controls_state = 688
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+			}
+			NOT = { has_global_flag = form_uprp_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = UPP
+			# Argentina
+			custom_effect_tooltip = form_country_argentina_coring_states_tt
+			hidden_effect = {
+				512 = { add_core_of = ROOT }
+				278 = { add_core_of = ROOT }
+				511 = { add_core_of = ROOT }
+				508 = { add_core_of = ROOT }
+				509 = { add_core_of = ROOT }
+				510 = { add_core_of = ROOT }
+			}
+			# Uruguay
+			custom_effect_tooltip = form_country_uruguay_coring_states_tt
+			hidden_effect = {
+				300 = { add_core_of = ROOT }
+			}
+			# Paraguay
+			custom_effect_tooltip = form_country_paraguay_coring_states_tt
+			hidden_effect = {
+				301 = { add_core_of = ROOT }
+				688 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = wtt_news.71 hours = 6 }
+				set_global_flag = form_uprp_flag
+				set_country_flag = ARG_United_Provinces
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 	}
 }
