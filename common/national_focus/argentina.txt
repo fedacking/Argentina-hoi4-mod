@@ -116,7 +116,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ARG_reach_out_oposition
+		id = ARG_reach_out_opposition
 		icon = GFX_goal_tripartite_pact
 		cost = 10
 		prerequisite = { focus = ARG_reinstate_the_secret_ballot }
