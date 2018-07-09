@@ -1,0 +1,42 @@
+focus_tree = {
+	id = argentinian_justo_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ARG
+		}
+	}
+	
+	default = no
+	
+	####################
+	###Political Tree###
+	####################
+
+	## Elections
+	
+	focus = {
+		id = ARG_1937_elections
+		icon = GFX_goal_elections
+		available = {
+			always = no 
+		}
+		bypass = {
+			OR = {
+				has_country_flag = ARG_fraude_patriotico
+				has_country_flag = ARG_token_reform
+				has_country_flag = ARG_march
+			}
+		}
+		x = 5
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = ARG_tooltip_focus_1937_election_effect
+		}
+	}
+}
