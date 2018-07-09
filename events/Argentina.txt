@@ -637,13 +637,14 @@ country_event = {
 		create_country_leader = {
 			name = "Emperor Justo"
 			desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
-			picture = "Portrait_Argentina_Agustin_Pedro_Justo.dds"
+			picture = "Portrait_Argentine_Emperor_Justo.tga"
 			expire = "1965.1.1"
 			ideology = fascism_ideology
 			traits = {
 				dictator
 			}
 		}
+		load_focus_tree = argentinian_justo_focus
 		set_politics = {
 			ruling_party = fascism
 			parties = {
@@ -1604,8 +1605,8 @@ country_event = {
 	option = {
 		name = arg.41.a
 		transfer_state = 502
+		set_country_flag = ARG_have_riogrande
 	}
-	set_country_flag = ARG_have_riogrande
 }
 
 country_event = {
@@ -1836,6 +1837,7 @@ country_event = {
             puppet = BRA
 		}
 		BRA = {
+			white_peace = ARG
 			set_state_controller = 503
 			set_state_controller = 504
 			set_state_controller = 501
@@ -1847,7 +1849,6 @@ country_event = {
 			set_state_controller = 497
 			set_state_controller = 498
 			set_state_controller = 499
-			white_peace_with_ROOT = yes
 		}
 	}			
 	option = { # no border strip
@@ -1865,6 +1866,7 @@ country_event = {
             puppet = BRA
 		}
 		BRA = {
+			white_peace = ARG
 			set_state_controller = 503
 			set_state_controller = 504
 			set_state_controller = 501
@@ -1876,8 +1878,7 @@ country_event = {
 			set_state_controller = 497
 			set_state_controller = 498
 			set_state_controller = 499
-            set_state_controller = 502			
-			white_peace_with_ROOT = yes
+            set_state_controller = 502
 		}
 	}
 	option = { #conquest
@@ -1936,7 +1937,7 @@ country_event = {
 			set_state_controller = 498
 			set_state_controller = 499
             set_state_controller = 502			
-			white_peace_with_ROOT = yes
+			white_peace = ARG
 		}
 	}
 	option = { #conquest
