@@ -789,6 +789,9 @@ opinion_modifiers = {
 	
 	POR_rejected_lease = { value = -35 }
 	
-	ARG_economic_treaty = { value = 50 }
+	##Argentine focus
+	
+	ARG_british_economic_treaty = { value = 50 }
+	ARG_german_economic_treaty = { value = 50 }
 	ARG_preserve_democracy = { value = 65 }
 }	
