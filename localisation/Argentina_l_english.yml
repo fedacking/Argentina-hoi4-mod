@@ -52,6 +52,10 @@
  ARG_idea_integration_bolivia:0 "Integration of Bolivia"
  ARG_idea_integration_bolivia_desc:0 "The government is directing resources towards the integration of Bolivia."
  
+### Opinion Modifiers ###
+ ARG_british_economic_treaty:0 "Eden-Malbrán Treaty"
+ ARG_german_economic_treaty:0 "Argentine-German Cooperation Treaty"
+ 
  ### Ministers ###
  ARG_juan_domingo_peron:0 "Juan Domingo Perón"
  ARG_ramon_castillo:0 "Ramón S. Castillo"
@@ -242,6 +246,11 @@ ARG_ideological_expansion:0 "Ideological Crusade"
 ARG_ideological_expansion_desc:0 "With the growing influence of the USA, the south american region is getting filled with democracies. To secure the good of the people we must expand the borders of our ideology."
 ARG_new_state:0 "The New State"
 ARG_new_state_desc:0 "With the implementation of the new government policies, the political instability is finally over."
+
+##Eco Tree
+#Tree Inicial
+ARG_renegotiate_treaty:0 "Eden-Malbrán Treaty"
+ARG_renegotiate_treaty_desc:0 "In 1932 we signed the Roca Runciman treaty with the United Kingdom, ensuring that we would continue to exports beef and in exchange we would lift tariffs towards most industrial imports from Great Britain. It is time to expand this treaty to ensure our agricultural outpout has buyers and that our industry has the supplies it needs to operate."
 
 ##Diplomatic tree
 
