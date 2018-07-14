@@ -536,10 +536,6 @@ focus_tree = {
 			OR = {has_government = democratic
 			has_government = neutrality}
 		}
-		mutually_exclusive = {
-		focus = ARG_argentine_first
-		focus = ARG_german_inversions
-		}
 		bypass = { 
 			OR = {
 				has_government = fascism 
@@ -555,7 +551,7 @@ focus_tree = {
 			ENG = {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ARG_economic_treaty
+					modifier = ARG_british_economic_treaty
 				}
 			}
 			
@@ -689,6 +685,10 @@ focus_tree = {
 			ENG = {has_government = democratic}
 			OR = {has_government = democratic
 			has_government = neutrality}
+		}
+		mutually_exclusive = {
+			focus = ARG_argentine_first
+			focus = ARG_german_inversions
 		}
 		x = 28
 		y = 3
@@ -919,8 +919,8 @@ focus_tree = {
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = ARG_industrial_development }
 		mutually_exclusive = {
-		focus = ARG_argentine_first
-		focus = ARG_british_treaty
+			focus = ARG_argentine_first
+			focus = ARG_british_treaty
 		}
 		available = {
 			GER = {has_government = fascism}
@@ -934,9 +934,9 @@ focus_tree = {
 			GER = {
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ARG_economic_treaty
+					modifier = ARG_german_economic_treaty
 				}
-			}
+			}`
 			add_tech_bonus = {
 				name = synth_resources
 				bonus = 0.65
@@ -1109,6 +1109,12 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = free_trade
 				add_idea = limited_exports
+			}
+			ENG = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_british_economic_treaty
+				}
 			}
 		}
 	}
