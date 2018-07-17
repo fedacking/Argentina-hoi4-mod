@@ -183,7 +183,7 @@ form_united_provinces_category = {
 				688 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
-				news_event = { id = wtt_news.71 hours = 6 }
+				news_event = { id = arg_news.1 hours = 6 }
 				set_global_flag = form_uprp_flag
 				set_country_flag = ARG_United_Provinces
 			}
