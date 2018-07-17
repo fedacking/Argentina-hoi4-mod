@@ -218,9 +218,9 @@ create_field_marshal = {
 	portrait_path = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
 	traits = {
 	politically_connected
-	swamp_fox
-	offensive_doctrine
-	fast_planner
+		swamp_fox
+		offensive_doctrine
+		fast_planner
 	}
 	skill = 3
 	attack_skill = 4
@@ -233,9 +233,9 @@ create_field_marshal = {
 	name = "Luis Dellepiane"
 	portrait_path = "gfx/leaders/ARG/Portrait_ARG_Luis_Dellepiane.tga"
 	traits = {
-	cautious
-	brilliant_strategist
-	old_guard
+		trait_cautious
+		brilliant_strategist
+		old_guard
 	}
 	skill = 2
 	attack_skill = 1
