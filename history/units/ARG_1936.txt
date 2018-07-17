@@ -16,7 +16,7 @@
 
 division_template = {
 	name = "Infantería de Montaña"			# Mountain Brigade
-	division_names_group = SPAN_MTN_02
+	division_names_group = SPAN_MNT_02
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
@@ -144,16 +144,16 @@ units = {
 		name = "Armada Argentina"
 		base = 12364
 		location = 12364
-		ship = { name = "ARP 'Argentina'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Rivadavia'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Moreno'" definition = battleship equipment = { battleship_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Pueyrredon'" definition = heavy_cruiser equipment = { heavy_cruiser_pre = { amount = 1 owner = ARG } }}
+		ship = { name = "ARP 'Argentina'" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Rivadavia'" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Moreno'" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Pueyrredon'" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ARG } }}
 		ship = { name = "ARP 'Almirante Brown'" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ARG } }}
 		ship = { name = "ARP 'Veintecinco de Mayo'" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ARG } }}
-		ship = { name = "ARP 'Catamarca'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Cervantes'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Santa Fé'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
-		ship = { name = "ARP 'Eva'" definition = destroyer equipment = { destroyer_pre = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Catamarca'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Cervantes'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Santa Fé'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
+		ship = { name = "ARP 'Eva'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
 		ship = { name = "ARP 'Christina'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
 		ship = { name = "ARP 'Buenos'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
 		ship = { name = "ARP 'Aires'" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARG } } }
