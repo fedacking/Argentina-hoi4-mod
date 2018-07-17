@@ -936,7 +936,7 @@ focus_tree = {
 					target = ROOT
 					modifier = ARG_german_economic_treaty
 				}
-			}`
+			}
 			add_tech_bonus = {
 				name = synth_resources
 				bonus = 0.65
