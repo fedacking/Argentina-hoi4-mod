@@ -1951,40 +1951,4 @@ country_event = {
 	}
 }
 
-# Formation of United Provinces of the Rio de la Plata
-
-news_event = {
-	id = wtt_news.71
-	title = wtt_news.71.t
-	desc = wtt_news.71.desc
-	picture = GFX_news_event_generic_parliament
-
-	is_triggered_only = yes
-	
-	option = {
-		name = wtt_news.71.a
-		trigger = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-			}
-			NOT = { has_war_with = FROM }
-		}
-	}
-	option = {
-		name = wtt_news.71.b
-		trigger = {
-			NOT = { original_tag = ARG }
-			NOT = { original_tag = URG }
-			NOT = { original_tag = PAR }
-			NOT = { has_war_with = FROM }
-		}
-	}
-	option = {
-		name = wtt_news.71.c
-		trigger = {
-			has_war_with = FROM
-		}
-	}
-}
+# Formation of United Provinces of the Rio de la Plata, pasado a otro archivo

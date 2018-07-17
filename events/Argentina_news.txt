@@ -1,0 +1,40 @@
+﻿###########################
+######Argentina Events#####
+###########################
+add_namespace = arg_news
+
+news_event = {
+	id = arg_news.1
+	title = arg_news.1.t
+	desc = arg_news.1.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = arg_news.1.a
+		trigger = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = arg_news.1.b
+		trigger = {
+			NOT = { original_tag = ARG }
+			NOT = { original_tag = URG }
+			NOT = { original_tag = PAR }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = arg_news.1.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
