@@ -806,7 +806,6 @@ country_event = { #Strong Leader
 				traits = {}
 			}
 			remove_ideas = {ARG_concordancia}
-			set_cosmetic_tag = ARF
 			set_country_flag = ARG_fresco_wins
 		}
 		URG = {
@@ -1064,33 +1063,6 @@ country_event = { #Repetto wins
 					popularity = 8
 				}
 			}
-		}
-	}
-}
-
-country_event = { #Fresco La Plata
-	id = arg.22
-	title = arg.22.t
-	desc = arg.22.d
-	fire_only_once = yes
-	mean_time_to_happen = { days = 1 }
-	trigger = {
-		OR = {
-			tag = ARG
-			tag = PAR
-			tag = URG
-		}
-		has_country_flag = ARG_Fresco
-		has_country_flag = ARG_United_Provinces
-	}
-	
-	option = {
-		name = arg.22.a
-		ai_chance = {
-			factor = 100
-		}
-		hidden_effect = {
-			set_cosmetic_tag = UPPF
 		}
 	}
 }
