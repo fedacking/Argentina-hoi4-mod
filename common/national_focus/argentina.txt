@@ -689,6 +689,17 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_argentine_first
 			focus = ARG_german_inversions
+		}		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_alvear_wins
+			}
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_ortiz_wins
+			}
 		}
 		x = 28
 		y = 3
@@ -929,7 +940,13 @@ focus_tree = {
 		x = 20
 		y = 3
 		cost = 10
-		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_fresco_wins
+			}
+		}
 		completion_reward = {
 			GER = {
 				add_opinion_modifier = {
@@ -1099,7 +1116,13 @@ focus_tree = {
 		focus = ARG_german_inversions
 		}
 		available = {
-			NOT = {has_government = democratic}
+			OR = {
+				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_alvear_wins
+				has_country_flag = ARG_repetto_wins
+				has_country_flag = ARG_fresco_wins
+				has_country_flag = ARG_ghioldi_wins
+			}
 		}
 		x = 24
 		y = 3
@@ -2038,7 +2061,7 @@ focus_tree = {
 		cost = 8
 		available = {
 			OR = {
-			has_completed_focus = ARG_reach_out_oposition
+			has_completed_focus = ARG_reach_out_opposition
 			has_completed_focus = ARG_new_republic
 			has_completed_focus = ARG_new_state
 			}
