@@ -1129,14 +1129,14 @@ focus_tree = {
 		x = 24
 		y = 3
 		cost = 10
-		modifier = {
-			factor = 100
-			has_country_flag = ARG_ghioldi_wins
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				OR = {has_country_flag = ARG_ghioldi_wins
+					has_country_flag = ARG_repetto_wins}
+			}		
 		}
-		modifier = {
-			factor = 100
-			has_country_flag = ARG_repetto_wins
-		}		
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = free_trade
