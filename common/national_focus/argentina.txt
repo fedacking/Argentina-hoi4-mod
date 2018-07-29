@@ -532,7 +532,8 @@ focus_tree = {
 		id = ARG_renegotiate_treaty
 		icon = GFX_goal_generic_positive_trade_relations
 		available = {
-			ENG = {has_government = democratic}
+			ENG = {has_government = democratic
+				is_puppet = no}
 			OR = {has_government = democratic
 			has_government = neutrality}
 		}
@@ -682,7 +683,10 @@ focus_tree = {
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = ARG_industrial_development }
 		available = {
-			ENG = {has_government = democratic}
+			ENG = {
+				has_government = democratic
+				is_puppet = no
+			}
 			OR = {
 				has_country_flag = ARG_ortiz_wins
 				has_country_flag = ARG_alvear_wins
@@ -936,7 +940,10 @@ focus_tree = {
 			focus = ARG_british_treaty
 		}
 		available = {
-			GER = {has_government = fascism}
+			GER = {
+				has_government = fascism
+				is_puppet = no
+				}
 			has_government = fascism
 		}
 		x = 20
@@ -2344,6 +2351,8 @@ focus_tree = {
 		icon = GFX_focus_generic_join_comintern
 		cost = 8
 		available = {
+			SOV = { has_government = communism
+				is_puppet = no }
 			has_government = communism
 		}
 		mutually_exclusive = {
@@ -2386,7 +2395,9 @@ focus_tree = {
 		icon = GFX_focus_ger_reichskommisariats
 		cost = 8
 		available = {
-			GER = { has_government = fascism }
+			GER = { has_government = fascism
+				is_puppet = no }
+			has_government = fascism
 		}		
 		mutually_exclusive = {
 			focus = ARG_comintern_alliance
@@ -2411,6 +2422,11 @@ focus_tree = {
 				exists = no 
 			}
 		}
+		available = {
+			ENG = {
+				owns_state = 299
+			}
+		}
 		prerequisite = {
 			focus = ARG_german_diplomacy
 			focus = ARG_own_way
@@ -2430,7 +2446,13 @@ focus_tree = {
 		id = ARG_paraguay_invitation
 		icon = GFX_goal_paraguay
 		cost = 8
-		available = { has_completed_focus = ARG_ideological_expansion }
+		available = { 
+			has_completed_focus = ARG_ideological_expansion 
+			PAR = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
 		bypass = {
 			PAR = {
 				exists = no
@@ -2453,7 +2475,13 @@ focus_tree = {
 		id = ARG_uruguay_annexation
 		icon = GFX_goal_uruguay
 		cost = 8
-		available = { has_completed_focus = ARG_ideological_expansion }
+		available = { 
+			has_completed_focus = ARG_ideological_expansion 
+			URG = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
 		bypass = {
 			URG = {
 				exists = no 
@@ -2476,10 +2504,15 @@ focus_tree = {
 		id = ARG_war_bolivia
 		icon = GFX_goal_bolivia
 		cost = 8
-		available = {}
 		bypass = {
 			BOL = {
 				exists = no 
+			}
+		}
+		available = {
+			BOL = {
+				exists = yes 
+				is_puppet = no
 			}
 		}
 		prerequisite = {
@@ -2503,10 +2536,15 @@ focus_tree = {
 		id = ARG_andean_crisis
 		icon = GFX_goal_chile
 		cost = 8
-		available = {}
 		bypass = {
 			CHL = {
 				exists = no 
+			}
+		}
+		available = {
+			CHL = {
+				exists = yes 
+				is_puppet = no
 			}
 		}
 		prerequisite = {
@@ -2529,10 +2567,15 @@ focus_tree = {
 		id = ARG_war_chile
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 8
-		available = {}
 		bypass = {
 			CHL = {
 				exists = no 
+			}
+		}
+		available = {
+			CHL = {
+				exists = yes 
+				is_puppet = no
 			}
 		}
 		prerequisite = {
@@ -2553,10 +2596,15 @@ focus_tree = {
 		id = ARG_rio_grande_demands
 		icon = GFX_goal_brazil
 		cost = 8
-		available = {}
 		bypass = {
 			BRA = {
 				exists = no 
+			}
+		}
+		available = {
+			BRA = {
+				exists = yes 
+				is_puppet = no
 			}
 		}
 		prerequisite = {
@@ -2579,10 +2627,15 @@ focus_tree = {
 		id = ARG_war_brazil
 		icon = GFX_goal_generic_major_war
 		cost = 8
-		available = {}
 		bypass = {
 			BRA = {
 				exists = no 
+			}
+		}
+		available = {
+			BRA = {
+				exists = yes 
+				is_puppet = no
 			}
 		}
 		prerequisite = {
