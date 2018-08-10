@@ -83,8 +83,6 @@
  ARG_agustin_pedro_justo_th:0 "Agustín Pedro Justo"
  ARG_eleazar_videla_th:0 "Eleazar Videla"
  ARG_antonio_parodi_th:0 "Antonio Parodi"
- 
-### Opinion Modifiers ###
 
 ### Decisions Categories ###
 
@@ -105,6 +103,9 @@ ARG_integrate_magallanes:0 "Integrate Magallanes"
 ARG_integrate_riogrande:0 "Integrate Río Grande"
 ARG_integrate_chile:0 "Integrate Chile"
 ARG_integrate_bolivia:0 "Integrate Bolivia"
+
+### Flags ###
+ARG_ortiz_wins:0 "Ortiz won the presidency!"
 
 ### Tooltips ###
 
@@ -277,6 +278,19 @@ ARG_military_factories2:0 "Expand Military Factories"
 ARG_military_factories2_desc:0 "After the successful integration of the new Mauser Argentina SA in the Argentinian economy it's time to expand the production of our new rifle and ensure Argentinian sovereignty."
 ARG_german_engeneering:0 "German Engineering"
 ARG_german_engeneering_desc:0 "With our new cooperation between the German industries we have begun to acquire new engineers and techniques for military and resource prodction."
+#Argentina > El resto
+ARG_argentine_first:0 "Argentina First"
+ARG_argentine_first_desc:0 "This has been the worst trade deal in the history of trade deals, maybe ever. From now on it will be Argentina First!"
+ARG_argentine_roads:0 "Asphalt the National Route 9"
+ARG_argentine_roads_desc:0 "Since Argentina was borne, the crucial way to our northen provinces was the Ruta Nacional 9. It is time too bring it to modern standars and connect it to the proposed Panamericana. This will provide jobs for the People, a boost to our economy and proper ways for transport our army, if it ever came to that."
+ARG_argentine_railways:0 "Nationalize Argentine Railways"
+ARG_argentine_railways_desc:0 "Ever since the English started owning our railways we were not master of our destiny. Taking control of our trains will allow us to expand the service and cover neglected parts of our economy. Putting the plans under approval by the army is of course, a necessary precaution."
+ARG_argentine_civ:0 "Expand the Civilian Economy"
+ARG_argentine_civ_desc:0 "With our reinvigorated focus on internal economics, it's time to expand our light infraestructure. To do so we wil expand the program of loans to small business and ensure that labour can afford the new products."
+ARG_argentine_civ2:0 "Reinvigorate the Provinces"
+ARG_argentine_civ2_desc:0 "For too long the interior has been left behind in economic backwardness. Providing tax incentives to business to move to the interior and ensuring our infraestructure includes them in their plans, we will ensure the growth of the Nation"
+ARG_argentine_construction:0 "New Construction Contracts"
+ARG_argentine_construction_desc:0 "We still have much to do, so much to build. In order to expand our capabilities, we are reinvigorating the government agencies and contracts related to construction, to streamline and improve the process."
 ##Diplomatic tree
 
 
