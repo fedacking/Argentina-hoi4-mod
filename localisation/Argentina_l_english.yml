@@ -291,6 +291,23 @@ ARG_argentine_civ2:0 "Reinvigorate the Provinces"
 ARG_argentine_civ2_desc:0 "For too long the interior has been left behind in economic backwardness. Providing tax incentives to business to move to the interior and ensuring our infraestructure includes them in their plans, we will ensure the growth of the Nation"
 ARG_argentine_construction:0 "New Construction Contracts"
 ARG_argentine_construction_desc:0 "We still have much to do, so much to build. In order to expand our capabilities, we are reinvigorating the government agencies and contracts related to construction, to streamline and improve the process."
+#Britanicos
+ARG_british_treaty:0 "Attract British Capital"
+ARG_british_treaty_desc:0 "With the reinvigorated trade between our nations, it's time to bring English businesses and capital to fuel our economy and combat unemployment."
+ARG_migrant_labour:0 "Migrant Labour"
+ARG_migrant_labour_desc:0 "Since our cooperation with the british has increased, the port expansion has started employing the inmigrants right out of the ships. With this new welcoming act they are joining the labour force, increasing it's productivity."
+ARG_expanded_civilian_economy:0 "The New Consumers"
+ARG_expanded_civilian_economy_desc:0 "The British consumer is starting to take a liking for argentinian products. With the new meat packers benefit, from the expansion the civilian economy has been reinvigorated."
+ARG_british_war_effort:0 "War Meat Exports"
+ARG_british_war_effort_desc:0 "The English are embroiled in a war and need any foodstuffs we can provide them. This has proved to be a profitable oportunity for us, and we are poised to benefit from this unbalanced trade."
+ARG_british_military_effort:0 "Support British War Effort"
+ARG_british_military_effort_desc:0 "The English have asked us to start producing war material needed for the war, in exchange for cancelation of debts and new lines of credit."
+ARG_british_full_economic_cooperation:0 "Full Economic Cooperation"
+ARG_british_full_economic_cooperation_desc:0 "It's time to devote most of our exports to fuelling the british war machine. In exchange for our support, we will get a set of british engineers and dock plans to expand our merchant marine. This will bring us to prosperity!"
+
+ARG_research_1:0 "New Research Techniques"
+ARG_research_1_desc:0 "Thanks to our improved economic position we have been to improved our scientific and military teams, furthering the progress and scientific institution of the Argentinian Nation."
+
 ##Diplomatic tree
 
 
