@@ -13,12 +13,19 @@ ARG_integrate_territory_category = {
 			original_tag = ARG
 			NOT = { has_global_flag = malvinas_integrated_flag }
 		}
-		complete_effect = {
+		highlight_states = {
+			state = 299
+			state = 720
+		}
+        modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 30
+		remove_effect = {
 			299 = { add_core_of = ROOT }
-			720 = { add_core_of = ROOT }
 			299 = { set_state_name = "Islas Malvinas" }
+			720 = { add_core_of = ROOT }
 			720 = { set_state_name = "Isla San Pedro" }
-			add_timed_idea = { idea = ARG_idea_integration_malvinas days = 30 }
 			set_global_flag = malvinas_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
@@ -36,9 +43,15 @@ ARG_integrate_territory_category = {
 			original_tag = ARG
 			NOT = { has_global_flag = magallanes_integrated_flag }
 		}
-		complete_effect = {
+		highlight_states = {
+			state = 507
+		}
+        modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 60
+		remove_effect = {
 			507 = { add_core_of = ROOT }
-			add_timed_idea = { idea = ARG_idea_integration_magallanes days = 60 }
 			set_global_flag = magallanes_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
@@ -56,10 +69,16 @@ ARG_integrate_territory_category = {
 			original_tag = ARG
 			NOT = { has_global_flag = riogrande_integrated_flag }
 		}
-		complete_effect = {
+		highlight_states = {
+			state = 502
+		}
+        modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 180
+		remove_effect = {
 			502 = { add_core_of = ROOT }
 			502 = { set_state_name = "Río Grande" }
-			add_timed_idea = { idea = ARG_idea_integration_riogrande days = 180 }
 			set_global_flag = riogrande_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
@@ -78,10 +97,17 @@ ARG_integrate_territory_category = {
 			original_tag = ARG
 			NOT = { has_global_flag = chile_integrated_flag }
 		}
-		complete_effect = {
+		highlight_states = {
+			state = 279
+			state = 506
+		}
+        modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 300
+		remove_effect = {
 			279 = { add_core_of = ROOT }
-			506 = { add_core_of = ROOT }			
-			add_timed_idea = { idea = ARG_idea_integration_chile days = 300 }
+			506 = { add_core_of = ROOT }
 			set_global_flag = chile_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
@@ -100,10 +126,17 @@ ARG_integrate_territory_category = {
 			original_tag = ARG
 			NOT = { has_global_flag = bolivia_integrated_flag }
 		}
-		complete_effect = {
+		highlight_states = {
+			state = 302
+			state = 487
+		}
+        modifier = {
+			civilian_factory_use = 1
+		}
+		days_remove = 240
+		remove_effect = {
 			302 = { add_core_of = ROOT }
-			487 = { add_core_of = ROOT }			
-			add_timed_idea = { idea = ARG_idea_integration_bolivia days = 240 }
+			487 = { add_core_of = ROOT }
 			set_global_flag = bolivia_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
@@ -157,6 +190,17 @@ form_united_provinces_category = {
 				original_tag = PAR
 			}
 			NOT = { has_global_flag = form_uprp_flag }
+		}
+		highlight_states = {
+			state = 512
+			state = 278
+			state = 511
+			state = 508
+			state = 509
+			state = 510
+			state = 300
+			state = 301
+			state = 688
 		}
 
 		complete_effect = {
