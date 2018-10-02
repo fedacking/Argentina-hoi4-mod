@@ -1,3 +1,103 @@
+form_united_provinces_category = {
+	
+	form_united_provinces = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			# Argentina
+			custom_trigger_tooltip = {
+				tooltip = form_country_argentina_required_states_tt
+				controls_state = 512
+				controls_state = 278
+				controls_state = 511
+				controls_state = 508
+				controls_state = 509
+				controls_state = 510
+			}
+			# Uruguay
+			custom_trigger_tooltip = {
+				tooltip = form_country_uruguay_required_states_tt
+				controls_state = 300
+			}
+			# Paraguay
+			custom_trigger_tooltip = {
+				tooltip = form_country_paraguay_required_states_tt
+				controls_state = 301
+				controls_state = 688
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+			}
+			NOT = { has_global_flag = form_uprp_flag }
+		}
+		highlight_states = {
+			state = 512
+			state = 278
+			state = 511
+			state = 508
+			state = 509
+			state = 510
+			state = 300
+			state = 301
+			state = 688
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = UPP
+			# Argentina
+			custom_effect_tooltip = form_country_argentina_coring_states_tt
+			hidden_effect = {
+				512 = { add_core_of = ROOT }
+				278 = { add_core_of = ROOT }
+				511 = { add_core_of = ROOT }
+				508 = { add_core_of = ROOT }
+				509 = { add_core_of = ROOT }
+				510 = { add_core_of = ROOT }
+			}
+			# Uruguay
+			custom_effect_tooltip = form_country_uruguay_coring_states_tt
+			hidden_effect = {
+				300 = { add_core_of = ROOT }
+			}
+			# Paraguay
+			custom_effect_tooltip = form_country_paraguay_coring_states_tt
+			hidden_effect = {
+				301 = { add_core_of = ROOT }
+				688 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = { id = arg_news.1 hours = 6 }
+				set_global_flag = form_uprp_flag
+				set_country_flag = ARG_United_Provinces
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
 ARG_integrate_territory_category = {
 	ARG_integrate_malvinas = {
 		icon = generic_form_nation
@@ -140,105 +240,5 @@ ARG_integrate_territory_category = {
 			set_global_flag = bolivia_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
-	}
-}
-
-form_united_provinces_category = {
-	
-	form_united_provinces = {
-
-		icon = generic_form_nation
-
-		allowed = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-			}
-			has_dlc = "Waking the Tiger"
-		}
-
-		available = {
-			is_subject = no
-			# Argentina
-			custom_trigger_tooltip = {
-				tooltip = form_country_argentina_required_states_tt
-				controls_state = 512
-				controls_state = 278
-				controls_state = 511
-				controls_state = 508
-				controls_state = 509
-				controls_state = 510
-			}
-			# Uruguay
-			custom_trigger_tooltip = {
-				tooltip = form_country_uruguay_required_states_tt
-				controls_state = 300
-			}
-			# Paraguay
-			custom_trigger_tooltip = {
-				tooltip = form_country_paraguay_required_states_tt
-				controls_state = 301
-				controls_state = 688
-			}
-		}
-
-		visible = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-			}
-			NOT = { has_global_flag = form_uprp_flag }
-		}
-		highlight_states = {
-			state = 512
-			state = 278
-			state = 511
-			state = 508
-			state = 509
-			state = 510
-			state = 300
-			state = 301
-			state = 688
-		}
-
-		complete_effect = {
-			set_cosmetic_tag = UPP
-			# Argentina
-			custom_effect_tooltip = form_country_argentina_coring_states_tt
-			hidden_effect = {
-				512 = { add_core_of = ROOT }
-				278 = { add_core_of = ROOT }
-				511 = { add_core_of = ROOT }
-				508 = { add_core_of = ROOT }
-				509 = { add_core_of = ROOT }
-				510 = { add_core_of = ROOT }
-			}
-			# Uruguay
-			custom_effect_tooltip = form_country_uruguay_coring_states_tt
-			hidden_effect = {
-				300 = { add_core_of = ROOT }
-			}
-			# Paraguay
-			custom_effect_tooltip = form_country_paraguay_coring_states_tt
-			hidden_effect = {
-				301 = { add_core_of = ROOT }
-				688 = { add_core_of = ROOT }
-			}
-			hidden_effect = {
-				news_event = { id = arg_news.1 hours = 6 }
-				set_global_flag = form_uprp_flag
-				set_country_flag = ARG_United_Provinces
-			}
-		}
-
-		ai_will_do = {
-			factor = 200
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
 	}
 }
