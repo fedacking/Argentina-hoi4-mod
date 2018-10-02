@@ -1431,7 +1431,7 @@ focus_tree = {
 			has_completed_focus = ARG_industrial_development
  		}
 		x = 14
-		y = 7
+		y = 8
 		cost = 8
 		available = {
 		}
@@ -1466,7 +1466,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_motorized
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_generic_production2
 		cost = 8
 		prerequisite = {
 			focus = ARG_mobile_warfare
@@ -1508,7 +1508,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_light_tanks
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_generic_license_production
 		cost = 8
 		prerequisite = {
 			focus = ARG_mobile_warfare
@@ -1590,7 +1590,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_infantry_sfp
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_little_entente
 		cost = 8
 		prerequisite = {
 			focus = ARG_superior_fire_power
@@ -1712,7 +1712,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_support_gbp
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_rhineland
 		cost = 8
 		prerequisite = {
 			focus = ARG_grand_battle_plan
@@ -1732,7 +1732,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_air_support_gbp
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_secret_rearmament
 		cost = 8
 		prerequisite = {
 			focus = ARG_support_gbp
@@ -1742,9 +1742,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_tech_bonus = {
+				name = infantry_bonus
 				bonus = 0.5
 				uses = 1
-				category = battlefield_support_tree
+				category = infantry_weapons
 			}
 		}
 	}
@@ -1775,7 +1776,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_gbp_bonus
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_generic_military_mission
 		cost = 8
 		prerequisite = {
 			focus = ARG_spec_ops
@@ -1824,6 +1825,193 @@ focus_tree = {
 		relative_position_id = ARG_review_military
 		x = 0
 		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	##air
+	
+	focus = {
+		id = ARG_air_command
+		icon = GFX_goal_generic_position_armies
+		available = {
+			has_completed_focus = ARG_industrial_development
+		}
+		x = 24
+		y = 9
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doctrine
+				bonus = 0.55
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_air_engineers
+		icon = GFX_goal_generic_air_production
+		prerequisite = { 
+			focus = ARG_air_command
+		}
+		relative_position_id = ARG_air_command
+		x = -1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_fabrica_militar_aviones
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { 
+			focus = ARG_air_command
+		}
+		relative_position_id = ARG_air_command
+		x = 1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_plane_research_group
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		prerequisite = { focus = ARG_air_engineers }
+		prerequisite = { focus = ARG_fabrica_militar_aviones }
+		available = {
+		}
+		relative_position_id = ARG_air_command
+		x = 0
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_long_range
+		icon = GFX_goal_expand_the_luftwaffe
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_heavy_armament
+			focus = ARG_agile_planes
+		}
+		relative_position_id = ARG_plane_research_group
+		x = -2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ARG_heavy_armament
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_long_range
+			focus = ARG_agile_planes
+		}
+		relative_position_id = ARG_plane_research_group
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_agile_planes
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_heavy_armament
+			focus = ARG_long_range
+		}
+		relative_position_id = ARG_plane_research_group
+		x = 2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_strategic_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = ARG_long_range }
+		relative_position_id = ARG_long_range
+		x = -1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_tactical_bombers
+		icon = GFX_focus_chi_flying_tigers
+		prerequisite = { 
+			focus = ARG_long_range
+			focus = ARG_heavy_armament
+		}
+		relative_position_id = ARG_heavy_armament
+		x = -1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_close_air_support
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { 
+			focus = ARG_agile_planes
+			focus = ARG_heavy_armament
+		}
+		relative_position_id = ARG_heavy_armament
+		x = 1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = ARG_fighter_planes
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ARG_agile_planes }
+		relative_position_id = ARG_agile_planes
+		x = 1
+		y = 1
 		cost = 10
 		
 		completion_reward = {
