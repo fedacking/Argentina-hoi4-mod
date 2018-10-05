@@ -395,6 +395,13 @@ ideas = {
 			}
 		}
 		
+		ARG_government_opposition_cooperation = {
+			picture = general_staff
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		
 		ARG_idea_political_liberties1 = {
 			picture = generic_research_bonus
 			modifier = {
