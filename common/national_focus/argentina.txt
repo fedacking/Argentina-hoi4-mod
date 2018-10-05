@@ -59,7 +59,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = ARG_ortiz_victory_tooltip				
+			custom_effect_tooltip = ARG_ortiz_victory_tooltip
 		}
 	}
 	
@@ -125,7 +125,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_stability = 0.1
+			add_ideas = ARG_government_opposition_cooperation
+			set_country_flag = ARG_stabilized
+			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}
 	
@@ -333,6 +335,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_stability = 0.2
+			set_country_flag = ARG_stabilized
+			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}
 	
@@ -520,6 +524,8 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			remove_ideas = ARG_idea_revolution
+			set_country_flag = ARG_stabilized
+			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}
 	
@@ -548,19 +554,16 @@ focus_tree = {
 		cost = 10
 		
 		completion_reward = {
-		
 			ENG = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = ARG_british_economic_treaty
 				}
-			}
-			
+			}			
 			swap_ideas = {
 				remove_idea = export_focus
 				add_idea = free_trade
-			}
-			
+			}			
 		}
 	}
 
@@ -1140,8 +1143,10 @@ focus_tree = {
 			factor = 0
 			modifier = {
 				factor = 100
-				OR = {has_country_flag = ARG_ghioldi_wins
-					has_country_flag = ARG_repetto_wins}
+				OR = {
+					has_country_flag = ARG_ghioldi_wins
+					has_country_flag = ARG_repetto_wins
+				}
 			}		
 		}
 		completion_reward = {
@@ -2354,16 +2359,16 @@ focus_tree = {
 		id = ARG_diplomacy
 		icon = GFX_goal_generic_propaganda
 		cost = 8
+		bypass = {
+			has_country_flag = ARG_stabilized
+		}
 		available = {
-			OR = {
-			has_completed_focus = ARG_reach_out_opposition
-			has_completed_focus = ARG_new_republic
-			has_completed_focus = ARG_new_state
-			}
+			always = no
 		}
 		x = 37
 		y = 0
 		completion_reward = {
+			#
 		}
 	}
 	
@@ -2413,6 +2418,48 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			ENG = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
+			FRA = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
+			AST = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
+			CAN = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
+			NZL = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
+			USA = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_allied_affinity
+				}
+			}
 		}
 	}
 	
@@ -2531,7 +2578,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = extensive_conscription
+			}
 		}
 	}
 	
@@ -2599,7 +2649,7 @@ focus_tree = {
 		}
 	}
 	
-#collectivist diplomacy
+#bad guyz
 	
 	focus = {
 		id = ARG_collectivist_diplomacy
@@ -2717,7 +2767,11 @@ focus_tree = {
 		completion_reward = {
 			ENG = {
 				country_event = arg.33
-			}				
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_malvinas_or_war
+				}
+			}
 		}
 	}
 	
@@ -2777,17 +2831,12 @@ focus_tree = {
 				country_event = arg.26
 			}
 		}
-	}	
+	}
 	
 	focus = {
 		id = ARG_war_bolivia
 		icon = GFX_goal_bolivia
 		cost = 8
-		bypass = {
-			BOL = {
-				exists = no 
-			}
-		}
 		available = {
 			BOL = {
 				exists = yes 
@@ -2799,6 +2848,14 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ARG_uruguay_annexation
+		}
+		bypass = {
+			BOL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
 		}
 		relative_position_id = ARG_malvinas_or_war
 		x = 0
@@ -2812,14 +2869,46 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ARG_andean_crisis
-		icon = GFX_goal_chile
+		id = ARG_subjugate_peru
+		icon = GFX_goal_peru
 		cost = 8
 		bypass = {
-			CHL = {
+			PRU = {
 				exists = no 
 			}
 		}
+		available = {
+			PRU = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_bolivia
+		}
+		bypass = {
+			PRU = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_war_bolivia
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = PRU
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_andean_crisis
+		icon = GFX_goal_chile
+		cost = 8
 		available = {
 			CHL = {
 				exists = yes 
@@ -2831,6 +2920,14 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ARG_uruguay_annexation
+		}
+		bypass = {
+			CHL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
 		}
 		relative_position_id = ARG_paraguay_invitation
 		x = 1
@@ -2846,11 +2943,6 @@ focus_tree = {
 		id = ARG_war_chile
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 8
-		bypass = {
-			CHL = {
-				exists = no 
-			}
-		}
 		available = {
 			CHL = {
 				exists = yes 
@@ -2860,8 +2952,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_andean_crisis
 		}
+		bypass = {
+			CHL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
 		relative_position_id = ARG_andean_crisis
-		x = 1
+		x = 0
 		y = 1
 		completion_reward = {
 			create_wargoal = {
@@ -2875,11 +2975,6 @@ focus_tree = {
 		id = ARG_rio_grande_demands
 		icon = GFX_goal_brazil
 		cost = 8
-		bypass = {
-			BRA = {
-				exists = no 
-			}
-		}
 		available = {
 			BRA = {
 				exists = yes 
@@ -2891,6 +2986,14 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ARG_uruguay_annexation
+		}
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
 		}
 		relative_position_id = ARG_uruguay_annexation
 		x = -1
@@ -2906,28 +3009,118 @@ focus_tree = {
 		id = ARG_war_brazil
 		icon = GFX_goal_generic_major_war
 		cost = 8
-		bypass = {
-			BRA = {
-				exists = no 
-			}
-		}
 		available = {
 			BRA = {
-				exists = yes 
-				is_puppet = no
+				exists = yes
 			}
 		}
 		prerequisite = {
 			focus = ARG_rio_grande_demands
 		}
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
 		relative_position_id = ARG_rio_grande_demands
-		x = -1
+		x = 0
 		y = 1
 		completion_reward = {
 			create_wargoal = {
-				type = annex_everything
 				target = BRA
+				type = puppet_wargoal_focus
 			}
+		}
+	}
+	
+	focus = {
+		id = ARG_commie_consolidation
+		icon = GFX_goal_redmaysun
+		cost = 8
+		available = {
+			BRA = {
+				is_puppet_of = ARG
+			}
+			PRU = {
+				is_puppet_of = ARG
+			}
+			CHL = {
+				exists = no
+			}
+			BOL = {
+				exists = no
+			}
+			PAR = {
+				exists = no
+			}
+			URG = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_chile
+		}
+		prerequisite = {
+			focus = ARG_subjugate_peru
+		}
+		prerequisite = {
+			focus = ARG_war_brazil
+		}
+		mutually_exclusive = {
+			focus = ARG_subjugate_our_conquests
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = -1
+		y = 3
+		completion_reward = {
+			#
+		}
+	}
+	
+	focus = {
+		id = ARG_subjugate_our_conquests
+		icon = GFX_goal_maysun
+		cost = 8
+		available = {
+			BRA = {
+				is_puppet_of = ARG
+			}
+			PRU = {
+				is_puppet_of = ARG
+			}
+			CHL = {
+				exists = no
+			}
+			BOL = {
+				exists = no
+			}
+			PAR = {
+				exists = no
+			}
+			URG = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_chile
+		}
+		prerequisite = {
+			focus = ARG_subjugate_peru
+		}
+		prerequisite = {
+			focus = ARG_war_brazil
+		}
+		mutually_exclusive = {
+			focus = ARG_commie_consolidation
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = 1
+		y = 3
+		completion_reward = {
+			#
 		}
 	}
 }
