@@ -76,4 +76,12 @@ spriteTypes = {
 		name = "GFX_goal_ideology_social_democrat"
 		texturefile = "gfx/interface/goals/goal_ideology_social_democrat.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_maysun"
+		texturefile = "gfx/interface/goals/goal_maysun.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_redmaysun"
+		texturefile = "gfx/interface/goals/goal_redmaysun.dds"
+	}
 }
