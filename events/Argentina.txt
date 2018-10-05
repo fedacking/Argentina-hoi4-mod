@@ -31,6 +31,9 @@ country_event = {
 			ideology = despotism
 			traits = {}
 		}
+		remove_ideas = {
+			ARG_government_opposition_cooperation
+		}
 		hidden_effect = {
 			set_country_flag = ARG_castillo_president
 		}
@@ -1923,4 +1926,54 @@ country_event = {
 	}
 }
 
-# Formation of United Provinces of the Rio de la Plata, pasado a otro archivo
+country_event = {
+	id = arg.46
+	title = arg.46.t
+	desc = arg.46.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.46.a
+		ai_chance = {
+			factor = 100
+		}
+		create_country_leader = {
+			name = "Edelmiro Farrell"
+			desc = "POLITICS_EDELMIRO_FARREL_DESC"
+			picture = "Portrait_Argentine_Edelmiro_Farrell.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {}
+		}
+		add_ideas = {ARG_bra_subjugated}
+		set_cosmetic_tag = BRA_subjugated
+	}
+}
+
+country_event = {
+	id = arg.47
+	title = arg.47.t
+	desc = arg.47.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.47.a
+		ai_chance = {
+			factor = 100
+		}
+		create_country_leader = {
+			name = "Juan Domingo Perón"
+			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+			picture = "Portrait_Argentine_Domingo_Peron.tga"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				political_dancer
+			}
+		}
+		add_ideas = {ARG_pru_subjugated}
+		set_cosmetic_tag = PRU_subjugated
+	}
+}
