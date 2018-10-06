@@ -1301,7 +1301,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_argentine_civ
-		icon = GFX_goal_generic_construct_civ_factory 
+		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = ARG_argentine_first }
 		available = {
 		}
@@ -1345,7 +1345,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARG_argentine_civ2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = ARG_argentine_civ }
 		available = {
 		}
