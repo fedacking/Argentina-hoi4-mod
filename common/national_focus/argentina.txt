@@ -1920,7 +1920,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
+		focus = {
 		id = ARG_plane_research_group
 		icon = GFX_focus_CZE_military_aeronautical_institute
 		prerequisite = { focus = ARG_air_engineers }
@@ -1962,6 +1962,13 @@ focus_tree = {
 		cost = 8
 		
 		completion_reward = {
+			custom_effect_tooltip = ARG_idea_long_range_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_long_range_planes
+				}
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 0.25
@@ -1985,6 +1992,13 @@ focus_tree = {
 		cost = 8
 		
 		completion_reward = {
+			custom_effect_tooltip = ARG_idea_heavy_armament_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_heavy_armament_planes
+				}
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 0.25
@@ -2008,6 +2022,13 @@ focus_tree = {
 		cost = 8
 		
 		completion_reward = {
+			custom_effect_tooltip = ARG_idea_agile_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_agile_planes
+				}
+			}
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 0.25
