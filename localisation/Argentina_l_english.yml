@@ -138,6 +138,10 @@ ARG_commie_revolution_tooltip:0 "A communist revolution will begin. (COMMUNIST P
 ARG_fascist_takeover_tooltip:0 "A strong leader will takeover. (FASCIST PATH)"
 ARG_stabilized_tooltip:0 "This will stabilize the nation."
 
+ARG_idea_long_range_planes_tooltip:0 "Our aircraft will have a longer range.\n"
+ARG_idea_heavy_armament_planes_tooltip:0 "Our aircraft will carry a bigger payload.\n"
+ARG_idea_agiles_planes_tooltip:0 "Our aircraft will be faster and maneuver better.\n"
+
 ### Country Names ###
 
 ARG_democratic_party:0 "Democratic"
