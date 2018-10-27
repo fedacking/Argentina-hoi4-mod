@@ -1,0 +1,18 @@
+spriteTypes = {	
+
+	### Eventos
+	
+
+	spriteType = {
+		name = "GFX_event_picture_17_de_Octubre"
+		texturefile = "gfx/event_pictures/GFX_event_picture_17_de_Octubre.tga"
+	}
+	spriteType = {
+		name = "GFX_event_picture_ERP_bombs"
+		texturefile = "gfx/event_pictures/GFX_event_picture_ERP_bombs.tga"
+	}
+	spriteType = {
+		name = "GFX_event_picture_Yrigoyen_velatorio"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Yrigoyen_velatorio.tga"
+	}
+}
