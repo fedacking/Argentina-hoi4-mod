@@ -2386,7 +2386,7 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		x = 38
+		x = 39
 		y = 0
 		completion_reward = {
 			#
@@ -2413,7 +2413,124 @@ focus_tree = {
 			focus = ARG_diplomacy
 		}
 		relative_position_id = ARG_diplomacy
-		x = -6
+		x = -7
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_efficient_draft
+		icon = GFX_focus_generic_little_entente
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_neutrality_diplomacy
+		}
+		relative_position_id = ARG_neutrality_diplomacy
+		x = -1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_defensive_military_plans
+		icon = GFX_goal_generic_construction2
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_efficient_draft
+		}
+		relative_position_id = ARG_efficient_draft
+		x = 0
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_calm_port_in_the_storm
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 8
+		available = {
+			threat > 0.4
+		}
+		prerequisite = {
+			focus = ARG_defensive_military_plans
+		}
+		relative_position_id = ARG_defensive_military_plans
+		x = 0
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_fortify_brazilian_border
+		icon = GFX_goal_generic_construction
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_neutrality_diplomacy
+		}
+		relative_position_id = ARG_neutrality_diplomacy
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_fortify_paraguay_border
+		icon = GFX_goal_generic_construct_military
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_fortify_brazilian_border
+		}
+		relative_position_id = ARG_fortify_brazilian_border
+		x = 0
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_fortify_oriental_border
+		icon = GFX_goal_generic_fortify_city
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_fortify_paraguay_border
+		}
+		relative_position_id = ARG_fortify_paraguay_border
+		x = 0
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_desperate_defense
+		icon = GFX_goal_generic_small_arms
+		cost = 8
+		available = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_calm_port_in_the_storm
+		}
+		prerequisite = {
+			focus = ARG_fortify_oriental_border
+		}
+		relative_position_id = ARG_calm_port_in_the_storm
+		x = 1
 		y = 1
 		completion_reward = {
 		}
