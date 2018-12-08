@@ -2386,14 +2386,14 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		x = 37
+		x = 38
 		y = 0
 		completion_reward = {
 			#
 		}
 	}
 	
-#Neutrality
+##Neutrality
 	
 	focus = {
 		id = ARG_neutrality_diplomacy
@@ -2419,7 +2419,141 @@ focus_tree = {
 		}
 	}
 	
-#allies
+##Good guys
+	
+#
+
+	focus = {
+		id = ARG_south_american_democracy
+		icon = GFX_goal_generic_military_sphere
+		cost = 8
+		available = {
+		}
+		mutually_exclusive = {
+			focus = ARG_ask_politely_malvinas
+		}
+		prerequisite = {
+			focus = ARG_ally_diplomacy
+		}
+		relative_position_id = ARG_ally_diplomacy
+		x = -2
+		y = 1
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_preserve_democracy
+				}
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = ARG_south_democracy_faction
+		}
+	}
+	
+	focus = {
+		id = ARG_democratic_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_south_american_democracy
+		}
+		relative_position_id = ARG_south_american_democracy
+		x = -1
+		y = 1
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { not = {has_government = democratic}}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_preserve_democracy
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_protection_from_abroad
+		icon = GFX_goal_generic_army_artillery
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_south_american_democracy
+		}
+		relative_position_id = ARG_south_american_democracy
+		x = 1
+		y = 1
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { not = {has_government = democratic}}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_preserve_democracy
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_buenos_aires_conference
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_democratic_propaganda
+		}
+		prerequisite = {
+			focus = ARG_protection_from_abroad
+		}
+		relative_position_id = ARG_democratic_propaganda
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_south_american_research
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_buenos_aires_conference
+		}
+		relative_position_id = ARG_buenos_aires_conference
+		x = -1
+		y = 1
+		completion_reward = {
+			add_to_tech_sharing_group = ARG_dem_research
+			every_other_country = {
+				limit = { is_in_faction_with = ARG }
+				add_to_tech_sharing_group = ARG_dem_research 
+			}
+		}
+	}
+	
+	focus = {
+		id = ARG_south_american_joint_command_staff
+		icon = GFX_goal_generic_position_armies
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_buenos_aires_conference
+		}
+		relative_position_id = ARG_buenos_aires_conference
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+#Allies
 	
 	focus = {
 		id = ARG_ally_diplomacy
@@ -2481,34 +2615,6 @@ focus_tree = {
 					modifier = ARG_allied_affinity
 				}
 			}
-		}
-	}
-	
-	focus = {
-		id = ARG_south_american_democracy
-		icon = GFX_goal_generic_military_sphere
-		cost = 8
-		available = {
-		}
-		mutually_exclusive = {
-			focus = ARG_ask_politely_malvinas
-		}
-		prerequisite = {
-			focus = ARG_ally_diplomacy
-		}
-		relative_position_id = ARG_ally_diplomacy
-		x = -2
-		y = 1
-		completion_reward = {
-			every_neighbor_country = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_preserve_democracy
-				}
-			}
-			set_rule = { can_create_factions = yes }
-			create_faction = ARG_south_democracy_faction
 		}
 	}
 	
@@ -2670,7 +2776,7 @@ focus_tree = {
 		}
 	}
 	
-#bad guyz
+##bad guyz
 	
 	focus = {
 		id = ARG_collectivist_diplomacy
