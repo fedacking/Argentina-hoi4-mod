@@ -46,6 +46,7 @@ country_event = {
 	title = arg.3.t
 	desc = arg.3.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Alvear_Dead
 	trigger = {
 		tag = arg
 		date > 1942.3.23
@@ -77,6 +78,7 @@ country_event = {
 	title = arg.4.t
 	desc = arg.4.d
 	fire_only_once = yes
+	picture = GFX_event_picture_GOU_Coup
 	trigger = {
 		tag = arg
 		date > 1943.7.4
@@ -186,6 +188,7 @@ country_event = {
 	title = arg.6.t
 	desc = arg.6.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Braden_Peron
 	trigger = {
 		tag = arg
 		date > 1946.6.4
@@ -752,7 +755,6 @@ country_event = { #Terror plot
 	desc = arg.13.d
 	picture = GFX_event_picture_ERP_bombs
 	fire_only_once = yes
-	picture = GFX_event_picture_ERP_bombs
 	trigger = {
 		tag = arg
 		has_country_flag = ARG_crack_down
@@ -947,6 +949,7 @@ country_event = { #Ortiz wins
 	title = arg.19.t
 	desc = arg.19.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Ortiz_Castillo
 	trigger = {
 		tag = arg
 		date > 1937.9.5
@@ -991,6 +994,7 @@ country_event = { #Alvear wins
 	title = arg.20.t
 	desc = arg.20.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Alvear_Win
 	trigger = {
 		tag = arg
 		date > 1937.9.5
@@ -1031,6 +1035,7 @@ country_event = { #Repetto wins
 	title = arg.21.t
 	desc = arg.21.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Repetto_Win
 	trigger = {
 		tag = arg
 		date > 1937.9.5
@@ -1980,5 +1985,48 @@ country_event = {
 		}
 		add_ideas = {ARG_pru_subjugated}
 		set_cosmetic_tag = PRU_subjugated
+	}
+}
+
+country_event = {
+	id = arg.100
+	title = arg.100.t
+	desc = arg.100.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.100.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = {
+				id = arg.100
+			}
+		}
+		effect_tooltip = {
+			ARG = {
+				transfer_state = 299
+				transfer_state = 720
+			}
+		}
+	}
+	option = { # Refuse
+		name = arg.100.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.100 }
+		}
 	}
 }
