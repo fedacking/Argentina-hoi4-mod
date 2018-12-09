@@ -2056,6 +2056,7 @@ country_event = {
 		name = arg.101.b
 		set_country_flag = ARG_join_anyways
 		ENG = {
+			country_event = { id = arg.103 }
 			add_opinion_modifier = {
 				target = ARG
 				modifier = ARG_flag_join_anyways
@@ -2083,5 +2084,17 @@ country_event = {
 				modifier = ARG_malvinas_transfered
 			}
 		}
+	}
+}
+
+#Join anyways
+country_event = {
+	id = arg.103
+	title = arg.103.t
+	desc = arg.103.d
+	is_triggered_only = yes
+	option = {
+		name = arg.103.a
+		add_to_faction = ARG
 	}
 }
