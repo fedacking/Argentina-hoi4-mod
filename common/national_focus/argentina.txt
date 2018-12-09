@@ -1888,33 +1888,35 @@ focus_tree = {
 		
 		completion_reward = {
 			510 = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								510 = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									510 = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
 									}
-									is_in_home_area = yes
 								}
 							}
 						}
 					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -2416,22 +2418,7 @@ focus_tree = {
 		x = -7
 		y = 1
 		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = ARG_efficient_draft
-		icon = GFX_focus_generic_little_entente
-		cost = 8
-		available = {
-		}
-		prerequisite = {
-			focus = ARG_neutrality_diplomacy
-		}
-		relative_position_id = ARG_neutrality_diplomacy
-		x = -1
-		y = 1
-		completion_reward = {
+			add_ideas = neutrality_idea
 		}
 	}
 	
@@ -2442,12 +2429,34 @@ focus_tree = {
 		available = {
 		}
 		prerequisite = {
-			focus = ARG_efficient_draft
+			focus = ARG_neutrality_diplomacy
 		}
-		relative_position_id = ARG_efficient_draft
+		relative_position_id = ARG_neutrality_diplomacy
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	
+	focus = {
+		id = ARG_efficient_draft
+		icon = GFX_focus_generic_little_entente
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_defensive_military_plans
+		}
+		relative_position_id = ARG_defensive_military_plans
 		x = 0
 		y = 1
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = deterrence
+				add_idea = ARG_deterrence2
+			}
+			add_political_power = 50
 		}
 	}
 	
@@ -2458,13 +2467,21 @@ focus_tree = {
 		available = {
 			threat > 0.4
 		}
-		prerequisite = {
-			focus = ARG_defensive_military_plans
+		bypass = {
+			has_war = yes
 		}
-		relative_position_id = ARG_defensive_military_plans
+		prerequisite = {
+			focus = ARG_efficient_draft
+		}
+		relative_position_id = ARG_efficient_draft
 		x = 0
 		y = 1
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARG_deterrence2
+				add_idea = ARG_deterrence3
+			}
+			add_political_power = 50
 		}
 	}
 	
@@ -2474,6 +2491,9 @@ focus_tree = {
 		cost = 8
 		available = {
 		}
+		bypass = {
+			has_war = yes
+		}
 		prerequisite = {
 			focus = ARG_neutrality_diplomacy
 		}
@@ -2481,6 +2501,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			510 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -2490,6 +2521,9 @@ focus_tree = {
 		cost = 8
 		available = {
 		}
+		bypass = {
+			has_war = yes
+		}
 		prerequisite = {
 			focus = ARG_fortify_brazilian_border
 		}
@@ -2497,6 +2531,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			509 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -2506,6 +2551,9 @@ focus_tree = {
 		cost = 8
 		available = {
 		}
+		bypass = {
+			has_war = yes
+		}
 		prerequisite = {
 			focus = ARG_fortify_paraguay_border
 		}
@@ -2513,6 +2561,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			278 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -2533,6 +2592,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			if = {
+				limit = {has_idea = ARG_deterrence2}
+				remove_ideas = ARG_deterrence2
+			}
+			swap_ideas = {
+				remove_idea = ARG_deterrence3
+				add_idea = ARG_war_of_survival
+			}	
 		}
 	}
 	
@@ -2583,9 +2650,9 @@ focus_tree = {
 		completion_reward = {
 			every_neighbor_country = {
 				limit = { not = {has_government = democratic}}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_preserve_democracy
+				add_timed_idea = {
+					idea = ARG_idea_democratic_propaganda
+					days = 365
 				}
 			}
 		}
@@ -2604,13 +2671,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			every_neighbor_country = {
-				limit = { not = {has_government = democratic}}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_preserve_democracy
-				}
-			}
+			add_ideas = ARG_idea_protection_from_abroad
 		}
 	}
 	
@@ -2667,6 +2728,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARG_idea_protection_from_abroad
+				add_idea = ARG_idea_protection_from_abroad2
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ARG }
+				add_ideas = ARG_idea_protection_from_abroad2
+			}
 		}
 	}
 	
@@ -2690,46 +2759,58 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			ENG = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { ENG = { has_government = democratic}}
+				ENG = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
-			FRA = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { FRA = { has_government = democratic}}
+				FRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
-			AST = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { AST = { has_government = democratic}}
+				AST = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
-			CAN = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { CAN = { has_government = democratic}}
+				CAN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
-			NZL = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { NZL = { has_government = democratic}}
+				NZL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
-			USA = {
-				limit = { has_government = democratic}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ARG_allied_affinity
+			if {
+				limit = { USA = { has_government = democratic}}
+				USA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
 				}
 			}
 		}
@@ -2822,9 +2903,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = limited_conscription
-				add_idea = extensive_conscription
+			if = {
+				limit = { has_idea = limited_conscription }
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = extensive_conscription
+				}
+			}
+			if = {
+				limit = { has_idea = extensive_conscription }
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = service_by_requirement	
+				}
 			}
 		}
 	}
@@ -2889,7 +2980,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-
+			add_ideas = ARG_lend_lease
 		}
 	}
 	
