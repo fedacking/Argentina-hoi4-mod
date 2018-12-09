@@ -43,4 +43,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Repetto_Win"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Repetto_Win.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Elecciones_1951"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Elecciones_1951.tga"
+	}
 }
