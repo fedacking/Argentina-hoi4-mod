@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Yrigoyen_velatorio"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Yrigoyen_velatorio.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Ortiz_Renuncia"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Ortiz_Renuncia"
+	}
 }
