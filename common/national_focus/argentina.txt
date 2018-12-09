@@ -2619,6 +2619,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_ally_diplomacy
 		}
+		bypass = { has_country_flag = ARG_uk_refused }
 		relative_position_id = ARG_ally_diplomacy
 		x = -2
 		y = 1
@@ -2837,6 +2838,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
+			ENG = {
+				country_event = arg.100
+			}
 		}
 	}
 	
@@ -2848,6 +2852,10 @@ focus_tree = {
 			USA = {
 				has_government = democratic
 				has_war = yes
+			}
+			OR = {
+				has_country_flag = ARG_uk_accept
+				has_country_flag = ARG_join_anyways
 			}
 		}
 		prerequisite = {
@@ -2925,6 +2933,10 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 8
 		available = {
+			OR = {
+				has_country_flag = ARG_uk_accept
+				has_country_flag = ARG_join_anyways
+			}
 		}
 		prerequisite = {
 			focus = ARG_ask_politely_malvinas

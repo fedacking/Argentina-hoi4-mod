@@ -1990,6 +1990,7 @@ country_event = {
 	}
 }
 
+# Ask politely for Malvinas
 country_event = {
 	id = arg.100
 	title = arg.100.t
@@ -2008,7 +2009,7 @@ country_event = {
 		}
 		ARG = {
 			country_event = {
-				id = arg.100
+				id = arg.102
 			}
 		}
 		effect_tooltip = {
@@ -2017,6 +2018,7 @@ country_event = {
 				transfer_state = 720
 			}
 		}
+		add_to_faction = ARG
 	}
 	option = { # Refuse
 		name = arg.100.b
@@ -2028,7 +2030,37 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.100 }
+			country_event = { id = arg.101 }
 		}
+	}
+}
+
+#Refuse
+country_event = {
+	id = arg.101
+	title = arg.101.t
+	desc = arg.101.d
+	is_triggered_only = yes	
+	option = {
+		name = arg.101.a
+		set_country_flag = ARG_uk_refused
+	}
+	option = {
+		name = arg.101.b
+		set_country_flag = ARG_join_anyways
+	}
+}
+
+#Accept
+country_event = {
+	id = arg.102
+	title = arg.102.t
+	desc = arg.102.d
+	is_triggered_only = yes
+	option = {
+		name = arg.102.a
+		transfer_state = 299	
+		transfer_state = 720
+		set_country_flag = ARG_uk_accept
 	}
 }
