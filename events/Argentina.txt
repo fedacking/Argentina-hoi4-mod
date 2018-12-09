@@ -2043,11 +2043,25 @@ country_event = {
 	is_triggered_only = yes	
 	option = {
 		name = arg.101.a
-		set_country_flag = ARG_uk_refused
+		set_country_flag = ARG_flag_uk_refused
+		ENG = {
+			add_opinion_modifier = {
+				target = ARG
+				modifier = ARG_uk_refuse
+			}
+		}
+		add_political_power = -50
 	}
 	option = {
 		name = arg.101.b
 		set_country_flag = ARG_join_anyways
+		ENG = {
+			add_opinion_modifier = {
+				target = ARG
+				modifier = ARG_flag_join_anyways
+			}
+		}
+		add_political_power = -100
 	}
 }
 
@@ -2062,5 +2076,12 @@ country_event = {
 		transfer_state = 299	
 		transfer_state = 720
 		set_country_flag = ARG_uk_accept
+		add_political_power = 100
+		ENG = {
+			add_opinion_modifier = {
+				target = ARG
+				modifier = ARG_malvinas_transfered
+			}
+		}
 	}
 }

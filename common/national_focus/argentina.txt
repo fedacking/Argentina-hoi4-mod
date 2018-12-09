@@ -559,7 +559,7 @@ focus_tree = {
 					target = ROOT
 					modifier = ARG_british_economic_treaty
 				}
-			}			
+			}
 			swap_ideas = {
 				remove_idea = export_focus
 				add_idea = free_trade
@@ -2619,7 +2619,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_ally_diplomacy
 		}
-		bypass = { has_country_flag = ARG_uk_refused }
+		bypass = { has_country_flag = ARG_flag_uk_refusedd }
 		relative_position_id = ARG_ally_diplomacy
 		x = -2
 		y = 1
@@ -2855,7 +2855,7 @@ focus_tree = {
 			}
 			OR = {
 				has_country_flag = ARG_uk_accept
-				has_country_flag = ARG_join_anyways
+				has_country_flag = ARG_flag_join_anyways
 			}
 		}
 		prerequisite = {
@@ -2935,7 +2935,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_flag = ARG_uk_accept
-				has_country_flag = ARG_join_anyways
+				has_country_flag = ARG_flag_join_anyways
 			}
 		}
 		prerequisite = {
@@ -3186,8 +3186,13 @@ focus_tree = {
 		cost = 8
 		available = {
 			BOL = {
-				exists = yes 
-				is_puppet = no
+				exists = yes
+			}
+			URG = {
+				exists = no
+			}
+			PAR = {
+				exists = no
 			}
 		}
 		prerequisite = {

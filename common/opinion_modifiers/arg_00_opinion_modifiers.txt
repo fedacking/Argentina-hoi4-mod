@@ -56,4 +56,16 @@ opinion_modifiers = {
 	ARG_malvinas_or_war = {
 		value = -100
 	}
+
+	ARG_malvinas_transfered = {
+		value = 100
+	}
+
+	ARG_join_anyways = {
+		value = 100
+	}
+
+	ARG_uk_refuse = {
+		value = -50
+	}
 }
