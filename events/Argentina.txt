@@ -1983,3 +1983,46 @@ country_event = {
 		set_cosmetic_tag = PRU_subjugated
 	}
 }
+
+country_event = {
+	id = arg.100
+	title = arg.100.t
+	desc = arg.100.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.100.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = {
+				id = arg.100
+			}
+		}
+		effect_tooltip = {
+			ARG = {
+				transfer_state = 299
+				transfer_state = 720
+			}
+		}
+	}
+	option = { # Refuse
+		name = arg.100.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -70
+				ENG = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.100 }
+		}
+	}
+}
