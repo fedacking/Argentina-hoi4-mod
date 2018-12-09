@@ -520,6 +520,7 @@ country_event = {
 		date > 1955.9.23
 		has_country_flag = ARG_peron_wins
 	}
+	picture = GFX_event_picture_Rev_Libertadora
 	mean_time_to_happen = { days = 1 }
 
 	option = {
