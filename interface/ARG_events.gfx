@@ -17,10 +17,14 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_event_picture_Ortiz_Renuncia"
-		texturefile = "gfx/event_pictures/GFX_event_picture_Ortiz_Renuncia"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Ortiz_Renuncia.tga"
 	}
 	spriteType = {
 		name = "GFX_event_picture_Ortiz_Castillo"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Ortiz_Castillo.tga"
+	}
+	spriteType = {
+		name = "GFX_event_picture_Alvear_Win"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Alvear_Win.tga"
 	}
 }
