@@ -68,4 +68,12 @@ opinion_modifiers = {
 	ARG_uk_refuse = {
 		value = -50
 	}
+
+	ARG_andean_crisis = {
+		value = -100
+	}
+
+	ARG_rio_grande_demands = {
+		value = -100
+	}
 }

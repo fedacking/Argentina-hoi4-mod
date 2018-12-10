@@ -3287,6 +3287,10 @@ focus_tree = {
 		completion_reward = {
 			CHL = {
 				country_event = arg.36
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_andean_crisis
+				}
 			}
 		}
 	}
@@ -3353,6 +3357,10 @@ focus_tree = {
 		completion_reward = {	
 			BRA = {
 				country_event = arg.39
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_rio_grande_demands
+				}
 			}
 		}
 	}
