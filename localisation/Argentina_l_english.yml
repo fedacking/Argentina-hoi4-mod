@@ -140,7 +140,7 @@ ARG_stabilized_tooltip:0 "This will stabilize the nation."
 
 ARG_idea_long_range_planes_tooltip:0 "Our aircraft will have a longer range.\n"
 ARG_idea_heavy_armament_planes_tooltip:0 "Our aircraft will carry a bigger payload.\n"
-ARG_idea_agiles_planes_tooltip:0 "Our aircraft will be faster and maneuver better.\n"
+ARG_idea_agile_planes_tooltip:0 "Our aircraft will be faster and maneuver better.\n"
 
 ### Country Names ###
 
@@ -370,6 +370,31 @@ ARG_gbp_bonus:0 "Gentlemen Officers"
 ARG_gbp_bonus_desc:0 "An officer in the argentinean army should be a modern knight: strong, intelligent and gallant. He should command the respect of his subordinates and impress his supperiors through his leadership and planning capacities. Pushing our staff towards this vision will push them to become the better version of themselves and accomplish their tasks to the best of their abilities"
 ARG_final_gbp_doctrine:0 "A Proud Military"
 ARG_final_gbp_doctrine_desc:0 "From the lowliest of privates to the highest of field-marshalls every member of the army is part of awell oiled machine and proud to be so. Our high command creates brilliant yet reallistic plans that our troops are ready and willing to see to completion. And while none of the individual parts is particularly worthy of praise the total sum is an army that is always ready, always prepared"
+
+##AirForce Tree
+
+ARG_air_command:0 "Establish the Command in Chief of Aeronautics"
+ARG_air_command_desc:0 "Up until now our air force has been under the armed forces, relegated as a support weapon for the army. It's tactics and equipment lay underdeveloped, and are quickly falling behind the rest of the world. To counterac this we must create a new Comando en Jefe de Aeronáutica in order to organize our aeronautical efforts."
+ARG_air_engineers:0 "Create an Engineer Staff"
+ARG_air_engineers_desc:0 "In order to bolsters our new airmed forces we need to quickly improve and iterate over our designs. We have started aeronautical engineering programs in national universities in order to create a steady amount of engineers to improve our planes and it's our production capabilities."
+ARG_fabrica_militar_aviones:0 "Expand the Military Factories in Cordoba"
+ARG_fabrica_militar_aviones_desc:0 "Our Fabrica Militar de Aviones is not enough to supply our entire military needs. To fully equip our units we need to expand it's capabilities."
+ARG_plane_research_group:0 "Create the Military School of Engineering"
+ARG_plane_research_group_desc:0 "In order to cover all of our vacancies in the engineer staff, and keep pace with the nations of Europe, the government has approved the creation of the 'Escuela de Ingeniería de la Fuerza Aérea Argentina'. This will ensure our supremacy in the sky."
+ARG_long_range:0 "Thousand Miles Away"
+ARG_long_range_desc:0 "Our enemies think they are outside our reach. We will show them  nobody can stand outside of Argentina's zone of control. Our planes will reach farther than any one else's!"
+ARG_heavy_armament:0 "Thousand Bombs Below"
+ARG_heavy_armament_desc:0 "The enemies will pick themselves outside of the rubble our planes created. With larger and more numerous bombs, our planes are ready to take down any fortification, infraestructure, factories or schools the enemy holds."
+ARG_agile_planes:0 "One Among Thousand Above"
+ARG_agile_planes_desc:0 "Our Air Force prouds itself on it's aces, and their ability to fight in any condition. Day or Night, under storms or clear days, our pilots are the best in the world. With expanded training our agility and speed will be unmatched!"
+ARG_heavy_fighters:0 "Long Range Escorts"
+ARG_heavy_fighters_desc:0 "If we want to keep our bombers safe and sound while their delivery their payload, we need to develop our long range fighters. With new engines, further range and agility will be required."
+ARG_strategic_bombers:0 "Strategic Destruction"
+ARG_strategic_bombers_desc:0 "The enemy war machine lays behind the frontline, away from the reach of our soldiers, and even our CAS. For such a task we need to develop new and better bombers, ready to bring fire to the heartland of the enemy."
+ARG_close_air_support:0 "Danger Close"
+ARG_close_air_support_desc:0 "In order for our offensive to be successful, we need to devaste the enemies before and during battles. With the development of a new CAS we are in a position to deliver payloads to the defenses of the enemy during an assault."
+ARG_fighter_planes:0 "Ace Machine"
+ARG_fighter_planes_desc:0 "In order for our flying aces to win over the skies, we are going to need superior planes to the enemies. With new engines and better frames, our pilots will have a machine to be proud of."
 
 ##Navy tree
 
