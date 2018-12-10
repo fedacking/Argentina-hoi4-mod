@@ -1866,6 +1866,7 @@ focus_tree = {
 		cost = 8
 		
 		completion_reward = {
+			add_ideas = ARG_idea_basic_planes
 			add_tech_bonus = {
 				name = doctrine_bonus
 				bonus = 0.25
