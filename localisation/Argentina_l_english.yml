@@ -427,6 +427,28 @@ ARG_tp_bonus_desc:0 " "
 
 ARG_diplomacy:0 "Foreign Affairs"
 ARG_diplomacy_desc:0 "With the most urgent matters of our country fixed, we can set our eyes to the rest of the world."
+
+#Alone
+ARG_neutrality_diplomacy:0 "Watch From Afar"
+ARG_neutrality_diplomacy_desc:0 "While the rest of the world tears itself apart, Argentina must not be pulled into a conflict we can't sustain. It's best to steer clear of the tides of war."
+ARG_defensive_military_plans:0 "Prepare to Dig In"
+ARG_defensive_military_plans_desc:0 "The politicians may be happy with peace, but our enemies may choose another route. We must make plans and prepare, in case the enemy is the agressor."
+ARG_efficient_draft:0 "Streamline the Draft"
+ARG_efficient_draft_desc:0 "In case of enemy attack we need anyone available to defend the Nation. Our long and convoluted draft must be simplified and streamlined, in order to have as many men as we can. Just in case."
+ARG_calm_port_in_the_storm:0 "A Calm Port in the Storm"
+ARG_calm_port_in_the_storm_desc:0 "Europe's tearing itself apart again. While the world falls into the darkness of war, we stands as a lighthouse for all men in the world who wish to dwell on Argentine soil."
+ARG_fortify_brazilian_border:0 "Prepare for the Carioca Menace"
+ARG_fortify_brazilian_border_desc:0 "For too long our border with our greatest rival has sat unguarded and unprotected. It's time to remedy this problem, and build fortifications all along the Uruguay river."
+ARG_fortify_paraguay_border:0 "Forts from Tarija to Buenos Aires"
+ARG_fortify_paraguay_border_desc:0 "Our other enemy to the north is Paraguay. El Chaco must be defended from foreign agressors, as hard as we can. Luckily, at our west los Andes stand tall, protecting us from foreign invasions."
+ARG_fortify_oriental_border:0 "Protect the Heartland"
+ARG_fortify_oriental_border_desc:0 "With our land borders secured, there is only one vector of attack left to the capital, Buenos Aires. To cover this deficiency, we must erect a 30 foot water wall, and Nazi Germany will pay for it!"
+ARG_desperate_defense:0 "Argentina's Last Stand"
+ARG_desperate_defense_desc:0 "At last the enemies are at our gate. We must throw everything we have towards our defence, or we will not survive. To arms, Argentina!"
+#Fight For Freedom
+
+
+#Colectivism
 ARG_collectivist_diplomacy:0 "Collectivist Diplomacy"
 ARG_collectivist_diplomacy_desc:0 "Argentina has been one of the most important countries in the world and specially in our sub-continent. However, in recent years our influence has been faultering and we need to quickly show to the world that we stand stronger than ever!"
 ARG_comintern_alliance:0 "Join the Comintern"
