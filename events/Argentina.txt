@@ -2098,3 +2098,99 @@ country_event = {
 		add_to_faction = ARG
 	}
 }
+
+#Referendum for Uruguay (DEM)
+country_event = {
+	id = arg.104
+	title = arg.104.t
+	desc = arg.104.d
+	picture = GFX_report_event_generic_parliament
+
+	trigger = {
+		original_tag = ARG
+		OR = {
+			has_government = democratic 
+			has_government = neutrality
+		}
+		is_in_faction_with = URG
+		OR = {
+			AUS = { has_government = democratic }
+			AUS = { has_government = neutrality }
+		}
+	}
+
+	mean_time_to_happen = { days = 60 }
+
+	fire_only_once = yes
+	
+	# Yes
+	option = {
+		name = arg.104.a
+		ai_chance = {
+			factor = 90
+		}
+		URG = { country_event = { id = arg.105 days = 1 random = 6 } }
+	}
+
+	# No
+	option = {
+		name = arg.104.b
+		ai_chance = {
+			factor = 10
+		}
+		
+	}
+}
+
+#Uruguayan event for Uruguayan referendum to join Democratic Argentina
+country_event = {
+	id = arg.105
+	title = arg.105.t
+	desc = arg.105.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	# Yes we will join them
+	option = {
+		name = arg.105.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		ARG = { country_event = { id = arg.106 days = 1 random = 6 } }
+	}
+
+	# No we will remain independent
+	option = {
+		name = arg.105.b
+	}
+}
+
+# Argentine confirmation event for Uruguayan referendum to join Democratic Argentina
+country_event = {
+	id = arg.106
+	title = arg.106.t
+	desc = arg.106.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	# Excellent
+	option = {
+		name = arg.106.a
+		300 = {
+			if = {
+				limit = { is_owned_by = URG }
+				add_core_of = ARG
+			}
+		}
+		URG = {
+			every_unit_leader = {
+				set_nationality = ARG
+			}
+		}
+		annex_country = { target = URG transfer_troops = yes }
+		hidden_effect = { news_event = { id = arg_news.2 hours = 6 } }
+	}
+}

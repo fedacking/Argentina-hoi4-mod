@@ -6,7 +6,7 @@ add_namespace = arg_news
 news_event = {
 	id = arg_news.1
 	title = arg_news.1.t
-	desc = arg_news.1.desc
+	desc = arg_news.1.d
 	picture = GFX_news_event_generic_parliament
 
 	is_triggered_only = yes
@@ -35,6 +35,31 @@ news_event = {
 		name = arg_news.1.c
 		trigger = {
 			has_war_with = FROM
+		}
+	}
+}
+
+#Argentina democratically annexes Uruguay
+news_event = {
+	id = arg_news.2
+	title = arg_news.2.t
+	desc = arg_news.2.d
+	picture = GFX_news_event_election_vote
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = arg_news.2.a
+		trigger = {
+			original_tag = ARG
+		}
+	}
+	option = {
+		name = arg_news.2.b
+		trigger = {
+			NOT = { original_tag = ARG }
 		}
 	}
 }
