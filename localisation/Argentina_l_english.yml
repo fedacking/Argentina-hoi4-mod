@@ -447,7 +447,7 @@ ARG_desperate_defense:0 "Argentina's Last Stand"
 ARG_desperate_defense_desc:0 "At last the enemies are at our gate. We must throw everything we have towards our defence, or we will not survive. To arms, Argentina!"
 
 #Fight For Freedom
-ARG_ally_diplomacy:0 "We Fight For Freedom"
+ARG_ally_diplomacy:0 "We Fight for Freedom"
 ARG_ally_diplomacy_desc:0 "For too long, we have stood aside, and let democracy and liberty burn to the ground. No more! From now on, Argentina will join the world stage on the side of freedom, and fight!"
 
 ARG_south_american_democracy:0 "South American Democracy"
@@ -473,7 +473,7 @@ ARG_full_mobilisation:0 "All Must Fight For Freedom"
 ARG_embrace_lend_lease:0 "Embrace Lend Lease"
 
 #Colectivism
-ARG_collectivist_diplomacy:0 "Collectivist Diplomacy"
+ARG_collectivist_diplomacy:0 "We Fight for Clay"
 ARG_collectivist_diplomacy_desc:0 "Argentina has been one of the most important countries in the world and specially in our sub-continent. However, in recent years our influence has been faultering and we need to quickly show to the world that we stand stronger than ever!"
 ARG_comintern_alliance:0 "Join the Comintern"
 ARG_comintern_alliance_desc:0 "The Comintern is led by the most powerful communist state in the world, it would be foolish to not join them in an alliance."

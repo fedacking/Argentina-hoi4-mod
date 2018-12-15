@@ -2997,7 +2997,7 @@ focus_tree = {
 		}
 	}
 	
-##bad guyz
+##AGGRO
 	
 	focus = {
 		id = ARG_collectivist_diplomacy
@@ -3402,6 +3402,7 @@ focus_tree = {
 		icon = GFX_goal_redmaysun
 		cost = 8
 		available = {
+			has_government = communism
 			BRA = {
 				is_puppet_of = ARG
 			}
@@ -3446,6 +3447,7 @@ focus_tree = {
 		icon = GFX_goal_maysun
 		cost = 8
 		available = {
+			has_government = fascism
 			BRA = {
 				is_puppet_of = ARG
 			}
