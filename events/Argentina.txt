@@ -2194,3 +2194,64 @@ country_event = {
 		hidden_effect = { news_event = { id = arg_news.2 hours = 6 } }
 	}
 }
+
+#Axis admission
+country_event = {
+	id = arg.107
+	title = arg.107.t
+	desc = arg.107.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.107.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 80
+				GER = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = {
+				id = arg.108
+			}
+		}
+		add_to_faction = ARG
+	}
+	option = { # Refuse
+		name = arg.107.b
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = -80
+				GER = { has_war = yes }
+			}
+		}
+		ARG = {
+			country_event = { id = arg.109 }
+		}
+	}
+}
+
+#Accept
+country_event = {
+	id = arg.108
+	title = arg.108.t
+	desc = arg.108.d
+	is_triggered_only = yes
+	option = {
+		name = arg.108.a
+	}
+}
+
+#Decline
+country_event = {
+	id = arg.109
+	title = arg.109.t
+	desc = arg.109.d
+	is_triggered_only = yes
+	option = {
+		name = arg.109.a
+	}
+}

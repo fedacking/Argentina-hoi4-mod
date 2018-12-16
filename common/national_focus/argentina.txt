@@ -3063,7 +3063,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-		set_rule = { can_create_factions = yes }
+			set_rule = { can_create_factions = yes }
 		}
 	}
 	
@@ -3072,9 +3072,11 @@ focus_tree = {
 		icon = GFX_focus_ger_reichskommisariats
 		cost = 8
 		available = {
-			GER = { has_government = fascism
-				is_puppet = no }
 			has_government = fascism
+			GER = { 
+				has_government = fascism
+				is_puppet = no
+			}
 		}		
 		mutually_exclusive = {
 			focus = ARG_comintern_alliance
@@ -3087,6 +3089,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
+			GER = {
+				country_event = arg.107
+			}
 		}
 	}
 	
