@@ -3028,9 +3028,11 @@ focus_tree = {
 		icon = GFX_focus_generic_join_comintern
 		cost = 8
 		available = {
-			SOV = { has_government = communism
-				is_puppet = no }
 			has_government = communism
+			SOV = {
+				has_government = communism
+				is_puppet = no
+			}
 		}
 		mutually_exclusive = {
 			focus = ARG_german_diplomacy

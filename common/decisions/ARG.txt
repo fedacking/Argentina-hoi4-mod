@@ -36,6 +36,12 @@ form_united_provinces_category = {
 				controls_state = 301
 				controls_state = 688
 			}
+			# Bolivia
+			custom_trigger_tooltip = {
+				tooltip = form_country_bolivia_required_states_tt
+				controls_state = 302
+				controls_state = 487
+			}
 		}
 
 		visible = {
@@ -56,6 +62,8 @@ form_united_provinces_category = {
 			state = 300
 			state = 301
 			state = 688
+			state = 302
+			state = 487
 		}
 
 		complete_effect = {
@@ -80,6 +88,12 @@ form_united_provinces_category = {
 			hidden_effect = {
 				301 = { add_core_of = ROOT }
 				688 = { add_core_of = ROOT }
+			}
+			# Bolivia
+			custom_effect_tooltip = form_country_bolivia_coring_states_tt
+			hidden_effect = {
+				302 = { add_core_of = ROOT }
+				487 = { add_core_of = ROOT }
 			}
 			hidden_effect = {
 				news_event = { id = arg_news.1 hours = 6 }
@@ -209,35 +223,6 @@ ARG_integrate_territory_category = {
 			279 = { add_core_of = ROOT }
 			506 = { add_core_of = ROOT }
 			set_global_flag = chile_integrated_flag
-		}
-		ai_will_do = { factor = 200 }
-	}
-	ARG_integrate_bolivia = {
-		icon = generic_form_nation
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-			owns_state = 302
-			owns_state = 487
-		}
-		visible = {
-			original_tag = ARG
-			NOT = { has_global_flag = bolivia_integrated_flag }
-		}
-		highlight_states = {
-			state = 302
-			state = 487
-		}
-        modifier = {
-			civilian_factory_use = 1
-		}
-		days_remove = 240
-		remove_effect = {
-			302 = { add_core_of = ROOT }
-			487 = { add_core_of = ROOT }
-			set_global_flag = bolivia_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
