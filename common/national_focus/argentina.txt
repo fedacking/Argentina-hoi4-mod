@@ -3429,16 +3429,16 @@ focus_tree = {
 				is_puppet_of = ARG
 			}
 			CHL = {
-				exists = no
+				is_puppet_of = ARG
 			}
 			BOL = {
-				exists = no
+				is_puppet_of = ARG
 			}
 			PAR = {
-				exists = no
+				is_puppet_of = ARG
 			}
 			URG = {
-				exists = no
+				is_puppet_of = ARG
 			}
 		}
 		prerequisite = {
@@ -3474,7 +3474,7 @@ focus_tree = {
 				is_puppet_of = ARG
 			}
 			CHL = {
-				exists = no
+				is_puppet_of = ARG
 			}
 			BOL = {
 				exists = no
