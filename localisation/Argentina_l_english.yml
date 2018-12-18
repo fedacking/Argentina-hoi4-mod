@@ -144,16 +144,28 @@ ARG_idea_long_range_planes_tooltip:0 "Our aircraft will have a longer range.\n"
 ARG_idea_heavy_armament_planes_tooltip:0 "Our aircraft will carry a bigger payload.\n"
 ARG_idea_agile_planes_tooltip:0 "Our aircraft will be faster and maneuver better.\n"
 
-### Country Names ###
+### Party Names ###
 
-ARG_democratic_party:0 "Democratic"
-ARG_democratic_party_long:0 "Democratic"
-ARG_fascism_party:0 "Fascist"
-ARG_fascism_party_long:0 "Fascist"
-ARG_communism_party:0 "Communist"
-ARG_communism_party_long:0 "Communist"
-ARG_neutrality_party:0 "Undemocratic"
-ARG_neutrality_party_long:0 "Undemocratic"
+ARG_democratic_party:0 "UCR"
+ARG_democratic_party_long:0 "Unión Cívica Radical"
+ARG_democratic_party_pdn:0 "PDN"
+ARG_democratic_party_pdn_long:0 "Partido Demócrata Nacional"
+ARG_democratic_party_ps:0 "PS"
+ARG_democratic_party_ps_long:0 "Partido Socialista"
+ARG_fascism_party:0 "UNA Patria"
+ARG_fascism_party_long:0 "UNA Patria"
+ARG_fascism_party_arggalemp:0 "Galactic Argentine Empire"
+ARG_fascism_party_arggalemp_long:0 "Galactic Argentine Empire"
+ARG_communism_party:0 "PCA"
+ARG_communism_party_long:0 "Partido Comunista"
+ARG_neutrality_party:0 "Concordancia"
+ARG_neutrality_party_long:0 "Concordancia"
+ARG_neutrality_party_gou:0 "GOU"
+ARG_neutrality_party_gou_long:0 "Grupo de Oficiales Unidos"
+ARG_neutrality_party_revlibertadora:0 "Rev. Libertadora"
+ARG_neutrality_party_revlibertadora_long:0 "Revolución Libertadora"
+ARG_fascism_party_PJ:0 "PJ"
+ARG_fascism_party_PJ_long:0 "Partido Justicialista"
 
 ### Country Names ###
  

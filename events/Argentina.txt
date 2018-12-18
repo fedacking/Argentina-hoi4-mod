@@ -99,6 +99,21 @@ country_event = {
 			remove_ideas = {
 				ARG_concordancia
 			}
+			create_country_leader = {
+				name = "Juan Domingo Perón"
+				desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+				picture = "Portrait_Argentine_Domingo_Peron.tga"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					political_dancer		
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = ARG_fascism_party_PJ_long
+				name = ARG_fascism_party_PJ
+			}
 		}
 		add_ideas = {ARG_gou}
 		create_country_leader = {
@@ -106,21 +121,28 @@ country_event = {
 			desc = "POLITICS_PEDRO_PABLO_RAMIREZ_DESC"
 			picture = "Portrait_Argentine_Pablo_Ramirez.tga"
 			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {}
+			ideology = despotism
+			traits = {
+				fascist_sympathies
+			}
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = ARG_neutrality_party_gou_long
+			name = ARG_neutrality_party_gou
 		}
 		set_country_flag = ARG_gou_coup
 		set_politics = {
-			ruling_party = fascism
+			ruling_party = neutrality
 			parties = {
 				neutrality = {
-					popularity = 5
+					popularity = 80
 				}
 				democratic = {
 					popularity = 7
 				}
 				fascism = {
-					popularity = 80
+					popularity = 5
 				}
 				communism = {
 					popularity = 8
@@ -167,8 +189,10 @@ country_event = {
 			desc = "POLITICS_EDELMIRO_FARREL_DESC"
 			picture = "Portrait_Argentine_Edelmiro_Farrell.tga"
 			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {}
+			ideology = despotism
+			traits = {
+				fascist_sympathies
+			}
 		}
 	}
 	option = {
@@ -223,16 +247,6 @@ country_event = {
 		}
 		set_country_flag = ARG_peron_wins
 		add_ideas = {ARG_pj}
-		create_country_leader = {
-			name = "Juan Domingo Perón"
-			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
-			picture = "Portrait_Argentine_Domingo_Peron.tga"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				political_dancer		
-			}
-		}
 		set_politics = {
 			ruling_party = fascism
 			parties = {
@@ -266,16 +280,6 @@ country_event = {
 				ARG_ucr
 				ARG_ps
 				ARG_gou
-			}
-			create_country_leader = {
-				name = "Juan Domingo Perón"
-				desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
-				picture = "Portrait_Argentine_Domingo_Peron.tga"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					political_dancer		
-				}
 			}
 		}
 		add_ideas = {ARG_ucr}
@@ -355,6 +359,11 @@ country_event = {
 			traits = {
 				political_dancer		
 			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = ARG_fascism_party_PJ_long
+			name = ARG_fascism_party_PJ
 		}
 		set_politics = {
 			ruling_party = fascism
@@ -446,6 +455,11 @@ country_event = {
 			ideology = conservatism
 			traits = {}
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
 		set_politics = {
 			ruling_party = democratic
 			parties = {
@@ -490,6 +504,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = socialism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -549,6 +568,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = despotism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = ARG_neutrality_party_revlibertadora_long
+			name = ARG_neutrality_party_revlibertadora
 		}
 		set_country_flag = ARG_revolucion_libertadora
 		set_politics = {
@@ -652,6 +676,11 @@ country_event = {
 			traits = {
 				dictator
 			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = ARG_fascism_party_arggalemp_long
+			name = ARG_fascism_party_arggalemp
 		}
 		load_focus_tree = argentinian_justo_focus
 		set_politics = {
@@ -1062,6 +1091,11 @@ country_event = { #Repetto wins
 			ideology = socialism
 			traits = {}
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
 		set_politics = {
 			ruling_party = democratic
 			parties = {
@@ -1149,6 +1183,11 @@ country_event = {
 			ideology = socialism
 			traits = {}
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
 	}
 	
 	option = {
@@ -1170,6 +1209,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
 		}
 	}
 }
@@ -1224,6 +1268,11 @@ country_event = {
 			ideology = liberalism
 			traits = {}		
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
 	}
 	
 	option = {
@@ -1245,6 +1294,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
 		}
 	}
 }
@@ -1630,6 +1684,11 @@ country_event = {
 			ideology = socialism
 			traits = {}
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
 	}
 	
 	option = {
@@ -1654,6 +1713,11 @@ country_event = {
 			ideology = liberalism
 			traits = {}
 		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
 	}
 	
 	option = {
@@ -1677,6 +1741,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
 		}
 	}
 }
@@ -1767,6 +1836,11 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = socialism
 			traits = {}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -1935,58 +2009,6 @@ country_event = {
 		add_political_power = -100
 		add_stability = -0.1
 		add_war_support = -0.1		
-	}
-}
-
-country_event = {
-	id = arg.46
-	title = arg.46.t
-	desc = arg.46.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	mean_time_to_happen = { days = 1 }
-	option = {
-		name = arg.46.a
-		ai_chance = {
-			factor = 100
-		}
-		create_country_leader = {
-			name = "Edelmiro Farrell"
-			desc = "POLITICS_EDELMIRO_FARREL_DESC"
-			picture = "Portrait_Argentine_Edelmiro_Farrell.tga"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {}
-		}
-		add_ideas = {ARG_bra_subjugated}
-		set_cosmetic_tag = BRA_subjugated
-	}
-}
-
-country_event = {
-	id = arg.47
-	title = arg.47.t
-	desc = arg.47.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	mean_time_to_happen = { days = 1 }
-	option = {
-		name = arg.47.a
-		ai_chance = {
-			factor = 100
-		}
-		create_country_leader = {
-			name = "Juan Domingo Perón"
-			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
-			picture = "Portrait_Argentine_Domingo_Peron.tga"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				political_dancer
-			}
-		}
-		add_ideas = {ARG_pru_subjugated}
-		set_cosmetic_tag = PRU_subjugated
 	}
 }
 
