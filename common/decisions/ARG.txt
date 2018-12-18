@@ -50,6 +50,7 @@ form_united_provinces_category = {
 				original_tag = URG
 				original_tag = PAR
 			}
+			has_government = fascism
 			NOT = { has_global_flag = form_uprp_flag }
 		}
 		highlight_states = {
@@ -144,6 +145,7 @@ ARG_integrate_territory_category = {
 		}
 		ai_will_do = { factor = 200 }
 	}
+	
 	ARG_integrate_magallanes = {
 		icon = generic_form_nation
 		allowed = {
@@ -156,6 +158,7 @@ ARG_integrate_territory_category = {
 		visible = {
 			original_tag = ARG
 			NOT = { has_global_flag = magallanes_integrated_flag }
+			has_government = fascism
 		}
 		highlight_states = {
 			state = 507
@@ -170,6 +173,7 @@ ARG_integrate_territory_category = {
 		}
 		ai_will_do = { factor = 200 }
 	}
+	
 	ARG_integrate_riogrande = {
 		icon = generic_form_nation
 		allowed = {
@@ -182,6 +186,7 @@ ARG_integrate_territory_category = {
 		visible = {
 			original_tag = ARG
 			NOT = { has_global_flag = riogrande_integrated_flag }
+			has_government = fascism
 		}
 		highlight_states = {
 			state = 502
