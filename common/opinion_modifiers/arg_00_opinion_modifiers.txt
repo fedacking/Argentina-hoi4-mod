@@ -76,4 +76,24 @@ opinion_modifiers = {
 	ARG_rio_grande_demands = {
 		value = -100
 	}
+
+	ARG_join_axis = {
+		value = 100
+	}
+
+	ARG_join_comintern = {
+		value = 100
+	}
+
+	ARG_denied_from_axis = {
+		value = -200
+	}
+
+	ARG_denied_from_comintern = {
+		value = -200
+	}
+
+	ARG_magallanes_demanded = {
+		value = -200
+	}	
 }

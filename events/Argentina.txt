@@ -1549,6 +1549,8 @@ country_event = {
 				transfer_state = 507
 			}
 		}
+		add_political_power = -100
+		add_stability = -0.1
 	}
 	option = { # Refuse
 		name = arg.36.b
@@ -1558,6 +1560,7 @@ country_event = {
 		ARG = {
 			country_event = { id = arg.37 }
 		}
+		add_war_support = 0.2
 	}
 }
 
@@ -1584,6 +1587,7 @@ country_event = {
 	option = {
 		name = arg.38.a
 		transfer_state = 507
+		add_political_power = 50
 	}
 }
 
@@ -1610,6 +1614,8 @@ country_event = {
 				transfer_state = 502
 			}
 		}
+		add_political_power = -100
+		add_stability = -0.1
 	}
 	option = { # Refuse
 		name = arg.39.b
@@ -1619,6 +1625,7 @@ country_event = {
 		ARG = {
 			country_event = { id = arg.40 }
 		}
+		add_war_support = 0.2
 	}
 }
 
@@ -1646,6 +1653,7 @@ country_event = {
 	option = {
 		name = arg.41.a
 		transfer_state = 502
+		add_political_power = 50
 		set_country_flag = ARG_have_riogrande
 	}
 }
@@ -1949,7 +1957,7 @@ country_event = {
 		}
 		add_political_power = -100
 		add_stability = -0.1
-		add_war_support = -0.1		
+		add_war_support = -0.1
 	}
 }
 
@@ -2279,5 +2287,70 @@ country_event = {
 	option = {
 		name = arg.109.a
 		set_rule = { can_create_factions = yes }
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = GER
+			modifier = ARG_denied_from_axis
+		}
+	}
+}
+
+#Comintern admission
+country_event = {
+	id = arg.110
+	title = arg.110.t
+	desc = arg.110.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = arg.110.a
+		ai_chance = {
+			base = 80
+		}
+		ARG = {
+			country_event = {
+				id = arg.111
+			}
+		}
+		add_to_faction = ARG
+	}
+	option = { # Refuse
+		name = arg.110.b
+		ai_chance = {
+			base = 20
+		}
+		ARG = {
+			country_event = { id = arg.112 }
+		}
+	}
+}
+
+#Accept
+country_event = {
+	id = arg.111
+	title = arg.111.t
+	desc = arg.111.d
+	is_triggered_only = yes
+	option = {
+		name = arg.111.a
+		custom_effect_tooltip = ARG_join_comintern_tooltip
+	}
+}
+
+#Decline
+country_event = {
+	id = arg.112
+	title = arg.112.t
+	desc = arg.112.d
+	is_triggered_only = yes
+	option = {
+		name = arg.112.a
+		set_rule = { can_create_factions = yes }
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = SOV
+			modifier = ARG_denied_from_comintern
+		}
 	}
 }

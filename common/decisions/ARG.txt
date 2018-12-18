@@ -197,33 +197,4 @@ ARG_integrate_territory_category = {
 		}
 		ai_will_do = { factor = 200 }
 	}
-	ARG_integrate_chile = {
-		icon = generic_form_nation
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-			owns_state = 279
-			owns_state = 506
-		}
-		visible = {
-			original_tag = ARG
-			NOT = { has_global_flag = chile_integrated_flag }
-		}
-		highlight_states = {
-			state = 279
-			state = 506
-		}
-        modifier = {
-			civilian_factory_use = 1
-		}
-		days_remove = 300
-		remove_effect = {
-			279 = { add_core_of = ROOT }
-			506 = { add_core_of = ROOT }
-			set_global_flag = chile_integrated_flag
-		}
-		ai_will_do = { factor = 200 }
-	}
 }

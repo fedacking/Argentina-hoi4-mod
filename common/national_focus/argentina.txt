@@ -3020,6 +3020,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	
@@ -3045,6 +3046,13 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_join_comintern
+				}
+				country_event = arg.110
+			}
 		}
 	}
 	
@@ -3092,6 +3100,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_join_axis
+				}
 				country_event = arg.107
 			}
 		}
@@ -3297,7 +3309,7 @@ focus_tree = {
 				country_event = arg.36
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ARG_andean_crisis
+					modifier = ARG_magallanes_demanded
 				}
 			}
 		}
@@ -3329,8 +3341,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			create_wargoal = {
-				type = annex_everything
 				target = CHL
+				type = puppet_wargoal_focus
 			}
 		}
 	}
