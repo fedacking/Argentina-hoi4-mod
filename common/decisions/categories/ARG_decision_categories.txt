@@ -18,3 +18,9 @@ form_united_provinces_category = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+
+ARG_foreign_affairs_category = {
+	allowed = {
+		original_tag = ARG
+	}
+}

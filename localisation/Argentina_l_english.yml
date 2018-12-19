@@ -64,6 +64,8 @@
  ARG_denied_from_axis:0 "Admission to Axis denied
  ARG_denied_from_comintern:0 "Admission to Comintern denied"
  ARG_magallanes_demanded:0 "Magallanes Demanded"
+ ARG_commie_threat:0 "Communist Threat in America"
+ ARG_expansionist_neighbour:0 "Expansionist Neighbour"
  
  ### Ministers ###
  ARG_juan_domingo_peron:0 "Juan Domingo Perón"
@@ -189,7 +191,10 @@ ARG_neutrality_ADJ:0 "Argentine"
 ARG_communism_ADJ:0 "Argentine"
  
 ### Cosmetic names ###
- 
+
+argcommie_communism:0 "Argentine SR"
+argcommie_communism_DEF:0 "the Argentine Socialist Republic" 
+argcommie_communism_ADJ:0 "Argentine"
 UPP_fascism:0 "La Plata"
 UPP_fascism_DEF:0 "the Federation of La Plata"
 UPP_democratic:0 "La Plata"
@@ -223,7 +228,19 @@ UPP_UNIFIED_laplata_fascism_ADJ:0 "Platine"
 UPP_UNIFIED_laplata_democratic_ADJ:0 "Platine"
 UPP_UNIFIED_laplata_neutrality_ADJ:0 "Platine"
 UPP_UNIFIED_laplata_communism_ADJ:0 "Platine"
-  
+USSAR_fascism:0 "South American State"
+USSAR_DEF:0 "the South American State"
+USSAR_democratic:0 "USSA"
+USSAR_democratic_DEF:0 "the United States of South America"
+USSAR_neutrality:0 "USSA"
+USSAR_neutrality_DEF:0 "the United States of South America"
+USSAR_communism:0 "USSAR"
+UPP_UNIFIED_laplata_communism_DEF:0 "the Union of Socialist South American Republics"
+UPP_UNIFIED_laplata_fascism_ADJ:0 "South American"
+UPP_UNIFIED_laplata_democratic_ADJ:0 "South American"
+UPP_UNIFIED_laplata_neutrality_ADJ:0 "South American"
+UPP_UNIFIED_laplata_communism_ADJ:0 "South American"
+
 ### Focuses ###
 
 ##Elections

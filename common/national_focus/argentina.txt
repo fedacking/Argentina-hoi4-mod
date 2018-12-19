@@ -3021,6 +3021,42 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_political_power = 100
+			URG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			PAR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			CHL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			BOL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			BRA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			PRU = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
 		}
 	}
 	
@@ -3155,7 +3191,10 @@ focus_tree = {
 		}
 		bypass = {
 			PAR = {
-				exists = no
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
 			}
 		}
 		prerequisite = {
@@ -3184,7 +3223,10 @@ focus_tree = {
 		}
 		bypass = {
 			URG = {
-				exists = no 
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
 			}
 		}
 		prerequisite = {
@@ -3209,10 +3251,16 @@ focus_tree = {
 				exists = yes
 			}
 			URG = {
-				exists = no
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
 			}
 			PAR = {
-				exists = no
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
 			}
 		}
 		prerequisite = {
@@ -3419,7 +3467,7 @@ focus_tree = {
 	focus = {
 		id = ARG_commie_consolidation
 		icon = GFX_goal_redmaysun
-		cost = 8
+		cost = 12
 		available = {
 			has_government = communism
 			BRA = {
@@ -3464,7 +3512,7 @@ focus_tree = {
 	focus = {
 		id = ARG_subjugate_our_conquests
 		icon = GFX_goal_maysun
-		cost = 8
+		cost = 6
 		available = {
 			has_government = fascism
 			BRA = {
