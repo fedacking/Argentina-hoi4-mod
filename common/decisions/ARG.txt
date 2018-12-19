@@ -202,4 +202,42 @@ ARG_integrate_territory_category = {
 		}
 		ai_will_do = { factor = 200 }
 	}
+	
+	ARG_fash_republican_intervention = {
+		icon = generic_prepare_civil_war
+		allowed = {
+			original_tag = ARG
+			has_dlc = "Waking the Tiger"
+		}
+		available = {
+		}
+		visible = {
+			original_tag = ARG
+			has_government = fascism
+			SPR = {
+				has_civil_war = yes
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					D01 = { has_war_with = SPR}
+				}
+				declare_war_on = {
+					target = D01
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					D02 = { has_war_with = SPR}
+				}
+				declare_war_on = {
+					target = D02
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = { factor = 200 }
+	}
 }
