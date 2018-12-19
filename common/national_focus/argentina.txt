@@ -3164,6 +3164,7 @@ focus_tree = {
 			focus = ARG_own_way
 			focus = ARG_comintern_alliance
 		}
+		will_lead_to_war_with = ENG
 		relative_position_id = ARG_own_way
 		x = 0
 		y = 1
@@ -3200,6 +3201,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_collectivist_diplomacy
 		}
+		will_lead_to_war_with = PAR
 		relative_position_id = ARG_collectivist_diplomacy
 		x = -3
 		y = 2
@@ -3232,6 +3234,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_collectivist_diplomacy
 		}
+		will_lead_to_war_with = URG
 		relative_position_id = ARG_collectivist_diplomacy
 		x = 3
 		y = 2
@@ -3269,6 +3272,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_uruguay_annexation
 		}
+		will_lead_to_war_with = BOL
 		bypass = {
 			BOL = {
 				OR = {
@@ -3306,6 +3310,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_war_bolivia
 		}
+		will_lead_to_war_with = PRU
 		bypass = {
 			PRU = {
 				OR = {
@@ -3341,6 +3346,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_uruguay_annexation
 		}
+		will_lead_to_war_with = CHL
 		bypass = {
 			CHL = {
 				OR = {
@@ -3376,6 +3382,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_andean_crisis
 		}
+		will_lead_to_war_with = CHL
 		bypass = {
 			CHL = {
 				OR = {
@@ -3411,6 +3418,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_uruguay_annexation
 		}
+		will_lead_to_war_with = BRA
 		bypass = {
 			BRA = {
 				OR = {
@@ -3445,6 +3453,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_rio_grande_demands
 		}
+		will_lead_to_war_with = BRA
 		bypass = {
 			BRA = {
 				OR = {
