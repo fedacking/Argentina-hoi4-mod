@@ -2852,11 +2852,14 @@ focus_tree = {
 		available = {
 			USA = {
 				has_government = democratic
-				has_war = yes
+				OR = {
+					has_war = yes
+					has_completed_focus = USA_the_giant_wakes
+				}
 			}
 			OR = {
 				has_country_flag = ARG_uk_accept
-				has_country_flag = ARG_flag_join_anyways
+				has_country_flag = USA_the_giant_wakes
 			}
 		}
 		prerequisite = {
@@ -2951,7 +2954,11 @@ focus_tree = {
 				uses = 1
 				category = dd_tech
 			}
-			add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = USA }
+			add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = ENG }
+			if = {
+				limit = { USA = {has_completed_focus = USA_arsenal_of_democracy} }
+				add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = USA }
+			}
 		}
 	}
 	
