@@ -221,23 +221,26 @@ ARG_foreign_affairs_category = {
 				has_civil_war = yes
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 			if = {
 				limit = {
 					D01 = { has_war_with = SPR}
 				}
-				declare_war_on = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 1000
 					target = D01
-					type = annex_everything
 				}
 			}
 			if = {
 				limit = {
 					D02 = { has_war_with = SPR}
 				}
-				declare_war_on = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 1000
 					target = D02
-					type = annex_everything
 				}
 			}
 		}
@@ -252,6 +255,7 @@ ARG_foreign_affairs_category = {
 		}
 		available = {
 		}
+		fire_only_once = yes
 		visible = {
 			original_tag = ARG
 			has_government = communism
@@ -260,23 +264,10 @@ ARG_foreign_affairs_category = {
 			}
 		}
 		complete_effect = {
-			if = {
-				limit = {
-					D01 = { has_war_with = SPR}
-				}
-				declare_war_on = {
-					target = D01
-					type = annex_everything
-				}
-			}
-			if = {
-				limit = {
-					D02 = { has_war_with = SPR}
-				}
-				declare_war_on = {
-					target = D02
-					type = annex_everything
-				}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = SPR
 			}
 		}
 		ai_will_do = { factor = 200 }
