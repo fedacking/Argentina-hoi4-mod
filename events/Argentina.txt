@@ -2091,18 +2091,18 @@ country_event = {
 			497 = { add_core_of = ROOT }
 			498 = { add_core_of = ROOT }
 			499 = { add_core_of = ROOT }
-			486 = { add_claim_of = ROOT }
-			306 = { add_claim_of = ROOT }
-			493 = { add_claim_of = ROOT }
-			488 = { add_claim_of = ROOT }
-			307 = { add_claim_of = ROOT }
-			489 = { add_claim_of = ROOT }
-			687 = { add_claim_of = ROOT }
-			309 = { add_claim_of = ROOT }
-			310 = { add_claim_of = ROOT }
-			649 = { add_claim_of = ROOT }
-			695 = { add_claim_of = ROOT }
-			691 = { add_claim_of = ROOT }
+			486 = { add_claim_by = ROOT }
+			306 = { add_claim_by = ROOT }
+			493 = { add_claim_by = ROOT }
+			488 = { add_claim_by = ROOT }
+			307 = { add_claim_by = ROOT }
+			489 = { add_claim_by = ROOT }
+			687 = { add_claim_by = ROOT }
+			309 = { add_claim_by = ROOT }
+			310 = { add_claim_by = ROOT }
+			649 = { add_claim_by = ROOT }
+			695 = { add_claim_by = ROOT }
+			691 = { add_claim_by = ROOT }
 		}
 	}
 }
@@ -2173,12 +2173,12 @@ country_event = {
 	}
 	option = {
 		name = arg.101.b
-		set_country_flag = ARG_join_anyways
+		set_country_flag = ARG_flag_join_anyways
 		ENG = {
 			country_event = { id = arg.103 }
 			add_opinion_modifier = {
 				target = ARG
-				modifier = ARG_flag_join_anyways
+				modifier = ARG_join_anyways
 			}
 		}
 		add_political_power = -100

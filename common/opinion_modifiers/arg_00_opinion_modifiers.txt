@@ -100,4 +100,8 @@ opinion_modifiers = {
 	ARG_expansionist_neighbour = {
 		value = -50
 	}
+
+	ARG_magallanes_demanded  = {
+		value = -50
+	}
 }

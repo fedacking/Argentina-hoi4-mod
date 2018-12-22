@@ -2859,7 +2859,7 @@ focus_tree = {
 			}
 			OR = {
 				has_country_flag = ARG_uk_accept
-				has_country_flag = USA_the_giant_wakes
+				has_country_flag = ARG_flag_join_anyways
 			}
 		}
 		prerequisite = {
@@ -2915,20 +2915,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			if = {
-				limit = { has_idea = limited_conscription }
-				swap_ideas = {
-					remove_idea = limited_conscription
-					add_idea = extensive_conscription
-				}
-			}
-			if = {
-				limit = { has_idea = extensive_conscription }
-				swap_ideas = {
-					remove_idea = extensive_conscription
-					add_idea = service_by_requirement	
-				}
-			}
+			add_ideas = ARG_increased_conscription
 		}
 	}
 	

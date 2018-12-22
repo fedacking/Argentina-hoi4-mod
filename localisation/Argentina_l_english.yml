@@ -746,3 +746,7 @@ arg_news.2.t:0 "Uruguay Votes to join Argentina"
 arg_news.2.d:0 "Since the close allied cooperation of [URG.GetNameDef] and [ARG.GetNameDef] began, pro-unification sentiment has risen dramatically in Uruguay. A plebiscite held yesterday saw the Uruguayan people vote overwhelmingly in favor of unification with their western neighbours.\n\nIntegration of the Uruguayan state has been pushed forward immediately, and the old state was abolished this morning."
 arg_news.2.a:0 "For a unified Argentina."
 arg_news.2.b:0 "It was what they wished."
+
+###Misc
+##tech research
+ARG_dem_research_name:0 "Ibero-America Reseach Center"
