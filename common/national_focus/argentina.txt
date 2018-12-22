@@ -3403,8 +3403,7 @@ focus_tree = {
 		cost = 8
 		available = {
 			BRA = {
-				exists = yes 
-				is_puppet = no
+				exists = yes
 			}
 		}
 		prerequisite = {
@@ -3430,7 +3429,7 @@ focus_tree = {
 				country_event = arg.39
 				add_opinion_modifier = {
 					target = ROOT
-					modifier = ARG_rio_grande_demands
+					modifier = ARG_om_rio_grande_demands
 				}
 			}
 		}
