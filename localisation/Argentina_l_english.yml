@@ -404,6 +404,9 @@ ARG_gbp_bonus_desc:0 "An officer in the argentinean army should be a modern knig
 ARG_final_gbp_doctrine:0 "A Proud Military"
 ARG_final_gbp_doctrine_desc:0 "From the lowliest of privates to the highest of field-marshalls every member of the army is part of awell oiled machine and proud to be so. Our high command creates brilliant yet reallistic plans that our troops are ready and willing to see to completion. And while none of the individual parts is particularly worthy of praise the total sum is an army that is always ready, always prepared"
 
+ARG_research_2:0 "Military Research"
+ARG_research_2_desc:0 "In order to expand our military doctrine, we need to continue to develop new equipemnt and technologies that support and fuel our strategy. For this, the Argentinian High Command has greenlighted a plan to establish a new permanent research team."
+
 ##AirForce Tree
 
 ARG_air_command:0 "Establish the Command in Chief of Aeronautics"
@@ -431,12 +434,12 @@ ARG_fighter_planes_desc:0 "In order for our flying aces to win over the skies, w
 
 ##Navy tree
 
-ARG_review_navy:0 "A Navy for the Nation"
-ARG_review_navy_desc:0 " "
+ARG_review_navy:0 "Queen of The South Atlantic"
+ARG_review_navy_desc:0 "Since almirante Brown, Argentina's navy has been the pride of the nation. In order for us to continue to have a prime navy, we need to revitalize, and pour new resources into it."
 ARG_fleet_being:0 "Royal Navy Doctrine"
-ARG_fleet_being_desc:0 " "
+ARG_fleet_being_desc:0 "In order to control the seas we need to learn from the best. The English showed us, the most important factor is tonnage. We need as big and as powerful ships as we can!"
 ARG_battleships:0 "Arms Race Against Brasil"
-ARG_battleships_desc:0 " "
+ARG_battleships_desc:0 "The Brazilians have always been the menace at the north. With the new resources being poured into"
 ARG_carriers:0 "The FAA is born"
 ARG_carriers_desc:0 " "
 ARG_battlecruisers:0 "Brown's Legacy"
@@ -445,8 +448,8 @@ ARG_fib_destroyers:0 "Escorts for the Fleet"
 ARG_fib_destroyers_desc:0 " "
 ARG_trade_interdiction:0 "Wolves of the Sea"
 ARG_trade_interdiction_desc:0 " "
-ARG_destroyers_ti:0 "Small yet Deadly"
-ARG_destroyers_ti_desc:0 " "
+ARG_submarines:0 "Convoy's Nightmare"
+ARG_submarines_desc:0 " "
 ARG_uboats:0 "Hunters of the Atlantic"
 ARG_uboats_desc:0 " "
 ARG_light_cruisers:0 "The Golden Middle"
