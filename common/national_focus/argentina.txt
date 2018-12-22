@@ -2275,8 +2275,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ARG_destroyers_ti
-		icon = GFX_goal_generic_navy_anti_submarine
+		id = ARG_submarines
+		icon = GFX_goal_generic_navy_submarine
 		cost = 5
 		prerequisite = {
 			focus = ARG_trade_interdiction
@@ -2286,10 +2286,10 @@ focus_tree = {
 		relative_position_id = ARG_trade_interdiction
 		completion_reward = {
 			add_tech_bonus = {
-				name = navy_bonus
+				name = ss_tech_bonus
 				bonus = 0.5
 				uses = 1
-				category = dd_tech
+				category = ss_tech
 			}
 		}
 	}
@@ -2299,15 +2299,16 @@ focus_tree = {
 		icon = GFX_goal_generic_wolf_pack
 		cost = 5
 		prerequisite = {
-			focus = ARG_destroyers_ti
+			focus = ARG_submarines
 		}
 		x = 0
 		y = 1
-		relative_position_id = ARG_destroyers_ti
+		relative_position_id = ARG_submarines
 		completion_reward = {
 			add_tech_bonus = {
 				name = ss_tech_bonus
 				bonus = 0.5
+				ahead_reduction = 1
 				uses = 1
 				category = ss_tech
 			}
