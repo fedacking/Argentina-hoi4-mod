@@ -66,6 +66,7 @@
  ARG_magallanes_demanded:0 "Magallanes Demanded"
  ARG_commie_threat:0 "Communist Threat in America"
  ARG_expansionist_neighbour:0 "Expansionist Neighbour"
+ ARG_om_rio_grande_demands:0 "Rio Grande Demanded"
  
  ### Ministers ###
  ARG_juan_domingo_peron:0 "Juan Domingo Perón"
@@ -512,7 +513,7 @@ ARG_embrace_lend_lease:0 "Embrace Lend Lease"
 ARG_embrace_lend_lease_desc:0 "The men fighting in the beaches, fighting in the trenches, fighting in the cities, need all the support they can get. They need all the bullets, grenades, bombs and weapons we can give them. So Praise the Lord, and pass the ammunition."
 
 #Fight for Clay
-ARG_collectivist_diplomacy:0 "The Might of the Argentinian People"
+ARG_collectivist_diplomacy:0 "The Might of the Argentine People"
 ARG_collectivist_diplomacy_desc:0 "Argentina has been one of the most important countries in the world and specially in our sub-continent. However, in recent years our influence has been faultering and we need to quickly show to the world that we stand stronger than ever!"
 ARG_comintern_alliance:0 "Join the Comintern"
 ARG_comintern_alliance_desc:0 "The Comintern is led by the most powerful communist state in the world, it would be foolish to not join them in an alliance."
