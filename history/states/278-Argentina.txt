@@ -3,9 +3,6 @@ state={
 	id=278
 	name="STATE_278" # Pampas
 	manpower = 5596366
-	resources={
-		aluminium=40
-	}
 	state_category = megalopolis
 
 	history={
