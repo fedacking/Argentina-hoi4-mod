@@ -31,7 +31,7 @@ prospect_for_resources = {
 		ai_will_do = {
 			factor = 1
 		}
-		remove_effect = { 
+		remove_effect = {
 			278 = { set_state_flag = buenos_aires_aluminium_developed } 
 			278 = {
 				add_resource = {
