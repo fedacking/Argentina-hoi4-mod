@@ -65,6 +65,7 @@ ARG_idea_ideology_expansion:0 "Ideological Crusade"
 ARG_idea_revolution:0 "Revolution"
 ARG_idea_revolution_desc:0 "The nation is in a state of anarchy as many factions struggle for power"
 ARG_idea_faithless_research:0 "Faithless Research"
+ARG_idea_NFascism:0 "Fascism Propaganda"
 
 ##Tree Economico
 ARG_idea_inmigration1:0 "Immigrants Welcomed"
@@ -74,13 +75,25 @@ ARG_idea_german_engineering:0 "Precision German Engineering"
 ARG_idea_argentine_construction:0 "National Licitations"
 
 ##Tree Militar
-ARG_idea_tank_production:0 "Tank Production"`
+ARG_idea_tank_production:0 "Tank Production"
 ARG_idea_gbp:0 "Centralized Command"
 ARG_idea_artillery:0 "Artillery Focused Strategy"
 
 ##Tree Aereo
+ARG_idea_basic_planes:0 "Plane Production"
+ARG_idea_long_range_planes:0 "Long Range Planes"
+ARG_idea_heavy_armament_planes:0 "Heavy Armament Planes"
+ARG_idea_agile_planes:0 "Agile Planes"
 
 ##Tree Diplomatico
+ARG_deterrence2:0 "Deterrence"
+ARG_deterrence3:0 "Calm Port"
+ARG_war_of_survival:0 "Desperate Defence"
+ARG_idea_democratic_propaganda:0 "Liberty Radio"
+ARG_idea_protection_from_abroad:0 "Coastal Defence Planning"
+ARG_idea_protection_from_abroad2:0 "Coastal Defence Planning"
+ARG_increased_conscription:0 "Conscritpion Propaganda"
+ARG_lend_lease:0 "Rifle Lend Leasing"
 
 ##invasiones
 ARG_idea_integration_malvinas:0 "Integration of Malvinas"
@@ -98,15 +111,16 @@ ARG_idea_integration_bolivia_desc:0 "The government is directing resources towar
 ### Opinion Modifiers ###
 ARG_british_economic_treaty:0 "Eden-Malbrán Treaty"
 ARG_german_economic_treaty:0 "Argentine-German Cooperation Treaty"
+ARG_allied_affinity:0 "Affinity for the Allies"
+ARG_preserve_democracy:0 "Preserves Democracy"
+ARG_expansionist_neighbour:0 "Expansionist Neighbour"
+ARG_join_comintern:0 "Requested to join the Comintern"
+ARG_denied_from_comintern:0 "Admission to Comintern denied"
 ARG_malvinas_or_war:0 "Malvinas or War"
 ARG_join_axis:0 "Requested to join the Axis"
-ARG_join_comintern:0 "Requested to join the Comintern"
-ARG_denied_from_axis:0 "Admission to Axis denied
-ARG_denied_from_comintern:0 "Admission to Comintern denied"
+ARG_denied_from_axis:0 "Admission to Axis denied"
 ARG_magallanes_demanded:0 "Magallanes Demanded"
 ARG_commie_threat:0 "Communist Threat in America"
-ARG_expansionist_neighbour:0 "Expansionist Neighbour"
- 
 
 
 
@@ -766,5 +780,7 @@ arg_news.2.a:0 "For a unified Argentina."
 arg_news.2.b:0 "It was what they wished."
 
 ###Misc.
+##faction
+ARG_south_democracy_faction:0 "Southern Democracy"
 ##tech research
 ARG_dem_research_name:0 "Ibero-America Research Center"

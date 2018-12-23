@@ -2454,11 +2454,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			add_political_power = 50
 			swap_ideas = {
 				remove_idea = deterrence
 				add_idea = ARG_deterrence2
 			}
-			add_political_power = 50
 		}
 	}
 	
@@ -2479,11 +2479,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			add_political_power = 50
 			swap_ideas = {
 				remove_idea = ARG_deterrence2
 				add_idea = ARG_deterrence3
 			}
-			add_political_power = 50
 		}
 	}
 	

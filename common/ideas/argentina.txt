@@ -706,7 +706,7 @@ ideas = {
 		ARG_idea_NFascism = {
 			picture = vittoria_mutilata
 			modifier = {
-				fascism_drift = +0.05
+				fascism_drift = +0.2
 			}
 		}
 		

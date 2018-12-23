@@ -1385,7 +1385,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = arg.29.a
-		add_ideas = {ARG_idea_NFascism}
+		add_timed_idea = {
+			idea = ARG_idea_NFascism 
+			days = 365
+		}
 	}
 }
 
