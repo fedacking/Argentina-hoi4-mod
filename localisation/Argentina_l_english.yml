@@ -218,7 +218,7 @@ ARG_fascism_ADJ:0 "Argentine"
 ARG_democratic_ADJ:0 "Argentine"
 ARG_neutrality_ADJ:0 "Argentine"
 ARG_communism_ADJ:0 "Argentine"
- 
+
 ### Cosmetic names ###
 
 argcommie_communism:0 "Argentine SR"
@@ -269,6 +269,10 @@ UPP_UNIFIED_laplata_fascism_ADJ:0 "South American"
 UPP_UNIFIED_laplata_democratic_ADJ:0 "South American"
 UPP_UNIFIED_laplata_neutrality_ADJ:0 "South American"
 UPP_UNIFIED_laplata_communism_ADJ:0 "South American"
+
+### State names ###
+
+STATE_278:0 "Buenos Aires"
 
 ### Focuses ###
 
