@@ -94,16 +94,16 @@ ARG_idea_protection_from_abroad:0 "Coastal Defence Planning"
 ARG_idea_protection_from_abroad2:0 "Coastal Defence Planning"
 ARG_increased_conscription:0 "Conscritpion Propaganda"
 ARG_lend_lease:0 "Rifle Lend Leasing"
+ARG_idea_subjugated:0 "Subjugated by Argentina"
+ARG_idea_subjugation_profits:0 "Profits From Our Conquests"
 
-##invasiones
+##Integration
 ARG_idea_integration_malvinas:0 "Integration of Malvinas"
 ARG_idea_integration_malvinas_desc:0 "The government is directing resources towards the integration of Islas Malvinas."
 ARG_idea_integration_magallanes:0 "Integration of Magallanes"
 ARG_idea_integration_magallanes_desc:0 "The government is directing resources towards the integration of Magallanes."
 ARG_idea_integration_riogrande:0 "Integration of Río Grande"
 ARG_idea_integration_riogrande_desc:0 "The government is directing resources towards the integration of Río Grande."
-ARG_idea_integration_chile:0 "Integration of Chile"
-ARG_idea_integration_chile_desc:0 "The government is directing resources towards the integration of Chile."
 ARG_idea_integration_bolivia:0 "Integration of Bolivia"
 ARG_idea_integration_bolivia_desc:0 "The government is directing resources towards the integration of Bolivia."
  
