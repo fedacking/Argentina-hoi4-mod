@@ -431,7 +431,7 @@ ideas = {
 		}
 
 		ARG_idea_ban_communism = {
-			picture = trotskyite_plot
+			picture = anti_soviet_pact
 			modifier = {
 				communism_drift = -0.05
 			}
@@ -700,9 +700,7 @@ ideas = {
 			}
 		}
 		
-		
-		##Other
-		
+		##fascist pig		
 		ARG_idea_NFascism = {
 			picture = vittoria_mutilata
 			modifier = {
@@ -710,35 +708,20 @@ ideas = {
 			}
 		}
 		
-		##Integration
-		ARG_idea_integration_malvinas = {
-			picture = vittoria_mutilata
+		ARG_idea_subjugated = {
+			picture = ENG_the_war_to_end_all_wars
 			modifier = {
-				consumer_goods_factor = 0.05
+				stability_factor = -0.20
 			}
 		}
-		ARG_idea_integration_magallanes = {
-			picture = vittoria_mutilata
+		
+		ARG_idea_subjugation_profits = {
+			picture = triumphant_will
 			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-		ARG_idea_integration_riogrande = {
-			picture = vittoria_mutilata
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-		ARG_idea_integration_chile = {
-			picture = vittoria_mutilata
-			modifier = {
-				consumer_goods_factor = 0.05
-			}
-		}
-		ARG_idea_integration_bolivia = {
-			picture = vittoria_mutilata
-			modifier = {
-				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				local_resources_factor = 0.2
+				consumer_goods_factor = -0.05
 			}
 		}
 	}

@@ -94,16 +94,16 @@ ARG_idea_protection_from_abroad:0 "Coastal Defence Planning"
 ARG_idea_protection_from_abroad2:0 "Coastal Defence Planning"
 ARG_increased_conscription:0 "Conscritpion Propaganda"
 ARG_lend_lease:0 "Rifle Lend Leasing"
+ARG_idea_subjugated:0 "Subjugated by Argentina"
+ARG_idea_subjugation_profits:0 "Profits From Our Conquests"
 
-##invasiones
+##Integration
 ARG_idea_integration_malvinas:0 "Integration of Malvinas"
 ARG_idea_integration_malvinas_desc:0 "The government is directing resources towards the integration of Islas Malvinas."
 ARG_idea_integration_magallanes:0 "Integration of Magallanes"
 ARG_idea_integration_magallanes_desc:0 "The government is directing resources towards the integration of Magallanes."
 ARG_idea_integration_riogrande:0 "Integration of Río Grande"
 ARG_idea_integration_riogrande_desc:0 "The government is directing resources towards the integration of Río Grande."
-ARG_idea_integration_chile:0 "Integration of Chile"
-ARG_idea_integration_chile_desc:0 "The government is directing resources towards the integration of Chile."
 ARG_idea_integration_bolivia:0 "Integration of Bolivia"
 ARG_idea_integration_bolivia_desc:0 "The government is directing resources towards the integration of Bolivia."
  
@@ -305,15 +305,15 @@ ARG_defang_the_army_desc:0 "The military provided the muscle for the 1930 coup. 
 ARG_president_repetto:0 "President Repetto"
 ARG_president_repetto_desc:0 "With a passionate speech in front of an energized crowd of lower-class citizens, newly elected president Repetto made clear his plans to create a new social republic for the people of Argentina."
 ARG_democracy_restored:0 "Democracy Restored!"
-ARG_democracy_restored_desc:0 "With the success of the 1937 election, and the end of electoral fraud the faith in the republican institutions has been restored! The Argentinian people breath a newly founded confidence in the Government."
+ARG_democracy_restored_desc:0 "With the success of the 1937 election, and the end of electoral fraud the faith in the republican institutions has been restored! The Argentine people breath a newly founded confidence in the Government."
 ARG_social_reform:0 "Institute Social Reforms"
-ARG_social_reform_desc:0 "With a breadth of economic reforms, including pensions, education investments, unemployment benefits and homes initiatives, the new government intends to restore the faith of the Argentinian workers in the government."
+ARG_social_reform_desc:0 "With a breadth of economic reforms, including pensions, education investments, unemployment benefits and homes initiatives, the new government intends to restore the faith of the Argentine workers in the government."
 ARG_wyoming_suffrage:0 "Women's Suffrage"
 ARG_wyoming_suffrage_desc:0 "'For too long the women in our nation have been second class citizens. This end now!', the president declared in his speech. Besides granting them the vote, he has integrated them in the army in non-combat roles, to add a group of loyal members to the army."
 ARG_empower_the_unions:0 "Empower the Syndicates"
 ARG_empower_the_unions_desc:0 "The president signed into law the controversial 'Ley Sindical n. º 14 455' that grants the workers the right to associate, and ensures that only one union can form per industry."
 ARG_new_republic:0 "The New Republic"
-ARG_new_republic_desc:0 "With the success of the new democratic governments inaugurated since 1937, the Argentine government steps with confidence, and the democratic and republican traditions start to set in, into the Argentinian collective consciousness."
+ARG_new_republic_desc:0 "With the success of the new democratic governments inaugurated since 1937, the Argentine government steps with confidence, and the democratic and republican traditions start to set in, into the Argentine collective consciousness."
 
 ##Revolution
 ARG_1937_revolution:0 "The 1937 Revolution"
@@ -355,7 +355,7 @@ ARG_industrial_development:0 "Industrial Development"
 ARG_industrial_development_desc:0 "With British funding we have started to acquire new tools and technologies to expand our industry. We still need to study and implement them in the factories, but our jobs will surely be much easier from now on."
 #Alemanes
 ARG_german_inversions:0 "Invite German Diplomats"
-ARG_german_inversions_desc:0 "With the new government from Fresco installed, we have started talks with the third Reich in order to bring our economies closer. They seemed interested in expanding Argentinian resources, to feed the German economy."
+ARG_german_inversions_desc:0 "With the new government from Fresco installed, we have started talks with the third Reich in order to bring our economies closer. They seemed interested in expanding Argentine resources, to feed the German economy."
 ARG_german_iron:0 "Open New Iron Mines"
 ARG_german_iron_desc:0 "In our Chilean frontier, the mines are thoroughly underexploited. We cannot let the iron idly sleep in the soil. Every resource must be mobilized for the benefit of the nation!"
 ARG_german_tungsten:0 "Expand The Mines"
@@ -363,7 +363,7 @@ ARG_german_tungsten_desc:0 "The aluminium and tungsten needed for the war effort
 ARG_military_factories:0 "Invite Mauser"
 ARG_military_factories_desc:0 "After purchasing old German rifle stock for years, it is time to develop and produce a new rifle in Argentina. To do this we have approached Mauser to open a subsidiary in Argentina with government funding."
 ARG_military_factories2:0 "Expand Military Factories"
-ARG_military_factories2_desc:0 "After the successful integration of the new Mauser Argentina SA in the Argentinian economy it's time to expand the production of our new rifle and ensure Argentinian sovereignty."
+ARG_military_factories2_desc:0 "After the successful integration of the new Mauser Argentina SA in the Argentine economy it's time to expand the production of our new rifle and ensure Argentine sovereignty."
 ARG_german_engeneering:0 "German Engineering"
 ARG_german_engeneering_desc:0 "With our new cooperation between the German industries we have begun to acquire new engineers and techniques for military and resource production."
 #Argentina > El resto
@@ -385,7 +385,7 @@ ARG_british_treaty_desc:0 "With the reinvigorated trade between our nations, it'
 ARG_migrant_labour:0 "Migrant Labour"
 ARG_migrant_labour_desc:0 "Since our cooperation with the British has increased, the port expansion has started employing the immigrants right out of the ships. With this new welcoming act, they are joining the labour force, increasing its productivity."
 ARG_expanded_civilian_economy:0 "The New Consumers"
-ARG_expanded_civilian_economy_desc:0 "The British consumer is starting to take a liking for Argentinian products. With the new meat packers’ benefit, from the expansion the civilian economy has been reinvigorated."
+ARG_expanded_civilian_economy_desc:0 "The British consumer is starting to take a liking for Argentine products. With the new meat packers’ benefit, from the expansion the civilian economy has been reinvigorated."
 ARG_british_war_effort:0 "War Meat Exports"
 ARG_british_war_effort_desc:0 "The English are embroiled in a war and need any foodstuffs we can provide them. This has proved to be a profitable opportunity for us, and we are poised to benefit from this unbalanced trade."
 ARG_british_military_effort:0 "Support British War Effort"
@@ -394,7 +394,7 @@ ARG_british_full_economic_cooperation:0 "Full Economic Cooperation"
 ARG_british_full_economic_cooperation_desc:0 "It's time to devote most of our exports to fuelling the British war machine. In exchange for our support, we will get a set of British engineers and dock plans to expand our merchant marine. This will bring us to prosperity!"
 
 ARG_research_1:0 "New Research Techniques"
-ARG_research_1_desc:0 "Thanks to our improved economic position we have been able to improve our scientific and military teams, furthering the progress and scientific institution of the Argentinian Nation."
+ARG_research_1_desc:0 "Thanks to our improved economic position we have been able to improve our scientific and military teams, furthering the progress and scientific institution of the Argentine Nation."
 
 ##Army tree
 
@@ -438,7 +438,7 @@ ARG_final_gbp_doctrine:0 "Planning For Everything"
 ARG_final_gbp_doctrine_desc:0 "From the lowliest of privates to the highest of field-marshals every member of the army is part of a well-oiled machine and proud to be so. Our high command creates brilliant yet realistic plans that our troops are ready and willing to see to completion. And while none of the individual parts is particularly worthy of praise the total sum is an army that is always ready, always prepared"
 
 ARG_research_2:0 "Military Research"
-ARG_research_2_desc:0 "In order to expand our military doctrine, we need to continue to develop new equipment and technologies that support and fuel our strategy. For this, the Argentinian High Command has greenlighted a plan to establish a new permanent research team."
+ARG_research_2_desc:0 "In order to expand our military doctrine, we need to continue to develop new equipment and technologies that support and fuel our strategy. For this, the Argentine High Command has greenlighted a plan to establish a new permanent research team."
 
 ##Air Force Tree
 
@@ -548,7 +548,7 @@ ARG_embrace_lend_lease:0 "Embrace Lend Lease"
 ARG_embrace_lend_lease_desc:0 "The men fighting in the beaches, fighting in the trenches, fighting in the cities, need all the support they can get. They need all the bullets, grenades, bombs and weapons we can give them. So, Praise the Lord, and pass the ammunition."
 
 #Fight for Clay
-ARG_collectivist_diplomacy:0 "The Might of the Argentinian People"
+ARG_collectivist_diplomacy:0 "The Might of the Argentine People"
 ARG_collectivist_diplomacy_desc:0 "Argentina has been one of the most important countries in the world and specially in our sub-continent. However, in recent years our influence has been faltering and we need to quickly show to the world that we stand stronger than ever!"
 ARG_comintern_alliance:0 "Join the Comintern"
 ARG_comintern_alliance_desc:0 "The Comintern is led by the most powerful communist state in the world, it would be foolish to not join them in an alliance. For the international workers of the world!"

@@ -3298,8 +3298,7 @@ focus_tree = {
 		}
 		available = {
 			PRU = {
-				exists = yes 
-				is_puppet = no
+				exists = yes
 			}
 		}
 		prerequisite = {
@@ -3553,7 +3552,15 @@ focus_tree = {
 		x = 1
 		y = 3
 		completion_reward = {
-			#
+			add_ideas = ARG_idea_subjugation_profits
+			CHL = {
+				add_ideas = ARG_idea_subjugated
+			}
+			BRA = {
+				add_ideas = ARG_idea_subjugated
+			}
+			PRU = {
+				add_ideas = ARG_idea_subjugated
+			}
 		}
 	}
-}
