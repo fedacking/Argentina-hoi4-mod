@@ -51,4 +51,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Rev_Libertadora"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Rev_Libertadora.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Generic_Elections"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Generic_Elections.tga"
+	}
 }
