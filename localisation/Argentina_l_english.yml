@@ -121,6 +121,7 @@ ARG_join_axis:0 "Requested to join the Axis"
 ARG_denied_from_axis:0 "Admission to Axis denied"
 ARG_magallanes_demanded:0 "Magallanes Demanded"
 ARG_commie_threat:0 "Communist Threat in America"
+ARG_om_rio_grande_demands:0 "Rio Grande Demanded"
 
 
 
