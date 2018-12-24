@@ -3310,7 +3310,7 @@ focus_tree = {
 			PRU = {
 				OR = {
 					exists = no
-					is_puppet_of = ARG
+					is_puppet_of = PRU
 				}
 			}
 		}
