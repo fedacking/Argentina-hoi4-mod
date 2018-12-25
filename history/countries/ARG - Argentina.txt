@@ -5,6 +5,7 @@ add_ideas = {
 	ARG_concordancia
 	limited_conscription
 }
+set_stability = 0.3
 set_research_slots = 2
 # Starting tech
 set_technology = {
