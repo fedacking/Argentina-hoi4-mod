@@ -715,6 +715,7 @@ country_event = {
 		date > 1936.12.1
 	}
 	mean_time_to_happen = { days = 1 }
+	picture = GFX_event_picture_Fraude_Patriotico
 
 	option = {
 		name = arg.11.a
@@ -1147,6 +1148,7 @@ country_event = {
 	title = arg.24.t
 	desc = arg.24.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
 	trigger = {
 		tag = arg
 		date > 1943.9.5
@@ -1230,6 +1232,7 @@ country_event = {
 	title = arg.25.t
 	desc = arg.25.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
 		tag = arg
 		date > 1943.9.5
@@ -1405,7 +1408,7 @@ country_event = {
 	desc = arg.30.d
 	
 	is_triggered_only = yes
-	
+	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
 		name = arg.30.a
 		ai_chance = {
@@ -1442,7 +1445,7 @@ country_event = {
 	desc = arg.31.d
 	
 	is_triggered_only = yes
-	
+	picture = GFX_report_event_german_troops_paris
 	option = {
 		name = arg.31.a
 		add_state_claim = 301
@@ -1475,8 +1478,8 @@ country_event = {
 	title = arg.33.t
 	desc = arg.33.d
 	
-	is_triggered_only = yes
-	
+	is_triggered_only = yes	
+	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
 		name = arg.33.a
 		ai_chance = {
@@ -1545,8 +1548,8 @@ country_event = {
 	id = arg.36
 	title = arg.36.t
 	desc = arg.36.d	
-	is_triggered_only = yes	
-	
+	is_triggered_only = yes		
+	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
 		name = arg.36.a
 		ai_chance = {
@@ -1582,6 +1585,7 @@ country_event = {
 	title = arg.37.t
 	desc = arg.37.d
 	is_triggered_only = yes	
+	picture = GFX_report_event_german_troops_paris
 	option = {
 		name = arg.37.a
 		create_wargoal = {
@@ -1611,7 +1615,7 @@ country_event = {
 	title = arg.39.t
 	desc = arg.39.d	
 	is_triggered_only = yes	
-	
+	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
 		name = arg.39.a
 		ai_chance = {
@@ -1647,6 +1651,7 @@ country_event = {
 	title = arg.40.t
 	desc = arg.40.d
 	is_triggered_only = yes	
+	picture = GFX_report_event_german_troops_paris
 	option = {
 		name = arg.40.a
 		create_wargoal = {
@@ -1676,6 +1681,7 @@ country_event = {
 	title = arg.42.t
 	desc = arg.42.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
 		tag = arg
 		date > 1949.9.5
@@ -1776,6 +1782,7 @@ country_event = {
 	title = arg.43.t
 	desc = arg.43.d
 	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
 	trigger = {
 		tag = arg
 		date > 1943.9.5
