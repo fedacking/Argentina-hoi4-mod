@@ -119,6 +119,7 @@ ARG_denied_from_comintern:0 "Admission to Comintern denied"
 ARG_malvinas_or_war:0 "Malvinas or War"
 ARG_join_axis:0 "Requested to join the Axis"
 ARG_denied_from_axis:0 "Admission to Axis denied"
+ARG_om_rio_grande_demands:0 "Rio Grande Demanded"
 ARG_magallanes_demanded:0 "Magallanes Demanded"
 ARG_commie_threat:0 "Communist Threat in America"
 
@@ -136,6 +137,14 @@ ARG_integrate_malvinas:0 "Integrate Malvinas"
 ARG_integrate_magallanes:0 "Integrate Magallanes"
 ARG_integrate_riogrande:0 "Integrate Río Grande"
 ARG_integrate_chile:0 "Integrate Chile"
+##Resource Decisions
+develop_buenos_aires_aluminium_deposits:0 "Develop Buenos Aires Auminium"
+develop_buenos_aires_aluminium_deposits2:0 "Pour money into State Aluminium"
+develop_patagonia_aluminium_deposits:0 "Develop Patagonia Auminium"
+develop_entre_rios_oil_deposits:0 "Further Investments From YPF into Entre Rios"
+develop_patagonia_oil_deposits:0 "Further Investments From YPF into Patagonia"
+develop_mendoza_iron_deposits:0 "Further Investments Into Mendoza Steel"
+develop_chaco_tungsten_deposits:0 "Further Investments Into Chaco Tungsten"
 
 ### Flags ###
 ARG_ortiz_wins:0 "Ortiz won the presidency!"
