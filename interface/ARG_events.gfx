@@ -59,4 +59,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Lonardi_Renuncia"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Lonardi_Renuncia.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Golpe_43"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Golpe_43.tga"
+	}
 }
