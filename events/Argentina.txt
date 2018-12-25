@@ -1354,10 +1354,9 @@ country_event = {
 country_event = {
 	id = arg.27
 	title = arg.27.t
-	desc = arg.27.d
-	
+	desc = arg.27.d	
 	is_triggered_only = yes
-	
+	picture = GFX_report_event_tanks_mexico_city
 	option = {
 		name = arg.27.a
 		add_state_claim = 300
