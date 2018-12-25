@@ -55,4 +55,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Generic_Elections"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Generic_Elections.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Lonardi_Renuncia"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Lonardi_Renuncia.tga"
+	}
 }
