@@ -67,4 +67,8 @@ spriteTypes = {
 		name = "GFX_event_picture_Fraude_Patriotico"
 		texturefile = "gfx/event_pictures/GFX_event_picture_Fraude_Patriotico.tga"
 	}
+	spriteType = {
+		name = "GFX_event_picture_Nazis_Luna_Park"
+		texturefile = "gfx/event_pictures/GFX_event_picture_Nazis_Luna_Park.tga"
+	}
 }

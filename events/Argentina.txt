@@ -2375,6 +2375,7 @@ country_event = {
 	title = arg.108.t
 	desc = arg.108.d
 	is_triggered_only = yes
+	picture = GFX_event_picture_Nazis_Luna_Park
 	option = {
 		name = arg.108.a
 		custom_effect_tooltip = ARG_join_axis_tooltip
