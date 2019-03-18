@@ -804,6 +804,7 @@ country_event = { #Terror plot
 		add_ideas = {ARG_idea_revolution}
 		custom_effect_tooltip = ARG_commie_revolution_tooltip
 	}
+	
 	option = {
 		name = arg.13.b
 		ai_chance = {

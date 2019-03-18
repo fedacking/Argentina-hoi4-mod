@@ -419,7 +419,7 @@ ideas = {
 				trade_laws_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
-				research_time_factor = -0.03
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -465,7 +465,7 @@ ideas = {
 		ARG_idea_faithless_research = {
 			picture = generic_research_bonus
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.05
 			}
 		}
 		

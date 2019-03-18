@@ -27,6 +27,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = ARG_tooltip_focus_justo_emergency_powers_act
+			
 		}
 	}
 }

@@ -2607,6 +2607,81 @@ focus_tree = {
 	
 ##Good guys
 	
+	focus = {
+		id = ARG_ally_diplomacy
+		icon = GFX_goal_support_democracy
+		cost = 8
+		available = {
+			has_government = democratic
+		}
+		mutually_exclusive = {
+			focus = ARG_neutrality_diplomacy
+			focus = ARG_collectivist_diplomacy
+		}
+		prerequisite = {
+			focus = ARG_diplomacy
+		}
+		relative_position_id = ARG_diplomacy
+		x = -1
+		y = 1
+		completion_reward = {
+			if {
+				limit = { ENG = { has_government = democratic}}
+				ENG = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { FRA = { has_government = democratic}}
+				FRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { AST = { has_government = democratic}}
+				AST = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { CAN = { has_government = democratic}}
+				CAN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { NZL = { has_government = democratic}}
+				NZL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { USA = { has_government = democratic}}
+				USA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+		}
+	}
+	
 #
 
 	focus = {
@@ -2743,81 +2818,6 @@ focus_tree = {
 	}
 	
 #Allies
-	
-	focus = {
-		id = ARG_ally_diplomacy
-		icon = GFX_goal_support_democracy
-		cost = 8
-		available = {
-			has_government = democratic
-		}
-		mutually_exclusive = {
-			focus = ARG_neutrality_diplomacy
-			focus = ARG_collectivist_diplomacy
-		}
-		prerequisite = {
-			focus = ARG_diplomacy
-		}
-		relative_position_id = ARG_diplomacy
-		x = -1
-		y = 1
-		completion_reward = {
-			if {
-				limit = { ENG = { has_government = democratic}}
-				ENG = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-			if {
-				limit = { FRA = { has_government = democratic}}
-				FRA = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-			if {
-				limit = { AST = { has_government = democratic}}
-				AST = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-			if {
-				limit = { CAN = { has_government = democratic}}
-				CAN = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-			if {
-				limit = { NZL = { has_government = democratic}}
-				NZL = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-			if {
-				limit = { USA = { has_government = democratic}}
-				USA = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = ARG_allied_affinity
-					}
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = ARG_ask_politely_malvinas
