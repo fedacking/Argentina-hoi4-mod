@@ -324,6 +324,7 @@ ideas = {
 					AND ={ has_government = democratic USA = { has_government = democratic } } 
 					AND ={ has_government = fascism USA = { has_government = fascism } } 
 					AND ={ has_government = communism USA = { has_government = communism } } 
+					AND ={ has_government = neutrality USA = { has_government = neutrality } } 
 				}
 			}
 			research_bonus = {
