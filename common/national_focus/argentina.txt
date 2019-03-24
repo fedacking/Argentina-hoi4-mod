@@ -2696,7 +2696,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ARG_ally_diplomacy
 		}
-		bypass = { has_country_flag = ARG_flag_uk_refusedd }
+		bypass = { has_country_flag = ARG_flag_uk_refused }
 		relative_position_id = ARG_ally_diplomacy
 		x = -2
 		y = 1

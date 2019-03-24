@@ -163,4 +163,71 @@ spriteTypes = {
 		name = "GFX_idea_ARG_carlos_saavedra_lamas"
 		texturefile = "gfx/interface/ministers/ARG/ARG_Carlos_Saavedra_Lamas.tga"
 	}
+	
+	##Companies
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_siam"
+		texturefile = "gfx/interface/ideas/ARG/companies/seccion_industrial_amasadoras_mecanicas.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_astarsa"
+		texturefile = "gfx/interface/ideas/ARG/companies/astarsa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_fore_river_shipyard"
+		texturefile = "gfx/interface/ideas/ARG/companies/fore_shipbuilding_company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_fore_river_shipyard"
+		texturefile = "gfx/interface/ideas/ARG/companies/fore_shipbuilding_company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_hispano_argentina"
+		texturefile = "gfx/interface/ideas/ARG/companies/hispano_argentina.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_fabrica_militar_aviones"
+		texturefile = "gfx/interface/ideas/ARG/companies/fabrica_militar_aviones.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_afne"
+		texturefile = "gfx/interface/ideas/ARG/companies/afne.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_afne"
+		texturefile = "gfx/interface/ideas/ARG/companies/afne.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_halcon"
+		texturefile = "gfx/interface/ideas/ARG/companies/halcon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_ika"
+		texturefile = "gfx/interface/ideas/ARG/companies/ika.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_fabricaciones_militares"
+		texturefile = "gfx/interface/ideas/ARG/companies/fabricaciones_militares.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_UBA"
+		texturefile = "gfx/interface/ideas/ARG/companies/universidad_buenos_aires.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ARG_idea_company_YPF"
+		texturefile = "gfx/interface/ideas/ARG/companies/ypf.dds"
+	}
 }

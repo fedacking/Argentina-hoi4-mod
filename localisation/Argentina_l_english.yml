@@ -30,6 +30,21 @@ ARG_agustin_pedro_justo_th:0 "Agustín Pedro Justo"
 ARG_eleazar_videla_th:0 "Eleazar Videla"
 ARG_antonio_parodi_th:0 "Antonio Parodi"
 
+##empresas
+ARG_idea_company_siam:0 "SIAM"
+ARG_idea_company_astarsa:0 "ASTARSA"
+ARG_idea_company_fore_river_shipyard:0 "Fore Shipbuilding"
+ARG_idea_company_fore_river_shipyard_desc:0 "The shipbuilder for the ARA Rivadavia and ARA Moreno, Fore has expressed interesting in working with the Argentine goverment. but they need to secure approval from Washington first."
+ARG_idea_company_hispano_argentina:0 "Hispano Argentina"
+ARG_idea_company_fabrica_militar_aviones:0 "FMA"
+ARG_idea_company_iame:0 "IAME"
+ARG_idea_company_afne:0 "AFNE"
+ARG_idea_company_ika:0 "Kaiser Argentina"
+ARG_idea_company_halcon:0 "Halcón"
+ARG_idea_company_fabricaciones_militares:0 "Fabricaciones Militares"
+ARG_idea_company_YPF:0 "YPF"
+ARG_idea_company_UBA:0 "Buenos Aires University"
+
 ##Partidos
 ARG_concordancia:0 "Concordancia"
 ARG_concordancia_desc:0 "Concordancia is the current ruling party. Formed by the Partido Demócrata Nacional, the Unión Cívica Radical Antipersonalista and the Partido Socialista Independiente, the Concordancia political alliance has been keeping power through the proscription of UCR's candidates, electoral fraud, and political violence."
@@ -157,6 +172,9 @@ ARG_token_reform:0 "The Government adopted a token reform."
 ARG_march:0 "The government has let the people march peacefully."
 ARG_crack_down:0 "The government has sent the police to repress the march."
 ARG_stabilized:0 "The nation is stabilized."
+ARG_uk_accept:0 "We joined the Allies for Malvinas."
+ARG_flag_join_anyways:0 "We joined the Allies without Malvinas."
+ARG_flag_uk_refused:0 "The English have rejected our demands."
 
 ### Tooltips ###
 
