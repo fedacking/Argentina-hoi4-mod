@@ -57,9 +57,7 @@ if = {
 set_country_flag = monroe_doctrine
 
 1939.1.1 = {
-
-	add_political_power = 1198
-	
+	add_political_power = 1198	
 	#generic focuses
 	complete_national_focus = army_effort
 	complete_national_focus = equipment_effort
@@ -69,8 +67,7 @@ set_country_flag = monroe_doctrine
 	complete_national_focus = large_navy
 	complete_national_focus = industrial_effort
 	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
+	complete_national_focus = production_effort	
 	oob = "ARG_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
@@ -79,7 +76,6 @@ set_country_flag = monroe_doctrine
 			set_naval_oob = "ARG_1939_naval_legacy"
 		}
 	}
-
 	set_technology = {
 		early_bomber = 1
 		naval_bomber1 = 1
@@ -134,30 +130,19 @@ set_country_flag = monroe_doctrine
 }
 
 set_convoys = 120
+
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 36
-		}
-
-		fascism = {
-			popularity = 11
-		}
-		
-		communism = {
-			popularity = 1
-		}
-		
-		neutrality = { 
-			popularity = 52
-		}
-	}
-	
 	ruling_party = neutrality
 	last_election = "1931.11.8"
 	election_frequency = 72
-	elections_allowed = no
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 36
+	fascism = 11
+	communism = 1
+	neutrality = 52
 }
 
 create_country_leader = {
@@ -173,31 +158,17 @@ create_country_leader = {
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-		democratic = { 
-			popularity = 5
-		}
-
-		fascism = {
-			popularity = 5
-		}
-		
-		communism = {
-			popularity = 12
-		}
-		
-		neutrality = { 
-			popularity = 78
-		}
-	}
-	
-	ruling_party = neutrality
+		ruling_party = neutrality
 		last_election = "1937.9.5"
-		election_frequency = 108
-		elections_allowed = no
+		election_frequency = 72
+		elections_allowed = yes
 	}
-
+	set_popularities = {
+		democratic = 36
+		fascism = 11
+		communism = 1
+		neutrality = 52
+	}
 	create_country_leader = {
 		name = "Roberto María Ortiz"
 		desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
@@ -209,7 +180,6 @@ create_country_leader = {
 		}
 	}
 }
-
 
 create_country_leader = {
 	name = "Manuel Fresco"
