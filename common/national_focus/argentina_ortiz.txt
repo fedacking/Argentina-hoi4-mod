@@ -1,0 +1,57 @@
+focus_tree = {
+	id = argentine_ortiz_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARG
+		}
+	}
+	
+	default = no
+	
+	####################
+	###Political Tree###
+	####################
+
+	## Dirtbag Centrist
+	
+	focus = {
+		id = ARG_ortiz_reforms
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 5
+		y = 0
+		cost = 10		
+		completion_reward = {
+			custom_effect_tooltip = ARG_tooltip_focus_justo_emergency_powers_act			
+		}
+	}
+
+##############	
+###Eco Tree###
+##############
+	
+	shared_focus = ARG_renegotiate_treaty
+
+###########################
+###       Military      ###
+###########################
+
+##army
+
+	shared_focus = ARG_review_military
+
+##air
+	
+	shared_focus = ARG_air_command
+	
+##navy
+	
+	shared_focus = ARG_review_navy
+	
+##### Diplo Tree #####
+	
+	shared_focus = ARG_diplomacy
+
+}

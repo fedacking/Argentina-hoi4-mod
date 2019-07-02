@@ -1,0 +1,3076 @@
+	##############	
+	###Eco Tree###
+	##############
+		
+		shared_focus = {
+		id = ARG_renegotiate_treaty
+		icon = GFX_goal_generic_positive_trade_relations
+		available = {
+			ENG = {has_government = democratic
+				is_puppet = no}
+			OR = {has_government = democratic
+			has_government = neutrality}
+		}
+		bypass = { 
+			OR = {
+				has_government = fascism 
+				has_government = communism 
+			}
+		}
+		x = 24
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_british_economic_treaty
+				}
+			}
+			swap_ideas = {
+				remove_idea = export_focus
+				add_idea = free_trade
+			}			
+		}
+	}
+
+	shared_focus = {
+		id = ARG_port_madero
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ARG_renegotiate_treaty }
+		available = {
+		}
+		bypass = { 
+			OR = {
+				has_government = fascism 
+				has_government = communism 
+			}
+		}
+		x = 21
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			278 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			278 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 12364
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_breadbasket
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ARG_renegotiate_treaty }
+		available = {
+		}
+		x = 23
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			278 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			510 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			511 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = ENG }
+		}
+	}
+
+	shared_focus = {
+		id = ARG_migrant_acceptance
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = ARG_renegotiate_treaty }
+		available = {
+		}
+		x = 25
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = ARG_idea_inmigration1
+		}
+	}	
+
+	shared_focus = {
+		id = ARG_migrant_minds
+		icon = GFX_focus_research
+		prerequisite = { focus = ARG_renegotiate_treaty }
+		available = {
+		}
+		x = 27
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	shared_focus = {
+		id = ARG_industrial_development
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ARG_migrant_minds }
+		prerequisite = { focus = ARG_migrant_acceptance }
+		prerequisite = { focus = ARG_breadbasket }
+		prerequisite = { focus = ARG_port_madero }
+		x = 24
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	
+	}
+	
+## British tree
+
+	shared_focus = {
+		id = ARG_british_treaty
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ARG_industrial_development }
+		available = {
+			ENG = {
+				has_government = democratic
+				is_puppet = no
+			}
+			OR = {
+				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_alvear_wins
+			}
+		}
+		mutually_exclusive = {
+			focus = ARG_argentine_first
+			focus = ARG_german_inversions
+		}		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_alvear_wins
+			}
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_ortiz_wins
+			}
+		}
+		x = 28
+		y = 3
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics
+				bonus = 2
+				uses = 1
+				category = electronics
+			}
+		}
+	}	
+	
+	shared_focus = {
+		id = ARG_migrant_labour
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = ARG_british_treaty }
+		available = {
+		}
+		x = 27
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARG_idea_inmigration1
+				add_idea = ARG_idea_inmigration2
+			}
+		}
+	}	
+	
+	shared_focus = {
+		id = ARG_expanded_civilian_economy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ARG_migrant_labour }
+		available = {
+		}
+		x = 27
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = ARG_british_war_effort
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ARG_british_treaty }
+		available = {
+			ENG = { has_war = yes }
+		}
+		x = 29
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	
+	shared_focus = {
+		id = ARG_british_military_effort
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = ARG_british_war_effort }
+		available = {
+			ENG = { has_war = yes }
+		}
+		x = 29
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	
+	shared_focus = {
+		id = ARG_british_full_economic_cooperation
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = ARG_british_military_effort }
+		prerequisite = { focus = ARG_expanded_civilian_economy }
+		available = {
+		}
+		x = 28
+		y = 6
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = ARG_idea_british_treaty
+		}
+	}	
+	
+	
+##GermanInvestors
+	
+	shared_focus = {
+		id = ARG_german_inversions
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = ARG_industrial_development }
+		mutually_exclusive = {
+			focus = ARG_argentine_first
+			focus = ARG_british_treaty
+		}
+		available = {
+			GER = {
+				has_government = fascism
+				is_puppet = no
+				}
+			has_government = fascism
+		}
+		x = 20
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				has_country_flag = ARG_fresco_wins
+			}
+		}
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_german_economic_treaty
+				}
+			}
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 3
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_german_iron
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ARG_german_inversions }
+		available = {
+		}
+		x = 19
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_resource = { 
+			type = steel 
+			amount = 10
+			state = 511
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_german_tungsten
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = ARG_german_iron }
+		available = {
+		}
+		x = 19
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_resource = { 
+			type = tungsten 
+			amount = 16
+			state = 509
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ARG_german_inversions }
+		available = {
+		}
+		x = 21
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_military_factories2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ARG_military_factories }
+		available = {
+		}
+		x = 21
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_german_engeneering
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = ARG_military_factories2 }
+		prerequisite = { focus = ARG_german_tungsten }
+		available = {
+		}
+		x = 20
+		y = 6
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = ARG_idea_german_engineering
+		}
+	}
+	
+##argentina first
+	
+	shared_focus = {
+		id = ARG_argentine_first
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = ARG_industrial_development }
+		mutually_exclusive = {
+			focus = ARG_british_treaty
+			focus = ARG_german_inversions
+		}
+		available = {
+			OR = {
+				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_alvear_wins
+				has_country_flag = ARG_repetto_wins
+				has_country_flag = ARG_fresco_wins
+				has_country_flag = ARG_ghioldi_wins
+			}
+		}
+		x = 24
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = ARG_ghioldi_wins
+					has_country_flag = ARG_repetto_wins
+				}
+			}		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = free_trade
+				add_idea = limited_exports
+			}
+			ENG = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_british_economic_treaty
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_argentine_roads
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = ARG_argentine_first }
+		available = {
+		}
+		x = 23
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_argentine_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ARG_argentine_roads }
+		available = {
+		}
+		x = 23
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_argentine_civ
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = ARG_argentine_first }
+		available = {
+		}
+		x = 25
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_argentine_civ2
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ARG_argentine_civ }
+		available = {
+		}
+		x = 25
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_argentine_construction
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ARG_argentine_railways }
+		prerequisite = { focus = ARG_argentine_civ2 }
+		available = {
+		}
+		x = 24
+		y = 6
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = ARG_idea_argentine_construction
+		}
+	}
+
+	shared_focus = {
+		id = ARG_research_1
+		icon = GFX_focus_research
+		prerequisite = { 
+			focus = ARG_german_engeneering
+			focus = ARG_argentine_construction
+			focus = ARG_british_full_economic_cooperation
+		}
+		available = {
+		}
+		x = 24
+		y = 7
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+###########################
+###       Military      ###
+###########################
+
+##army
+
+	shared_focus = {
+		id = ARG_review_military
+		icon = GFX_goal_generic_axis_build_infantry
+		available = {
+			has_completed_focus = ARG_industrial_development
+ 		}
+		x = 14
+		y = 9
+		cost = 5
+		available = {
+		}
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	
+	shared_focus = {# Mobile Warfare
+		id = ARG_mobile_warfare
+		icon = GFX_goal_generic_army_tanks
+		cost = 8
+		prerequisite = {
+			focus = ARG_review_military
+		}
+		mutually_exclusive = {
+			focus = ARG_grand_battle_plan
+			focus = ARG_superior_fire_power
+		}
+		relative_position_id = ARG_review_military
+		x = -4
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 3
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_motorized
+		icon = GFX_goal_generic_production2
+		cost = 8
+		prerequisite = {
+			focus = ARG_mobile_warfare
+		}
+		relative_position_id = ARG_mobile_warfare
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = mechanized_bonus
+				bonus = 2
+				ahead_reduction = 1
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_tanks
+		icon = GFX_goal_continuous_armor_production
+		cost = 8
+		prerequisite = {
+			focus = ARG_motorized
+		}
+		relative_position_id = ARG_motorized
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2
+				ahead_reduction = 1
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_light_tanks
+		icon = GFX_focus_generic_license_production
+		cost = 8
+		prerequisite = {
+			focus = ARG_mobile_warfare
+		}
+		relative_position_id = ARG_mobile_warfare
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2
+				ahead_reduction = 1
+				category = cat_light_armor
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_mobile_bonus
+		icon = GFX_goal_generic_army_motorized
+		cost = 8
+		prerequisite = {
+			focus = ARG_light_tanks
+		}
+		relative_position_id = ARG_light_tanks
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_final_mobile_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = ARG_mobile_bonus
+		}
+		prerequisite = {
+			focus = ARG_tanks
+		}
+		relative_position_id = ARG_mobile_warfare
+		x = 0
+		y = 3
+		cost = 8
+		completion_reward = {
+			add_ideas = ARG_idea_tank_production
+		}
+	}
+	
+	shared_focus = {# Superior Firepower
+		id = ARG_superior_fire_power
+		icon = GFX_goal_generic_army_artillery2
+		cost = 8
+		prerequisite = {
+			focus = ARG_review_military
+		}
+		mutually_exclusive = {
+			focus = ARG_grand_battle_plan
+			focus = ARG_mobile_warfare
+		}
+		relative_position_id = ARG_review_military
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 3
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_infantry_sfp
+		icon = GFX_focus_generic_little_entente
+		cost = 8
+		prerequisite = {
+			focus = ARG_superior_fire_power
+		}
+		relative_position_id = ARG_superior_fire_power
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_support_sfp
+		icon = GFX_goal_generic_small_arms
+		cost = 8
+		prerequisite = {
+			focus = ARG_infantry_sfp
+		}
+		relative_position_id = ARG_infantry_sfp
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_artillery_sfp
+		icon = GFX_goal_generic_army_artillery
+		cost = 8
+		prerequisite = {
+			focus = ARG_superior_fire_power
+		}
+		relative_position_id = ARG_superior_fire_power
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_sfp_bonus
+		icon = GFX_goal_generic_military_sphere
+		cost = 8
+		prerequisite = {
+			focus = ARG_artillery_sfp
+		}
+		relative_position_id = ARG_artillery_sfp
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_final_sfp_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = ARG_sfp_bonus
+		}
+		prerequisite = {
+			focus = ARG_support_sfp
+		}
+		relative_position_id = ARG_superior_fire_power
+		x = 0
+		y = 3
+		cost = 8
+		completion_reward = {
+			add_ideas = ARG_idea_artillery
+		}
+	}
+	
+	shared_focus = {# Grand Battle Plan
+		id = ARG_grand_battle_plan
+		icon = GFX_goal_generic_position_armies
+		cost = 8
+		prerequisite = {
+			focus = ARG_review_military
+		}
+		mutually_exclusive = {
+			focus = ARG_superior_fire_power
+			focus = ARG_mobile_warfare
+		}
+		relative_position_id = ARG_review_military
+		x = 4
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 3
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_support_gbp
+		icon = GFX_goal_rhineland
+		cost = 8
+		prerequisite = {
+			focus = ARG_grand_battle_plan
+		}
+		relative_position_id = ARG_grand_battle_plan
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 4
+				category = support_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_air_support_gbp
+		icon = GFX_focus_secret_rearmament
+		cost = 8
+		prerequisite = {
+			focus = ARG_support_gbp
+		}
+		relative_position_id = ARG_support_gbp
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 3
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_spec_ops
+		icon = GFX_goal_generic_special_forces
+		cost = 8
+		prerequisite = {
+			focus = ARG_grand_battle_plan
+		}
+		relative_position_id = ARG_grand_battle_plan
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 3
+				uses = 1
+				category = para_tech
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+				category = marine_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_gbp_bonus
+		icon = GFX_focus_generic_military_mission
+		cost = 8
+		prerequisite = {
+			focus = ARG_spec_ops
+		}
+		relative_position_id = ARG_spec_ops
+		x = 0
+		y = 1
+		completion_reward = {
+		add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 3
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_final_gbp_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = ARG_air_support_gbp
+		}
+		prerequisite = {
+			focus = ARG_gbp_bonus
+		}
+		relative_position_id = ARG_grand_battle_plan
+		x = 0
+		y = 3
+		cost = 8
+		completion_reward = {
+			add_ideas = ARG_idea_gbp
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_research_2
+		icon = GFX_focus_research
+		prerequisite = { 
+			focus = ARG_final_mobile_doctrine
+			focus = ARG_final_sfp_doctrine
+			focus = ARG_final_gbp_doctrine
+		}
+		available = {
+		}
+		relative_position_id = ARG_review_military
+		x = 0
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	##air
+	
+	shared_focus = {
+		id = ARG_air_command
+		icon = GFX_goal_generic_position_armies
+		available = {
+			has_completed_focus = ARG_industrial_development
+		}
+		x = 24
+		y = 9
+		cost = 5
+		
+		completion_reward = {
+			air_experience = 20
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_air_engineers
+		icon = GFX_goal_generic_air_production
+		prerequisite = { 
+			focus = ARG_air_command
+		}
+		relative_position_id = ARG_air_command
+		x = -1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			add_ideas = ARG_idea_basic_planes
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fabrica_militar_aviones
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { 
+			focus = ARG_air_command
+		}
+		relative_position_id = ARG_air_command
+		x = 1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			510 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									510 = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+		shared_focus = {
+		id = ARG_plane_research_group
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		prerequisite = { focus = ARG_air_engineers }
+		prerequisite = { focus = ARG_fabrica_militar_aviones }
+		available = {
+		}
+		relative_position_id = ARG_air_command
+		x = 0
+		y = 2
+		cost = 8
+		
+		completion_reward = {
+			add_tech_bonus = {
+                name = air_equipment
+                bonus = 1
+                uses = 1
+                category = air_equipment
+            }
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_long_range
+		icon = GFX_goal_expand_the_luftwaffe
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_heavy_armament
+			focus = ARG_agile_planes
+		}
+		relative_position_id = ARG_plane_research_group
+		x = -2
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			custom_effect_tooltip = ARG_idea_long_range_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_long_range_planes
+				}
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	shared_focus = {
+		id = ARG_heavy_armament
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_long_range
+			focus = ARG_agile_planes
+		}
+		relative_position_id = ARG_plane_research_group
+		x = 0
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			custom_effect_tooltip = ARG_idea_heavy_armament_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_heavy_armament_planes
+				}
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_agile_planes
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ARG_plane_research_group }
+		mutually_exclusive = {
+			focus = ARG_heavy_armament
+			focus = ARG_long_range
+		}
+		relative_position_id = ARG_plane_research_group
+		x = 2
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			custom_effect_tooltip = ARG_idea_agile_planes_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ARG_idea_basic_planes
+					add_idea = ARG_idea_agile_planes
+				}
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_heavy_fighters
+		icon = GFX_focus_chi_flying_tigers
+		prerequisite = { 
+			focus = ARG_long_range
+		}
+		relative_position_id = ARG_long_range
+		x = -1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = heavy_fighter
+				bonus = 3
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_strategic_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { 
+			focus = ARG_long_range
+			focus = ARG_heavy_armament
+		}
+		relative_position_id = ARG_heavy_armament
+		x = -1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = strategic_bomber
+				bonus = 3
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_close_air_support
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { 
+			focus = ARG_agile_planes
+			focus = ARG_heavy_armament
+		}
+		relative_position_id = ARG_heavy_armament
+		x = 1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = cas_bomber
+				bonus = 3
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fighter_planes
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ARG_agile_planes }
+		relative_position_id = ARG_agile_planes
+		x = 1
+		y = 1
+		cost = 8
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_fighter
+				bonus = 3
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+##navy
+
+	shared_focus = {
+		id = ARG_review_navy
+		icon = GFX_goal_generic_build_navy
+		available = {
+			has_completed_focus = ARG_industrial_development
+ 		}
+		x = 32
+		y = 9
+		cost = 5
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 20
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 2
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {# Fleet in Being
+		id = ARG_fleet_being
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 8
+		prerequisite = {
+			focus = ARG_review_navy
+		}
+		mutually_exclusive = {
+			focus = ARG_trade_interdiction
+		}
+		relative_position_id = ARG_review_navy
+		x = -2
+		y = 1
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_battleships
+		icon = GFX_goal_generic_navy_battleship
+		cost = 8
+		prerequisite = {
+			focus = ARG_fleet_being
+		}
+		relative_position_id = ARG_fleet_being
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = bb_tech_bonus
+				bonus = 1
+				uses = 1
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = basic_heavy_battery
+				technology = improved_heavy_battery
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 12
+		prerequisite = {
+			focus = ARG_battleships
+		}
+		relative_position_id = ARG_battleships
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = cl_tech_bonus
+				bonus = 2
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = naval_bomber
+				bonus = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_battlecruisers
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 8
+		prerequisite = {
+			focus = ARG_fleet_being
+		}
+		x = 1
+		y = 1
+		relative_position_id = ARG_fleet_being
+		completion_reward = {
+			add_tech_bonus = {
+				name = bc_tech_bonus
+				bonus = 1
+				uses = 1
+				category = bc_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = fire_control_methods_1
+				technology = fire_control_methods_2
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fib_destroyers
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 8
+		prerequisite = {
+			focus = ARG_battlecruisers
+		}
+		x = 0
+		y = 1
+		relative_position_id = ARG_battlecruisers
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = improved_depth_charges
+				technology = advanced_depth_charges
+			}
+		}
+	}
+	
+	shared_focus = {# Trade Interdiction
+		id = ARG_trade_interdiction
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5
+		prerequisite = {
+			focus = ARG_review_navy
+		}
+		mutually_exclusive = {
+			focus = ARG_fleet_being
+		}
+		x = 2
+		y = 1
+		relative_position_id = ARG_review_navy
+		completion_reward = {
+			add_tech_bonus = {
+				name = trade_interdiction_bonus
+				bonus = 1
+				uses = 3
+				category = trade_interdiction_tree
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_submarines
+		icon = GFX_goal_generic_navy_submarine
+		cost = 5
+		prerequisite = {
+			focus = ARG_trade_interdiction
+		}
+		x = -1
+		y = 1
+		relative_position_id = ARG_trade_interdiction
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 3
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_uboats
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5
+		prerequisite = {
+			focus = ARG_submarines
+		}
+		x = 0
+		y = 1
+		relative_position_id = ARG_submarines
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_tech_bonus
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = magnetic_detonator
+				technology = electric_torpedo
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_light_cruisers
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		prerequisite = {
+			focus = ARG_trade_interdiction
+		}
+		x = 1
+		y = 1
+		relative_position_id = ARG_trade_interdiction
+		completion_reward = {
+			add_tech_bonus = {
+				name = ca_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = improved_ship_torpedo_launcher
+				technology = advanced_ship_torpedo_launcher
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_ti_bonus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		prerequisite = {
+			focus = ARG_light_cruisers
+		}
+		x = 0
+		y = 1
+		relative_position_id = ARG_light_cruisers
+		completion_reward = {
+			add_tech_bonus = {
+				name = trade_interdiction_bonus
+				bonus = 1
+				uses = 1
+				category = trade_interdiction_tree
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = basic_submarine_snorkel
+				technology = improved_submarine_snorkel
+			}
+		}
+	}
+
+	shared_focus = {
+		id = ARG_tp_bonus
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = {
+			focus = ARG_carriers
+			focus = ARG_fib_destroyers
+			focus = ARG_uboats
+			focus = ARG_ti_bonus
+		}
+		x = 0
+		y = 4
+		relative_position_id = ARG_review_navy
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = tp_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+	
+##### Diplo Tree #####
+
+	shared_focus = {
+		id = ARG_diplomacy
+		icon = GFX_goal_generic_propaganda
+		cost = 8
+		bypass = {
+			has_country_flag = ARG_stabilized
+		}
+		available = {
+			always = no
+		}
+		x = 39
+		y = 0
+		completion_reward = {
+			#
+		}
+	}
+	
+##Neutrality
+	
+	shared_focus = {
+		id = ARG_neutrality_diplomacy
+		icon = GFX_goal_generic_defence
+		cost = 8
+		available = {
+			OR = {
+			has_government = democratic
+			has_government = neutrality
+			}
+		}
+		mutually_exclusive = {
+			focus = ARG_ally_diplomacy
+			focus = ARG_collectivist_diplomacy
+		}
+		prerequisite = {
+			focus = ARG_diplomacy
+		}
+		relative_position_id = ARG_diplomacy
+		x = -7
+		y = 1
+		completion_reward = {
+			add_ideas = neutrality_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_defensive_military_plans
+		icon = GFX_goal_generic_construction2
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_neutrality_diplomacy
+		}
+		relative_position_id = ARG_neutrality_diplomacy
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_efficient_draft
+		icon = GFX_focus_generic_little_entente
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_defensive_military_plans
+		}
+		relative_position_id = ARG_defensive_military_plans
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = deterrence
+				add_idea = ARG_deterrence2
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_calm_port_in_the_storm
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 8
+		available = {
+			threat > 0.4
+		}
+		bypass = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_efficient_draft
+		}
+		relative_position_id = ARG_efficient_draft
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = ARG_deterrence2
+				add_idea = ARG_deterrence3
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fortify_brazilian_border
+		icon = GFX_goal_generic_construction
+		cost = 8
+		available = {
+		}
+		bypass = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_neutrality_diplomacy
+		}
+		relative_position_id = ARG_neutrality_diplomacy
+		x = 1
+		y = 1
+		completion_reward = {
+			510 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fortify_paraguay_border
+		icon = GFX_goal_generic_construct_military
+		cost = 8
+		available = {
+		}
+		bypass = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_fortify_brazilian_border
+		}
+		relative_position_id = ARG_fortify_brazilian_border
+		x = 0
+		y = 1
+		completion_reward = {
+			509 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_fortify_oriental_border
+		icon = GFX_goal_generic_fortify_city
+		cost = 8
+		available = {
+		}
+		bypass = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_fortify_paraguay_border
+		}
+		relative_position_id = ARG_fortify_paraguay_border
+		x = 0
+		y = 1
+		completion_reward = {
+			278 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_desperate_defense
+		icon = GFX_goal_generic_small_arms
+		cost = 8
+		available = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = ARG_calm_port_in_the_storm
+		}
+		prerequisite = {
+			focus = ARG_fortify_oriental_border
+		}
+		relative_position_id = ARG_calm_port_in_the_storm
+		x = 1
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {has_idea = ARG_deterrence2}
+				remove_ideas = ARG_deterrence2
+			}
+			swap_ideas = {
+				remove_idea = ARG_deterrence3
+				add_idea = ARG_war_of_survival
+			}	
+		}
+	}
+	
+##Good guys
+	
+	shared_focus = {
+		id = ARG_ally_diplomacy
+		icon = GFX_goal_support_democracy
+		cost = 8
+		available = {
+			has_government = democratic
+		}
+		mutually_exclusive = {
+			focus = ARG_neutrality_diplomacy
+			focus = ARG_collectivist_diplomacy
+		}
+		prerequisite = {
+			focus = ARG_diplomacy
+		}
+		relative_position_id = ARG_diplomacy
+		x = -1
+		y = 1
+		completion_reward = {
+			if {
+				limit = { ENG = { has_government = democratic}}
+				ENG = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { FRA = { has_government = democratic}}
+				FRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { AST = { has_government = democratic}}
+				AST = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { CAN = { has_government = democratic}}
+				CAN = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { NZL = { has_government = democratic}}
+				NZL = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+			if {
+				limit = { USA = { has_government = democratic}}
+				USA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ARG_allied_affinity
+					}
+				}
+			}
+		}
+	}
+	
+#
+
+	shared_focus = {
+		id = ARG_south_american_democracy
+		icon = GFX_goal_generic_military_sphere
+		cost = 8
+		available = {
+		}
+		mutually_exclusive = {
+			focus = ARG_ask_politely_malvinas
+		}
+		prerequisite = {
+			focus = ARG_ally_diplomacy
+		}
+		bypass = { has_country_flag = ARG_flag_uk_refused }
+		relative_position_id = ARG_ally_diplomacy
+		x = -2
+		y = 1
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { has_government = democratic}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_preserve_democracy
+				}
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = ARG_south_democracy_faction
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_democratic_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_south_american_democracy
+		}
+		relative_position_id = ARG_south_american_democracy
+		x = -1
+		y = 1
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { not = {has_government = democratic}}
+				add_timed_idea = {
+					idea = ARG_idea_democratic_propaganda
+					days = 365
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_protection_from_abroad
+		icon = GFX_goal_generic_army_artillery
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_south_american_democracy
+		}
+		relative_position_id = ARG_south_american_democracy
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = ARG_idea_protection_from_abroad
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_buenos_aires_conference
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_democratic_propaganda
+		}
+		prerequisite = {
+			focus = ARG_protection_from_abroad
+		}
+		relative_position_id = ARG_democratic_propaganda
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_south_american_research
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_buenos_aires_conference
+		}
+		relative_position_id = ARG_buenos_aires_conference
+		x = -1
+		y = 1
+		completion_reward = {
+			add_to_tech_sharing_group = ARG_dem_research
+			every_other_country = {
+				limit = { is_in_faction_with = ARG }
+				add_to_tech_sharing_group = ARG_dem_research 
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_south_american_joint_command_staff
+		icon = GFX_goal_generic_position_armies
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_buenos_aires_conference
+		}
+		relative_position_id = ARG_buenos_aires_conference
+		x = 1
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARG_idea_protection_from_abroad
+				add_idea = ARG_idea_protection_from_abroad2
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ARG }
+				add_ideas = ARG_idea_protection_from_abroad2
+			}
+		}
+	}
+	
+#Allies
+	
+	shared_focus = {
+		id = ARG_ask_politely_malvinas
+		icon = GFX_goal_malvinas_green
+		cost = 8
+		available = {
+			has_government = democratic
+			ENG = {
+				has_government = democratic
+				has_war = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = ARG_south_american_democracy
+		}
+		prerequisite = {
+			focus = ARG_ally_diplomacy
+		}
+		relative_position_id = ARG_ally_diplomacy
+		x = 2
+		y = 1
+		completion_reward = {
+			ENG = {
+				country_event = arg.100
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_usa_designer
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 8
+		available = {
+			USA = {
+				has_government = democratic
+				OR = {
+					has_war = yes
+					has_completed_focus = USA_the_giant_wakes
+				}
+			}
+			OR = {
+				has_country_flag = ARG_uk_accept
+				has_country_flag = ARG_flag_join_anyways
+			}
+		}
+		prerequisite = {
+			focus = ARG_ask_politely_malvinas
+		}
+		relative_position_id = ARG_ask_politely_malvinas
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_marine_trainers
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_usa_designer
+		}
+		relative_position_id = ARG_usa_designer
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_full_mobilisation
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_marine_trainers
+			focus = ARG_combined_scientist
+		}
+		mutually_exclusive = {
+			focus = ARG_embrace_lend_lease
+		}
+		relative_position_id = ARG_marine_trainers
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = ARG_increased_conscription
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_commonwealth_convoys
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 8
+		available = {
+			OR = {
+				has_country_flag = ARG_uk_accept
+				has_country_flag = ARG_flag_join_anyways
+			}
+		}
+		prerequisite = {
+			focus = ARG_ask_politely_malvinas
+		}
+		relative_position_id = ARG_ask_politely_malvinas
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+			add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = ENG }
+			if = {
+				limit = { USA = {has_completed_focus = USA_arsenal_of_democracy} }
+				add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = USA }
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_combined_scientist
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_commonwealth_convoys
+		}
+		relative_position_id = ARG_commonwealth_convoys
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_embrace_lend_lease
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8
+		available = {
+		}
+		prerequisite = {
+			focus = ARG_marine_trainers
+			focus = ARG_combined_scientist
+		}
+		mutually_exclusive = {
+			focus = ARG_full_mobilisation
+		}
+		relative_position_id = ARG_combined_scientist
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = ARG_lend_lease
+		}
+	}
+	
+##AGGRO
+	
+	shared_focus = {
+		id = ARG_collectivist_diplomacy
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 8
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+		mutually_exclusive = {
+			focus = ARG_neutrality_diplomacy
+			focus = ARG_ally_diplomacy
+		}
+		prerequisite = {
+			focus = ARG_diplomacy
+		}
+		relative_position_id = ARG_diplomacy
+		x = 7
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			URG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			PAR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			CHL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			BOL = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			BRA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+			PRU = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_expansionist_neighbour
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_comintern_alliance
+		icon = GFX_focus_generic_join_comintern
+		cost = 8
+		available = {
+			has_government = communism
+			SOV = {
+				has_government = communism
+				is_puppet = no
+			}
+		}
+		mutually_exclusive = {
+			focus = ARG_german_diplomacy
+			focus = ARG_own_way
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
+		x = -2
+		y = 1
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_join_comintern
+				}
+				country_event = arg.110
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_own_way
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8
+		available = {
+		}		
+		mutually_exclusive = {
+			focus = ARG_german_diplomacy
+			focus = ARG_comintern_alliance
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
+		x = 0
+		y = 1
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_german_diplomacy
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 8
+		available = {
+			has_government = fascism
+			GER = { 
+				has_government = fascism
+				is_puppet = no
+			}
+		}		
+		mutually_exclusive = {
+			focus = ARG_comintern_alliance
+			focus = ARG_own_way
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		relative_position_id = ARG_collectivist_diplomacy
+		x = 2
+		y = 1
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_join_axis
+				}
+				country_event = arg.107
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_malvinas_or_war
+		icon = GFX_goal_malvinas_wank_wargoal
+		cost = 8
+		bypass = {
+			ENG = {
+				exists = no 
+			}
+		}
+		available = {
+			ENG = {
+				owns_state = 299
+			}
+		}
+		prerequisite = {
+			focus = ARG_german_diplomacy
+			focus = ARG_own_way
+			focus = ARG_comintern_alliance
+		}
+		will_lead_to_war_with = ENG
+		relative_position_id = ARG_own_way
+		x = 0
+		y = 1
+		completion_reward = {
+			ENG = {
+				country_event = arg.33
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_malvinas_or_war
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_paraguay_invitation
+		icon = GFX_goal_paraguay
+		cost = 8
+		available = { 
+			has_completed_focus = ARG_ideological_expansion 
+			PAR = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
+		bypass = {
+			PAR = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		will_lead_to_war_with = PAR
+		relative_position_id = ARG_collectivist_diplomacy
+		x = -3
+		y = 2
+		completion_reward = {
+			PAR = {
+				country_event = arg.30
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_uruguay_annexation
+		icon = GFX_goal_uruguay
+		cost = 8
+		available = { 
+			has_completed_focus = ARG_ideological_expansion 
+			URG = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
+		bypass = {
+			URG = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		prerequisite = {
+			focus = ARG_collectivist_diplomacy
+		}
+		will_lead_to_war_with = URG
+		relative_position_id = ARG_collectivist_diplomacy
+		x = 3
+		y = 2
+		completion_reward = {
+			URG = {
+				country_event = arg.26
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_war_bolivia
+		icon = GFX_goal_bolivia
+		cost = 8
+		available = {
+			BOL = {
+				exists = yes
+			}
+			URG = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+			PAR = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		will_lead_to_war_with = BOL
+		bypass = {
+			BOL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_subjugate_peru
+		icon = GFX_goal_peru
+		cost = 8
+		bypass = {
+			PRU = {
+				exists = no 
+			}
+		}
+		available = {
+			PRU = {
+				exists = yes
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_bolivia
+		}
+		will_lead_to_war_with = PRU
+		bypass = {
+			PRU = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_war_bolivia
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = PRU
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_andean_crisis
+		icon = GFX_goal_chile
+		cost = 8
+		available = {
+			CHL = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		will_lead_to_war_with = CHL
+		bypass = {
+			CHL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_paraguay_invitation
+		x = 1
+		y = 1
+		completion_reward = {
+			CHL = {
+				country_event = arg.36
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_magallanes_demanded
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_war_chile
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 8
+		available = {
+			CHL = {
+				exists = yes 
+				is_puppet = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_andean_crisis
+		}
+		will_lead_to_war_with = CHL
+		bypass = {
+			CHL = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_andean_crisis
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = CHL
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+	shared_focus = {
+		id = ARG_rio_grande_demands
+		icon = GFX_goal_brazil
+		cost = 8
+		available = {
+			BRA = {
+				exists = yes
+			}
+		}
+		prerequisite = {
+			focus = ARG_paraguay_invitation
+		}
+		prerequisite = {
+			focus = ARG_uruguay_annexation
+		}
+		will_lead_to_war_with = BRA
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_uruguay_annexation
+		x = -1
+		y = 1
+		completion_reward = {	
+			BRA = {
+				country_event = arg.39
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ARG_om_rio_grande_demands
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_war_brazil
+		icon = GFX_goal_generic_major_war
+		cost = 8
+		available = {
+			BRA = {
+				exists = yes
+			}
+		}
+		prerequisite = {
+			focus = ARG_rio_grande_demands
+		}
+		will_lead_to_war_with = BRA
+		bypass = {
+			BRA = {
+				OR = {
+					exists = no
+					is_puppet_of = ARG
+				}
+			}
+		}
+		relative_position_id = ARG_rio_grande_demands
+		x = 0
+		y = 1
+		completion_reward = {
+			create_wargoal = {
+				target = BRA
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_commie_consolidation
+		icon = GFX_goal_redmaysun
+		cost = 12
+		available = {
+			has_government = communism
+			BRA = {
+				is_puppet_of = ARG
+			}
+			PRU = {
+				is_puppet_of = ARG
+			}
+			CHL = {
+				is_puppet_of = ARG
+			}
+			BOL = {
+				is_puppet_of = ARG
+			}
+			PAR = {
+				is_puppet_of = ARG
+			}
+			URG = {
+				is_puppet_of = ARG
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_chile
+		}
+		prerequisite = {
+			focus = ARG_subjugate_peru
+		}
+		prerequisite = {
+			focus = ARG_war_brazil
+		}
+		mutually_exclusive = {
+			focus = ARG_subjugate_our_conquests
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = -1
+		y = 3
+		completion_reward = {
+			country_event = arg.46
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_subjugate_our_conquests
+		icon = GFX_goal_maysun
+		cost = 6
+		available = {
+			has_government = fascism
+			BRA = {
+				is_puppet_of = ARG
+			}
+			PRU = {
+				is_puppet_of = ARG
+			}
+			CHL = {
+				is_puppet_of = ARG
+			}
+			BOL = {
+				exists = no
+			}
+			PAR = {
+				exists = no
+			}
+			URG = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = ARG_war_chile
+		}
+		prerequisite = {
+			focus = ARG_subjugate_peru
+		}
+		prerequisite = {
+			focus = ARG_war_brazil
+		}
+		mutually_exclusive = {
+			focus = ARG_commie_consolidation
+		}
+		relative_position_id = ARG_malvinas_or_war
+		x = 1
+		y = 3
+		completion_reward = {
+			add_ideas = ARG_idea_subjugation_profits
+			CHL = {
+				add_ideas = ARG_idea_subjugated
+			}
+			BRA = {
+				add_ideas = ARG_idea_subjugated
+			}
+			PRU = {
+				add_ideas = ARG_idea_subjugated
+			}
+		}
+	}

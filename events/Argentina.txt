@@ -4,6 +4,44 @@
 add_namespace = arg
 
 country_event = {
+	id = arg.1
+	title = arg.1.t
+	desc = arg.1.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		date > 1941.6.27
+		has_country_flag = ARG_ortiz_wins
+	}
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = arg.1.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ARG_ortiz_will_resign
+		}
+	}
+	option = {
+		name = arg.1.b
+		ai_chance = {
+			factor = 60
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		custom_effect_tooltip = ARG_ortiz_stands_for_democracy_tooltip
+		hidden_effect = {
+			set_country_flag = ARG_ortiz_stands_for_democracy
+			load_focus_tree = argentine_ortiz_focus
+		}
+	}
+}
+
+country_event = {
 	id = arg.2
 	title = arg.2.t
 	desc = arg.2.d
@@ -12,7 +50,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1942.6.27
-		has_country_flag = ARG_ortiz_wins
+		has_country_flag = ARG_ortiz_will_resign
 	}
 	mean_time_to_happen = { days = 1 }
 	option = {
@@ -32,11 +70,14 @@ country_event = {
 			ideology = despotism
 			traits = {}
 		}
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		custom_effect_tooltip = ARG_castillo_president_tooltip
 		remove_ideas = {
 			ARG_government_opposition_cooperation
 		}
 		hidden_effect = {
 			set_country_flag = ARG_castillo_president
+			load_focus_tree = argentine_castillo_focus
 		}
 	}
 }
@@ -82,7 +123,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1943.7.4
-		has_country_flag = ARG_ortiz_wins
+		has_country_flag = ARG_ortiz_will_resign
 	}
 	mean_time_to_happen = { days = 1 }
 
@@ -2346,3 +2387,5 @@ country_event = {
 		}
 	}
 }
+
+###The Diabetes Arc

@@ -84,4 +84,16 @@ spriteTypes = {
 		name = "GFX_goal_redmaysun"
 		texturefile = "gfx/interface/goals/goal_redmaysun.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_malvinas_green"
+		texturefile = "gfx/interface/goals/goal_malvinas_green.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_malvinas_wargoal"
+		texturefile = "gfx/interface/goals/goal_malvinas_wargoal.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_malvinas_wank_wargoal"
+		texturefile = "gfx/interface/goals/goal_malvinas_wank_wargoal.dds"
+	}
 }
