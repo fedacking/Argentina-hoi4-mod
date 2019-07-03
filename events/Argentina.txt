@@ -948,6 +948,7 @@ country_event = { #Ortiz wins
 		date > 1937.9.5
 		has_country_flag = ARG_fraude_patriotico
 	}
+	is_triggered_only = yes
 	option = {
 		name = arg.19.a
 		ai_chance = {
@@ -985,6 +986,7 @@ country_event = { #Alvear wins
 		date > 1937.9.5
 		has_country_flag = ARG_token_reform
 	}
+	is_triggered_only = yes
 	option = {
 		name = arg.20.a
 		ai_chance = {
@@ -1018,6 +1020,7 @@ country_event = { #Repetto wins
 		date > 1937.9.5
 		has_country_flag = ARG_march
 	}
+	is_triggered_only = yes
 
 	option = {
 		name = arg.21.a

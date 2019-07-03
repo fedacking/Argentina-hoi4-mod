@@ -1,0 +1,23 @@
+on_actions = {
+	# country 
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit {
+					tag = ARG
+				}
+				ARG = {
+					country_event = {
+						id = arg.19
+					}
+					country_event = {
+						id = arg.20
+					}
+					country_event = {
+						id = arg.21
+					}
+				}
+			}
+		}
+	}
+}
