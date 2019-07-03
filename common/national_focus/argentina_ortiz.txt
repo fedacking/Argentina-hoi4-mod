@@ -4,11 +4,12 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 11
 			tag = ARG
 		}
 	}
 	
+    continuous_focus_position = { x = 20 y = 1500 }
 	default = no
 	
 	####################
@@ -20,11 +21,49 @@ focus_tree = {
 	focus = {
 		id = ARG_ortiz_reforms
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 5
+		x = 6
 		y = 0
 		cost = 10		
 		completion_reward = {
-			custom_effect_tooltip = ARG_tooltip_focus_justo_emergency_powers_act			
+			custom_effect_tooltip = ARG_tooltip_focus_justo_emergency_powers_act
+		}
+	}
+	
+	focus = {
+		id = ARG_finish_the_reforms
+		icon = GFX_goal_support_democracy
+		relative_position_id = ARG_ortiz_reforms
+		prerequisite = { focus = ARG_ortiz_reforms }
+		x = -1
+		y = 1
+		cost = 10		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_sit_with_the_radicals
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		relative_position_id = ARG_ortiz_reforms
+		prerequisite = { focus = ARG_ortiz_reforms }
+		x = 1
+		y = 1
+		cost = 10		
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ARG_call_for_new_elections
+		icon = GFX_goal_elections
+		relative_position_id = ARG_ortiz_reforms
+		prerequisite = { focus = ARG_finish_the_reforms }
+		prerequisite = { focus = ARG_sit_with_the_radicals }
+		x = 0
+		y = 2
+		cost = 10		
+		completion_reward = {
+			hold_election = ROOT
 		}
 	}
 
