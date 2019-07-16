@@ -172,7 +172,7 @@ focus_tree = {
 	
 	## President Alvear
 	
-		focus = {
+	focus = {
 		id = ARG_president_alvear
 		icon = GFX_goal_ideology_social_liberal
 		cost = 10

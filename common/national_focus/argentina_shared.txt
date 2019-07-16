@@ -2365,7 +2365,8 @@
 				has_government = democratic
 				OR = {
 					has_war = yes
-					has_completed_focus = USA_the_giant_wakes
+					has_completed_focus = USA_arsenal_of_democracy
+					has_completed_focus = USA_limited_intervention
 				}
 			}
 			OR = {

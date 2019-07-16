@@ -21,11 +21,12 @@ focus_tree = {
 	focus = {
 		id = ARG_ortiz_reforms
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 6
+		available = { always = no }
+		x = 7
 		y = 0
 		cost = 10		
 		completion_reward = {
-			custom_effect_tooltip = ARG_tooltip_focus_justo_emergency_powers_act
+			custom_effect_tooltip = ARG_tooltip_focus_ortiz_stays
 		}
 	}
 	
@@ -38,6 +39,7 @@ focus_tree = {
 		y = 1
 		cost = 10		
 		completion_reward = {
+			add_stability = 0.05
 		}
 	}
 	
@@ -50,6 +52,10 @@ focus_tree = {
 		y = 1
 		cost = 10		
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARG_government_opposition_cooperation
+				add_idea = ARG_government_opposition_cooperation1
+			}
 		}
 	}
 	
@@ -66,6 +72,249 @@ focus_tree = {
 			hold_election = ROOT
 		}
 	}
+	
+	## Constitutional debate
+	
+	focus = {
+		id = ARG_reform_the_constitution
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_tamborini
+			focus = ARG_president_palacios
+		}
+		relative_position_id = ARG_call_for_new_elections
+		available = { always = no }
+		mutually_exclusive = {
+			focus = ARG_heal_national_divide
+		}
+		x = -2
+		y = 2
+		completion_reward = {		
+		}
+	}
+	
+	focus = {
+		id = ARG_remove_electoral_college
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = ARG_reform_the_constitution
+		}
+		relative_position_id = ARG_reform_the_constitution
+		available = { always = no }
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_reform_the_senate
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = ARG_reform_the_constitution
+		}
+		relative_position_id = ARG_reform_the_constitution
+		available = { always = no }
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_heal_national_divide
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_tamborini
+			focus = ARG_president_palacios
+		}
+		relative_position_id = ARG_call_for_new_elections
+		available = { always = no }
+		mutually_exclusive = {
+			focus = ARG_reform_the_constitution
+		}
+		x = 2
+		y = 2
+		completion_reward = {		
+		}
+	}
+	
+	focus = {
+		id = ARG_deal_with_conservatives
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = ARG_heal_national_divide
+		}
+		relative_position_id = ARG_heal_national_divide
+		available = { always = no }
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_forgive_and_forget
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = ARG_heal_national_divide
+		}
+		relative_position_id = ARG_heal_national_divide
+		available = { always = no }
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	
+	
+	## Tamborini
+	
+	focus = {
+		id = ARG_president_tamborini
+		icon = GFX_goal_ideology_social_liberal
+		cost = 10
+		prerequisite = {
+			focus = ARG_call_for_new_elections
+		}
+		relative_position_id = ARG_call_for_new_elections
+		available = { always = no }
+		mutually_exclusive = {
+			focus = ARG_president_palacios
+		}
+		x = -5
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_alvear_victory_tooltip				
+		}
+	}
+	
+	focus = {
+		id = ARG_agricultural_mechanization
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_tamborini
+		}
+		relative_position_id = ARG_president_tamborini
+		available = { always = no }
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_protect_the_press
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_tamborini
+		}
+		relative_position_id = ARG_president_tamborini
+		available = { always = no }
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_the_argentine_republic
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 10
+		prerequisite = { focus = ARG_agricultural_mechanization }
+		prerequisite = { focus = ARG_protect_the_press }
+		relative_position_id = ARG_president_tamborini
+		available = { always = no }
+		x = 0
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	## Palacios
+	
+	focus = {
+		id = ARG_president_palacios
+		icon = GFX_goal_ideology_social_democrat
+		cost = 10
+		prerequisite = {
+			focus = ARG_call_for_new_elections
+		}
+		relative_position_id = ARG_call_for_new_elections
+		available = { always = no }
+		mutually_exclusive = {
+			focus = ARG_president_tamborini
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_minimum_salary
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_palacios
+		}
+		relative_position_id = ARG_president_palacios
+		available = { always = no }
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_heal_the_cgt_split
+		icon = GFX_focus_usa_union_representation_act
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_palacios
+		}
+		relative_position_id = ARG_president_palacios
+		available = { always = no }
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+	
+	focus = {
+		id = ARG_the_right_to_strike
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 10
+		prerequisite = { focus = ARG_minimum_salary }
+		prerequisite = { focus = ARG_heal_the_cgt_split }
+		relative_position_id = ARG_president_palacios
+		available = { always = no }
+		x = 0
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = ARG_repetto_victory_tooltip
+		}
+	}
+
 
 ##############	
 ###Eco Tree###
