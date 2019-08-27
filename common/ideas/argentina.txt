@@ -589,6 +589,36 @@ ideas = {
 			}
 		}
 		
+		##Ortiz Subtree
+		
+		
+		ARG_idea_united_syndicates = {
+			picture = FRA_factory_strikes
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+		
+		ARG_idea_political_liberties3 = {
+			picture = generic_research_bonus
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		ARG_idea_emboldened_syndicates = {
+			picture = FRA_factory_strikes
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		
 		ARG_government_opposition_cooperation1 = {
 			picture = general_staff
 			modifier = {
