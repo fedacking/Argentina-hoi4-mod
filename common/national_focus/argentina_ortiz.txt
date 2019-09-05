@@ -170,7 +170,6 @@ focus_tree = {
 			focus = ARG_heal_national_divide
 		}
 		relative_position_id = ARG_heal_national_divide
-		available = { always = no }
 		x = 1
 		y = 1
 		completion_reward = {
@@ -193,6 +192,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_palacios
 		}
+		available = { always = no }
 		x = -5
 		y = 1
 		completion_reward = {
@@ -271,7 +271,6 @@ focus_tree = {
 			focus = ARG_call_for_new_elections
 		}
 		relative_position_id = ARG_call_for_new_elections
-		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_president_tamborini
 		}
