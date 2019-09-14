@@ -215,6 +215,8 @@ ARG_tooltip_focus_ortiz_stays:0 "Ortiz has decided to stay"
 
 ARG_democratic_party:0 "UCR"
 ARG_democratic_party_long:0 "Unión Cívica Radical"
+ARG_democratic_party_ucr:0 "UCR"
+ARG_democratic_party_ucr_long:0 "Unión Cívica Radical"
 ARG_democratic_party_pdn:0 "PDN"
 ARG_democratic_party_pdn_long:0 "Partido Demócrata Nacional"
 ARG_democratic_party_ps:0 "PS"

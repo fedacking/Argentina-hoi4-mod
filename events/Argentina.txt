@@ -2392,3 +2392,195 @@ country_event = {
 }
 
 ###The Diabetes Arc
+
+country_event = {
+    id = arg.113
+    title = arg.113.t
+    desc = arg.113.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Fraude_Patriotico
+    trigger = {
+        tag = arg
+        date > 1941.1.1
+        has_country_flag = ARG_ortiz_stands_for_democracy
+    }
+
+	option = {
+		name = arg.113.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_tamborini_wins_1941
+		create_country_leader = {
+			name = "José Pascual Tamborini"
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}		
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 100
+			fascism = 0
+			communism = 0
+			neutrality = 0
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ucr}
+		}
+	}
+
+	option = {
+		name = arg.113.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_palacios_wins_1941
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 100
+			fascism = 0
+			communism = 0
+			neutrality = 0
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ps}
+		}
+	}
+}
+
+country_event = {
+    id = arg.114
+    title = arg.114.t
+    desc = arg.114.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Fraude_Patriotico
+    trigger = {
+        tag = arg
+        date > 1947.1.1
+        has_country_flag = ARG_tamborini_wins_1941
+    }
+
+	option = {
+		name = arg.114.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_balbin_wins_1947
+		create_country_leader = {
+			name = "Ricardo Balbín"
+			desc = "POLITICS_RICARDO_BALBIN_DESC"
+			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+	}
+
+	option = {
+		name = arg.114.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_palacios_wins_1947
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		create_country_leader = {
+			name = "Alfredo Palacios"
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_ps}
+		}
+	}
+}
+
+country_event = {
+    id = arg.115
+    title = arg.115.t
+    desc = arg.115.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Elecciones_1951
+    trigger = {
+        tag = arg
+        date > 1947.1.1
+        has_country_flag = ARG_palacios_wins_1941
+    }
+
+	option = {
+		name = arg.115.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_balbin_wins_1947
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ucr_long
+			name = ARG_democratic_party_ucr
+		}
+		create_country_leader = {
+			name = "Ricardo Balbín"
+			desc = "POLITICS_RICARDO_BALBIN_DESC"
+			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			add_ideas = {ARG_ucr}
+		}
+	}
+
+	option = {
+		name = arg.115.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_moreaujusto_wins_1947
+		create_country_leader = {
+			name = "Alicia Moreau de Justo"
+			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
+			picture = "Portrait_Argentine_Alicia_Justo.tga"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {}
+		}
+	}
+}
