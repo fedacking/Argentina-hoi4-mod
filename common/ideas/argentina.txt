@@ -548,7 +548,7 @@ ideas = {
 		}
 		
 		ARG_idea_british_treaty = {
-			picture = CAN_wartime_prices_and_trade_board
+			picture = can_wartime_prices_and_trade_board
 			modifier = {
                 industrial_capacity_factory = 0.2
 				production_speed_dockyard_factor = 0.2

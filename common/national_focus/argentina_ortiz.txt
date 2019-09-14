@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 11
+			add = 9
 			tag = ARG
 		}
 	}
@@ -22,6 +22,7 @@ focus_tree = {
 		id = ARG_ortiz_reforms
 		icon = GFX_focus_hol_the_foundations_of_defense
 		available = { always = no }
+		bypass = { has_country_flag = ARG_ortiz_stands_for_democracy }
 		x = 7
 		y = 0
 		cost = 10		
@@ -236,7 +237,6 @@ focus_tree = {
 			focus = ARG_president_tamborini
 		}
 		relative_position_id = ARG_president_tamborini
-		available = { always = no }
 		x = 1
 		y = 1
 		completion_reward = {
@@ -274,6 +274,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_tamborini
 		}
+		available = { always = no }
 		x = 5
 		y = 1
 		completion_reward = {
