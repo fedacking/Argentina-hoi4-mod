@@ -2399,6 +2399,7 @@ country_event = {
     desc = arg.113.d
     fire_only_once = yes
     picture = GFX_event_picture_Fraude_Patriotico
+	is_triggered_only = yes
     trigger = {
         tag = arg
         date > 1941.1.1
@@ -2479,6 +2480,7 @@ country_event = {
     desc = arg.114.d
     fire_only_once = yes
     picture = GFX_event_picture_Fraude_Patriotico
+	is_triggered_only = yes
     trigger = {
         tag = arg
         date > 1947.1.1
@@ -2535,6 +2537,7 @@ country_event = {
     desc = arg.115.d
     fire_only_once = yes
     picture = GFX_event_picture_Elecciones_1951
+	is_triggered_only = yes
     trigger = {
         tag = arg
         date > 1947.1.1

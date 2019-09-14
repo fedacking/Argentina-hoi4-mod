@@ -16,6 +16,15 @@ on_actions = {
 					country_event = {
 						id = arg.21
 					}
+					country_event = {
+						id = arg.113
+					}
+					country_event = {
+						id = arg.114
+					}
+					country_event = {
+						id = arg.115
+					}
 				}
 			}
 		}

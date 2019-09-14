@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 9
+			add = 11
 			tag = ARG
 		}
 	}
@@ -71,6 +71,7 @@ focus_tree = {
 		cost = 10		
 		completion_reward = {
 			hold_election = ROOT
+			remove_ideas = ARG_government_opposition_cooperation1
 		}
 	}
 	
@@ -85,7 +86,6 @@ focus_tree = {
 			focus = ARG_president_palacios
 		}
 		relative_position_id = ARG_call_for_new_elections
-		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_heal_national_divide
 		}
@@ -103,7 +103,6 @@ focus_tree = {
 			focus = ARG_reform_the_constitution
 		}
 		relative_position_id = ARG_reform_the_constitution
-		available = { always = no }
 		x = -1
 		y = 1
 		completion_reward = {
@@ -119,7 +118,6 @@ focus_tree = {
 			focus = ARG_reform_the_constitution
 		}
 		relative_position_id = ARG_reform_the_constitution
-		available = { always = no }
 		x = 1
 		y = 1
 		completion_reward = {
@@ -136,7 +134,6 @@ focus_tree = {
 			focus = ARG_president_palacios
 		}
 		relative_position_id = ARG_call_for_new_elections
-		available = { always = no }
 		mutually_exclusive = {
 			focus = ARG_reform_the_constitution
 		}
@@ -154,7 +151,6 @@ focus_tree = {
 			focus = ARG_heal_national_divide
 		}
 		relative_position_id = ARG_heal_national_divide
-		available = { always = no }
 		x = -1
 		y = 1
 		completion_reward = {
@@ -194,10 +190,11 @@ focus_tree = {
 			focus = ARG_president_palacios
 		}
 		available = { always = no }
+		bypass = { has_country_flag = ARG_tamborini_wins_1941 }
 		x = -5
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = ARG_alvear_victory_tooltip				
+			custom_effect_tooltip = ARG_tamborini_victory_tooltip				
 		}
 	}
 	
@@ -274,6 +271,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_tamborini
 		}
+		bypass = { has_country_flag = ARG_palacios_wins_1941 }
 		available = { always = no }
 		x = 5
 		y = 1
