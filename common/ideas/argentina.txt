@@ -585,14 +585,21 @@ ideas = {
 		ARG_government_opposition_cooperation = {
 			picture = general_staff
 			modifier = {
-				political_power_gain = 0.5
+				political_power_gain = 0.25
 			}
 		}
 		
 		##Ortiz Subtree
 		
+		ARG_idea_heal_national_divide = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_weekly_factor = 0.001
+			}
+		}
+		
 		ARG_idea_strong_constitution = {
-			picture = FRA_factory_strikes
+			picture = generic_democratic_drift_bonus
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
@@ -600,7 +607,7 @@ ideas = {
 		}
 		
 		ARG_idea_strong_constitution_1 = {
-			picture = FRA_factory_strikes
+			picture = generic_democratic_drift_bonus
 			modifier = {
 				party_popularity_stability_factor = 0.05
 				mobilization_speed = 0.05

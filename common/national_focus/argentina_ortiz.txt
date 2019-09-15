@@ -108,6 +108,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+				can_puppet = yes
+				can_lower_tension = yes
+			}
 			add_political_power = -50
 		}
 	}
@@ -146,6 +152,10 @@ focus_tree = {
 		x = 2
 		y = 2
 		completion_reward = {		
+			add_timed_idea = {
+				idea = ARG_idea_heal_national_divide
+				days = 700
+			}
 		}
 	}
 	
@@ -196,6 +206,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			army_experience = 50
 		}
 	}
 	
