@@ -2,7 +2,7 @@
 	###Eco Tree###
 	##############
 		
-		shared_focus = {
+	shared_focus = {
 		id = ARG_renegotiate_treaty
 		icon = GFX_goal_generic_positive_trade_relations
 		available = {

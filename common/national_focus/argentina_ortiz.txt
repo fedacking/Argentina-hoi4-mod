@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 9
 			tag = ARG
 		}
 	}
@@ -312,7 +312,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = ARG_repetto_victory_tooltip
+			custom_effect_tooltip = ARG_palacios_victory_tooltip
 		}
 	}
 	
