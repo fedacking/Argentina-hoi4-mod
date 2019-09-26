@@ -541,6 +541,7 @@ arg.115.t:0 "Presidential Election"
 arg.115.d:0 "After 6 years of democracy, the first Socialist President has to end his presidency. President Palacios has reached his goal of establishing the first tentative steps towards a more egalitarian and pro worker government, and it's time to give the people the power to choose their new beloved leader, president..."
 arg.115.a:0 "Ricardo Balbín"
 arg.115.b:0 "Alicia Moreau de Justo"
+
 arg_news.1.t:0 "Rebirth of [From.GetNameDef]"
 arg_news.1.d:0 "Through force of arms, [From.GetOldName] has united the Argentine, Uruguayan, Paraguayan and Bolivian people under its rule, and its government is now integrating the newly-conquered territories. In an attempt to rally the people behind the state, there has been an increase in pan-nationalist propaganda with clear support from the government.\n\nAs a side-effect, proponents of South American unification have already begun citing historical parallels, and point out how the current state of affairs can be seen as simply a natural continuation of earlier attempts at unifying the region. The [From.GetOldAdjective] government has eagerly jumped on the bandwagon of this line of thinking, and has now officially proclaimed the 'establishment of La Plata', renaming the country to '[From.GetNameDef]'."
 arg_news.1.a:0 "A glorious day for all Platineans!"
