@@ -1186,7 +1186,7 @@
 	
 	shared_focus = {
 		id = ARG_support_gbp
-		icon = GFX_goal_rhineland
+		icon = GFX_goal_generic_radar
 		cost = 8
 		prerequisite = {
 			focus = ARG_grand_battle_plan
