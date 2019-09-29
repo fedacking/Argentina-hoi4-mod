@@ -77,7 +77,7 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = ARG_castillo_president
-			load_focus_tree = argentine_castillo_focus
+			#load_focus_tree = argentine_castillo_focus (WIP)
 		}
 	}
 }
