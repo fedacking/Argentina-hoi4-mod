@@ -1,5 +1,5 @@
-name="ArgentinaGit"
-path="mod/ArgentinaGit/"
+name="Argentina+"
+path="mod/Argentina+/"
 tags={
 	"Gameplay"
 	"Alternative History"
@@ -7,4 +7,4 @@ tags={
 	"Events"
 }
 supported_version="1.8.*"
-
+picture="tina_plus.png"
