@@ -1651,17 +1651,28 @@
 		x = -1
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = bb_tech_bonus
-				bonus = 1
-				uses = 1
-				category = bb_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = basic_heavy_battery
-				technology = improved_heavy_battery
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = basic_heavy_battery
+					technology = improved_heavy_battery
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = bb_tech
+				}
+			} else {
+				add_tech_bonus = {
+					name = bb_tech_bonus
+					bonus = 1
+					uses = 1
+					category = bb_tech
+				}
 			}
 		}
 	}
@@ -1703,17 +1714,29 @@
 		y = 1
 		relative_position_id = ARG_fleet_being
 		completion_reward = {
-			add_tech_bonus = {
-				name = bc_tech_bonus
-				bonus = 1
-				uses = 1
-				category = bc_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = fire_control_methods_1
-				technology = fire_control_methods_2
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = bc_tech_bonus
+					bonus = 1
+					uses = 1
+					category = bc_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = fire_control_methods_1
+					technology = fire_control_methods_2
+				}
+			} else {
+				add_tech_bonus = {
+					name = bc_tech_bonus
+					bonus = 2
+					uses = 1
+					category = bc_tech
+				}
 			}
 		}
 	}
@@ -1729,17 +1752,29 @@
 		y = 1
 		relative_position_id = ARG_battlecruisers
 		completion_reward = {
-			add_tech_bonus = {
-				name = navy_bonus
-				bonus = 1
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = improved_depth_charges
-				technology = advanced_depth_charges
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = navy_bonus
+					bonus = 1
+					uses = 1
+					category = dd_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = improved_depth_charges
+					technology = advanced_depth_charges
+				}
+			} else {
+				add_tech_bonus = {
+					name = navy_bonus
+					bonus = 2
+					uses = 1
+					category = dd_tech
+				}
 			}
 		}
 	}
@@ -1798,17 +1833,29 @@
 		y = 1
 		relative_position_id = ARG_submarines
 		completion_reward = {
-			add_tech_bonus = {
-				name = ss_tech_bonus
-				bonus = 1
-				uses = 1
-				category = ss_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = magnetic_detonator
-				technology = electric_torpedo
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = ss_tech_bonus
+					bonus = 1
+					uses = 1
+					category = ss_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = magnetic_detonator
+					technology = electric_torpedo
+				}
+			} else {
+				add_tech_bonus = {
+					name = ss_tech_bonus
+					bonus = 2
+					uses = 1
+					category = ss_tech
+				}
 			}
 		}
 	}
@@ -1824,17 +1871,29 @@
 		y = 1
 		relative_position_id = ARG_trade_interdiction
 		completion_reward = {
-			add_tech_bonus = {
-				name = ca_tech_bonus
-				bonus = 0.5
-				uses = 1
-				category = cl_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = improved_ship_torpedo_launcher
-				technology = advanced_ship_torpedo_launcher
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = ca_tech_bonus
+					bonus = 0.5
+					uses = 1
+					category = cl_tech
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = improved_ship_torpedo_launcher
+					technology = advanced_ship_torpedo_launcher
+				}
+			} else {
+				add_tech_bonus = {
+					name = ca_tech_bonus
+					bonus = 1
+					uses = 1
+					category = cl_tech
+				}
 			}
 		}
 	}
@@ -1850,17 +1909,29 @@
 		y = 1
 		relative_position_id = ARG_light_cruisers
 		completion_reward = {
-			add_tech_bonus = {
-				name = trade_interdiction_bonus
-				bonus = 1
-				uses = 1
-				category = trade_interdiction_tree
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = basic_submarine_snorkel
-				technology = improved_submarine_snorkel
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = trade_interdiction_bonus
+					bonus = 1
+					uses = 1
+					category = trade_interdiction_tree
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					technology = basic_submarine_snorkel
+					technology = improved_submarine_snorkel
+				}
+			} else {
+				add_tech_bonus = {
+					name = trade_interdiction_bonus
+					bonus = 1
+					uses = 2
+					category = trade_interdiction_tree
+				}
 			}
 		}
 	}
