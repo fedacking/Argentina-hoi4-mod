@@ -309,8 +309,6 @@ ideas = {
 				naval_equipment = 0.20
 			}
 			traits = { atlantic_fleet_naval_manufacturer }
-			modifier = {
-			}
 		}
 		
 		ARG_idea_company_fore_river_shipyard = {
@@ -320,19 +318,11 @@ ideas = {
 				has_government = democratic
 			}
 			available = {
-				OR = {
-					AND ={ has_government = democratic USA = { has_government = democratic } } 
-					AND ={ has_government = fascism USA = { has_government = fascism } } 
-					AND ={ has_government = communism USA = { has_government = communism } } 
-					AND ={ has_government = neutrality USA = { has_government = neutrality } } 
-				}
 			}
 			research_bonus = {
 				naval_equipment = 0.20
 			}
 			traits = { battlefleet_designer }
-			modifier = {
-			}
 		}
 	}
 	
