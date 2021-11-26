@@ -1,10 +1,10 @@
-name="Argentina+"
-path="mod/Argentina+/"
+version="1.9.*"
 tags={
-	"Gameplay"
 	"Alternative History"
+	"Gameplay"
 	"National Focuses"
-	"Events"
+	"Historical"
 }
-supported_version="1.8.*"
-picture="tina_plus.png"
+name="Tina"
+path="mod/ArgentinaGit"
+picture="thumb.png"

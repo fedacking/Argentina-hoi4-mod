@@ -1666,12 +1666,13 @@
 					uses = 1
 					category = bb_tech
 				}
-			} else {
-				add_tech_bonus = {
-					name = bb_tech_bonus
-					bonus = 1
-					uses = 1
-					category = bb_tech
+				else = {
+					add_tech_bonus = {
+						name = bb_tech_bonus
+						bonus = 1
+						uses = 1
+						category = bb_tech
+					}
 				}
 			}
 		}
@@ -1730,7 +1731,7 @@
 					technology = fire_control_methods_1
 					technology = fire_control_methods_2
 				}
-			} else {
+			} else = {
 				add_tech_bonus = {
 					name = bc_tech_bonus
 					bonus = 2
@@ -1768,7 +1769,7 @@
 					technology = improved_depth_charges
 					technology = advanced_depth_charges
 				}
-			} else {
+			} else = {
 				add_tech_bonus = {
 					name = navy_bonus
 					bonus = 2
@@ -1849,7 +1850,7 @@
 					technology = magnetic_detonator
 					technology = electric_torpedo
 				}
-			} else {
+			} else = {
 				add_tech_bonus = {
 					name = ss_tech_bonus
 					bonus = 2
@@ -1887,7 +1888,7 @@
 					technology = improved_ship_torpedo_launcher
 					technology = advanced_ship_torpedo_launcher
 				}
-			} else {
+			} else = {
 				add_tech_bonus = {
 					name = ca_tech_bonus
 					bonus = 1
@@ -1925,7 +1926,7 @@
 					technology = basic_submarine_snorkel
 					technology = improved_submarine_snorkel
 				}
-			} else {
+			} else = {
 				add_tech_bonus = {
 					name = trade_interdiction_bonus
 					bonus = 1
@@ -2206,8 +2207,8 @@
 		x = -1
 		y = 1
 		completion_reward = {
-			if {
-				limit = { ENG = { has_government = democratic}}
+			if = {
+				limit = { ENG = { has_government = democratic } }
 				ENG = {
 					add_opinion_modifier = {
 						target = ROOT
@@ -2215,8 +2216,8 @@
 					}
 				}
 			}
-			if {
-				limit = { FRA = { has_government = democratic}}
+			if = {
+				limit = { FRA = { has_government = democratic } }
 				FRA = {
 					add_opinion_modifier = {
 						target = ROOT
@@ -2224,8 +2225,8 @@
 					}
 				}
 			}
-			if {
-				limit = { AST = { has_government = democratic}}
+			if = {
+				limit = { AST = { has_government = democratic } }
 				AST = {
 					add_opinion_modifier = {
 						target = ROOT
@@ -2233,8 +2234,8 @@
 					}
 				}
 			}
-			if {
-				limit = { CAN = { has_government = democratic}}
+			if = {
+				limit = { CAN = { has_government = democratic } }
 				CAN = {
 					add_opinion_modifier = {
 						target = ROOT
@@ -2242,8 +2243,8 @@
 					}
 				}
 			}
-			if {
-				limit = { NZL = { has_government = democratic}}
+			if = {
+				limit = { NZL = { has_government = democratic } }
 				NZL = {
 					add_opinion_modifier = {
 						target = ROOT
@@ -2251,8 +2252,8 @@
 					}
 				}
 			}
-			if {
-				limit = { USA = { has_government = democratic}}
+			if = {
+				limit = { USA = { has_government = democratic } }
 				USA = {
 					add_opinion_modifier = {
 						target = ROOT

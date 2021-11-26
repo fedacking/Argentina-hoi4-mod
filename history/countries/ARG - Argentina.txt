@@ -181,6 +181,24 @@ create_country_leader = {
 	}
 }
 
+recruit_character = ARG_agustín_pedro_justo
+recruit_character = ARG_arturo_rawson
+recruit_character = ARG_juan_pistarini
+recruit_character = ARG_alberto_teisaire
+recruit_character = ARG_pedro_pablo_ramirez
+recruit_character = ARG_eleazar_videla
+recruit_character = ARG_juan_domingo_peron
+recruit_character = ARG_manuel_fresco
+recruit_character = ARG_marcelo_t._de_alvear
+recruit_character = ARG_rodolfo_ghioldi
+recruit_character = ARG_basilio_pertiné
+recruit_character = ARG_luis_dellepiane
+recruit_character = ARG_enrique_mosconi
+recruit_character = ARG_manuel_savio
+recruit_character = ARG_edelmiro_julián_farrell
+recruit_character = ARG_manuel_domecq_garcia
+
+
 create_country_leader = {
 	name = "Manuel Fresco"
 	desc = "POLITICS_MANUEL_FRESCO_DESC"

@@ -553,7 +553,9 @@ arg_news.2.a:0 "For a unified Argentina"
 arg_news.2.b:0 "It was what they wished"
 
 ###Misc.
-##faction
+## faction
 ARG_south_democracy_faction:0 "Southern Democracy"
-##tech research
+## tech research
 ARG_dem_research_name:0 "Ibero-America Research Center"
+## game_rules
+ARG_AI_BEHAVIOR:0 "@ARG Argentina"

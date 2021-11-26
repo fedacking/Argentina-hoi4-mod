@@ -156,7 +156,7 @@ country_event = {
 				name = ARG_fascism_party_PJ
 			}
 		}
-		add_ideas = {ARG_gou}
+		add_ideas = ARG_gou
 		create_country_leader = {
 			name = "Pedro Pablo Ramírez"
 			desc = "POLITICS_PEDRO_PABLO_RAMIREZ_DESC"

@@ -1,0 +1,74 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+
+ARG_ai_behavior = {
+	name = "ARG_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_ARG_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FASCIST_INDEPENDENT
+		text = "RULE_OPTION_FASCIST_INDEPENDENT"
+		desc = "RULE_OPTION_FASCIST_ARG_AI_DESC"
+	}
+	option = {
+		name = FASCIST_AXIS
+		text = "RULE_OPTION_FASCIST_AXIS"
+		desc = "RULE_OPTION_FASCIST_ARG_AI_DESC"
+	}
+	option = {
+		name = ARG_UNION_CIVICA_RADICAL
+		text = "RULE_OPTION_UNION_CIVICA_RADICAL"
+		desc = "RULE_OPTION_DEMOCRATIC_ARG_AI_DESC"
+	}
+	option = {
+		name = ARG_PARTIDO_SOCIALISTA
+		text = "RULE_OPTION_PARTIDO_SOCIALISTA"
+		desc = "RULE_OPTION_DEMOCRATIC_ARG_AI_DESC"
+	}
+	option = {
+		name = ARG_COMMUNIST_COMINTERN
+		text = "RULE_OPTION_COMMUNIST_COMINTERN"
+		desc = "RULE_OPTION_COMMUNIST_COMINTERN_DESC"
+	}
+	option = {
+		name = ARG_COMMUNIST_INDEPENDENT
+		text = "RULE_OPTION_COMMUNIST_INDEPENDENT"
+		desc = "RULE_OPTION_COMMUNIST_INDEPENDENT_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
