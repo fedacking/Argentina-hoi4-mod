@@ -171,6 +171,7 @@ set_popularities = {
 }
 
 recruit_character = ARG_agustín_pedro_justo
+recruit_character = ARG_ramon_castillo
 recruit_character = ARG_arturo_rawson
 recruit_character = ARG_juan_pistarini
 recruit_character = ARG_alberto_teisaire

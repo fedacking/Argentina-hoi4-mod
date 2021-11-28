@@ -4,7 +4,6 @@
  
 ##Ministers
 ARG_juan_domingo_peron:0 "Juan Domingo Perón"
-ARG_ramon_castillo:0 "Ramón S. Castillo"
 ARG_manuel_maria_de_iriondo:0 "Manuel M. de Iriondo"
 ARG_cesar_ameghino:0 "César Ameghino"
 ARG_arturo_frondizi:0 "Arturo Frondizi"
@@ -32,6 +31,8 @@ ARG_antonio_parodi_th:0 "Antonio Parodi"
 ##empresas
 ARG_idea_company_siam:0 "SIAM"
 ARG_idea_company_astarsa:0 "ASTARSA"
+ARG_idea_company_fanazul: "FANAZUL"
+ARG_coastal_defence_naval_manufacturer: "Diseñador de Folta de Defensas Costeras"
 ARG_idea_company_fore_river_shipyard:0 "Fore Shipbuilding"
 ARG_idea_company_fore_river_shipyard_desc:0 "El constructor naval de ARA Rivadavia y ARA Moreno. Fore ha expresado interés en trabajar con el gobierno argentino, pero primero necesitan obtener la aprobación de Washington."
 ARG_idea_company_hispano_argentina:0 "Hispano Argentina"

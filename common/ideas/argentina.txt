@@ -146,14 +146,6 @@ ideas = {
 
 	political_advisor = {
 
-		ARG_ramon_castillo = {
-			picture = generic_political_advisor_south_america_2
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { backroom_backstabber }
-		}
-
 		ARG_juan_domingo_peron = {
 			picture = generic_political_advisor_south_america_1
 			allowed = {
@@ -265,8 +257,8 @@ ideas = {
 			traits = { atlantic_fleet_naval_manufacturer }
 		}
 		
-		ARG_idea_company_fore_river_shipyard = {
-			picture = GFX_idea_ARG_company_fore_shipbuilding_company
+		ARG_idea_company_fanazul = {
+			picture = ARG_idea_company_fabricaciones_militares
 			allowed = {
 				original_tag = ARG
 				has_government = democratic
@@ -276,6 +268,25 @@ ideas = {
 			research_bonus = {
 				naval_equipment = 0.20
 			}
+			traits = { 
+				naval_manufacturer
+				ARG_coastal_defence_naval_manufacturer
+			}
+		}
+		
+		ARG_idea_company_fore_river_shipyard = {
+			picture = GFX_idea_ARG_company_fore_shipbuilding_company
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+				has_government = democratic
+				has_completed_focus = ARG_marine_trainers
+			}
+			research_bonus = {
+				naval_equipment = 0.20
+			}
+			cost = 50
 			traits = { battlefleet_designer }
 		}
 	}

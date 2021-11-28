@@ -1,0 +1,18 @@
+
+leader_traits = {
+    ARG_coastal_defence_naval_manufacturer = {
+		random = no
+		equipment_bonus = {
+			capital_ship = {
+				build_cost_ic = -0.10 naval_range = -0.5
+			}
+			screen_ship = {
+				build_cost_ic = -0.25 naval_range = -0.5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,4 +1,7 @@
 characters = {
+
+	## Presidents
+	# Neutral
 	ARG_agustín_pedro_justo = {
 		name = "Agustín Pedro Justo"
 		portraits = {
@@ -13,6 +16,136 @@ characters = {
 			id = -1
 		}
 	}
+	ARG_ramon_castillo = {
+		name = "Ramón S. Castillo"
+		
+		advisor = {
+			picture = generic_political_advisor_south_america_2
+			slot = political_advisor
+			cost = 150
+			idea_token = ARG_ramon_castillo
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { backroom_backstabber }
+		}
+	}
+	ARG_pedro_pablo_ramirez = {
+		name = "Pedro Pablo Ramirez"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected swamp_fox offensive_doctrine fast_planner }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			picture = generic_army_south_america_2
+			slot = army_chief
+			cost = 150
+			idea_token = ARG_pedro_pablo_ramirez
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_chief_defensive_2 }
+		}
+	}
+	ARG_juan_domingo_peron = {
+		name = "Juan Domingo Peron"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/Portrait_ARG_Peron_General.tga"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality politically_connected fortress_buster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	ARG_edelmiro_julián_farrell = {
+		name = "Edelmiro Julián Farrell"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Edelmiro_Farrell.tga"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader infantry_officer trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	# Demonrat
+	ARG_marcelo_t_de_alvear = {
+		name = "Marcelo T. de Alvear"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Marcelo_Alvear.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MARCELO_ALVEAR_DESC"
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	# Facho
+	ARG_manuel_fresco = {
+		name = "Manuel Fresco"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Manuel_Fresco.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MANUEL_FRESCO_DESC"
+			ideology = fascism_ideology
+			traits = { dictator }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	# Commie
+	ARG_rodolfo_ghioldi = {
+		name = "Rodolfo Ghioldi"
+		portraits = {
+			civilian = {
+				large = "Portrait_Argentine_Rodolfo_Ghioldi.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RODOLFO_GHIOLDI_DESC"
+			ideology = marxism
+			traits = { dictator }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	## Generals
 	ARG_arturo_rawson = {
 		name = "Arturo Rawson"
 		portraits = {
@@ -45,159 +178,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-		}
-	}
-	ARG_alberto_teisaire = {
-		name = "Alberto Teisaire"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Alberto_Teisaire.tga"
-			}
-		}
-		navy_leader = {
-			traits = { chief_engineer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 1
-			coordination_skill = 1
-			legacy_id = -1
-		}
-	}
-	ARG_pedro_pablo_ramirez = {
-		name = "Pedro Pablo Ramirez"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
-			}
-		}
-		field_marshal = {
-			traits = { politically_connected swamp_fox offensive_doctrine fast_planner }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = -1
-		}
-		advisor = {
-			picture = generic_army_south_america_2
-			slot = army_chief
-			cost = 150
-			allowed = {
-				original_tag = ARG
-			}
-			ai_will_do = {
-				factor = 1
-			}
-			traits = { army_chief_defensive_2 }
-		}
-	}
-	ARG_eleazar_videla = {
-		name = "Eleazar Videla"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Eleazar_Videla.tga"
-			}
-		}
-		navy_leader = {
-			traits = { seawolf }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 1
-			maneuvering_skill = 1
-			coordination_skill = 1
-			legacy_id = -1
-		}
-
-		advisor = {
-			picture = generic_navy_south_america_2
-			cost = 150
-			slot = navy_chief
-			allowed = {
-				original_tag = ARG
-			}
-			ai_will_do = {
-				factor = 1
-			}
-			traits = { navy_chief_decisive_battle_2 }
-		}
-
-		advisor = {
-			picture = generic_navy_south_america_2
-			cost = 150
-			slot = theorist
-			allowed = {
-				original_tag = ARG
-			}
-			ai_will_do = {
-				factor = 1
-			}
-			research_bonus = {
-				naval_doctrine = 0.15
-			}
-			traits = { naval_theorist }
-		}
-	}
-	ARG_juan_domingo_peron = {
-		name = "Juan Domingo Peron"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_ARG_Peron_General.tga"
-			}
-		}
-		corps_commander = {
-			traits = { media_personality politically_connected fortress_buster }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = -1
-		}
-	}
-	ARG_manuel_fresco = {
-		name = "Manuel Fresco"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Manuel_Fresco.tga"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_MANUEL_FRESCO_DESC"
-			ideology = fascism_ideology
-			traits = { dictator }
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-	ARG_marcelo_t_de_alvear = {
-		name = "Marcelo T. de Alvear"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Marcelo_Alvear.tga"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_MARCELO_ALVEAR_DESC"
-			ideology = liberalism
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-	ARG_rodolfo_ghioldi = {
-		name = "Rodolfo Ghioldi"
-		portraits = {
-			civilian = {
-				large = "Portrait_Argentine_Rodolfo_Ghioldi.tga"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_RODOLFO_GHIOLDI_DESC"
-			ideology = marxism
-			traits = { dictator }
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
 	ARG_basilio_pertiné = {
@@ -268,21 +248,71 @@ characters = {
 			legacy_id = -1
 		}
 	}
-	ARG_edelmiro_julián_farrell = {
-		name = "Edelmiro Julián Farrell"
+
+	## Admirals
+	ARG_alberto_teisaire = {
+		name = "Alberto Teisaire"
 		portraits = {
 			army = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Edelmiro_Farrell.tga"
+				large = "gfx/leaders/ARG/Portrait_Argentine_Alberto_Teisaire.tga"
 			}
 		}
-		corps_commander = {
-			traits = { harsh_leader infantry_officer trickster }
-			skill = 2
+		navy_leader = {
+			traits = { chief_engineer }
+			skill = 3
 			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
 			legacy_id = -1
+		}
+	}
+	ARG_eleazar_videla = {
+		name = "Eleazar Videla"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Eleazar_Videla.tga"
+			}
+		}
+		navy_leader = {
+			traits = { seawolf }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = -1
+		}
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			cost = 150
+			slot = navy_chief
+			allowed = {
+				original_tag = ARG
+			}
+			idea_token = ARG_eleazar_videla
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { navy_chief_decisive_battle_2 }
+		}
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			cost = 150
+			slot = theorist
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_eleazar_videla_th
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+			traits = { naval_theorist }
 		}
 	}
 	ARG_manuel_domecq_garcia = {
@@ -302,6 +332,8 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
+	## Advisor
 	
 	ARG_domingo_mercante = {
 		name = "Domingo Mercante"
@@ -314,6 +346,7 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
+			idea_token = ARG_domingo_mercante
 			slot = army_chief
 			cost = 150
 			traits = { army_chief_offensive_2 }
