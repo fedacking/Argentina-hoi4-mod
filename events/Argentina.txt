@@ -62,13 +62,14 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_country_leader = {
-			name = "Ramon S. Castillo"
-			desc = "POLITICS_RAMON_S_CASTILLO_DESC"
-			picture = "Portrait_Argentine_Ramon_Castillo.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {}
+		add_country_leader_role = {
+			character = ARG_ramon_castillo
+			promote_leader = yes
+  			country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {}
+			}
 		}
 		add_popularity = { ideology = neutrality popularity = 0.1 }
 		custom_effect_tooltip = ARG_castillo_president_tooltip
