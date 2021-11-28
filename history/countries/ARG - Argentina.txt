@@ -188,6 +188,10 @@ recruit_character = ARG_manuel_savio
 recruit_character = ARG_edelmiro_julián_farrell
 recruit_character = ARG_manuel_domecq_garcia
 recruit_character = ARG_domingo_mercante
+recruit_character = ARG_antonio_parodi
+recruit_character = ARG_gabriel_a_hermansson
+recruit_character = ARG_heriberto_la_galine
+recruit_character = ARG_jorge_manni
 
 
 ### VARIANTS ###

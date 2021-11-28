@@ -352,4 +352,77 @@ characters = {
 			traits = { army_chief_offensive_2 }
 		}
 	}
+	
+	ARG_antonio_parodi = {
+		name = "Antonio Parodi"
+
+		advisor = {
+			picture = generic_air_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_antonio_parodi
+			slot = air_chief
+			cost = 150
+			traits = { air_chief_night_operations_2 }
+		}
+	}
+	
+	ARG_gabriel_a_hermansson = {
+		name = "Gabriel A. Hermansson"
+
+		advisor = {
+			picture = generic_air_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_antonio_parodi
+			slot = air_chief
+			cost = 150
+			traits = { air_chief_night_operations_2 } #should change trait
+		}
+	}
+	
+	ARG_heriberto_la_galine = {
+		name = "Heriberto la Galine"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_heriberto_la_galine
+			slot = navy_chief
+			cost = 150
+			traits = { navy_chief_commerce_raiding_2 }
+		}
+	}
+	
+	ARG_jorge_manni = {
+		name = "Jorge Manni"
+
+		advisor = {
+			picture = generic_army_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_jorge_manni
+			slot = high_command
+			cost = 150
+			traits = { army_infantry_2 }
+		}
+	}
+	
 }

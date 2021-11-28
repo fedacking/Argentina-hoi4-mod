@@ -1,59 +1,7 @@
 ideas = {
 	# MILITARY
 
-
-	air_chief = {
-
-		ARG_antonio_parodi = {
-			picture = generic_air_south_america_3
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { air_chief_ground_support_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		ARG_gabriel_a_hermansson = {
-			picture = generic_air_south_america_2
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { air_chief_night_operations_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-	}
-
-	navy_chief = {
-
-		ARG_heriberto_la_galine = {
-			picture = generic_navy_south_america_1
-			allowed = {
-				original_tag = ARG
-			}					
-			traits = { navy_chief_commerce_raiding_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
 	high_command = {
-
-		ARG_jorge_manni = {
-			picture = generic_army_south_america_1
-			allowed = {
-				original_tag = ARG
-			}
-			traits = { army_infantry_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		ARG_thomas_martinez = {
 			picture = generic_army_south_america_4
