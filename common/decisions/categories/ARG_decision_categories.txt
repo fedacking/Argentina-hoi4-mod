@@ -8,6 +8,12 @@ ARG_integrate_territory_category = {
 	}
 }
 
+ARG_prepare_for_conquest = {
+	allowed = {
+		original_tag = ARG
+	}
+}
+
 form_united_provinces_category = {
 
 	icon = generic_formable_nations
@@ -22,5 +28,15 @@ form_united_provinces_category = {
 ARG_foreign_affairs_category = {
 	allowed = {
 		original_tag = ARG
+	}
+}
+
+ARG_immigration_category = {
+	allowed = {
+		original_tag = ARG
+	}
+
+	visible = {
+		has_completed_focus = ARG_migrant_acceptance
 	}
 }

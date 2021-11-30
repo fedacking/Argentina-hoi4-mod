@@ -182,7 +182,6 @@ recruit_character = ARG_manuel_fresco
 recruit_character = ARG_marcelo_t_de_alvear
 recruit_character = ARG_rodolfo_ghioldi
 recruit_character = ARG_basilio_pertiné
-recruit_character = ARG_luis_dellepiane
 recruit_character = ARG_enrique_mosconi
 recruit_character = ARG_manuel_savio
 recruit_character = ARG_edelmiro_julián_farrell

@@ -1,0 +1,12 @@
+
+ARG_initialize_immigration = {
+	log = "test"
+	set_variable = { argentine_migration@ITA = 1.175 }
+}
+
+ARG_update_migration = {
+	set_temp_variable = { migration = argentine_migration@ITA }
+	multiply_temp_variable = { migration = ITA.max_manpower_k }
+	divide_temp_variable = { migration = 12 }
+	log = "migration from itaglia [?migration]"
+}

@@ -124,6 +124,8 @@ ARG_commie_threat:0 "Communist Threat in America"
 
 
 ### Decisions Categories ###
+ARG_immigration_category: "The Land of Opportunity"
+ARG_foreign_affairs_category: "Foreign Affairs"
 form_united_provinces_category:0 "The Virreinato's Legacy"
 form_united_provinces_category_desc:0 " - "
 ARG_integrate_territory_category:0 "Integrate territory"

@@ -133,7 +133,7 @@ characters = {
 		name = "Rodolfo Ghioldi"
 		portraits = {
 			civilian = {
-				large = "Portrait_Argentine_Rodolfo_Ghioldi.tga"
+				large = "gfx/leaders/ARG/Portrait_Argentine_Rodolfo_Ghioldi.tga"
 			}
 		}
 		country_leader = {
@@ -192,23 +192,6 @@ characters = {
 			skill = 4
 			attack_skill = 2
 			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = -1
-		}
-	}
-	ARG_luis_dellepiane = {
-		name = "Luis Dellepiane"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_ARG_Luis_Dellepiane.tga"
-			}
-		}
-		field_marshal = {
-			traits = { old_guard brilliant_strategist trait_cautious }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
 			legacy_id = -1
