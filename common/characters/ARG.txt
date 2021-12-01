@@ -15,6 +15,22 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
+
+		theorist = {
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_agustín_pedro_justo
+			slot = military_theorist
+			cost = 150
+			traits = { military_theorist }
+			research_bonus = {
+				land_doctrine = 0.15
+			}
+		}
 	}
 	ARG_ramon_castillo = {
 		name = "Ramón S. Castillo"
@@ -79,6 +95,20 @@ characters = {
 			logistics_skill = 3
 			legacy_id = -1
 		}
+
+		advisor = {
+			picture = generic_political_advisor_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_juan_domingo_peron
+			slot = political_advisor
+			cost = 150
+			traits = { silent_workhorse }
+		}
 	}
 	ARG_edelmiro_julián_farrell = {
 		name = "Edelmiro Julián Farrell"
@@ -88,7 +118,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { harsh_leader infantry_officer trickster }
+			traits = { harsh_leader infantry_officer trickster politically_connected }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 3
@@ -96,8 +126,22 @@ characters = {
 			logistics_skill = 3
 			legacy_id = -1
 		}
+
+		advisor = {
+			picture = generic_army_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_edelmiro_julián_farrell
+			slot = high_command
+			cost = 150
+			traits = { army_regrouping_2 }
+		}
 	}
-	# Demonrat
+	#Demonrat
 	ARG_marcelo_t_de_alvear = {
 		name = "Marcelo T. de Alvear"
 		portraits = {
@@ -112,7 +156,7 @@ characters = {
 			id = -1
 		}
 	}
-	# Facho
+	#fash
 	ARG_manuel_fresco = {
 		name = "Manuel Fresco"
 		portraits = {
@@ -128,7 +172,7 @@ characters = {
 			id = -1
 		}
 	}
-	# Commie
+	#Commie
 	ARG_rodolfo_ghioldi = {
 		name = "Rodolfo Ghioldi"
 		portraits = {
@@ -352,6 +396,23 @@ characters = {
 			cost = 150
 			traits = { air_chief_night_operations_2 }
 		}
+
+		advisor = {
+			picture = generic_air_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_antonio_parodi
+			slot = theorist
+			cost = 150
+			traits = { air_warfare_theorist }
+			research_bonus = {
+				air_doctrine = 0.15
+			}
+		}
 	}
 	
 	ARG_gabriel_a_hermansson = {
@@ -365,7 +426,7 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
-			idea_token = ARG_antonio_parodi
+			idea_token = ARG_gabriel_a_hermansson
 			slot = air_chief
 			cost = 150
 			traits = { air_chief_night_operations_2 } #should change trait
@@ -405,6 +466,240 @@ characters = {
 			slot = high_command
 			cost = 150
 			traits = { army_infantry_2 }
+		}
+	}
+	
+	ARG_thomas_martinez = {
+		name = "Thomas Martínez"
+
+		advisor = {
+			picture = generic_army_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_thomas_martinez
+			slot = high_command
+			cost = 150
+			traits = { army_logistics_2 }
+		}
+	}
+	
+	ARG_carlos_maurino = {
+		name = "Carlos Maurino"
+
+		advisor = {
+			picture = generic_army_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_carlos_maurino
+			slot = high_command
+			cost = 150
+			traits = { air_close_air_support_2 }
+		}
+	}
+	
+	ARG_uribaldi_diaz_brittenberg = {
+		name = "Uribaldi Díaz Brittenberg"
+
+		advisor = {
+			picture = generic_air_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_uribaldi_diaz_brittenberg
+			slot = high_command
+			cost = 150
+			traits = { air_bomber_interception_2 }
+		}
+	}
+	
+	ARG_hector_del_riva = {
+		name = "Hector del Riva"
+
+		advisor = {
+			picture = generic_air_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_hector_del_riva
+			slot = high_command
+			cost = 150
+			traits = { air_naval_strike_2 }
+		}
+	}
+	
+	ARG_luis_silva_carrasco = {
+		name = "Hector del Riva"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_luis_silva_carrasco
+			slot = high_command
+			cost = 150
+			traits = { air_navy_screen_2 }
+		}
+	}
+	
+	ARG_pedro_grosso_soto = {
+		name = "Pedro Grosso Soto"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_pedro_grosso_soto
+			slot = high_command
+			cost = 150
+			traits = { navy_submarine_2 }
+		}
+	}
+	
+	ARG_segundo_r_storni = {
+		name = "Segundo R. Storni"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_segundo_r_storni
+			slot = high_command
+			cost = 150
+			traits = { navy_capital_ship_2 }
+		}
+	}
+	
+	ARG_manuel_maria_de_iriondo = {
+		name = "Manuel Maria de Iriondo"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_manuel_maria_de_iriondo
+			slot = political_advisor
+			cost = 150
+			traits = { prince_of_terror }
+		}
+	}
+	
+	ARG_cesar_ameghino = {
+		name = "Cesar Ameghino"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_cesar_ameghino
+			slot = political_advisor
+			cost = 150
+			traits = { war_industrialist }
+		}
+	}
+	
+	ARG_arturo_frondizi = {
+		name = "Arturo Frondizi"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_arturo_frondizi
+			slot = political_advisor
+			cost = 150
+			traits = { captain_of_industry }
+		}
+	}
+	
+	ARG_diogenes_taboada = {
+		name = "Diogenes Taboada"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_diogenes_taboada
+			slot = political_advisor
+			cost = 150
+			traits = { quartermaster_general }
+		}
+	}
+	
+	ARG_julio_roca = {
+		name = "Julio A. P. Roca"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_julio_roca
+			slot = political_advisor
+			cost = 150
+			traits = { smooth_talking_charmer }
+		}
+	}
+	
+	ARG_carlos_saavedra_lamas = {
+		name = "Carlos Saavedra Lamas"
+
+		advisor = {
+			picture = generic_navy_south_america_2
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_carlos_saavedra_lamas
+			slot = political_advisor
+			cost = 150
+			traits = { compassionate_gentleman }
 		}
 	}
 	

@@ -191,6 +191,18 @@ recruit_character = ARG_antonio_parodi
 recruit_character = ARG_gabriel_a_hermansson
 recruit_character = ARG_heriberto_la_galine
 recruit_character = ARG_jorge_manni
+recruit_character = ARG_thomas_martinez
+recruit_character = ARG_carlos_maurino
+recruit_character = ARG_uribaldi_diaz_brittenberg
+recruit_character = ARG_hector_del_riva
+recruit_character = ARG_luis_silva_carrasco
+recruit_character = ARG_pedro_grosso_soto
+recruit_character = ARG_segundo_r_storni
+recruit_character = ARG_cesar_ameghino
+recruit_character = ARG_arturo_frondizi
+recruit_character = ARG_diogenes_taboada
+recruit_character = ARG_julio_roca
+recruit_character = ARG_carlos_saavedra_lamas
 
 
 ### VARIANTS ###
