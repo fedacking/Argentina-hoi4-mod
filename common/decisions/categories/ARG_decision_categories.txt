@@ -37,6 +37,6 @@ ARG_immigration_category = {
 	}
 
 	visible = {
-		has_completed_focus = ARG_migrant_acceptance
+		has_country_flag = ARG_immigration_started_flag
 	}
 }

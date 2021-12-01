@@ -108,6 +108,7 @@
 		completion_reward = {
 			add_ideas = ARG_idea_inmigration1
 			unlock_decision_category_tooltip = ARG_immigration_category
+			ARG_initialize_immigration = yes
 		}
 	}	
 

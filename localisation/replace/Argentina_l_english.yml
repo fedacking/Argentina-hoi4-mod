@@ -125,6 +125,8 @@ ARG_commie_threat:0 "Communist Threat in America"
 
 ### Decisions Categories ###
 ARG_immigration_category: "The Land of Opportunity"
+ARG_immigration_category_desc: "Keep, ancient lands, your storied pomp!" cries she\nWith silent lips. "Give me your tired, your poor,\nYour huddled masses yearning to breathe free,\nThe wretched refuse of your teeming shore.\nSend these, the homeless, tempest-tost to me,\nI lift my lamp beside the golden door!\n\nImmigration to Argentina next month:[ARG_immigration_countries_loc]"
+ARG_immigration_country_loc: "\n  [?ARG_next_country.GetNameWithFlag] [?ARG_next_country:ARG_migration|Y0][?ARG_next_country.ARG_immigration_countries_loc_2]"
 ARG_foreign_affairs_category: "Foreign Affairs"
 form_united_provinces_category:0 "The Virreinato's Legacy"
 form_united_provinces_category_desc:0 " - "

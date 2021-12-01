@@ -1,12 +1,38 @@
 
 ARG_initialize_immigration = {
-	log = "test"
+	clear_array = ARG_immigration_countries
+	set_country_flag = ARG_immigration_started_flag
+	add_to_array = { ARG_immigration_countries = SPR }
+	set_variable = { argentine_migration@SPR = 1.175 }
+	add_to_array = { ARG_immigration_countries = ITA }
 	set_variable = { argentine_migration@ITA = 1.175 }
+	ARG_reposition_immigration = yes
+	ARG_update_migration = yes
+}
+
+ARG_reposition_immigration = {
+	set_variable = { ARG_next_country = ARG_immigration_countries^0 }
+	set_temp_variable = { position = 0 }
+	set_variable = { ARG_immigration_position = position }
+	for_each_scope_loop = {
+		array = ARG_immigration_countries
+		
+		add_to_temp_variable = { position = 1 }
+		set_variable = { ARG_next_country = ARG.ARG_immigration_countries^position }
+		set_variable = { ARG_immigration_position = position }
+	}
 }
 
 ARG_update_migration = {
-	set_temp_variable = { migration = argentine_migration@ITA }
-	multiply_temp_variable = { migration = ITA.max_manpower_k }
-	divide_temp_variable = { migration = 12 }
-	log = "migration from itaglia [?migration]"
+	for_each_scope_loop = {
+		array = ARG_immigration_countries
+		
+		set_variable = { ARG_migration = ARG.argentine_migration@THIS }
+		multiply_variable = { ARG_migration = max_manpower_k }
+		divide_variable = { ARG_migration = 12 }
+	}
+}
+
+ARG_do_migration = {
+
 }
