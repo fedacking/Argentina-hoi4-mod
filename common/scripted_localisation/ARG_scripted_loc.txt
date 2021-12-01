@@ -1,0 +1,19 @@
+
+defined_text = {
+	name = ARG_immigration_countries_loc
+	text = {
+		trigger = {
+			check_variable = { ARG_immigration_position < ARG.ARG_immigration_countries^num }
+		}
+		localization_key = ARG_immigration_country_loc
+    }
+	text = {
+		localization_key = ""
+	}
+}
+defined_text = {
+	name = ARG_immigration_countries_loc_2
+	text = {
+		localization_key = "[THIS.ARG_immigration_countries_loc]"
+	}
+}
