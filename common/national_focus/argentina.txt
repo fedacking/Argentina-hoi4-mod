@@ -127,48 +127,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ARG_government_opposition_cooperation
 			set_country_flag = ARG_stabilized
+			complete_national_focus = ARG_diplomacy
 			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}
-	
-#	focus = {
-#		id = ARG_conservative_reaction
-#		icon = GFX_goal_generic_political_pressure
-#		cost = 10
-#		available = { always = no }
-#		prerequisite = { focus = ARG_empower_the_landowners }
-#		prerequisite = { focus = ARG_stop_the_fraud }
-#		bypass = { has_country_flag = ARG_castillo_president }
-#		x = 1
-#		y = 3
-#		completion_reward = {
-#		}
-#	}
-#	
-#	focus = {
-#		id = ARG_military_budget
-#		icon = GFX_goal_generic_axis_build_infantry
-#		cost = 10
-#		prerequisite = { focus = ARG_conservative_reaction }
-#		x = 2
-#		y = 4
-#		completion_reward = {
-#			add_ideas = ARG_idea_military_budget
-#		}
-#	}
-#	
-#	focus = {
-#		id = ARG_defang_the_intelectuals
-#		icon = GFX_focus_renounce_the_treaty_of_trianon
-#		cost = 10
-#		prerequisite = { focus = ARG_conservative_reaction }
-#		x = 0
-#		y = 4
-#		completion_reward = {
-#			add_war_support = 0.1
-#			add_political_power = -25
-#		}
-#	}
 	
 	## President Alvear
 	
@@ -336,6 +298,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.2
 			set_country_flag = ARG_stabilized
+			complete_national_focus = ARG_diplomacy
 			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}
@@ -346,12 +309,9 @@ focus_tree = {
 		id = ARG_1937_revolution
 		icon = GFX_goal_revolution
 		available = {
-			always = no 
+			has_country_flag = ARG_37_revolution_flag
 		}
-		bypass = {
-			has_country_flag = ARG_crack_down
-		}
-		x = 15
+		x = 16
 		y = 0
 		cost = 10	
 		completion_reward = {
@@ -373,7 +333,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ARG_president_ghioldi
 		}
-		x = 17
+		x = 19
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = ARG_fresco_takeover_tooltip
@@ -387,24 +347,24 @@ focus_tree = {
 		prerequisite = { 
 		focus = ARG_president_fresco
 		}
-		x = 16
+		x = 18
 		y = 2
 		completion_reward = {
 			add_ideas = ARG_idea_ban_communism
 		}
 	}
-	
+
 	focus = {
-		id = ARG_state_catholicism
-		icon = GFX_goal_faith_and_state
+		id = ARG_embrace_and_extinguish_the_cgt
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 10
-		prerequisite = { 
-			focus = ARG_president_fresco
+		prerequisite = {
+			focus = ARG_ban_communism
 		}
 		x = 18
-		y = 2		
+		y = 3
 		completion_reward = {
-			add_stability = 0.2
+			add_political_power = 150
 		}
 	}
 
@@ -413,18 +373,45 @@ focus_tree = {
 		icon = GFX_goal_government_icon
 		cost = 10
 		prerequisite = {
-			focus = ARG_ban_communism
+			focus = ARG_president_fresco
 		}
-		prerequisite = {
-			focus = ARG_state_catholicism
-		}
-		x = 17
-		y = 3
+		x = 20
+		y = 2
 		completion_reward = {
 			add_political_power = 150
 		}
 	}
 
+	focus = {
+		id = ARG_state_catholicism
+		icon = GFX_goal_faith_and_state
+		cost = 10
+		prerequisite = { 
+			focus = ARG_technical_parliament
+		}
+		x = 20
+		y = 3		
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+
+	focus = {
+		id = ARG_frescos_cult_of_personality
+		icon = GFX_focus_SOV_stalins_cult_of_personality
+		cost = 10
+		prerequisite = { 
+			focus = ARG_embrace_and_extinguish_the_cgt
+		}
+		prerequisite = { 
+			focus = ARG_state_catholicism
+		}
+		x = 19
+		y = 4		
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
 	
 	## Ghioldi
 
@@ -448,6 +435,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ARG_workers_congress
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10
+		prerequisite = {
+			focus = ARG_president_ghioldi
+		}
+		x = 12
+		y = 2
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = ARG_land_reform
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		cost = 10
+		prerequisite = {
+			focus = ARG_workers_congress
+		}
+		x = 12
+		y = 3
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
 		id = ARG_ban_fascism
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 10
@@ -466,10 +481,10 @@ focus_tree = {
 		icon = GFX_goal_no_religion
 		cost = 10
 		prerequisite = { 
-			focus = ARG_president_ghioldi
+			focus = ARG_ban_fascism
 		}
-		x = 12
-		y = 2
+		x = 14
+		y = 3
 		completion_reward = {
 			add_stability = -0.1
 			add_ideas = ARG_idea_faithless_research
@@ -477,54 +492,69 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ARG_workers_congress
-		icon = GFX_focus_generic_soviet_politics
+		id = ARG_the_red_constitution
+		icon = GFX_focus_SOV_stalins_cult_of_personality
 		cost = 10
-		prerequisite = {
-			focus = ARG_ban_fascism
-		}
-		prerequisite = {
+		prerequisite = { 
 			focus = ARG_state_atheism
 		}
+		prerequisite = { 
+			focus = ARG_land_reform
+		}
 		x = 13
-		y = 3
+		y = 4
 		completion_reward = {
-			add_political_power = 150
 		}
 	}
-
+	
+	focus = {
+		id = ARG_purge_the_army
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = { 
+			focus = ARG_president_fresco
+			focus = ARG_president_ghioldi
+		}
+		x = 16
+		y = 2
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = ARG_idea_ideology_expansion
+		}
+	}
 	
 	focus = {
 		id = ARG_ideological_expansion
 		icon = GFX_goal_generic_major_war
 		cost = 10
 		prerequisite = { 
-			focus = ARG_ban_communism
-			focus = ARG_ban_fascism
+			focus = ARG_purge_the_army
 		}
-		x = 15
-		y = 3
+		x = 16
+		y = 4
 		completion_reward = {
 			add_war_support = 0.1
 			add_ideas = ARG_idea_ideology_expansion
 		}
-	}	
+	}
 	
 	focus = {
 		id = ARG_new_state
 		icon = GFX_goal_generic_demand_territory
 		cost = 10
 		prerequisite = { 
-			focus = ARG_technical_parliament
-			focus = ARG_workers_congress
-		}
-		x = 15
-		y = 4
+			focus = ARG_frescos_cult_of_personality
+			focus = ARG_the_red_constitution
+		} 
+		prerequisite = { focus = ARG_ideological_expansion }
+		x = 16
+		y = 5
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			remove_ideas = ARG_idea_revolution
 			set_country_flag = ARG_stabilized
+			complete_national_focus = ARG_diplomacy
 			custom_effect_tooltip = ARG_stabilized_tooltip
 		}
 	}

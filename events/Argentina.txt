@@ -732,7 +732,8 @@ country_event = { #General Strike
 		ai_chance = {
 			factor = 34
 		}
-		set_country_flag = ARG_crack_down
+		set_country_flag = ARG_37_revolution_flag
+		complete_national_focus = ARG_1937_revolution
 		custom_effect_tooltip = ARG_terror_plot_tooltip
 	}
 	option = {
@@ -761,7 +762,7 @@ country_event = { #Terror plot
 	fire_only_once = yes
 	trigger = {
 		tag = arg
-		has_country_flag = ARG_crack_down
+		has_country_flag = ARG_37_revolution_flag
 	}
 	mean_time_to_happen = { days = 1 }
 

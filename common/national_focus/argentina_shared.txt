@@ -6,10 +6,14 @@
 		id = ARG_renegotiate_treaty
 		icon = GFX_goal_generic_positive_trade_relations
 		available = {
-			ENG = {has_government = democratic
-				is_puppet = no}
-			OR = {has_government = democratic
-			has_government = neutrality}
+			ENG = {
+				has_government = democratic
+				is_puppet = no
+			}
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
 		}
 		bypass = { 
 			OR = {
@@ -17,7 +21,7 @@
 				has_government = communism 
 			}
 		}
-		x = 24
+		x = 27
 		y = 0
 		cost = 10
 		
@@ -39,15 +43,15 @@
 		id = ARG_port_madero
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = ARG_renegotiate_treaty }
-		available = {
-		}
+		available = {}
 		bypass = { 
 			OR = {
 				has_government = fascism 
 				has_government = communism 
 			}
 		}
-		x = 21
+		relative_position_id = ARG_renegotiate_treaty
+		x = -3
 		y = 1
 		cost = 10
 		
@@ -75,9 +79,9 @@
 		id = ARG_breadbasket
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = ARG_renegotiate_treaty }
-		available = {
-		}
-		x = 23
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -1
 		y = 1
 		cost = 10
 		
@@ -99,9 +103,9 @@
 		id = ARG_migrant_acceptance
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = ARG_renegotiate_treaty }
-		available = {
-		}
-		x = 25
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 1
 		y = 1
 		cost = 10
 		
@@ -116,9 +120,9 @@
 		id = ARG_migrant_minds
 		icon = GFX_focus_research
 		prerequisite = { focus = ARG_renegotiate_treaty }
-		available = {
-		}
-		x = 27
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 3
 		y = 1
 		cost = 10
 		
@@ -134,7 +138,8 @@
 		prerequisite = { focus = ARG_migrant_acceptance }
 		prerequisite = { focus = ARG_breadbasket }
 		prerequisite = { focus = ARG_port_madero }
-		x = 24
+		relative_position_id = ARG_renegotiate_treaty
+		x = 0
 		y = 2
 		cost = 10
 		
@@ -180,7 +185,8 @@
 				has_country_flag = ARG_ortiz_wins
 			}
 		}
-		x = 28
+		relative_position_id = ARG_renegotiate_treaty
+		x = 4
 		y = 3
 		cost = 10
 		
@@ -198,9 +204,9 @@
 		id = ARG_migrant_labour
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = ARG_british_treaty }
-		available = {
-		}
-		x = 27
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 3
 		y = 4
 		cost = 10
 		
@@ -216,9 +222,9 @@
 		id = ARG_expanded_civilian_economy
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = ARG_migrant_labour }
-		available = {
-		}
-		x = 27
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 3
 		y = 5
 		cost = 10
 		
@@ -276,7 +282,8 @@
 		available = {
 			ENG = { has_war = yes }
 		}
-		x = 29
+		relative_position_id = ARG_renegotiate_treaty
+		x = 5
 		y = 4
 		cost = 10
 		
@@ -334,7 +341,8 @@
 		available = {
 			ENG = { has_war = yes }
 		}
-		x = 29
+		relative_position_id = ARG_renegotiate_treaty
+		x = 5
 		y = 5
 		cost = 10
 		
@@ -390,9 +398,9 @@
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = { focus = ARG_british_military_effort }
 		prerequisite = { focus = ARG_expanded_civilian_economy }
-		available = {
-		}
-		x = 28
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 4
 		y = 6
 		cost = 10
 		
@@ -419,7 +427,8 @@
 				}
 			has_government = fascism
 		}
-		x = 20
+		relative_position_id = ARG_renegotiate_treaty
+		x = -4
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -449,9 +458,9 @@
 		id = ARG_german_iron
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = ARG_german_inversions }
-		available = {
-		}
-		x = 19
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -5
 		y = 4
 		cost = 10
 		
@@ -468,9 +477,9 @@
 		id = ARG_german_tungsten
 		icon = GFX_focus_generic_tungsten
 		prerequisite = { focus = ARG_german_iron }
-		available = {
-		}
-		x = 19
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -5
 		y = 5
 		cost = 10
 		
@@ -487,9 +496,9 @@
 		id = ARG_military_factories
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = ARG_german_inversions }
-		available = {
-		}
-		x = 21
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -3
 		y = 4
 		cost = 10
 		
@@ -531,9 +540,9 @@
 		id = ARG_military_factories2
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = ARG_military_factories }
-		available = {
-		}
-		x = 21
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -3
 		y = 5
 		cost = 10
 		
@@ -576,9 +585,9 @@
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = ARG_military_factories2 }
 		prerequisite = { focus = ARG_german_tungsten }
-		available = {
-		}
-		x = 20
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -4
 		y = 6
 		cost = 10
 		
@@ -606,7 +615,8 @@
 				has_country_flag = ARG_ghioldi_wins
 			}
 		}
-		x = 24
+		relative_position_id = ARG_renegotiate_treaty
+		x = 0
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -637,9 +647,9 @@
 		id = ARG_argentine_roads
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = ARG_argentine_first }
-		available = {
-		}
-		x = 23
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -1
 		y = 4
 		cost = 10
 		
@@ -705,9 +715,9 @@
 		id = ARG_argentine_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = ARG_argentine_roads }
-		available = {
-		}
-		x = 23
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = -1
 		y = 5
 		cost = 10
 		
@@ -773,9 +783,9 @@
 		id = ARG_argentine_civ
 		icon = GFX_focus_generic_industry_2
 		prerequisite = { focus = ARG_argentine_first }
-		available = {
-		}
-		x = 25
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 1
 		y = 4
 		cost = 10
 		
@@ -817,9 +827,9 @@
 		id = ARG_argentine_civ2
 		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = ARG_argentine_civ }
-		available = {
-		}
-		x = 25
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 1
 		y = 5
 		cost = 10
 		
@@ -862,9 +872,9 @@
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = ARG_argentine_railways }
 		prerequisite = { focus = ARG_argentine_civ2 }
-		available = {
-		}
-		x = 24
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 0
 		y = 6
 		cost = 10
 		
@@ -881,9 +891,9 @@
 			focus = ARG_argentine_construction
 			focus = ARG_british_full_economic_cooperation
 		}
-		available = {
-		}
-		x = 24
+		available = {}
+		relative_position_id = ARG_renegotiate_treaty
+		x = 0
 		y = 7
 		cost = 10
 		
@@ -1968,17 +1978,12 @@
 		id = ARG_diplomacy
 		icon = GFX_goal_generic_propaganda
 		cost = 8
-		bypass = {
+		available = {
 			has_country_flag = ARG_stabilized
 		}
-		available = {
-			always = no
-		}
-		x = 39
+		x = 42
 		y = 0
-		completion_reward = {
-			#
-		}
+		completion_reward = {}
 	}
 	
 ##Neutrality
