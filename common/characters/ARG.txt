@@ -16,7 +16,7 @@ characters = {
 			id = -1
 		}
 
-		theorist = {
+		advisor = {
 			allowed = {
 				original_tag = ARG
 			}
@@ -30,6 +30,20 @@ characters = {
 			research_bonus = {
 				land_doctrine = 0.15
 			}
+		}
+	}
+	ARG_roberto_maría_ortiz = {
+		name = "Roberto María Ortiz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Roberto_Ortiz.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
+			ideology = centrism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
 	ARG_ramon_castillo = {

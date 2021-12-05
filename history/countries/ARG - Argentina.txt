@@ -1,5 +1,40 @@
 ﻿capital = 278
 
+recruit_character = ARG_agustín_pedro_justo
+recruit_character = ARG_roberto_maría_ortiz
+recruit_character = ARG_ramon_castillo
+recruit_character = ARG_arturo_rawson
+recruit_character = ARG_juan_pistarini
+recruit_character = ARG_alberto_teisaire
+recruit_character = ARG_pedro_pablo_ramirez
+recruit_character = ARG_eleazar_videla
+recruit_character = ARG_juan_domingo_peron
+recruit_character = ARG_manuel_fresco
+recruit_character = ARG_marcelo_t_de_alvear
+recruit_character = ARG_rodolfo_ghioldi
+recruit_character = ARG_basilio_pertiné
+recruit_character = ARG_enrique_mosconi
+recruit_character = ARG_manuel_savio
+recruit_character = ARG_edelmiro_julián_farrell
+recruit_character = ARG_manuel_domecq_garcia
+recruit_character = ARG_domingo_mercante
+recruit_character = ARG_antonio_parodi
+recruit_character = ARG_gabriel_a_hermansson
+recruit_character = ARG_heriberto_la_galine
+recruit_character = ARG_jorge_manni
+recruit_character = ARG_thomas_martinez
+recruit_character = ARG_carlos_maurino
+recruit_character = ARG_uribaldi_diaz_brittenberg
+recruit_character = ARG_hector_del_riva
+recruit_character = ARG_luis_silva_carrasco
+recruit_character = ARG_pedro_grosso_soto
+recruit_character = ARG_segundo_r_storni
+recruit_character = ARG_cesar_ameghino
+recruit_character = ARG_arturo_frondizi
+recruit_character = ARG_diogenes_taboada
+recruit_character = ARG_julio_roca
+recruit_character = ARG_carlos_saavedra_lamas
+
 oob = "ARG_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -158,51 +193,8 @@ set_popularities = {
 		communism = 1
 		neutrality = 52
 	}
-	create_country_leader = {
-		name = "Roberto María Ortiz"
-		desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
-		picture = "gfx/leaders/ARG/Portrait_Argentine_Roberto_Ortiz.tga"
-		expire = "1965.1.1"
-		ideology = centrism
-		traits = {
-			#
-		}
-	}
+	promote_character = ARG_roberto_maría_ortiz
 }
-
-recruit_character = ARG_agustín_pedro_justo
-recruit_character = ARG_ramon_castillo
-recruit_character = ARG_arturo_rawson
-recruit_character = ARG_juan_pistarini
-recruit_character = ARG_alberto_teisaire
-recruit_character = ARG_pedro_pablo_ramirez
-recruit_character = ARG_eleazar_videla
-recruit_character = ARG_juan_domingo_peron
-recruit_character = ARG_manuel_fresco
-recruit_character = ARG_marcelo_t_de_alvear
-recruit_character = ARG_rodolfo_ghioldi
-recruit_character = ARG_basilio_pertiné
-recruit_character = ARG_enrique_mosconi
-recruit_character = ARG_manuel_savio
-recruit_character = ARG_edelmiro_julián_farrell
-recruit_character = ARG_manuel_domecq_garcia
-recruit_character = ARG_domingo_mercante
-recruit_character = ARG_antonio_parodi
-recruit_character = ARG_gabriel_a_hermansson
-recruit_character = ARG_heriberto_la_galine
-recruit_character = ARG_jorge_manni
-recruit_character = ARG_thomas_martinez
-recruit_character = ARG_carlos_maurino
-recruit_character = ARG_uribaldi_diaz_brittenberg
-recruit_character = ARG_hector_del_riva
-recruit_character = ARG_luis_silva_carrasco
-recruit_character = ARG_pedro_grosso_soto
-recruit_character = ARG_segundo_r_storni
-recruit_character = ARG_cesar_ameghino
-recruit_character = ARG_arturo_frondizi
-recruit_character = ARG_diogenes_taboada
-recruit_character = ARG_julio_roca
-recruit_character = ARG_carlos_saavedra_lamas
 
 
 ### VARIANTS ###

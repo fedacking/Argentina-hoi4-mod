@@ -518,8 +518,25 @@ focus_tree = {
 		x = 16
 		y = 2
 		completion_reward = {
-			add_war_support = 0.1
-			add_ideas = ARG_idea_ideology_expansion
+			if = {
+				limit = {
+					has_government = communism
+				}
+				every_character = {
+					limit = { 
+						NOT = { is_character = ARG_juan_domingo_peron } 
+						OR = { 
+							is_corps_commander = yes
+							is_navy_leader = yes
+							is_field_marshal = yes
+						}
+					}
+					retire = yes
+				}
+				add_ideas = ARG_idea_purged_army
+			} else = {
+				retire_character = ARG_pedro_pablo_ramirez
+			}
 		}
 	}
 	
@@ -534,7 +551,17 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_war_support = 0.1
-			add_ideas = ARG_idea_ideology_expansion
+			if = {
+				limit = {
+					has_government = communism
+				}
+				swap_ideas = {
+					remove_idea = ARG_idea_purged_army
+					add_idea = ARG_idea_purged_army_2
+				}
+			} else = {
+				add_ideas = ARG_idea_ideology_expansion
+			}
 		}
 	}
 	

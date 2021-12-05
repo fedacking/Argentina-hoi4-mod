@@ -420,6 +420,24 @@ ideas = {
 			}
 		}
 		
+		ARG_idea_purged_army = {
+			picture = air_war_plans_division_focus
+			modifier = {
+				promote_cost_factor = -0.5
+				army_leader_cost_factor = -0.5
+			}
+		}
+		
+		ARG_idea_purged_army_2 = {
+			picture = air_war_plans_division_focus
+			modifier = {
+				promote_cost_factor = -0.5
+				army_leader_cost_factor = -0.5
+				justify_war_goal_time = -0.2
+				conscription = 0.02
+			}
+		}
+		
 		ARG_idea_ideology_expansion = {
 			picture = air_war_plans_division_focus
 			modifier = {

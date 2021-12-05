@@ -52,6 +52,8 @@ ARG_idea_social_reform:0 "Women's Suffrage"
 ##Tree Revolution
 ARG_idea_ban_communism:0 "Communism Banned"
 ARG_idea_ban_fascism:0 "Fascism Banned"
+ARG_idea_purged_army: "Purged Army"
+ARG_idea_purged_army_2: "Ideological Crusade"
 ARG_idea_ideology_expansion:0 "Ideological Crusade"
 ARG_idea_revolution:0 "Revolution"
 ARG_idea_revolution_desc:0 "The nation is in a state of anarchy as many factions struggle for power"
