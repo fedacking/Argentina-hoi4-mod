@@ -170,6 +170,20 @@ characters = {
 			id = -1
 		}
 	}
+	ARG_enrique_mosca = {
+		name = "Enrique Mosca"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Enrique_Mosca.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MARCELO_ALVEAR_DESC"
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 	#fash
 	ARG_manuel_fresco = {
 		name = "Manuel Fresco"

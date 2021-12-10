@@ -104,13 +104,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_country_leader = {
-			name = "Enrique Mosca"
-			desc = "POLITICS_ENRIQUEE_MOSCA_DESC"
-			picture = "Portrait_Argentine_Enrique_Mosca.tga"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {}
+		ARG_enrique_mosca = {
+			promote_character = yes
 		}
 	}
 }

@@ -11,6 +11,7 @@ recruit_character = ARG_eleazar_videla
 recruit_character = ARG_juan_domingo_peron
 recruit_character = ARG_manuel_fresco
 recruit_character = ARG_marcelo_t_de_alvear
+recruit_character = ARG_enrique_mosca
 recruit_character = ARG_rodolfo_ghioldi
 recruit_character = ARG_basilio_pertiné
 recruit_character = ARG_enrique_mosconi
