@@ -226,8 +226,8 @@ ARG_neutrality_party_gou:0 "GOU"
 ARG_neutrality_party_gou_long:0 "Grupo de Oficiales Unidos"
 ARG_neutrality_party_revlibertadora:0 "Rev. Libertadora"
 ARG_neutrality_party_revlibertadora_long:0 "Revolución Libertadora"
-ARG_fascism_party_PJ:0 "PJ"
-ARG_fascism_party_PJ_long:0 "Partido Justicialista"
+ARG_neutrality_party_PJ:0 "PJ"
+ARG_neutrality_party_PJ_long:0 "Partido Justicialista"
 
 ### Country Names ###
  

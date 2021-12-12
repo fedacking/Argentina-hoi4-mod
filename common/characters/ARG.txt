@@ -64,7 +64,7 @@ characters = {
 		}
 	}
 	ARG_pedro_pablo_ramirez = {
-		name = "Pedro Pablo Ramirez"
+		name = "Pedro Pablo Ramírez"
 		portraits = {
 			army = {
 				large = "gfx/leaders/ARG/Portrait_Argentine_Pablo_Ramirez.tga"
@@ -91,37 +91,6 @@ characters = {
 				factor = 1
 			}
 			traits = { army_chief_defensive_2 }
-		}
-	}
-	ARG_juan_domingo_peron = {
-		name = "Juan Domingo Peron"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ARG/Portrait_ARG_Peron_General.tga"
-			}
-		}
-		corps_commander = {
-			traits = { media_personality politically_connected fortress_buster }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = -1
-		}
-
-		advisor = {
-			picture = generic_political_advisor_south_america_1
-			allowed = {
-				original_tag = ARG
-			}
-			ai_will_do = {
-				factor = 1
-			}
-			idea_token = ARG_juan_domingo_peron
-			slot = political_advisor
-			cost = 150
-			traits = { silent_workhorse }
 		}
 	}
 	ARG_edelmiro_julián_farrell = {
@@ -155,6 +124,37 @@ characters = {
 			traits = { army_regrouping_2 }
 		}
 	}
+	ARG_juan_domingo_peron = {
+		name = "Juan Domingo Peron"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARG/Portrait_ARG_Peron_General.tga"
+			}
+		}
+		corps_commander = {
+			traits = { media_personality politically_connected fortress_buster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+
+		advisor = {
+			picture = generic_political_advisor_south_america_1
+			allowed = {
+				original_tag = ARG
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			idea_token = ARG_juan_domingo_peron
+			slot = political_advisor
+			cost = 150
+			traits = { silent_workhorse }
+		}
+	}
 	#Demonrat
 	ARG_marcelo_t_de_alvear = {
 		name = "Marcelo T. de Alvear"
@@ -180,6 +180,20 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_MARCELO_ALVEAR_DESC"
 			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_jose_pascual_tamborini = {
+		name = "José Pascual Tamborini"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Pascual_Tamborini.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_TAMBORINI_DESC"
+			ideology = liberalism
 			expire = "1965.1.1.1"
 			id = -1
 		}

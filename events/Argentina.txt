@@ -136,33 +136,19 @@ country_event = {
 			remove_ideas = {
 				ARG_concordancia
 			}
-			create_country_leader = {
-				name = "Juan Domingo Perón"
-				desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
-				picture = "Portrait_Argentine_Domingo_Peron.tga"
+		}
+		add_country_leader_role = {
+			character = ARG_pedro_pablo_ramirez
+			promote_leader = yes
+			Country_leader = {
 				expire = "1965.1.1"
-				ideology = fascism_ideology
+				ideology = despotism
 				traits = {
-					political_dancer		
+					fascist_sympathies		
 				}
-			}
-			set_party_name = {
-				ideology = fascism
-				long_name = ARG_fascism_party_PJ_long
-				name = ARG_fascism_party_PJ
 			}
 		}
 		add_ideas = ARG_gou
-		create_country_leader = {
-			name = "Pedro Pablo Ramírez"
-			desc = "POLITICS_PEDRO_PABLO_RAMIREZ_DESC"
-			picture = "Portrait_Argentine_Pablo_Ramirez.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				fascist_sympathies
-			}
-		}
 		set_party_name = {
 			ideology = neutrality
 			long_name = ARG_neutrality_party_gou_long
@@ -214,14 +200,15 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_country_leader = {
-			name = "Edelmiro Farrell"
-			desc = "POLITICS_EDELMIRO_FARREL_DESC"
-			picture = "Portrait_Argentine_Edelmiro_Farrell.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				fascist_sympathies
+		add_country_leader_role = {
+			character = ARG_edelmiro_julián_farrell
+			promote_leader = yes
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					fascist_sympathies
+				}
 			}
 		}
 	}
@@ -266,25 +253,31 @@ country_event = {
 				ARG_ps
 				ARG_gou
 			}
-			create_country_leader = {
-				name = "José Pascual Tamborini"
-				desc = "POLITICS_JOSE_TAMBORINI_DESC"
-				picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {}
-			}
+			ARG_jose_pascual_tamborini = { promote_character = yes }
 		}
 		set_country_flag = ARG_peron_wins
-		add_ideas = {ARG_pj}
-		set_politics = {
-			ruling_party = fascism
+		add_ideas = ARG_pj
+		add_country_leader_role = {
+			character = ARG_juan_domingo_peron
+			promote_leader = yes
+			Country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					political_dancer		
+				}
+			}
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = ARG_neutrality_party_PJ_long
+			name = ARG_neutrality_party_PJ
 		}
 		set_popularities = {
 			democratic = 19
-			fascism = 80
+			fascism = 1
 			communism = 1
-			neutrality = 0
+			neutrality = 79
 		}
 	}
 	option = {
@@ -376,8 +369,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = fascism
-			long_name = ARG_fascism_party_PJ_long
-			name = ARG_fascism_party_PJ
+			long_name = ARG_neutrality_party_PJ_long
+			name = ARG_neutrality_party_PJ
 		}
 		set_politics = {
 			ruling_party = fascism
@@ -993,7 +986,7 @@ country_event = { #Alvear wins
 		hidden_effect = {
 			remove_ideas = {ARG_concordancia}
 		}
-		add_ideas = {ARG_ucr}
+		add_ideas = ARG_ucr
 		set_politics = {
 			ruling_party = democratic
 		}
