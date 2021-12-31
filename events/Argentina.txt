@@ -62,15 +62,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		add_country_leader_role = {
-			character = ARG_ramon_castillo
-			promote_leader = yes
-  			country_leader = {
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {}
-			}
-		}
+		ARG_ramon_castillo = { promote_character = yes }
 		add_popularity = { ideology = neutrality popularity = 0.1 }
 		custom_effect_tooltip = ARG_castillo_president_tooltip
 		remove_ideas = {
@@ -298,13 +290,9 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_ucr}
-		create_country_leader = {
-			name = "José Pascual Tamborini"
-			desc = "POLITICS_JOSE_TAMBORINI_DESC"
-			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
+		
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -347,24 +335,21 @@ country_event = {
 				ARG_ps
 				ARG_gou
 			}
-			create_country_leader = {
-				name = "Ricardo Balbín"
-				desc = "POLITICS_RICARDO_BALBIN_DESC"
-				picture = "Portrait_Argentine_Ricardo_Balbin.tga"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {}
+			ARG_ricardo_bablin = {
+				promote_character = yes
 			}
 		}
 		add_ideas = {ARG_pj}
-		create_country_leader = {
-			name = "Juan Domingo Perón"
-			desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
-			picture = "Portrait_Argentine_Domingo_Peron.tga"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				political_dancer		
+		ARG_jose_pascual_tamborini = { promote_character = yes }
+		add_country_leader_role = {
+			character = ARG_juan_domingo_peron
+			promote_leader = yes
+			Country_leader = {
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					fascist_sympathies		
+				}
 			}
 		}
 		set_party_name = {
@@ -401,13 +386,8 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_ucr}
-		create_country_leader = {
-			name = "Ricardo Balbín"
-			desc = "POLITICS_RICARDO_BALBIN_DESC"
-			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
+		ARG_ricardo_bablin = {
+			promote_character = yes
 		}
 		set_politics = {
 			ruling_party = democratic
@@ -438,13 +418,8 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_pdn}
-		create_country_leader = {
-			name = "Reynaldo Pastor"
-			desc = "POLITICS_REYNALDO_PASTOR_DESC"
-			picture = "Portrait_Argentine_Reynaldo_Pastor.tga"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {}
+		ARG_reynaldo_pastor = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -480,13 +455,8 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_ps}
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
+		ARG_alfredo_palacios = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -536,13 +506,8 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_mj}
-		create_country_leader = {
-			name = "Eduardo Lonardi"
-			desc = "POLITICS_EDUARDO_LONARDI_DESC"
-			picture = "Portrait_Argentine_Eduardo_Lonardi.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {}
+		ARG_eduardo_lonardi = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = neutrality
@@ -593,13 +558,8 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		create_country_leader = {
-			name = "Pedro Eugenio Aramburu"
-			desc = "POLITICS_PEDRO_EUGENIO_ARAMBURU_DESC"
-			picture = "Portrait_ARG_Aramburu.tga"
-			expire = "1965.1.1"
-			ideology = moderatism
-			traits = {}
+		ARG_pedro_aramburu = {
+			promote_character = yes
 		}
 	}
 	option = {
@@ -635,15 +595,8 @@ country_event = {
 			set_cosmetic_tag = ARG_Empire
 		}
 		add_ideas = {ARG_ae}
-		create_country_leader = {
-			name = "Emperor Justo"
-			desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
-			picture = "Portrait_Argentine_Emperor_Justo.tga"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				dictator
-			}
+		ARG_emperor_justo = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = fascism
@@ -801,13 +754,8 @@ country_event = { #Strong Leader
 			factor = 100
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ramon S. Castillo"
-				desc = "POLITICS_RAMON_S_CASTILLO_DESC"
-				picture = "Portrait_Argentine_Ramon_Castillo.tga"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {}
+			ARG_ramon_castillo = {
+				promote_character = yes
 			}
 			remove_ideas = {ARG_concordancia}
 			set_country_flag = ARG_fresco_wins
@@ -945,13 +893,8 @@ country_event = { #Ortiz wins
 			factor = 100
 		}
 		set_country_flag = ARG_ortiz_wins
-		create_country_leader = {
-			name = "Roberto M. Ortiz"
-			desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
-			picture = "Portrait_Argentine_Roberto_Ortiz.tga"
-			expire = "1965.1.1"
-			ideology = centrism
-			traits = {}
+		ARG_roberto_maría_ortiz = {
+			promote_character = yes
 		}
 		set_politics = {
 			ruling_party = neutrality
@@ -1022,13 +965,8 @@ country_event = { #Repetto wins
 			set_country_flag = ARG_repetto_wins
 		}
 		add_ideas = {ARG_ps}
-		create_country_leader = {
-			name = "Nicolas Repetto"
-			desc = "POLITICS_NICOLAS_REPETTO_DESC"
-			picture = "Portrait_Argentine_Nicolas_Repetto.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
+		ARG_nicolas_repetto = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1085,13 +1023,8 @@ country_event = {
 			factor = 60
 		}
 		set_country_flag = ARG_tamborini_wins_1943
-		create_country_leader = {
-			name = "José Pascual Tamborini"
-			desc = "POLITICS_JOSE_TAMBORINI_DESC"
-			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}		
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
 		}
 	}
 
@@ -1107,13 +1040,8 @@ country_event = {
 			add_ideas = {ARG_ps}
 		}
 		set_country_flag = ARG_palacios_wins_1943
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
+		ARG_alfredo_palacios = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1134,13 +1062,8 @@ country_event = {
 			add_ideas = {ARG_pdn}
 		}
 		set_country_flag = ARG_costas_wins_1943
-		create_country_leader = {
-			name = "Robustiano Patrón Costas"
-			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
-			picture = "Portrait_Argentine_Robustiano_Costas.tga"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {}
+		ARG_robustiano_costas = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1172,13 +1095,8 @@ country_event = {
 			add_ideas = {ARG_ps}
 		}
 		set_country_flag = ARG_palacios_wins_1943
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
+		ARG_alfredo_palacios = {
+			promote_character = yes
 		}
 	}
 	
@@ -1193,13 +1111,8 @@ country_event = {
 			}
 		}
 		set_country_flag = ARG_tamborini_wins_1943
-		create_country_leader = {
-			name = "José Pascual Tamborini"
-			desc = "POLITICS_JOSE_TAMBORINI_DESC"
-			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}		
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1220,13 +1133,8 @@ country_event = {
 			add_ideas = {ARG_pdn}
 		}
 		set_country_flag = ARG_costas_wins_1943
-		create_country_leader = {
-			name = "Robustiano Patrón Costas"
-			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
-			picture = "Portrait_Argentine_Robustiano_Costas.tga"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {}
+		ARG_robustiano_costas = {
+			promote_character = yes
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1633,14 +1541,7 @@ country_event = {
 			add_ideas = {ARG_ps}
 		}
 		set_country_flag = ARG_mdejusto_wins_1949
-		create_country_leader = {
-			name = "Alicia Moreau de Justo"
-			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
-			picture = "Portrait_Argentine_Alicia_Justo.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
-		}
+		ARG_alicia_moreau_de_justo = { promote_character = yes }
 		set_party_name = {
 			ideology = democratic
 			long_name = ARG_democratic_party_ps_long
@@ -1662,14 +1563,7 @@ country_event = {
 			add_ideas = {ARG_ucr}
 		}
 		set_country_flag = ARG_balbin_wins_1949
-		create_country_leader = {
-			name = "Ricardo Balbín"
-			desc = "POLITICS_RICARDO_BALBIN_DESC"
-			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
-		}
+		ARG_ricardo_balbin = { promote_character = yes }
 		set_party_name = {
 			ideology = democratic
 			long_name = ARG_democratic_party_long
@@ -1691,14 +1585,7 @@ country_event = {
 			add_ideas = {ARG_pdn}
 		}
 		set_country_flag = ARG_pastor_wins_1949
-		create_country_leader = {
-			name = "Reynaldo Pastor"
-			desc = "POLITICS_REYNALDO_PASTOR_DESC"
-			picture = "Portrait_Argentine_Reynaldo_Pastor.tga"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {}
-		}
+		ARG_reynaldo_pastor = { promote_character = yes }
 		set_party_name = {
 			ideology = democratic
 			long_name = ARG_democratic_party_pdn_long
@@ -1726,14 +1613,7 @@ country_event = {
 			factor = 80
 		}
 		set_country_flag = ARG_concordancia_wins_1943
-		create_country_leader = {
-			name = "Robustiano Patrón Costas"
-			desc = "POLITICS_RUBUSTIANO_COSTAS_DESC"
-			picture = "Portrait_Argentine_Robustiano_Costas.tga"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {}
-		}
+		ARG_robustiano_costas = { promote_character = yes }
 	}
 	
 	option = {
@@ -1748,14 +1628,7 @@ country_event = {
 			add_ideas = {ARG_ucr}
 		}
 		set_country_flag = ARG_ucr_wins_1943
-		create_country_leader = {
-			name = "José Pascual Tamborini"
-			desc = "POLITICS_JOSE_TAMBORINI_DESC"
-			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
-		}
+		ARG_jose_pascual_tamborini = { promote_character = yes }
 		set_politics = {
 			ruling_party = democratic
 		}
@@ -1779,14 +1652,7 @@ country_event = {
 			add_ideas = {ARG_ps}
 		}
 		set_country_flag = ARG_ps_wins_1943
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
-		}
+		ARG_alfredo_palacios = { promote_character = yes }
 		set_party_name = {
 			ideology = democratic
 			long_name = ARG_democratic_party_ps_long
@@ -2402,14 +2268,7 @@ country_event = {
 			factor = 50
 		}
 		set_country_flag = ARG_tamborini_wins_1941
-		create_country_leader = {
-			name = "José Pascual Tamborini"
-			desc = "POLITICS_JOSE_TAMBORINI_DESC"
-			picture = "Portrait_Argentine_Pascual_Tamborini.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}		
-		}
+		ARG_jose_pascual_tamborini = { promote_character = yes }
 		set_politics = {
 			ruling_party = democratic
 			election_frequency = 72
@@ -2440,14 +2299,7 @@ country_event = {
 			long_name = ARG_democratic_party_ps_long
 			name = ARG_democratic_party_ps
 		}
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
-		}
+		ARG_alfredo_palacios = { promote_character = yes }
 		set_politics = {
 			ruling_party = democratic
 			election_frequency = 72
@@ -2487,14 +2339,7 @@ country_event = {
 			factor = 50
 		}
 		set_country_flag = ARG_balbin_wins_1947
-		create_country_leader = {
-			name = "Ricardo Balbín"
-			desc = "POLITICS_RICARDO_BALBIN_DESC"
-			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
-		}
+		ARG_ricardo_bablin = { promote_character = yes }
 	}
 
 	option = {
@@ -2508,14 +2353,7 @@ country_event = {
 			long_name = ARG_democratic_party_ps_long
 			name = ARG_democratic_party_ps
 		}
-		create_country_leader = {
-			name = "Alfredo Palacios"
-			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
-			picture = "Portrait_Argentine_Alfredo_Palacios.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
-		}
+		ARG_alfredo_palacios = { promote_character = yes }
 		hidden_effect = {
 			remove_ideas = {
 				ARG_ucr
@@ -2549,14 +2387,7 @@ country_event = {
 			long_name = ARG_democratic_party_ucr_long
 			name = ARG_democratic_party_ucr
 		}
-		create_country_leader = {
-			name = "Ricardo Balbín"
-			desc = "POLITICS_RICARDO_BALBIN_DESC"
-			picture = "Portrait_Argentine_Ricardo_Balbin.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {}
-		}
+		ARG_ricardo_bablin = { promote_character = yes }
 		hidden_effect = {
 			remove_ideas = {
 				ARG_ps
@@ -2571,13 +2402,6 @@ country_event = {
 			factor = 50
 		}
 		set_country_flag = ARG_moreaujusto_wins_1947
-		create_country_leader = {
-			name = "Alicia Moreau de Justo"
-			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
-			picture = "Portrait_Argentine_Alicia_Justo.tga"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {}
-		}
+		ARG_alicia_moreau_de_justo = { promote_character = yes }
 	}
 }

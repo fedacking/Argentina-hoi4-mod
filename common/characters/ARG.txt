@@ -155,6 +155,34 @@ characters = {
 			traits = { silent_workhorse }
 		}
 	}
+	ARG_eduardo_lonardi = {
+		name = "Eduardo Lonardi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Eduardo_Lonardi.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EDUARDO_LONARDI_DESC"
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_pedro_aramburu = {
+		name = "Pedro Eugenio Aramburu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_ARG_Aramburu.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PEDRO_ARAMBURU_DESC"
+			ideology = moderatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 	#Demonrat
 	ARG_marcelo_t_de_alvear = {
 		name = "Marcelo T. de Alvear"
@@ -179,7 +207,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_MARCELO_ALVEAR_DESC"
-			ideology = conservatism
+			ideology = liberalism
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -198,6 +226,90 @@ characters = {
 			id = -1
 		}
 	}
+	ARG_ricardo_balbin = {
+		name = "Ricardo Balbín"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Ricardo_Balbin.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RICARDO_BALBIN_DESC"
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_reynaldo_pastor = {
+		name = "Reynaldo Pastor"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Reynaldo_Pastor.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_REYNALD_PASTOR_DESC"
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_robustiano_costas = {
+		name = "Robustiano Patrón Costas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Robustiano_Costas.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ROBUSTIANO_COSTAS_DESC"
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_alfredo_palacios = {
+		name = "Alfredo Palacios"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Alfredo_Palacios.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ALFREDO_PALACIOS_DESC"
+			ideology = socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_nicolas_repetto = {
+		name = "Nicolas Repetto"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Nicolas_Repetto.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_NICOLAS_REPETTO_DESC"
+			ideology = socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_alicia_moreau_de_justo = {
+		name = "Alicia Moreau de Justo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Alicia_Justo.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
+			ideology = socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 	#fash
 	ARG_manuel_fresco = {
 		name = "Manuel Fresco"
@@ -210,6 +322,20 @@ characters = {
 			desc = "POLITICS_MANUEL_FRESCO_DESC"
 			ideology = fascism_ideology
 			traits = { dictator }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_emperor_justo = {
+		name = "Emperor Justo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Agustin_Justo.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EMPEROR_JUSTO_DESC"
+			ideology = fascism_ideology
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -692,7 +818,7 @@ characters = {
 	}
 	
 	ARG_diogenes_taboada = {
-		name = "Diogenes Taboada"
+		name = "Diógenes Taboada"
 
 		advisor = {
 			picture = generic_navy_south_america_2
