@@ -2285,7 +2285,6 @@
 		prerequisite = {
 			focus = ARG_ally_diplomacy
 		}
-		bypass = { has_country_flag = ARG_flag_uk_refused }
 		relative_position_id = ARG_ally_diplomacy
 		x = -2
 		y = 1
@@ -2299,6 +2298,7 @@
 			}
 			set_rule = { can_create_factions = yes }
 			create_faction = ARG_south_democracy_faction
+			unlock_decision_category_tooltip = ARG_the_supply_problem_category
 		}
 	}
 	
@@ -2642,6 +2642,7 @@
 					modifier = ARG_expansionist_neighbour
 				}
 			}
+			unlock_decision_category_tooltip = ARG_the_supply_problem_category
 		}
 	}
 	

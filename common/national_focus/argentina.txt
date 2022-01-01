@@ -535,7 +535,8 @@ focus_tree = {
 				}
 				add_ideas = ARG_idea_purged_army
 			} else = {
-				retire_character = ARG_pedro_pablo_ramirez
+				retire_character = ARG_arturo_rawson
+				retire_character = ARG_enrique_mosconi
 			}
 		}
 	}

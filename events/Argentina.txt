@@ -1972,8 +1972,7 @@ country_event = {
 			}
 		}
 		add_political_power = -50
-		set_rule = { can_create_factions = yes }
-		create_faction = ARG_south_democracy_faction
+		complete_national_focus = ARG_south_american_democracy
 	}
 	option = {
 		name = arg.101.b

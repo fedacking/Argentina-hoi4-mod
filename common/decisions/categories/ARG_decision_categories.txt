@@ -40,3 +40,16 @@ ARG_immigration_category = {
 		has_country_flag = ARG_immigration_started_flag
 	}
 }
+
+ARG_the_supply_problem_category = {
+	allowed = {
+		original_tag = ARG
+	}
+
+	visible = {
+		OR = {
+			has_completed_focus = ARG_collectivist_diplomacy
+			has_completed_focus = ARG_south_american_democracy
+		}
+	}
+}
