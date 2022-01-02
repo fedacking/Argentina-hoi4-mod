@@ -2756,7 +2756,7 @@
 		y = 1
 		completion_reward = {
 			ENG = {
-				country_event = arg.33
+				country_event = arg.127
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = ARG_malvinas_or_war
@@ -2793,7 +2793,7 @@
 		y = 2
 		completion_reward = {
 			PAR = {
-				country_event = arg.30
+				country_event = arg.124
 			}
 		}
 	}
@@ -2826,7 +2826,7 @@
 		y = 2
 		completion_reward = {
 			URG = {
-				country_event = arg.26
+				country_event = arg.120
 			}
 		}
 	}
@@ -2945,7 +2945,7 @@
 		y = 1
 		completion_reward = {
 			CHL = {
-				country_event = arg.36
+				country_event = arg.130
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = ARG_magallanes_demanded
@@ -3016,7 +3016,7 @@
 		y = 1
 		completion_reward = {	
 			BRA = {
-				country_event = arg.39
+				country_event = arg.133
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = ARG_om_rio_grande_demands
@@ -3098,7 +3098,7 @@
 		x = -1
 		y = 3
 		completion_reward = {
-			country_event = arg.46
+			country_event = arg.137
 		}
 	}
 	

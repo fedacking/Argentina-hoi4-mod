@@ -7,23 +7,60 @@ on_actions = {
 					tag = ARG
 				}
 				ARG = {
+					# 1937
 					country_event = {
-						id = arg.19
+						id = arg.1
 					}
+					country_event = {
+						id = arg.41
+					}
+					country_event = {
+						id = arg.44
+					}
+
+					# 1941
+					country_event = {
+						id = arg.30
+					}
+
+					# 1943
 					country_event = {
 						id = arg.20
 					}
 					country_event = {
-						id = arg.21
+						id = arg.43
 					}
 					country_event = {
-						id = arg.113
+						id = arg.45
+					}
+
+					# 1946
+					country_event = {
+						id = arg.6
+					}
+
+					# 1947
+					country_event = {
+						id = arg.31
 					}
 					country_event = {
-						id = arg.114
+						id = arg.32
+					}
+
+					# 1949
+					country_event = {
+						id = arg.44
 					}
 					country_event = {
-						id = arg.115
+						id = arg.46
+					}
+					country_event = {
+						id = arg.47
+					}
+
+					# 1951
+					country_event = {
+						id = arg.7
 					}
 				}
 			}

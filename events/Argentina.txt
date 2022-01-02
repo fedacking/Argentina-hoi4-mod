@@ -4,18 +4,54 @@
 add_namespace = arg
 
 country_event = {
-	id = arg.1
-	title = arg.1.t
-	desc = arg.1.d
+	id = arg.0
+	title = arg.0.t
+	desc = arg.0.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_picture_Fraude_Patriotico
+
+	option = {
+		name = arg.0.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		set_country_flag = ARG_fraude_patriotico
+		custom_effect_tooltip = ARG_fraude_patriotico_tooltip
+	}
+	option = {
+		name = arg.0.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		set_country_flag = ARG_ban_cgt
+		country_event = { id = arg.40 days = 31 }
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		custom_effect_tooltip = ARG_ban_cgt_tooltip
+	}
+}
+
+country_event = {
+	id = arg.2
+	title = arg.2.t
+	desc = arg.2.d
 	fire_only_once = yes
 	trigger = {
 		tag = arg
 		date > 1941.6.27
 		has_country_flag = ARG_ortiz_wins
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	option = {
-		name = arg.1.a
+		name = arg.2.a
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -25,10 +61,11 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = ARG_ortiz_will_resign
+			country_event = { id = arg.3 days = 364 }
 		}
 	}
 	option = {
-		name = arg.1.b
+		name = arg.2.b
 		ai_chance = {
 			factor = 60
 		}
@@ -42,9 +79,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.2
-	title = arg.2.t
-	desc = arg.2.d
+	id = arg.3
+	title = arg.3.t
+	desc = arg.3.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Ortiz_Renuncia
 	trigger = {
@@ -52,9 +89,9 @@ country_event = {
 		date > 1942.6.27
 		has_country_flag = ARG_ortiz_will_resign
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	option = {
-		name = arg.2.a
+		name = arg.3.a
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -71,14 +108,15 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = ARG_castillo_president
 			#load_focus_tree = argentine_castillo_focus (WIP)
+			country_event = { id = arg.4 days = 371 }
 		}
 	}
 }
 
 country_event = {
-	id = arg.3
-	title = arg.3.t
-	desc = arg.3.d
+	id = arg.42
+	title = arg.42.t
+	desc = arg.42.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Alvear_Dead
 	trigger = {
@@ -86,9 +124,9 @@ country_event = {
 		date > 1942.3.23
 		has_country_flag = ARG_alvear_wins
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	option = {
-		name = arg.3.a
+		name = arg.42.a
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -113,7 +151,7 @@ country_event = {
 		date > 1943.7.4
 		has_country_flag = ARG_ortiz_will_resign
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.4.a
@@ -128,6 +166,7 @@ country_event = {
 			remove_ideas = {
 				ARG_concordancia
 			}
+			country_event = { id = arg.5 days = 248 }
 		}
 		add_country_leader_role = {
 			character = ARG_pedro_pablo_ramirez
@@ -181,7 +220,7 @@ country_event = {
 		date > 1944.3.9
 		has_country_flag = ARG_gou_coup
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.5.a
@@ -227,7 +266,7 @@ country_event = {
 		date > 1946.6.4
 		has_country_flag = ARG_gou_coup
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.6.a
@@ -247,7 +286,7 @@ country_event = {
 			}
 			ARG_jose_pascual_tamborini = { promote_character = yes }
 		}
-		set_country_flag = ARG_peron_wins
+		set_country_flag = ARG_palacios_wins_1946
 		add_ideas = ARG_pj
 		add_country_leader_role = {
 			character = ARG_juan_domingo_peron
@@ -289,7 +328,7 @@ country_event = {
 				ARG_gou
 			}
 		}
-		add_ideas = {ARG_ucr}
+		add_ideas = { ARG_ucr }
 		
 		ARG_jose_pascual_tamborini = {
 			promote_character = yes
@@ -317,7 +356,7 @@ country_event = {
 		date > 1951.11.11
 		has_country_flag = ARG_gou_coup
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.7.a
@@ -482,10 +521,10 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1955.9.23
-		has_country_flag = ARG_peron_wins
+		has_country_flag = ARG_palacios_wins_1946
 	}
 	picture = GFX_event_picture_Rev_Libertadora
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.8.a
@@ -547,7 +586,7 @@ country_event = {
 		date > 1955.11.13
 		has_country_flag = ARG_revolucion_libertadora
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.9.a
@@ -575,18 +614,18 @@ country_event = {
 }
 
 country_event = {
-	id = arg.10
-	title = arg.10.t
-	desc = arg.10.d
+	id = arg.90
+	title = arg.90.t
+	desc = arg.90.d
 	fire_only_once = yes
 	trigger = {
 		tag = arg
 		has_country_flag = ARG_emperor_justo
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.10.a
+		name = arg.90.a
 		ai_chance = {
 			factor = 100
 		}
@@ -616,49 +655,10 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = arg.11
-	title = arg.11.t
-	desc = arg.11.d
-	fire_only_once = yes
-	trigger = {
-		tag = arg
-		date > 1936.12.1
-	}
-	mean_time_to_happen = { days = 1 }
-	picture = GFX_event_picture_Fraude_Patriotico
-
-	option = {
-		name = arg.11.a
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
-		}
-		set_country_flag = ARG_fraude_patriotico
-		custom_effect_tooltip = ARG_fraude_patriotico_tooltip
-	}
-	option = {
-		name = arg.11.b
-		ai_chance = {
-			factor = 60
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		set_country_flag = ARG_ban_cgt
-		add_popularity = { ideology = neutrality popularity = 0.1 }
-		custom_effect_tooltip = ARG_ban_cgt_tooltip
-	}
-}
-
 country_event = { #General Strike
-	id = arg.12
-	title = arg.12.t
-	desc = arg.12.d
+	id = arg.40
+	title = arg.40.t
+	desc = arg.40.d
 	fire_only_once = yes
 	picture = GFX_event_picture_17_de_Octubre
 	trigger = {
@@ -666,19 +666,20 @@ country_event = { #General Strike
 		has_country_flag = ARG_ban_cgt
 		date > 1937.1.1
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.12.a
+		name = arg.40.a
 		ai_chance = {
 			factor = 34
 		}
 		set_country_flag = ARG_37_revolution_flag
+		country_event = { id = arg.60 days = 1 }
 		complete_national_focus = ARG_1937_revolution
 		custom_effect_tooltip = ARG_terror_plot_tooltip
 	}
 	option = {
-		name = arg.12.b
+		name = arg.40.b
 		ai_chance = {
 			factor = 34
 		}
@@ -686,7 +687,7 @@ country_event = { #General Strike
 		custom_effect_tooltip = ARG_ucr_wins_tooltip
 	}
 	option = {
-		name = arg.12.c
+		name = arg.40.c
 		ai_chance = {
 			factor = 32
 		}
@@ -696,29 +697,30 @@ country_event = { #General Strike
 }
 
 country_event = { #Terror plot
-	id = arg.13
-	title = arg.13.t
-	desc = arg.13.d
+	id = arg.60
+	title = arg.60.t
+	desc = arg.60.d
 	picture = GFX_event_picture_ERP_bombs
 	fire_only_once = yes
 	trigger = {
 		tag = arg
 		has_country_flag = ARG_37_revolution_flag
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.13.a
+		name = arg.60.a
 		ai_chance = {
 			factor = 50
 		}
 		set_country_flag = ARG_execute_order_66
-		add_ideas = {ARG_idea_revolution}
+		add_ideas = { ARG_idea_revolution }
+		country_event = { id = arg.61 days = 2 }
 		custom_effect_tooltip = ARG_commie_revolution_tooltip
 	}
 	
 	option = {
-		name = arg.13.b
+		name = arg.60.b
 		ai_chance = {
 			factor = 50
 		}
@@ -727,9 +729,11 @@ country_event = { #Terror plot
 			random_list = {
 				0 = { 
 					set_country_flag = ARG_emperor_justo
+					country_event = { id = arg.90 days = 2 }
 				}
 				100 = {
 					set_country_flag = ARG_justo_ded
+					country_event = { id = arg.70 days = 2 }
 				}
 			}
 		}
@@ -738,18 +742,18 @@ country_event = { #Terror plot
 }
 
 country_event = { #Strong Leader
-	id = arg.14
-	title = arg.14.t
-	desc = arg.14.d
+	id = arg.70
+	title = arg.70.t
+	desc = arg.70.d
 	picture = GFX_event_picture_Yrigoyen_velatorio
 	fire_only_once = yes
 	trigger = {
 		tag = arg
 		has_country_flag = ARG_justo_ded
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	option = {
-		name = arg.14.a
+		name = arg.70.a
 		ai_chance = {
 			factor = 100
 		}
@@ -757,13 +761,13 @@ country_event = { #Strong Leader
 			ARG_ramon_castillo = {
 				promote_character = yes
 			}
-			remove_ideas = {ARG_concordancia}
+			remove_ideas = { ARG_concordancia }
 			set_country_flag = ARG_fresco_wins
 		}
 		URG = {
-			country_event = { id = arg.29 }
+			country_event = { id = arg.123 }
 		}
-		add_ideas = {ARG_upa}
+		add_ideas = { ARG_upa }
 		kill_country_leader = yes
 		set_politics = {
 			ruling_party = fascism
@@ -778,25 +782,25 @@ country_event = { #Strong Leader
 }
 
 country_event = { #Unrest
-	id = arg.15
-	title = arg.15.t
-	desc = arg.15.d
+	id = arg.61
+	title = arg.61.t
+	desc = arg.61.d
 	fire_only_once = yes
 	picture = GFX_report_event_generic_riot
 	trigger = {
 		tag = arg
 		has_country_flag = ARG_execute_order_66
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.15.a
+		name = arg.61.a
 		ai_chance = {
 			factor = 100
 		}
 		hidden_effect = { 
 			country_event = { 
-				id = arg.16 
+				id = arg.62 
 				days = 15
 			}
 		}
@@ -804,20 +808,20 @@ country_event = { #Unrest
 }
 
 country_event = { #Commie agitations
-	id = arg.16
-	title = arg.16.t
-	desc = arg.16.d
+	id = arg.62
+	title = arg.62.t
+	desc = arg.62.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = GFX_report_event_spain_civil_war_volunteers_02
 	option = {
-		name = arg.16.a
+		name = arg.62.a
 		ai_chance = {
 			factor = 100
 		}
 		hidden_effect = { 
 			country_event = { 
-				id = arg.17 
+				id = arg.63 
 				days = 15
 			}
 		}
@@ -825,20 +829,20 @@ country_event = { #Commie agitations
 }
 
 country_event = { #Weapon smuggling
-	id = arg.17
-	title = arg.17.t
-	desc = arg.17.d
+	id = arg.63
+	title = arg.63.t
+	desc = arg.63.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = GFX_report_event_communists_cheer
 	option = {
-		name = arg.17.a
+		name = arg.63.a
 		ai_chance = {
 			factor = 100
 		}
 		hidden_effect = { 
 			country_event = { 
-				id = arg.18 
+				id = arg.64 
 				days = 15
 			}
 		}
@@ -846,14 +850,14 @@ country_event = { #Weapon smuggling
 }
 
 country_event = { #Communist takeover
-	id = arg.18
-	title = arg.18.t
-	desc = arg.18.d
+	id = arg.64
+	title = arg.64.t
+	desc = arg.64.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	picture = GFX_report_event_soviet_purge_trial
 	option = {
-		name = arg.18.a
+		name = arg.64.a
 		ai_chance = {
 			factor = 100
 		}
@@ -876,9 +880,9 @@ country_event = { #Communist takeover
 }
 
 country_event = { #Ortiz wins
-	id = arg.19
-	title = arg.19.t
-	desc = arg.19.d
+	id = arg.1
+	title = arg.1.t
+	desc = arg.1.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Ortiz_Castillo
 	trigger = {
@@ -888,11 +892,12 @@ country_event = { #Ortiz wins
 	}
 	is_triggered_only = yes
 	option = {
-		name = arg.19.a
+		name = arg.1.a
 		ai_chance = {
 			factor = 100
 		}
 		set_country_flag = ARG_ortiz_wins
+		country_event = { id = arg.2 days = 1390 }
 		ARG_roberto_maría_ortiz = {
 			promote_character = yes
 		}
@@ -909,9 +914,9 @@ country_event = { #Ortiz wins
 }
 
 country_event = { #Alvear wins
-	id = arg.20
-	title = arg.20.t
-	desc = arg.20.d
+	id = arg.41
+	title = arg.41.t
+	desc = arg.41.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Alvear_Win
 	trigger = {
@@ -921,7 +926,7 @@ country_event = { #Alvear wins
 	}
 	is_triggered_only = yes
 	option = {
-		name = arg.20.a
+		name = arg.41.a
 		ai_chance = {
 			factor = 100
 		}
@@ -939,13 +944,14 @@ country_event = { #Alvear wins
 			communism = 8
 			neutrality = 5
 		}
+		hidden_effect = { country_event = { id = arg.42 days = 1659 }}
 	}
 }
 
 country_event = { #Repetto wins
-	id = arg.21
-	title = arg.21.t
-	desc = arg.21.d
+	id = arg.44
+	title = arg.44.t
+	desc = arg.44.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Repetto_Win
 	trigger = {
@@ -956,7 +962,7 @@ country_event = { #Repetto wins
 	is_triggered_only = yes
 
 	option = {
-		name = arg.21.a
+		name = arg.44.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1005,9 +1011,9 @@ country_event = { #de la Torre dies
 }
 
 country_event = {
-	id = arg.24
-	title = arg.24.t
-	desc = arg.24.d
+	id = arg.43
+	title = arg.43.t
+	desc = arg.43.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Generic_Elections
 	trigger = {
@@ -1015,10 +1021,10 @@ country_event = {
 		date > 1943.9.5
 		has_country_flag = ARG_alvear_wins
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.24.a
+		name = arg.43.a
 		ai_chance = {
 			factor = 60
 		}
@@ -1029,7 +1035,7 @@ country_event = {
 	}
 
 	option = {
-		name = arg.24.b
+		name = arg.43.b
 		ai_chance = {
 			factor = 30
 		}
@@ -1051,7 +1057,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.24.c
+		name = arg.43.c
 		ai_chance = {
 			factor = 10
 		}
@@ -1074,9 +1080,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.25
-	title = arg.25.t
-	desc = arg.25.d
+	id = arg.45
+	title = arg.45.t
+	desc = arg.45.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
@@ -1084,10 +1090,10 @@ country_event = {
 		date > 1943.9.5
 		has_country_flag = ARG_repetto_wins
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.25.a
+		name = arg.45.a
 		ai_chance = {
 			factor = 60
 		}
@@ -1101,7 +1107,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.25.b
+		name = arg.45.b
 		ai_chance = {
 			factor = 30
 		}
@@ -1122,7 +1128,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.25.c
+		name = arg.45.c
 		ai_chance = {
 			factor = 10
 		}
@@ -1146,14 +1152,14 @@ country_event = {
 
 # Uruguay is asked about re-joining Argentina
 country_event = {
-	id = arg.26
-	title = arg.26.t
-	desc = arg.26.d
+	id = arg.120
+	title = arg.120.t
+	desc = arg.120.d
 	
 	is_triggered_only = yes
 	
 	option = { # Accept
-		name = arg.26.a
+		name = arg.120.a
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -1162,12 +1168,12 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.28 }
+			country_event = { id = arg.122 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 	option = { # Refuse
-		name = arg.26.b
+		name = arg.120.b
 		ai_chance = {
 			base = 80
 			modifier = {
@@ -1176,20 +1182,20 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.27 }
+			country_event = { id = arg.121 }
 		}
 	}
 }
 
 # Uruguay declines
 country_event = {
-	id = arg.27
-	title = arg.27.t
-	desc = arg.27.d	
+	id = arg.121
+	title = arg.121.t
+	desc = arg.121.d	
 	is_triggered_only = yes
 	picture = GFX_report_event_tanks_mexico_city
 	option = {
-		name = arg.27.a
+		name = arg.121.a
 		add_state_claim = 300
 		create_wargoal = {
 			type = take_state_focus
@@ -1201,14 +1207,14 @@ country_event = {
 
 # Uruguay accepts
 country_event = {
-	id = arg.28
-	title = arg.28.t
-	desc = arg.28.d
+	id = arg.122
+	title = arg.122.t
+	desc = arg.122.d
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = arg.28.a
+		name = arg.122.a
 		annex_country = {
 			target = URG
 			transfer_troops = yes
@@ -1218,12 +1224,12 @@ country_event = {
 
 # Neighboring fascism
 country_event = {
-	id = arg.29
-	title = arg.29.t
-	desc = arg.29.d
+	id = arg.123
+	title = arg.123.t
+	desc = arg.123.d
 	is_triggered_only = yes
 	option = {
-		name = arg.29.a
+		name = arg.123.a
 		add_timed_idea = {
 			idea = ARG_idea_NFascism 
 			days = 365
@@ -1233,14 +1239,14 @@ country_event = {
 
 # Paraguay is invited into the new socialist state
 country_event = {
-	id = arg.30
-	title = arg.30.t
-	desc = arg.30.d
+	id = arg.124
+	title = arg.124.t
+	desc = arg.124.d
 	
 	is_triggered_only = yes
 	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
-		name = arg.30.a
+		name = arg.124.a
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -1249,12 +1255,12 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.32 }
+			country_event = { id = arg.126 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 	}
 	option = { # Refuse
-		name = arg.30.b
+		name = arg.124.b
 		ai_chance = {
 			base = 80
 			modifier = {
@@ -1263,21 +1269,21 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.31 }
+			country_event = { id = arg.125 }
 		}
 	}
 }
 
 # Paraguay declines
 country_event = {
-	id = arg.31
-	title = arg.31.t
-	desc = arg.31.d
+	id = arg.125
+	title = arg.125.t
+	desc = arg.125.d
 	
 	is_triggered_only = yes
 	picture = GFX_report_event_german_troops_paris
 	option = {
-		name = arg.31.a
+		name = arg.125.a
 		add_state_claim = 301
 		add_state_claim = 688
 		create_wargoal = {
@@ -1290,28 +1296,28 @@ country_event = {
 
 # Paraguay accepts
 country_event = {
-	id = arg.32
-	title = arg.32.t
-	desc = arg.32.d
+	id = arg.126
+	title = arg.126.t
+	desc = arg.126.d
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = arg.32.a
+		name = arg.126.a
 		annex_country = { target = PAR }
 	}
 }
 
 # Malvinas or war
 country_event = {
-	id = arg.33
-	title = arg.33.t
-	desc = arg.33.d
+	id = arg.127
+	title = arg.127.t
+	desc = arg.127.d
 	
 	is_triggered_only = yes	
 	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
-		name = arg.33.a
+		name = arg.127.a
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -1325,7 +1331,7 @@ country_event = {
 		}
 		ARG = {
 			country_event = {
-				id = arg.35
+				id = arg.129
 			}
 		}
 		effect_tooltip = {
@@ -1336,7 +1342,7 @@ country_event = {
 		}
 	}
 	option = { # Refuse
-		name = arg.33.b
+		name = arg.127.b
 		ai_chance = {
 			base = 80
 			modifier = {
@@ -1349,18 +1355,18 @@ country_event = {
 			}
 		}
 		ARG = {
-			country_event = { id = arg.34 }
+			country_event = { id = arg.128 }
 		}
 	}
 }
 
 country_event = {
-	id = arg.34
-	title = arg.34.t
-	desc = arg.34.d
+	id = arg.128
+	title = arg.128.t
+	desc = arg.128.d
 	is_triggered_only = yes	
 	option = {
-		name = arg.34.a
+		name = arg.128.a
 		create_wargoal = {
 			type = take_state_focus
 			target = ENG
@@ -1370,12 +1376,12 @@ country_event = {
 }
 
 country_event = {
-	id = arg.35
-	title = arg.35.t
-	desc = arg.35.d
+	id = arg.129
+	title = arg.129.t
+	desc = arg.129.d
 	is_triggered_only = yes
 	option = {
-		name = arg.35.a
+		name = arg.129.a
 		transfer_state = 299	
 		transfer_state = 720
 	}
@@ -1383,19 +1389,19 @@ country_event = {
 
 # Andean Crisis
 country_event = {
-	id = arg.36
-	title = arg.36.t
-	desc = arg.36.d	
+	id = arg.130
+	title = arg.130.t
+	desc = arg.130.d	
 	is_triggered_only = yes		
 	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
-		name = arg.36.a
+		name = arg.130.a
 		ai_chance = {
 			base = 60
 		}
 		ARG = {
 			country_event = {
-				id = arg.38
+				id = arg.132
 			}
 		}
 		effect_tooltip = {
@@ -1407,25 +1413,25 @@ country_event = {
 		add_stability = -0.1
 	}
 	option = { # Refuse
-		name = arg.36.b
+		name = arg.130.b
 		ai_chance = {
 			base = 40
 		}
 		ARG = {
-			country_event = { id = arg.37 }
+			country_event = { id = arg.131 }
 		}
 		add_war_support = 0.2
 	}
 }
 
 country_event = {
-	id = arg.37
-	title = arg.37.t
-	desc = arg.37.d
+	id = arg.131
+	title = arg.131.t
+	desc = arg.131.d
 	is_triggered_only = yes	
 	picture = GFX_report_event_german_troops_paris
 	option = {
-		name = arg.37.a
+		name = arg.131.a
 		create_wargoal = {
 			type = take_state_focus
 			target = CHL
@@ -1435,12 +1441,12 @@ country_event = {
 }
 
 country_event = {
-	id = arg.38
-	title = arg.38.t
-	desc = arg.38.d
+	id = arg.132
+	title = arg.132.t
+	desc = arg.132.d
 	is_triggered_only = yes
 	option = {
-		name = arg.38.a
+		name = arg.132.a
 		transfer_state = 507
 		add_political_power = 50
 	}
@@ -1449,19 +1455,19 @@ country_event = {
 
 # Rio Grande demands
 country_event = {
-	id = arg.39
-	title = arg.39.t
-	desc = arg.39.d	
+	id = arg.133
+	title = arg.133.t
+	desc = arg.133.d	
 	is_triggered_only = yes	
 	picture = GFX_report_event_german_troops_paris
 	option = { # Accept
-		name = arg.39.a
+		name = arg.133.a
 		ai_chance = {
 			base = 20
 		}
 		ARG = {
 			country_event = {
-				id = arg.41
+				id = arg.135
 			}
 		}
 		effect_tooltip = {
@@ -1473,25 +1479,25 @@ country_event = {
 		add_stability = -0.1
 	}
 	option = { # Refuse
-		name = arg.39.b
+		name = arg.133.b
 		ai_chance = {
 			base = 80
 		}
 		ARG = {
-			country_event = { id = arg.40 }
+			country_event = { id = arg.134 }
 		}
 		add_war_support = 0.2
 	}
 }
 
 country_event = {
-	id = arg.40
-	title = arg.40.t
-	desc = arg.40.d
+	id = arg.134
+	title = arg.134.t
+	desc = arg.134.d
 	is_triggered_only = yes	
 	picture = GFX_report_event_german_troops_paris
 	option = {
-		name = arg.40.a
+		name = arg.134.a
 		create_wargoal = {
 			type = take_state_focus
 			target = BRA
@@ -1502,12 +1508,12 @@ country_event = {
 }
 
 country_event = {
-	id = arg.41
-	title = arg.41.t
-	desc = arg.41.d
+	id = arg.135
+	title = arg.135.t
+	desc = arg.135.d
 	is_triggered_only = yes
 	option = {
-		name = arg.41.a
+		name = arg.135.a
 		transfer_state = 502
 		add_political_power = 50
 		set_country_flag = ARG_have_riogrande
@@ -1515,9 +1521,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.42
-	title = arg.42.t
-	desc = arg.42.d
+	id = arg.47
+	title = arg.47.t
+	desc = arg.47.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
@@ -1525,10 +1531,10 @@ country_event = {
 		date > 1949.9.5
 		has_country_flag = ARG_repetto_wins
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 
 	option = {
-		name = arg.42.a
+		name = arg.47.a
 		ai_chance = {
 			factor = 60
 		}
@@ -1550,7 +1556,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.42.b
+		name = arg.47.b
 		ai_chance = {
 			factor = 30
 		}
@@ -1572,7 +1578,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.42.c
+		name = arg.47.c
 		ai_chance = {
 			factor = 10
 		}
@@ -1595,9 +1601,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.43
-	title = arg.43.t
-	desc = arg.43.d
+	id = arg.20
+	title = arg.20.t
+	desc = arg.20.d
 	fire_only_once = yes
 	picture = GFX_event_picture_Generic_Elections
 	trigger = {
@@ -1605,10 +1611,10 @@ country_event = {
 		date > 1943.9.5
 		has_country_flag = ARG_gou_coup_fails
 	}
-	mean_time_to_happen = { days = 1 }
+	is_triggered_only = yes
 	
 	option = {
-		name = arg.43.a
+		name = arg.20.a
 		ai_chance = {
 			factor = 80
 		}
@@ -1617,7 +1623,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.43.b
+		name = arg.20.b
 		ai_chance = {
 			factor = 15
 		}
@@ -1641,7 +1647,7 @@ country_event = {
 	}
 	
 	option = {
-		name = arg.43.c
+		name = arg.20.c
 		ai_chance = {
 			factor = 5
 		}
@@ -1671,9 +1677,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.44
-	title = arg.44.t
-	desc = arg.44.d
+	id = arg.138
+	title = arg.138.t
+	desc = arg.138.d
 
 	fire_only_once = yes
 
@@ -1685,11 +1691,9 @@ country_event = {
 		}
 		has_country_flag = ARG_no_riogrande
 	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	mean_time_to_happen = { days = 1 }
 	option = { # border strip
-		name = arg.44.a
+		name = arg.138.a
 		ai_chance = {
 			factor = 100
 		}
@@ -1721,7 +1725,7 @@ country_event = {
 		}
 	}			
 	option = { # no border strip
-		name = arg.44.b
+		name = arg.138.b
 		ai_chance = {
 			factor = 0
 		}
@@ -1751,7 +1755,7 @@ country_event = {
 		}
 	}
 	option = { #conquest
-		name = arg.44.c
+		name = arg.138.c
 		ai_chance = {
 			factor = 0
 		}
@@ -1762,9 +1766,9 @@ country_event = {
 }
 
 country_event = {
-	id = arg.45
-	title = arg.45.t
-	desc = arg.45.d
+	id = arg.136
+	title = arg.136.t
+	desc = arg.136.d
 
 	fire_only_once = yes
 
@@ -1776,11 +1780,9 @@ country_event = {
 		}
 		has_country_flag = ARG_have_riogrande
 	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	mean_time_to_happen = { days = 1 }
 	option = { # no border strip
-		name = arg.45.b
+		name = arg.136.b
 		ai_chance = {
 			factor = 0
 		}
@@ -1810,7 +1812,7 @@ country_event = {
 		}
 	}
 	option = { #conquest
-		name = arg.45.c
+		name = arg.136.c
 		ai_chance = {
 			factor = 0
 		}
@@ -1821,12 +1823,12 @@ country_event = {
 }
 
 country_event = {
-	id = arg.46
-	title = arg.46.t
-	desc = arg.46.d
+	id = arg.137
+	title = arg.137.t
+	desc = arg.137.d
 	is_triggered_only = yes
 	option = {
-		name = arg.46.a
+		name = arg.137.a
 		ai_chance = {
 			factor = 100
 		}
@@ -2249,9 +2251,9 @@ country_event = {
 ###The Diabetes Arc
 
 country_event = {
-    id = arg.113
-    title = arg.113.t
-    desc = arg.113.d
+    id = arg.30
+    title = arg.30.t
+    desc = arg.30.d
     fire_only_once = yes
     picture = GFX_event_picture_Fraude_Patriotico
 	is_triggered_only = yes
@@ -2262,7 +2264,7 @@ country_event = {
     }
 
 	option = {
-		name = arg.113.a
+		name = arg.30.a
 		ai_chance = {
 			factor = 50
 		}
@@ -2288,7 +2290,7 @@ country_event = {
 	}
 
 	option = {
-		name = arg.113.b
+		name = arg.30.b
 		ai_chance = {
 			factor = 50
 		}
@@ -2320,9 +2322,9 @@ country_event = {
 }
 
 country_event = {
-    id = arg.114
-    title = arg.114.t
-    desc = arg.114.d
+    id = arg.31
+    title = arg.31.t
+    desc = arg.31.d
     fire_only_once = yes
     picture = GFX_event_picture_Fraude_Patriotico
 	is_triggered_only = yes
@@ -2333,7 +2335,7 @@ country_event = {
     }
 
 	option = {
-		name = arg.114.a
+		name = arg.31.a
 		ai_chance = {
 			factor = 50
 		}
@@ -2342,7 +2344,7 @@ country_event = {
 	}
 
 	option = {
-		name = arg.114.b
+		name = arg.31.b
 		ai_chance = {
 			factor = 50
 		}
@@ -2363,9 +2365,9 @@ country_event = {
 }
 
 country_event = {
-    id = arg.115
-    title = arg.115.t
-    desc = arg.115.d
+    id = arg.32
+    title = arg.32.t
+    desc = arg.32.d
     fire_only_once = yes
     picture = GFX_event_picture_Elecciones_1951
 	is_triggered_only = yes
@@ -2376,7 +2378,7 @@ country_event = {
     }
 
 	option = {
-		name = arg.115.a
+		name = arg.32.a
 		ai_chance = {
 			factor = 50
 		}
@@ -2396,7 +2398,7 @@ country_event = {
 	}
 
 	option = {
-		name = arg.115.b
+		name = arg.32.b
 		ai_chance = {
 			factor = 50
 		}

@@ -181,6 +181,10 @@ set_popularities = {
 	neutrality = 52
 }
 
+1936.1.1 = {
+	country_event = { id = arg.0 days = 334 }
+}
+
 1939.1.1 = {
 	set_politics = {
 		ruling_party = neutrality
