@@ -39,6 +39,40 @@ country_event = {
 	}
 }
 
+country_event = { #Ortiz wins
+	id = arg.1
+	title = arg.1.t
+	desc = arg.1.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Ortiz_Castillo
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_fraude_patriotico
+	}
+	is_triggered_only = yes
+	option = {
+		name = arg.1.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = ARG_ortiz_wins
+		country_event = { id = arg.2 days = 1390 }
+		ARG_roberto_maría_ortiz = {
+			promote_character = yes
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			democratic = 28
+			fascism = 4
+			communism = 8
+			neutrality = 60
+		}
+	}
+}
+
 country_event = {
 	id = arg.2
 	title = arg.2.t
@@ -109,33 +143,6 @@ country_event = {
 			set_country_flag = ARG_castillo_president
 			#load_focus_tree = argentine_castillo_focus (WIP)
 			country_event = { id = arg.4 days = 371 }
-		}
-	}
-}
-
-country_event = {
-	id = arg.42
-	title = arg.42.t
-	desc = arg.42.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Alvear_Dead
-	trigger = {
-		tag = arg
-		date > 1942.3.23
-		has_country_flag = ARG_alvear_wins
-	}
-	is_triggered_only = yes
-	option = {
-		name = arg.42.a
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
-		}
-		ARG_enrique_mosca = {
-			promote_character = yes
 		}
 	}
 }
@@ -613,48 +620,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = arg.90
-	title = arg.90.t
-	desc = arg.90.d
-	fire_only_once = yes
-	trigger = {
-		tag = arg
-		has_country_flag = ARG_emperor_justo
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.90.a
-		ai_chance = {
-			factor = 100
-		}
-		hidden_effect = {
-			remove_ideas = {ARG_concordancia}
-			set_cosmetic_tag = ARG_Empire
-		}
-		add_ideas = {ARG_ae}
-		ARG_emperor_justo = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = fascism
-			long_name = ARG_fascism_party_arggalemp_long
-			name = ARG_fascism_party_arggalemp
-		}
-		load_focus_tree = argentinian_justo_focus
-		set_politics = {
-			ruling_party = fascism
-		}
-		set_popularities = {
-			democratic = 0
-			fascism = 100
-			communism = 0
-			neutrality = 0
-		}
-	}
-}
-
 country_event = { #General Strike
 	id = arg.40
 	title = arg.40.t
@@ -693,6 +658,251 @@ country_event = { #General Strike
 		}
 		set_country_flag = ARG_march
 		custom_effect_tooltip = ARG_ps_wins_tooltip
+	}
+}
+
+country_event = { #Alvear wins
+	id = arg.41
+	title = arg.41.t
+	desc = arg.41.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Alvear_Win
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_token_reform
+	}
+	is_triggered_only = yes
+	option = {
+		name = arg.41.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = ARG_alvear_wins
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+		}
+		add_ideas = ARG_ucr
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 80
+			fascism = 7
+			communism = 8
+			neutrality = 5
+		}
+		hidden_effect = { country_event = { id = arg.42 days = 1659 }}
+	}
+}
+
+country_event = {
+	id = arg.42
+	title = arg.42.t
+	desc = arg.42.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Alvear_Dead
+	trigger = {
+		tag = arg
+		date > 1942.3.23
+		has_country_flag = ARG_alvear_wins
+	}
+	is_triggered_only = yes
+	option = {
+		name = arg.42.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		ARG_enrique_mosca = {
+			promote_character = yes
+		}
+	}
+}
+
+country_event = {
+	id = arg.43
+	title = arg.43.t
+	desc = arg.43.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_alvear_wins
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.43.a
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = ARG_tamborini_wins_1943
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
+		}
+	}
+
+	option = {
+		name = arg.43.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_palacios_wins_1943
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+	}
+	
+	option = {
+		name = arg.43.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_pdn}
+		}
+		set_country_flag = ARG_costas_wins_1943
+		ARG_robustiano_costas = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+	}
+}
+
+country_event = { #Repetto wins
+	id = arg.44
+	title = arg.44.t
+	desc = arg.44.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Repetto_Win
+	trigger = {
+		tag = arg
+		date > 1937.9.5
+		has_country_flag = ARG_march
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.44.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+			set_country_flag = ARG_repetto_wins
+		}
+		add_ideas = {ARG_ps}
+		ARG_nicolas_repetto = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 80
+			fascism = 7
+			communism = 1
+			neutrality = 12
+		}
+	}
+}
+
+country_event = {
+	id = arg.45
+	title = arg.45.t
+	desc = arg.45.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Elecciones_1951
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_repetto_wins
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.45.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			add_ideas = {ARG_ps}
+		}
+		set_country_flag = ARG_palacios_wins_1943
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+	}
+	
+	option = {
+		name = arg.45.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+		}
+		set_country_flag = ARG_tamborini_wins_1943
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
+	}
+	
+	option = {
+		name = arg.45.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			add_ideas = {ARG_pdn}
+		}
+		set_country_flag = ARG_costas_wins_1943
+		ARG_robustiano_costas = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
 	}
 }
 
@@ -879,118 +1089,6 @@ country_event = { #Communist takeover
 	}
 }
 
-country_event = { #Ortiz wins
-	id = arg.1
-	title = arg.1.t
-	desc = arg.1.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Ortiz_Castillo
-	trigger = {
-		tag = arg
-		date > 1937.9.5
-		has_country_flag = ARG_fraude_patriotico
-	}
-	is_triggered_only = yes
-	option = {
-		name = arg.1.a
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = ARG_ortiz_wins
-		country_event = { id = arg.2 days = 1390 }
-		ARG_roberto_maría_ortiz = {
-			promote_character = yes
-		}
-		set_politics = {
-			ruling_party = neutrality
-		}
-		set_popularities = {
-			democratic = 28
-			fascism = 4
-			communism = 8
-			neutrality = 60
-		}
-	}
-}
-
-country_event = { #Alvear wins
-	id = arg.41
-	title = arg.41.t
-	desc = arg.41.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Alvear_Win
-	trigger = {
-		tag = arg
-		date > 1937.9.5
-		has_country_flag = ARG_token_reform
-	}
-	is_triggered_only = yes
-	option = {
-		name = arg.41.a
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = ARG_alvear_wins
-		hidden_effect = {
-			remove_ideas = {ARG_concordancia}
-		}
-		add_ideas = ARG_ucr
-		set_politics = {
-			ruling_party = democratic
-		}
-		set_popularities = {
-			democratic = 80
-			fascism = 7
-			communism = 8
-			neutrality = 5
-		}
-		hidden_effect = { country_event = { id = arg.42 days = 1659 }}
-	}
-}
-
-country_event = { #Repetto wins
-	id = arg.44
-	title = arg.44.t
-	desc = arg.44.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Repetto_Win
-	trigger = {
-		tag = arg
-		date > 1937.9.5
-		has_country_flag = ARG_march
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.44.a
-		ai_chance = {
-			factor = 100
-		}
-		hidden_effect = {
-			remove_ideas = {ARG_concordancia}
-			set_country_flag = ARG_repetto_wins
-		}
-		add_ideas = {ARG_ps}
-		ARG_nicolas_repetto = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-		set_politics = {
-			ruling_party = democratic
-		}
-		set_popularities = {
-			democratic = 80
-			fascism = 7
-			communism = 1
-			neutrality = 12
-		}
-	}
-}
-
 country_event = { #de la Torre dies
 	id = arg.23
 	title = arg.23.t
@@ -1007,146 +1105,6 @@ country_event = { #de la Torre dies
 			factor = 100
 		}
 		set_country_flag = ARG_delatorre_dead
-	}
-}
-
-country_event = {
-	id = arg.43
-	title = arg.43.t
-	desc = arg.43.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Generic_Elections
-	trigger = {
-		tag = arg
-		date > 1943.9.5
-		has_country_flag = ARG_alvear_wins
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.43.a
-		ai_chance = {
-			factor = 60
-		}
-		set_country_flag = ARG_tamborini_wins_1943
-		ARG_jose_pascual_tamborini = {
-			promote_character = yes
-		}
-	}
-
-	option = {
-		name = arg.43.b
-		ai_chance = {
-			factor = 30
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
-			add_ideas = {ARG_ps}
-		}
-		set_country_flag = ARG_palacios_wins_1943
-		ARG_alfredo_palacios = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-	}
-	
-	option = {
-		name = arg.43.c
-		ai_chance = {
-			factor = 10
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
-			add_ideas = {ARG_pdn}
-		}
-		set_country_flag = ARG_costas_wins_1943
-		ARG_robustiano_costas = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_pdn_long
-			name = ARG_democratic_party_pdn
-		}
-	}
-}
-
-country_event = {
-	id = arg.45
-	title = arg.45.t
-	desc = arg.45.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Elecciones_1951
-	trigger = {
-		tag = arg
-		date > 1943.9.5
-		has_country_flag = ARG_repetto_wins
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.45.a
-		ai_chance = {
-			factor = 60
-		}
-		hidden_effect = {
-			add_ideas = {ARG_ps}
-		}
-		set_country_flag = ARG_palacios_wins_1943
-		ARG_alfredo_palacios = {
-			promote_character = yes
-		}
-	}
-	
-	option = {
-		name = arg.45.b
-		ai_chance = {
-			factor = 30
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ps
-			}
-		}
-		set_country_flag = ARG_tamborini_wins_1943
-		ARG_jose_pascual_tamborini = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_long
-			name = ARG_democratic_party
-		}
-	}
-	
-	option = {
-		name = arg.45.c
-		ai_chance = {
-			factor = 10
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ps
-			}
-			add_ideas = {ARG_pdn}
-		}
-		set_country_flag = ARG_costas_wins_1943
-		ARG_robustiano_costas = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_pdn_long
-			name = ARG_democratic_party_pdn
-		}
 	}
 }
 
@@ -1183,6 +1141,48 @@ country_event = {
 		}
 		ARG = {
 			country_event = { id = arg.121 }
+		}
+	}
+}
+
+country_event = {
+	id = arg.90
+	title = arg.90.t
+	desc = arg.90.d
+	fire_only_once = yes
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_emperor_justo
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.90.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_ideas = {ARG_concordancia}
+			set_cosmetic_tag = ARG_Empire
+		}
+		add_ideas = {ARG_ae}
+		ARG_emperor_justo = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = ARG_fascism_party_arggalemp_long
+			name = ARG_fascism_party_arggalemp
+		}
+		load_focus_tree = argentinian_justo_focus
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_popularities = {
+			democratic = 0
+			fascism = 100
+			communism = 0
+			neutrality = 0
 		}
 	}
 }
