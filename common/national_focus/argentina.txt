@@ -55,7 +55,7 @@ focus_tree = {
 			focus = ARG_president_alvear
 			focus = ARG_president_repetto
 		}
-		bypass = { has_country_flag = ARG_ortiz_wins }
+		bypass = { has_country_flag = ARG_ortiz_wins_1937 }
 		x = -4
 		y = 1
 		completion_reward = {

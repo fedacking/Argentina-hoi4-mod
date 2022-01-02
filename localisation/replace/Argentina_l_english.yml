@@ -151,7 +151,7 @@ develop_mendoza_iron_deposits:0 "Further Investments Into Mendoza Steel"
 develop_chaco_tungsten_deposits:0 "Further Investments Into Chaco Tungsten"
 
 ### Flags ###
-ARG_ortiz_wins:0 "Ortiz won the presidency!"
+ARG_ortiz_wins_1937:0 "Ortiz won the presidency!"
 ARG_alvear_wins:0 "Alvear won the presidency!"
 ARG_repetto_wins:0 "Repetto won the presidency!"
 ARG_ghioldi_wins:0 "Ghioldi seized the government!"

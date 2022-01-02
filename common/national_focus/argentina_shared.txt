@@ -166,7 +166,7 @@
 				is_puppet = no
 			}
 			OR = {
-				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_ortiz_wins_1937
 				has_country_flag = ARG_alvear_wins
 			}
 		}
@@ -182,7 +182,7 @@
 			}
 			modifier = {
 				factor = 100
-				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_ortiz_wins_1937
 			}
 		}
 		relative_position_id = ARG_renegotiate_treaty
@@ -608,7 +608,7 @@
 		}
 		available = {
 			OR = {
-				has_country_flag = ARG_ortiz_wins
+				has_country_flag = ARG_ortiz_wins_1937
 				has_country_flag = ARG_alvear_wins
 				has_country_flag = ARG_repetto_wins
 				has_country_flag = ARG_fresco_wins

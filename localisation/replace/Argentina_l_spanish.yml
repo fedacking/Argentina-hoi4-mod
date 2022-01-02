@@ -145,7 +145,7 @@ develop_mendoza_iron_deposits:0 "Más inversiones en acero mendocino"
 develop_chaco_tungsten_deposits:0 "Más inversiones en tungsteno chaqueño"
 
 ### Flags ###
-ARG_ortiz_wins:0 "Ortiz gano la presidencia!"
+ARG_ortiz_wins_1937:0 "Ortiz gano la presidencia!"
 ARG_alvear_wins:0 "Alvear gano la presidencia!"
 ARG_repetto_wins:0 "Repetto gano la presidencia!"
 ARG_ghioldi_wins:0 "Ghioldi tomo el gobierno!"

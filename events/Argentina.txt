@@ -3,6 +3,21 @@
 ###########################
 add_namespace = arg
 
+### Event number space
+##   - Historical
+#      00-19
+##   - Ortiz Alt Hist
+#      20-39
+##   - Demonratic
+#      40-59
+##   - Fash Comie
+#      60-79
+##   - Emperor Justo
+#      90-99
+##   - Diplo
+#      100+
+
+
 country_event = {
 	id = arg.0
 	title = arg.0.t
@@ -56,7 +71,7 @@ country_event = { #Ortiz wins
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = ARG_ortiz_wins
+		set_country_flag = ARG_ortiz_wins_1937
 		country_event = { id = arg.2 days = 1390 }
 		ARG_roberto_maría_ortiz = {
 			promote_character = yes
@@ -81,7 +96,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1941.6.27
-		has_country_flag = ARG_ortiz_wins
+		has_country_flag = ARG_ortiz_wins_1937
 	}
 	is_triggered_only = yes
 	option = {
@@ -551,7 +566,7 @@ country_event = {
 				ARG_pj
 			}
 		}
-		add_ideas = {ARG_mj}
+		add_ideas = { ARG_mj }
 		ARG_eduardo_lonardi = {
 			promote_character = yes
 		}
@@ -1097,7 +1112,7 @@ country_event = { #de la Torre dies
 	trigger = {
 		tag = arg
 		date > 1939.1.5
-		has_country_flag = ARG_ortiz_wins
+		has_country_flag = ARG_ortiz_wins_1937
 	}
 	option = {
 		name = arg.23.a
