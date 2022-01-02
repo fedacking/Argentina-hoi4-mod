@@ -196,9 +196,6 @@ country_event = {
 			Country_leader = {
 				expire = "1965.1.1"
 				ideology = despotism
-				traits = {
-					fascist_sympathies		
-				}
 			}
 		}
 		add_ideas = ARG_gou
@@ -208,9 +205,6 @@ country_event = {
 			name = ARG_neutrality_party_gou
 		}
 		set_country_flag = ARG_gou_coup
-		set_politics = {
-			ruling_party = neutrality
-		}
 		set_popularities = {
 			democratic = 14
 			fascism = 25
@@ -308,7 +302,7 @@ country_event = {
 			}
 			ARG_jose_pascual_tamborini = { promote_character = yes }
 		}
-		set_country_flag = ARG_palacios_wins_1946
+		set_country_flag = ARG_peron_wins_1946
 		add_ideas = ARG_pj
 		add_country_leader_role = {
 			character = ARG_juan_domingo_peron
@@ -327,10 +321,10 @@ country_event = {
 			name = ARG_neutrality_party_PJ
 		}
 		set_popularities = {
-			democratic = 19
+			democratic = 38
 			fascism = 1
 			communism = 1
-			neutrality = 79
+			neutrality = 60
 		}
 	}
 	option = {
@@ -349,7 +343,24 @@ country_event = {
 				ARG_ps
 				ARG_gou
 			}
+			add_country_leader_role = {
+				character = ARG_juan_domingo_peron
+				promote_leader = yes
+				Country_leader = {
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						political_dancer		
+					}
+				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = ARG_neutrality_party_PJ_long
+				name = ARG_neutrality_party_PJ
+			}
 		}
+		set_country_flag = ARG_tamborini_wins_1946
 		add_ideas = { ARG_ucr }
 		
 		ARG_jose_pascual_tamborini = {
@@ -359,10 +370,10 @@ country_event = {
 			ruling_party = democratic
 		}
 		set_popularities = {
-			democratic = 70
-			fascism = 22
-			communism = 8
-			neutrality = 0
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
 		}
 	}
 }
@@ -401,31 +412,14 @@ country_event = {
 			}
 		}
 		add_ideas = {ARG_pj}
-		ARG_jose_pascual_tamborini = { promote_character = yes }
-		add_country_leader_role = {
-			character = ARG_juan_domingo_peron
-			promote_leader = yes
-			Country_leader = {
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					fascist_sympathies		
-				}
-			}
-		}
-		set_party_name = {
-			ideology = fascism
-			long_name = ARG_neutrality_party_PJ_long
-			name = ARG_neutrality_party_PJ
-		}
 		set_politics = {
-			ruling_party = fascism
+			ruling_party = neutrality
 		}
 		set_popularities = {
-			democratic = 19
-			fascism = 80
+			democratic = 38
+			fascism = 1
 			communism = 1
-			neutrality = 0
+			neutrality = 60
 		}
 	}
 	option = {
@@ -454,10 +448,10 @@ country_event = {
 			ruling_party = democratic
 		}
 		set_popularities = {
-			democratic = 70
-			fascism = 22
-			communism = 8
-			neutrality = 0
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
 		}
 	}
 	option = {
@@ -491,10 +485,10 @@ country_event = {
 			ruling_party = democratic
 		}
 		set_popularities = {
-			democratic = 54
-			fascism = 22
-			communism = 12
-			neutrality = 12
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
 		}
 	}
 	option = {
@@ -528,10 +522,10 @@ country_event = {
 			ruling_party = democratic
 		}
 		set_popularities = {
-			democratic = 70
-			fascism = 20
-			communism = 0
-			neutrality = 10
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
 		}
 	}
 }

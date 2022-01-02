@@ -125,10 +125,10 @@ characters = {
 		}
 	}
 	ARG_juan_domingo_peron = {
-		name = "Juan Domingo Peron"
+		name = "Juan Domingo Perón"
 		portraits = {
 			army = {
-				large = "gfx/leaders/ARG/Portrait_ARG_Peron_General.tga"
+				large = "gfx/leaders/ARG/Portrait_ARG_Juan_Domingo_Peron.tga"
 			}
 		}
 		corps_commander = {
