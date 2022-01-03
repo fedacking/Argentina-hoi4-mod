@@ -198,11 +198,11 @@ ideas = {
 
 	country = {
 		##Parties
-		ARG_concordancia = {
-			picture = generic_spy_coup
-			modifier = {
-				democratic_drift = -0.05
-			}
+		ARG_concordancia_ucra = {
+			picture = ARG_UCRA
+		}
+		ARG_concordancia_pdn = {
+			picture = ARG_PDN
 		}
 		ARG_gou = {
 			picture = ARG_GOU

@@ -151,8 +151,10 @@ country_event = {
 		ARG_ramon_castillo = { promote_character = yes }
 		add_popularity = { ideology = neutrality popularity = 0.1 }
 		custom_effect_tooltip = ARG_castillo_president_tooltip
+		add_ideas = ARG_concordancia_pdn
 		remove_ideas = {
 			ARG_government_opposition_cooperation
+			ARG_concordancia_ucra
 		}
 		hidden_effect = {
 			set_country_flag = ARG_castillo_president
@@ -186,7 +188,7 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_ideas = {
-				ARG_concordancia
+				ARG_concordancia_pdn
 			}
 			country_event = { id = arg.5 days = 248 }
 		}
@@ -221,7 +223,10 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		set_country_flag = ARG_gou_coup_fails
+		hidden_effect = {
+			set_country_flag = ARG_gou_coup_fails
+			country_event = { id = arg.20 days = 63 }
+		}
 	}
 }
 
@@ -258,6 +263,10 @@ country_event = {
 				}
 			}
 		}
+		hidden_effect = {
+			set_country_flag = ARG_farrel_leads_gou
+			country_event = { id = arg.6 days = 817 }
+		}
 	}
 	option = {
 		name = arg.5.b
@@ -280,7 +289,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1946.6.4
-		has_country_flag = ARG_gou_coup
+		has_country_flag = ARG_farrel_leads_gou
 	}
 	is_triggered_only = yes
 
@@ -301,8 +310,9 @@ country_event = {
 				ARG_gou
 			}
 			ARG_jose_pascual_tamborini = { promote_character = yes }
+			set_country_flag = ARG_peron_wins_1946
+			country_event = { id = arg.7 days = 1986 }
 		}
-		set_country_flag = ARG_peron_wins_1946
 		add_ideas = ARG_pj
 		add_country_leader_role = {
 			character = ARG_juan_domingo_peron
@@ -359,8 +369,9 @@ country_event = {
 				long_name = ARG_neutrality_party_PJ_long
 				name = ARG_neutrality_party_PJ
 			}
+			set_country_flag = ARG_tamborini_wins_1946
+			country_event = { id = arg.27 days = 1986 }
 		}
-		set_country_flag = ARG_tamborini_wins_1946
 		add_ideas = { ARG_ucr }
 		
 		ARG_jose_pascual_tamborini = {
@@ -387,7 +398,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1951.11.11
-		has_country_flag = ARG_gou_coup
+		has_country_flag = ARG_peron_wins_1946
 	}
 	is_triggered_only = yes
 
@@ -625,6 +636,204 @@ country_event = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
+		}
+	}
+}
+
+##   - Ortiz Alt Hist
+
+country_event = {
+	id = arg.20
+	title = arg.20.t
+	desc = arg.20.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		date > 1943.9.5
+		has_country_flag = ARG_gou_coup_fails
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.20.a
+		ARG_robustiano_costas = { promote_character = yes }
+		hidden_effect = {
+			set_country_flag = ARG_concordancia_wins_1943
+			country_event = { id = arg.21 days = 2192 }
+		}
+	}
+}
+country_event = {
+	id = arg.21
+	title = arg.21.t
+	desc = arg.21.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		date > 1949.9.5
+		has_country_flag = ARG_concordancia_wins_1943
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.21.a
+		ARG_jose_aguirre_camara = { promote_character = yes }
+		hidden_effect = {
+			set_country_flag = ARG_concordancia_wins_1949
+			country_event = { id = arg.22 days = 2192 }
+		}
+	}
+}
+country_event = {
+	id = arg.22
+	title = arg.22.t
+	desc = arg.22.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		date > 1955.9.5
+		has_country_flag = ARG_concordancia_wins_1949
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.22.a
+		ARG_adolfo_vicchi = { promote_character = yes }
+	}
+}
+
+country_event = {
+	id = arg.27
+	title = arg.27.t
+	desc = arg.27.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Elecciones_1951
+	trigger = {
+		tag = arg
+		date > 1951.11.11
+		has_country_flag = ARG_tamborini_wins_1946
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.27.a
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_ucr}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+		set_popularities = {
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
+		}
+	}
+	option = {
+		name = arg.27.b
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+			}
+			ARG_ricardo_balbin = {
+				promote_character = yes
+			}
+		}
+		add_ideas = {ARG_pj}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			democratic = 38
+			fascism = 1
+			communism = 1
+			neutrality = 60
+		}
+	}
+	option = {
+		name = arg.27.c
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_pdn}
+		ARG_reynaldo_pastor = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
+		}
+	}
+	option = {
+		name = arg.27.e
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+				ARG_ucr
+				ARG_ps
+				ARG_gou
+				ARG_pj
+			}
+		}
+		add_ideas = {ARG_ps}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 60
+			fascism = 1
+			communism = 1
+			neutrality = 38
 		}
 	}
 }
@@ -1605,82 +1814,6 @@ country_event = {
 			ideology = democratic
 			long_name = ARG_democratic_party_pdn_long
 			name = ARG_democratic_party_pdn
-		}
-	}
-}
-
-country_event = {
-	id = arg.20
-	title = arg.20.t
-	desc = arg.20.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Generic_Elections
-	trigger = {
-		tag = arg
-		date > 1943.9.5
-		has_country_flag = ARG_gou_coup_fails
-	}
-	is_triggered_only = yes
-	
-	option = {
-		name = arg.20.a
-		ai_chance = {
-			factor = 80
-		}
-		set_country_flag = ARG_concordancia_wins_1943
-		ARG_robustiano_costas = { promote_character = yes }
-	}
-	
-	option = {
-		name = arg.20.b
-		ai_chance = {
-			factor = 15
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_concordancia
-			}
-			add_ideas = {ARG_ucr}
-		}
-		set_country_flag = ARG_ucr_wins_1943
-		ARG_jose_pascual_tamborini = { promote_character = yes }
-		set_politics = {
-			ruling_party = democratic
-		}
-		set_popularities = {
-			democratic = 80
-			fascism = 7
-			communism = 8
-			neutrality = 5
-		}
-	}
-	
-	option = {
-		name = arg.20.c
-		ai_chance = {
-			factor = 5
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_concordancia
-			}
-			add_ideas = {ARG_ps}
-		}
-		set_country_flag = ARG_ps_wins_1943
-		ARG_alfredo_palacios = { promote_character = yes }
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-		set_politics = {
-			ruling_party = democratic
-		}
-		set_popularities = {
-			democratic = 80
-			fascism = 7
-			communism = 8
-			neutrality = 5
 		}
 	}
 }

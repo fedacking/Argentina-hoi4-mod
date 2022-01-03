@@ -33,7 +33,7 @@ characters = {
 		}
 	}
 	ARG_roberto_maría_ortiz = {
-		name = "Roberto María Ortiz"
+		name = "Roberto M. Ortiz"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/ARG/Portrait_Argentine_Roberto_Ortiz.tga"
@@ -49,6 +49,17 @@ characters = {
 	ARG_ramon_castillo = {
 		name = "Ramón S. Castillo"
 		
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Ramon_Castillo.tga"
+			}
+		}		
+		country_leader = {
+			desc = "POLITICS_RAMON_S_CASTILLO_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}		
 		advisor = {
 			picture = generic_political_advisor_south_america_2
 			slot = political_advisor
@@ -61,6 +72,76 @@ characters = {
 				factor = 1
 			}
 			traits = { backroom_backstabber }
+		}
+	}
+	ARG_robustiano_costas = {
+		name = "Robustiano Patrón Costas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARG/Portrait_Argentine_Robustiano_Costas.tga"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ROBUSTIANO_COSTAS_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_rodolfo_moreno = {
+		name = "Rodolfo Moreno"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RODOLFO_MORENO_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_vicente_solano_lima = {
+		name = "Vicente Solano Lima"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_jose_aguirre_camara = {
+		name = "José Aguirre Cámara"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_JOSE_AGUIRRE_CAMARA_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_adolfo_vicchi = {
+		name = "Adolfo Vicchi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ADOLFO_VICCHI_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
 	ARG_pedro_pablo_ramirez = {
@@ -254,25 +335,11 @@ characters = {
 			id = -1
 		}
 	}
-	ARG_robustiano_costas = {
-		name = "Robustiano Patrón Costas"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Robustiano_Costas.tga"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_ROBUSTIANO_COSTAS_DESC"
-			ideology = conservatism
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
 	ARG_alfredo_palacios = {
 		name = "Alfredo Palacios"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ARG/Portrait_Argentine_Alfredo_Palacios.tga"
+				large = "gfx/leaders/ARG/Portrait_ARG_Alfredo_Palacios.tga"
 			}
 		}
 		country_leader = {

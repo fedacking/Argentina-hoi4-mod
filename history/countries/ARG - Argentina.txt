@@ -35,6 +35,17 @@ recruit_character = ARG_arturo_frondizi
 recruit_character = ARG_diogenes_taboada
 recruit_character = ARG_julio_roca
 recruit_character = ARG_carlos_saavedra_lamas
+recruit_character = ARG_jose_pascual_tamborini
+recruit_character = ARG_ricardo_balbin
+recruit_character = ARG_reynaldo_pastor
+recruit_character = ARG_robustiano_costas
+recruit_character = ARG_alfredo_palacios
+recruit_character = ARG_nicolas_repetto
+recruit_character = ARG_alicia_moreau_de_justo
+recruit_character = ARG_jose_aguirre_camara
+recruit_character = ARG_adolfo_vicchi
+recruit_character = ARG_eduardo_lonardi
+recruit_character = ARG_pedro_aramburu
 
 oob = "ARG_1936"
 if = {
@@ -45,7 +56,7 @@ if = {
 	}
 }
 add_ideas = {
-	ARG_concordancia
+	ARG_concordancia_ucra
 	limited_conscription
 }
 set_stability = 0.3
