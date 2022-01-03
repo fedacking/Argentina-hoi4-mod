@@ -88,34 +88,6 @@ characters = {
 			id = -1
 		}
 	}
-	ARG_rodolfo_moreno = {
-		name = "Rodolfo Moreno"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_RODOLFO_MORENO_DESC"
-			ideology = oligarchism
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-	ARG_vicente_solano_lima = {
-		name = "Vicente Solano Lima"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
-			ideology = oligarchism
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
 	ARG_jose_aguirre_camara = {
 		name = "José Aguirre Cámara"
 		portraits = {
@@ -373,6 +345,34 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_MOREAU_DEJUSTO_DESC"
 			ideology = socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_rodolfo_moreno = {
+		name = "Rodolfo Moreno"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_RODOLFO_MORENO_DESC"
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARG_vicente_solano_lima = {
+		name = "Vicente Solano Lima"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+			ideology = conservatism
 			expire = "1965.1.1.1"
 			id = -1
 		}

@@ -62,7 +62,7 @@ country_event = { #Ortiz wins
 	picture = GFX_event_picture_Ortiz_Castillo
 	trigger = {
 		tag = arg
-		date > 1937.9.5
+		#date > 1937.9.5
 		has_country_flag = ARG_fraude_patriotico
 	}
 	is_triggered_only = yes
@@ -95,7 +95,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = arg
-		date > 1941.6.27
+		#date > 1941.6.27
 		has_country_flag = ARG_ortiz_wins_1937
 	}
 	is_triggered_only = yes
@@ -135,7 +135,7 @@ country_event = {
 	picture = GFX_event_picture_Ortiz_Renuncia
 	trigger = {
 		tag = arg
-		date > 1942.6.27
+		#date > 1942.6.27
 		has_country_flag = ARG_ortiz_will_resign
 	}
 	is_triggered_only = yes
@@ -172,7 +172,7 @@ country_event = {
 	picture = GFX_event_picture_Golpe_43
 	trigger = {
 		tag = arg
-		date > 1943.7.4
+		#date > 1943.7.4
 		has_country_flag = ARG_ortiz_will_resign
 	}
 	is_triggered_only = yes
@@ -238,7 +238,7 @@ country_event = {
 	picture = GFX_event_picture_GOU_Coup
 	trigger = {
 		tag = arg
-		date > 1944.3.9
+		#date > 1944.3.9
 		has_country_flag = ARG_gou_coup
 	}
 	is_triggered_only = yes
@@ -288,7 +288,7 @@ country_event = {
 	picture = GFX_event_picture_Braden_Peron
 	trigger = {
 		tag = arg
-		date > 1946.6.4
+		#date > 1946.6.4
 		has_country_flag = ARG_farrel_leads_gou
 	}
 	is_triggered_only = yes
@@ -397,7 +397,7 @@ country_event = {
 	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
 		tag = arg
-		date > 1951.11.11
+		#date > 1951.11.11
 		has_country_flag = ARG_peron_wins_1946
 	}
 	is_triggered_only = yes
@@ -549,7 +549,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = arg
-		date > 1955.9.23
+		#date > 1955.9.23
 		has_country_flag = ARG_peron_wins_1951
 	}
 	picture = GFX_event_picture_Rev_Libertadora
@@ -614,7 +614,7 @@ country_event = {
 	picture = GFX_event_picture_Lonardi_Renuncia
 	trigger = {
 		tag = arg
-		date > 1955.11.13
+		#date > 1955.11.13
 		has_country_flag = ARG_revolucion_libertadora
 	}
 	is_triggered_only = yes
@@ -654,7 +654,7 @@ country_event = {
 	picture = GFX_event_picture_Generic_Elections
 	trigger = {
 		tag = arg
-		date > 1943.9.5
+		#date > 1943.9.5
 		has_country_flag = ARG_gou_coup_fails
 	}
 	is_triggered_only = yes
@@ -676,7 +676,7 @@ country_event = {
 	picture = GFX_event_picture_Generic_Elections
 	trigger = {
 		tag = arg
-		date > 1949.9.5
+		#date > 1949.9.5
 		has_country_flag = ARG_concordancia_wins_1943
 	}
 	is_triggered_only = yes
@@ -698,7 +698,7 @@ country_event = {
 	picture = GFX_event_picture_Generic_Elections
 	trigger = {
 		tag = arg
-		date > 1955.9.5
+		#date > 1955.9.5
 		has_country_flag = ARG_concordancia_wins_1949
 	}
 	is_triggered_only = yes
@@ -717,7 +717,7 @@ country_event = {
 	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
 		tag = arg
-		date > 1951.11.11
+		#date > 1951.11.11
 		has_country_flag = ARG_tamborini_wins_1946
 	}
 	is_triggered_only = yes
@@ -842,6 +842,167 @@ country_event = {
 	}
 }
 
+###The Diabetes Arc
+
+country_event = {
+    id = arg.30
+    title = arg.30.t
+    desc = arg.30.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Fraude_Patriotico
+	is_triggered_only = yes
+    trigger = {
+        tag = arg
+        date > 1941.1.1
+        has_country_flag = ARG_ortiz_stands_for_democracy
+    }
+
+	option = {
+		name = arg.30.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_tamborini_wins_1941
+		ARG_jose_pascual_tamborini = { promote_character = yes }
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 100
+			fascism = 0
+			communism = 0
+			neutrality = 0
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ucr}
+		}
+	}
+
+	option = {
+		name = arg.30.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_palacios_wins_1941
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		ARG_alfredo_palacios = { promote_character = yes }
+		set_politics = {
+			ruling_party = democratic
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 100
+			fascism = 0
+			communism = 0
+			neutrality = 0
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia
+			}
+			add_ideas = {ARG_ps}
+		}
+	}
+}
+
+country_event = {
+    id = arg.31
+    title = arg.31.t
+    desc = arg.31.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Fraude_Patriotico
+	is_triggered_only = yes
+    trigger = {
+        tag = arg
+        date > 1947.1.1
+        has_country_flag = ARG_tamborini_wins_1941
+    }
+
+	option = {
+		name = arg.31.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_balbin_wins_1947
+		ARG_ricardo_balbin = { promote_character = yes }
+	}
+
+	option = {
+		name = arg.31.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_palacios_wins_1947
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		ARG_alfredo_palacios = { promote_character = yes }
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			add_ideas = {ARG_ps}
+		}
+	}
+}
+
+country_event = {
+    id = arg.32
+    title = arg.32.t
+    desc = arg.32.d
+    fire_only_once = yes
+    picture = GFX_event_picture_Elecciones_1951
+	is_triggered_only = yes
+    trigger = {
+        tag = arg
+        date > 1947.1.1
+        has_country_flag = ARG_palacios_wins_1941
+    }
+
+	option = {
+		name = arg.32.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_balbin_wins_1947
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ucr_long
+			name = ARG_democratic_party_ucr
+		}
+		ARG_ricardo_balbin = { promote_character = yes }
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			add_ideas = {ARG_ucr}
+		}
+	}
+
+	option = {
+		name = arg.32.b
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = ARG_moreaujusto_wins_1947
+		ARG_alicia_moreau_de_justo = { promote_character = yes }
+	}
+}
+
+##1937
+
 country_event = { #General Strike
 	id = arg.40
 	title = arg.40.t
@@ -850,8 +1011,8 @@ country_event = { #General Strike
 	picture = GFX_event_picture_17_de_Octubre
 	trigger = {
 		tag = arg
+		#date > 1937.1.1
 		has_country_flag = ARG_ban_cgt
-		date > 1937.1.1
 	}
 	is_triggered_only = yes
 
@@ -862,7 +1023,7 @@ country_event = { #General Strike
 		}
 		hidden_effect = {
 			set_country_flag = ARG_37_revolution_flag
-			country_event = { id = arg.60 days = 1 }
+			country_event = { id = arg.60 days = 160 }
 		}
 		complete_national_focus = ARG_1937_revolution
 		custom_effect_tooltip = ARG_terror_plot_tooltip
@@ -874,6 +1035,7 @@ country_event = { #General Strike
 		}
 		hidden_effect = {
 			set_country_flag = ARG_token_reform
+			country_event = { id = arg.41 days = 247 }
 		}
 		custom_effect_tooltip = ARG_ucr_wins_tooltip
 	}
@@ -884,6 +1046,7 @@ country_event = { #General Strike
 		}
 		hidden_effect = {
 			set_country_flag = ARG_march
+			country_event = { id = arg.44 days = 247 }
 		}
 		custom_effect_tooltip = ARG_ps_wins_tooltip
 	}
@@ -897,18 +1060,15 @@ country_event = { #Alvear wins
 	picture = GFX_event_picture_Alvear_Win
 	trigger = {
 		tag = arg
-		date > 1937.9.5
+		#date > 1937.9.5
 		has_country_flag = ARG_token_reform
 	}
 	is_triggered_only = yes
 	option = {
 		name = arg.41.a
-		ai_chance = {
-			factor = 100
-		}
 		set_country_flag = ARG_alvear_wins
 		hidden_effect = {
-			remove_ideas = {ARG_concordancia}
+			remove_ideas = {ARG_concordancia_ucra}
 		}
 		add_ideas = ARG_ucr
 		set_politics = {
@@ -924,123 +1084,28 @@ country_event = { #Alvear wins
 	}
 }
 
-country_event = {
+country_event = { #Repetto wins
 	id = arg.42
 	title = arg.42.t
 	desc = arg.42.d
 	fire_only_once = yes
-	picture = GFX_event_picture_Alvear_Dead
-	trigger = {
-		tag = arg
-		date > 1942.3.23
-		has_country_flag = ARG_alvear_wins
-	}
-	is_triggered_only = yes
-	option = {
-		name = arg.42.a
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
-		}
-		ARG_enrique_mosca = {
-			promote_character = yes
-		}
-	}
-}
-
-country_event = {
-	id = arg.43
-	title = arg.43.t
-	desc = arg.43.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Generic_Elections
-	trigger = {
-		tag = arg
-		date > 1943.9.5
-		has_country_flag = ARG_alvear_wins
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.43.a
-		ai_chance = {
-			factor = 60
-		}
-		set_country_flag = ARG_tamborini_wins_1943
-		ARG_jose_pascual_tamborini = {
-			promote_character = yes
-		}
-	}
-
-	option = {
-		name = arg.43.b
-		ai_chance = {
-			factor = 30
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
-			add_ideas = {ARG_ps}
-		}
-		set_country_flag = ARG_palacios_wins_1943
-		ARG_alfredo_palacios = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-	}
-	
-	option = {
-		name = arg.43.c
-		ai_chance = {
-			factor = 10
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
-			add_ideas = {ARG_pdn}
-		}
-		set_country_flag = ARG_costas_wins_1943
-		ARG_robustiano_costas = {
-			promote_character = yes
-		}
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_pdn_long
-			name = ARG_democratic_party_pdn
-		}
-	}
-}
-
-country_event = { #Repetto wins
-	id = arg.44
-	title = arg.44.t
-	desc = arg.44.d
-	fire_only_once = yes
 	picture = GFX_event_picture_Repetto_Win
 	trigger = {
 		tag = arg
-		date > 1937.9.5
+		#date > 1937.9.5
 		has_country_flag = ARG_march
 	}
 	is_triggered_only = yes
 
 	option = {
-		name = arg.44.a
+		name = arg.42.a
 		ai_chance = {
 			factor = 100
 		}
 		hidden_effect = {
 			remove_ideas = {ARG_concordancia}
 			set_country_flag = ARG_repetto_wins
+			country_event = { id = arg.45 days = 2192 }
 		}
 		add_ideas = {ARG_ps}
 		ARG_nicolas_repetto = {
@@ -1063,7 +1128,113 @@ country_event = { #Repetto wins
 	}
 }
 
+##1942
+
 country_event = {
+	id = arg.43
+	title = arg.43.t
+	desc = arg.43.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Alvear_Dead
+	trigger = {
+		tag = arg
+		#date > 1942.3.23
+		has_country_flag = ARG_alvear_wins
+	}
+	is_triggered_only = yes
+	option = {
+		name = arg.43.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		ARG_enrique_mosca = {
+			promote_character = yes
+		}
+		hidden_effect = { country_event = { id = arg.44 days = 531 }}
+	}
+}
+
+##1943
+
+country_event = { #ALVEAR WON 37
+	id = arg.44
+	title = arg.44.t
+	desc = arg.44.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		#date > 1943.9.5
+		has_country_flag = ARG_alvear_wins
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.44.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			set_country_flag = ARG_tamborini_wins_1943
+			country_event = { id = arg.46 days = 2192 }
+		}
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
+		}
+	}
+
+	option = {
+		name = arg.44.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_palacios_wins_1943
+			country_event = { id = arg.47 days = 2192 }
+		}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
+	}
+	
+	option = {
+		name = arg.44.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_moreno_wins_1943
+			country_event = { id = arg.48 days = 2192 }
+		}
+		ARG_rodolfo_moreno = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
+	}
+}
+
+country_event = { #REPETTO WON 37
 	id = arg.45
 	title = arg.45.t
 	desc = arg.45.d
@@ -1071,7 +1242,7 @@ country_event = {
 	picture = GFX_event_picture_Elecciones_1951
 	trigger = {
 		tag = arg
-		date > 1943.9.5
+		#date > 1943.9.5
 		has_country_flag = ARG_repetto_wins
 	}
 	is_triggered_only = yes
@@ -1082,9 +1253,13 @@ country_event = {
 			factor = 60
 		}
 		hidden_effect = {
-			add_ideas = {ARG_ps}
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_palacios_wins_1943
+			country_event = { id = arg.47 days = 2192 }
 		}
-		set_country_flag = ARG_palacios_wins_1943
+		add_ideas = {ARG_ps}
 		ARG_alfredo_palacios = {
 			promote_character = yes
 		}
@@ -1099,8 +1274,9 @@ country_event = {
 			remove_ideas = {
 				ARG_ps
 			}
+			set_country_flag = ARG_tamborini_wins_1943
+			country_event = { id = arg.46 days = 2192 }
 		}
-		set_country_flag = ARG_tamborini_wins_1943
 		ARG_jose_pascual_tamborini = {
 			promote_character = yes
 		}
@@ -1109,6 +1285,7 @@ country_event = {
 			long_name = ARG_democratic_party_long
 			name = ARG_democratic_party
 		}
+		add_ideas = {ARG_ucr)
 	}
 	
 	option = {
@@ -1120,10 +1297,10 @@ country_event = {
 			remove_ideas = {
 				ARG_ps
 			}
-			add_ideas = {ARG_pdn}
+			set_country_flag = ARG_moreno_wins_1943
+			country_event = { id = arg.48 days = 2192 }
 		}
-		set_country_flag = ARG_costas_wins_1943
-		ARG_robustiano_costas = {
+		ARG_rodolfo_moreno = {
 			promote_character = yes
 		}
 		set_party_name = {
@@ -1131,8 +1308,228 @@ country_event = {
 			long_name = ARG_democratic_party_pdn_long
 			name = ARG_democratic_party_pdn
 		}
+		add_ideas = {ARG_pdn}
 	}
 }
+
+##1949
+
+
+country_event = { #TAMBORINI WON 43
+	id = arg.46
+	title = arg.46.t
+	desc = arg.46.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		#date > 1949.9.5
+		has_country_flag = ARG_tamborini_wins_1943
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.46.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			set_country_flag = ARG_balbin_wins_1949
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+	}
+
+	option = {
+		name = arg.46.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_palacios_wins_1949
+		}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
+	}
+	
+	option = {
+		name = arg.46.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_solano_wins_1949
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
+	}
+}
+
+country_event = { #PALACIOS WON 43
+	id = arg.47
+	title = arg.47.t
+	desc = arg.47.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Elecciones_1951
+	trigger = {
+		tag = arg
+		#date > 1949.9.5
+		has_country_flag = ARG_palacios_wins_1943
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.47.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			set_country_flag = ARG_alicia_wins_1949
+		}
+		ARG_alicia_moreau_de_justo = {
+			promote_character = yes
+		}
+	}
+	
+	option = {
+		name = arg.47.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			set_country_flag = ARG_balbin_wins_1949
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
+		add_ideas = {ARG_ucr)
+	}
+	
+	option = {
+		name = arg.47.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			set_country_flag = ARG_solano_wins_1949
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
+	}
+}
+
+country_event = { #MORENO WON 43
+	id = arg.48
+	title = arg.48.t
+	desc = arg.48.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		#date > 1949.9.5
+		has_country_flag = ARG_moreno_wins_1943
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.48.a
+		ai_chance = {
+			factor = 60
+		}
+		hidden_effect = {
+			set_country_flag = ARG_solano_wins_1949
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		add_ideas = {ARG_pdn}
+	}
+	
+	option = {
+		name = arg.48.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_pdn
+			}
+			set_country_flag = ARG_balbin_wins_1949
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
+		add_ideas = {ARG_ucr)
+	}
+	
+	option = {
+		name = arg.48.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_pdn
+			}
+			set_country_flag = ARG_palacios_wins_1949
+		}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
+	}
+}
+
+
 
 country_event = { #Terror plot
 	id = arg.60
@@ -1314,25 +1711,6 @@ country_event = { #Communist takeover
 			neutrality = 0
 		}
 		set_cosmetic_tag = argcommie
-	}
-}
-
-country_event = { #de la Torre dies
-	id = arg.23
-	title = arg.23.t
-	desc = arg.23.d
-	fire_only_once = yes
-	trigger = {
-		tag = arg
-		date > 1939.1.5
-		has_country_flag = ARG_ortiz_wins_1937
-	}
-	option = {
-		name = arg.23.a
-		ai_chance = {
-			factor = 100
-		}
-		set_country_flag = ARG_delatorre_dead
 	}
 }
 
@@ -1745,86 +2123,6 @@ country_event = {
 		transfer_state = 502
 		add_political_power = 50
 		set_country_flag = ARG_have_riogrande
-	}
-}
-
-country_event = {
-	id = arg.47
-	title = arg.47.t
-	desc = arg.47.d
-	fire_only_once = yes
-	picture = GFX_event_picture_Elecciones_1951
-	trigger = {
-		tag = arg
-		date > 1949.9.5
-		has_country_flag = ARG_repetto_wins
-	}
-	is_triggered_only = yes
-
-	option = {
-		name = arg.47.a
-		ai_chance = {
-			factor = 60
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-				ARG_ps
-				ARG_pdn
-			}
-			add_ideas = {ARG_ps}
-		}
-		set_country_flag = ARG_mdejusto_wins_1949
-		ARG_alicia_moreau_de_justo = { promote_character = yes }
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-	}
-	
-	option = {
-		name = arg.47.b
-		ai_chance = {
-			factor = 30
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-				ARG_ps
-				ARG_pdn
-			}
-			add_ideas = {ARG_ucr}
-		}
-		set_country_flag = ARG_balbin_wins_1949
-		ARG_ricardo_balbin = { promote_character = yes }
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_long
-			name = ARG_democratic_party
-		}
-	}
-	
-	option = {
-		name = arg.47.c
-		ai_chance = {
-			factor = 10
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-				ARG_ps
-				ARG_pdn
-			}
-			add_ideas = {ARG_pdn}
-		}
-		set_country_flag = ARG_pastor_wins_1949
-		ARG_reynaldo_pastor = { promote_character = yes }
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_pdn_long
-			name = ARG_democratic_party_pdn
-		}
 	}
 }
 
@@ -2397,164 +2695,5 @@ country_event = {
 			target = SOV
 			modifier = ARG_denied_from_comintern
 		}
-	}
-}
-
-###The Diabetes Arc
-
-country_event = {
-    id = arg.30
-    title = arg.30.t
-    desc = arg.30.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Fraude_Patriotico
-	is_triggered_only = yes
-    trigger = {
-        tag = arg
-        date > 1941.1.1
-        has_country_flag = ARG_ortiz_stands_for_democracy
-    }
-
-	option = {
-		name = arg.30.a
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_tamborini_wins_1941
-		ARG_jose_pascual_tamborini = { promote_character = yes }
-		set_politics = {
-			ruling_party = democratic
-			election_frequency = 72
-			elections_allowed = yes
-		}
-		set_popularities = {
-			democratic = 100
-			fascism = 0
-			communism = 0
-			neutrality = 0
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_concordancia
-			}
-			add_ideas = {ARG_ucr}
-		}
-	}
-
-	option = {
-		name = arg.30.b
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_palacios_wins_1941
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-		ARG_alfredo_palacios = { promote_character = yes }
-		set_politics = {
-			ruling_party = democratic
-			election_frequency = 72
-			elections_allowed = yes
-		}
-		set_popularities = {
-			democratic = 100
-			fascism = 0
-			communism = 0
-			neutrality = 0
-		}
-		hidden_effect = {
-			remove_ideas = {
-				ARG_concordancia
-			}
-			add_ideas = {ARG_ps}
-		}
-	}
-}
-
-country_event = {
-    id = arg.31
-    title = arg.31.t
-    desc = arg.31.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Fraude_Patriotico
-	is_triggered_only = yes
-    trigger = {
-        tag = arg
-        date > 1947.1.1
-        has_country_flag = ARG_tamborini_wins_1941
-    }
-
-	option = {
-		name = arg.31.a
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_balbin_wins_1947
-		ARG_ricardo_balbin = { promote_character = yes }
-	}
-
-	option = {
-		name = arg.31.b
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_palacios_wins_1947
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-		ARG_alfredo_palacios = { promote_character = yes }
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ucr
-			}
-			add_ideas = {ARG_ps}
-		}
-	}
-}
-
-country_event = {
-    id = arg.32
-    title = arg.32.t
-    desc = arg.32.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Elecciones_1951
-	is_triggered_only = yes
-    trigger = {
-        tag = arg
-        date > 1947.1.1
-        has_country_flag = ARG_palacios_wins_1941
-    }
-
-	option = {
-		name = arg.32.a
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_balbin_wins_1947
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ucr_long
-			name = ARG_democratic_party_ucr
-		}
-		ARG_ricardo_balbin = { promote_character = yes }
-		hidden_effect = {
-			remove_ideas = {
-				ARG_ps
-			}
-			add_ideas = {ARG_ucr}
-		}
-	}
-
-	option = {
-		name = arg.32.b
-		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_moreaujusto_wins_1947
-		ARG_alicia_moreau_de_justo = { promote_character = yes }
 	}
 }

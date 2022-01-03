@@ -46,6 +46,8 @@ recruit_character = ARG_jose_aguirre_camara
 recruit_character = ARG_adolfo_vicchi
 recruit_character = ARG_eduardo_lonardi
 recruit_character = ARG_pedro_aramburu
+recruit_character = ARG_rodolfo_moreno
+recruit_character = ARG_vicente_solano_lima
 
 oob = "ARG_1936"
 if = {
