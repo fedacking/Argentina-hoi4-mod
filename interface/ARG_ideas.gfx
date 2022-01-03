@@ -3,6 +3,11 @@ spriteTypes = {
 		name = "GFX_idea_ARG_UCR"
 		texturefile = "gfx/interface/ideas/ARG/ARG_UCR.tga"
 	}
+
+	spriteType = {
+		name = "GFX_idea_ARG_UCRA"
+		texturefile = "gfx/interface/ideas/ARG/ARG_UCRA.tga"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_ARG_PS"
