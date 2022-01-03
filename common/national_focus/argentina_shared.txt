@@ -1994,8 +1994,8 @@
 		cost = 8
 		available = {
 			OR = {
-			has_government = democratic
-			has_government = neutrality
+				has_government = democratic
+				has_government = neutrality
 			}
 		}
 		mutually_exclusive = {
@@ -2014,185 +2014,124 @@
 	}
 	
 	shared_focus = {
-		id = ARG_defensive_military_plans
-		icon = GFX_goal_generic_construction2
+		id = ARG_suspend_constitutional_rights
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
+			has_war = no
 		}
 		prerequisite = {
 			focus = ARG_neutrality_diplomacy
 		}
-		relative_position_id = ARG_neutrality_diplomacy
-		x = -1
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -7
+		y = 2
 		completion_reward = {
-			add_ideas = deterrence
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_efficient_draft
-		icon = GFX_focus_generic_little_entente
+		id = ARG_reassure_allied_diplomats
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_defensive_military_plans
+			focus = ARG_suspend_constitutional_rights
 		}
-		relative_position_id = ARG_defensive_military_plans
-		x = 0
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -8
+		y = 3
 		completion_reward = {
-			add_political_power = 50
-			swap_ideas = {
-				remove_idea = deterrence
-				add_idea = ARG_deterrence2
-			}
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_calm_port_in_the_storm
-		icon = GFX_focus_generic_the_giant_wakes
+		id = ARG_break_diplomatic_relations_with_germany
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
-			threat > 0.4
-		}
-		bypass = {
-			has_war = yes
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_efficient_draft
+			focus = ARG_reassure_allied_diplomats
 		}
-		relative_position_id = ARG_efficient_draft
-		x = 0
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -8
+		y = 4
 		completion_reward = {
-			add_political_power = 50
-			swap_ideas = {
-				remove_idea = ARG_deterrence2
-				add_idea = ARG_deterrence3
-			}
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_fortify_brazilian_border
-		icon = GFX_goal_generic_construction
+		id = ARG_declare_war_on_germany
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
-		}
-		bypass = {
-			has_war = yes
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_neutrality_diplomacy
+			focus = ARG_break_diplomatic_relations_with_germany
 		}
-		relative_position_id = ARG_neutrality_diplomacy
-		x = 1
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -8
+		y = 5
 		completion_reward = {
-			510 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-				}
-			}
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_fortify_paraguay_border
-		icon = GFX_goal_generic_construct_military
+		id = ARG_supress_accion_argentina
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
-		}
-		bypass = {
-			has_war = yes
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_fortify_brazilian_border
+			focus = ARG_suspend_constitutional_rights
 		}
-		relative_position_id = ARG_fortify_brazilian_border
-		x = 0
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -6
+		y = 3
 		completion_reward = {
-			509 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-				}
-			}
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_fortify_oriental_border
-		icon = GFX_goal_generic_fortify_city
+		id = ARG_suspend_pro_allied_newspapers
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
-		}
-		bypass = {
-			has_war = yes
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_fortify_paraguay_border
+			focus = ARG_supress_accion_argentina
 		}
-		relative_position_id = ARG_fortify_paraguay_border
-		x = 0
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -6
+		y = 4
 		completion_reward = {
-			278 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-				}
-			}
 		}
 	}
 	
 	shared_focus = {
-		id = ARG_desperate_defense
-		icon = GFX_goal_generic_small_arms
+		id = ARG_buy_weapons_from_germany
+		icon = GFX_goal_generic_defence
 		cost = 8
 		available = {
-			has_war = yes
+			has_war = no
 		}
 		prerequisite = {
-			focus = ARG_calm_port_in_the_storm
+			focus = ARG_suspend_pro_allied_newspapers
 		}
-		prerequisite = {
-			focus = ARG_fortify_oriental_border
-		}
-		relative_position_id = ARG_calm_port_in_the_storm
-		x = 1
-		y = 1
+		relative_position_id = ARG_diplomacy
+		x = -6
+		y = 5
 		completion_reward = {
-			if = {
-				limit = {has_idea = ARG_deterrence2}
-				remove_ideas = ARG_deterrence2
-			}
-			swap_ideas = {
-				remove_idea = ARG_deterrence3
-				add_idea = ARG_war_of_survival
-			}	
 		}
 	}
+	
 	
 ##Good guys
 	

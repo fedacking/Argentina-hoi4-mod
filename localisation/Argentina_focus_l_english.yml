@@ -223,7 +223,7 @@ ARG_diplomacy:0 "Foreign Affairs"
 ARG_diplomacy_desc:0 "With the most urgent matters of our country fixed, we can set our eyes to the rest of the world."
 
 #Alone
-ARG_neutrality_diplomacy:0 "Watch From Afar"
+ARG_neutrality_diplomacy:0 "VIII Panamerican Conference"
 ARG_neutrality_diplomacy_desc:0 "While the rest of the world tears itself apart, Argentina must not be pulled into a conflict we can't sustain. It's best to steer clear of the tides of war."
 ARG_defensive_military_plans:0 "Prepare to Dig In"
 ARG_defensive_military_plans_desc:0 "The politicians may be happy with peace, but our enemies may choose another route. We must make plans and prepare, in case the enemy is the aggressor."
