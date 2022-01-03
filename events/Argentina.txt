@@ -421,6 +421,8 @@ country_event = {
 			ARG_ricardo_balbin = {
 				promote_character = yes
 			}
+			set_country_flag = ARG_peron_wins_1951
+			country_event = { id = arg.8 days = 1412 }
 		}
 		add_ideas = {ARG_pj}
 		set_politics = {
@@ -548,7 +550,7 @@ country_event = {
 	trigger = {
 		tag = arg
 		date > 1955.9.23
-		has_country_flag = ARG_palacios_wins_1946
+		has_country_flag = ARG_peron_wins_1951
 	}
 	picture = GFX_event_picture_Rev_Libertadora
 	is_triggered_only = yes
@@ -570,6 +572,8 @@ country_event = {
 				ARG_gou
 				ARG_pj
 			}
+			set_country_flag = ARG_revolucion_libertadora
+			country_event = { id = arg.9 days = 51 }
 		}
 		add_ideas = { ARG_mj }
 		ARG_eduardo_lonardi = {
@@ -856,8 +860,10 @@ country_event = { #General Strike
 		ai_chance = {
 			factor = 34
 		}
-		set_country_flag = ARG_37_revolution_flag
-		country_event = { id = arg.60 days = 1 }
+		hidden_effect = {
+			set_country_flag = ARG_37_revolution_flag
+			country_event = { id = arg.60 days = 1 }
+		}
 		complete_national_focus = ARG_1937_revolution
 		custom_effect_tooltip = ARG_terror_plot_tooltip
 	}
@@ -866,7 +872,9 @@ country_event = { #General Strike
 		ai_chance = {
 			factor = 34
 		}
-		set_country_flag = ARG_token_reform
+		hidden_effect = {
+			set_country_flag = ARG_token_reform
+		}
 		custom_effect_tooltip = ARG_ucr_wins_tooltip
 	}
 	option = {
@@ -874,7 +882,9 @@ country_event = { #General Strike
 		ai_chance = {
 			factor = 32
 		}
-		set_country_flag = ARG_march
+		hidden_effect = {
+			set_country_flag = ARG_march
+		}
 		custom_effect_tooltip = ARG_ps_wins_tooltip
 	}
 }
