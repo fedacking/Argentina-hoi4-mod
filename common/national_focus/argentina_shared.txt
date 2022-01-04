@@ -2015,7 +2015,7 @@
 	
 	shared_focus = {
 		id = ARG_suspend_constitutional_rights
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_secret_weapon
 		cost = 8
 		available = {
 			has_war = no
@@ -2032,7 +2032,7 @@
 	
 	shared_focus = {
 		id = ARG_reassure_allied_diplomats
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_chi_british_cooperation
 		cost = 8
 		available = {
 			has_war = no
@@ -2049,7 +2049,7 @@
 	
 	shared_focus = {
 		id = ARG_break_diplomatic_relations_with_germany
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 8
 		available = {
 			has_war = no
@@ -2066,7 +2066,7 @@
 	
 	shared_focus = {
 		id = ARG_declare_war_on_germany
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_attack_germany
 		cost = 8
 		available = {
 			has_war = no
@@ -2083,7 +2083,7 @@
 	
 	shared_focus = {
 		id = ARG_supress_accion_argentina
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_rom_parties_end
 		cost = 8
 		available = {
 			has_war = no
@@ -2100,7 +2100,7 @@
 	
 	shared_focus = {
 		id = ARG_suspend_pro_allied_newspapers
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 8
 		available = {
 			has_war = no
@@ -2117,7 +2117,7 @@
 	
 	shared_focus = {
 		id = ARG_buy_weapons_from_germany
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_chi_mission_to_germany
 		cost = 8
 		available = {
 			has_war = no
