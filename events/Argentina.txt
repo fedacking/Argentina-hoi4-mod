@@ -35,6 +35,7 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
+		country_event = { id = arg.1 days = 278 }
 		set_country_flag = ARG_fraude_patriotico
 		custom_effect_tooltip = ARG_fraude_patriotico_tooltip
 	}
@@ -73,7 +74,7 @@ country_event = { #Ortiz wins
 		}
 		set_country_flag = ARG_ortiz_wins_1937
 		country_event = { id = arg.2 days = 1390 }
-		ARG_roberto_maría_ortiz = {
+		ARG_roberto_maria_ortiz = {
 			promote_character = yes
 		}
 		set_politics = {
@@ -253,7 +254,7 @@ country_event = {
 			}
 		}
 		add_country_leader_role = {
-			character = ARG_edelmiro_julián_farrell
+			character = ARG_edelmiro_julian_farrell
 			promote_leader = yes
 			country_leader = {
 				expire = "1965.1.1"
@@ -1431,7 +1432,7 @@ country_event = { #PALACIOS WON 43
 			long_name = ARG_democratic_party_long
 			name = ARG_democratic_party
 		}
-		add_ideas = {ARG_ucr)
+		add_ideas = { ARG_ucr }
 	}
 	
 	option = {
@@ -1503,7 +1504,7 @@ country_event = { #MORENO WON 43
 			long_name = ARG_democratic_party_long
 			name = ARG_democratic_party
 		}
-		add_ideas = {ARG_ucr)
+		add_ideas = { ARG_ucr }
 	}
 	
 	option = {

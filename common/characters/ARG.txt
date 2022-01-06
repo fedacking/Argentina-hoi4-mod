@@ -32,7 +32,7 @@ characters = {
 			}
 		}
 	}
-	ARG_roberto_maría_ortiz = {
+	ARG_roberto_maria_ortiz = {
 		name = "Roberto M. Ortiz"
 		portraits = {
 			civilian = {
@@ -146,7 +146,7 @@ characters = {
 			traits = { army_chief_defensive_2 }
 		}
 	}
-	ARG_edelmiro_julián_farrell = {
+	ARG_edelmiro_julian_farrell = {
 		name = "Edelmiro Julián Farrell"
 		portraits = {
 			army = {
@@ -171,7 +171,7 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
-			idea_token = ARG_edelmiro_julián_farrell
+			idea_token = ARG_edelmiro_julian_farrell
 			slot = high_command
 			cost = 150
 			traits = { army_regrouping_2 }

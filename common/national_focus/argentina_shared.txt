@@ -2019,6 +2019,19 @@
 		cost = 8
 		available = {
 			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = ARG_allies_at_war_with_germany_tt
+				OR = { 
+					USA = {
+						has_government = democratic
+						has_war_with = GER
+					}
+					ENG = {
+						has_government = democratic
+						has_war_with = GER
+					}
+				}
+			}
 		}
 		prerequisite = {
 			focus = ARG_neutrality_diplomacy

@@ -192,6 +192,7 @@ ARG_ps_wins_tooltip:0 "Partido Socialista will win the election. (DEMOCRATIC PAT
 ARG_commie_revolution_tooltip:0 "A communist revolution will begin. (COMMUNIST PATH)"
 ARG_fascist_takeover_tooltip:0 "A strong leader will take over. (FASCIST PATH)"
 ARG_stabilized_tooltip:0 "This will stabilize the nation."
+ARG_allies_at_war_with_germany_tt: "The Allies are at war with Germany"
 ARG_join_axis_tooltip:0 "Argentina joins the Axis."
 ARG_join_comintern_tooltip:0 "Argentina joins the Comintern."
 
