@@ -1285,7 +1285,7 @@ country_event = { #REPETTO WON 37
 			long_name = ARG_democratic_party_long
 			name = ARG_democratic_party
 		}
-		add_ideas = {ARG_ucr)
+		add_ideas = { ARG_ucr }
 	}
 	
 	option = {
