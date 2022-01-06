@@ -77,9 +77,6 @@ country_event = { #Ortiz wins
 		ARG_roberto_maria_ortiz = {
 			promote_character = yes
 		}
-		set_politics = {
-			ruling_party = neutrality
-		}
 		set_popularities = {
 			democratic = 28
 			fascism = 4
@@ -845,160 +842,385 @@ country_event = {
 
 ###The Diabetes Arc
 
+#DIABETES FIRST ELECTION
+
 country_event = {
-    id = arg.30
-    title = arg.30.t
-    desc = arg.30.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Fraude_Patriotico
-	is_triggered_only = yes
+	id = arg.30
+	title = arg.30.t
+	desc = arg.30.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
     trigger = {
         tag = arg
-        date > 1941.1.1
         has_country_flag = ARG_ortiz_stands_for_democracy
     }
+	is_triggered_only = yes
 
 	option = {
 		name = arg.30.a
 		ai_chance = {
-			factor = 50
-		}
-		set_country_flag = ARG_tamborini_wins_1941
-		ARG_jose_pascual_tamborini = { promote_character = yes }
-		set_politics = {
-			ruling_party = democratic
-			election_frequency = 72
-			elections_allowed = yes
-		}
-		set_popularities = {
-			democratic = 100
-			fascism = 0
-			communism = 0
-			neutrality = 0
+			factor = 40
 		}
 		hidden_effect = {
 			remove_ideas = {
-				ARG_concordancia
+				ARG_concordancia_ucra
 			}
-			add_ideas = {ARG_ucr}
+			set_country_flag = ARG_tamborini_wins_diabetes_first
+			country_event = { id = arg.31 days = 2192 }
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		ARG_jose_pascual_tamborini = {
+			promote_character = yes
 		}
 	}
 
 	option = {
 		name = arg.30.b
 		ai_chance = {
-			factor = 50
+			factor = 30
 		}
-		set_country_flag = ARG_palacios_wins_1941
+		hidden_effect = {
+			remove_ideas = {
+				ARG_concordancia_ucra
+			}
+			set_country_flag = ARG_repetto_wins_diabetes_first
+			country_event = { id = arg.32 days = 2192 }
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		ARG_nicolas_repetto = {
+			promote_character = yes
+		}
 		set_party_name = {
 			ideology = democratic
 			long_name = ARG_democratic_party_ps_long
 			name = ARG_democratic_party_ps
 		}
-		ARG_alfredo_palacios = { promote_character = yes }
-		set_politics = {
-			ruling_party = democratic
-			election_frequency = 72
-			elections_allowed = yes
-		}
-		set_popularities = {
-			democratic = 100
-			fascism = 0
-			communism = 0
-			neutrality = 0
+		add_ideas = {ARG_ps}
+	}
+	
+	option = {
+		name = arg.30.c
+		ai_chance = {
+			factor = 30
 		}
 		hidden_effect = {
 			remove_ideas = {
-				ARG_concordancia
+				ARG_concordancia_ucra
 			}
-			add_ideas = {ARG_ps}
+			set_country_flag = ARG_moreno_wins_diabetes_first
+			country_event = { id = arg.33 days = 2192 }
 		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		ARG_rodolfo_moreno = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
 	}
 }
 
+#DIABETES SECOND ELECTION
+
 country_event = {
-    id = arg.31
-    title = arg.31.t
-    desc = arg.31.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Fraude_Patriotico
-	is_triggered_only = yes
+	id = arg.31
+	title = arg.31.t
+	desc = arg.31.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
     trigger = {
         tag = arg
-        date > 1947.1.1
-        has_country_flag = ARG_tamborini_wins_1941
+        has_country_flag = ARG_ortiz_stands_for_democracy
     }
-
+	is_triggered_only = yes
+	
 	option = {
 		name = arg.31.a
 		ai_chance = {
-			factor = 50
+			factor = 40
 		}
-		set_country_flag = ARG_balbin_wins_1947
-		ARG_ricardo_balbin = { promote_character = yes }
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+				ARG_pdn
+			}
+			set_country_flag = ARG_balbin_wins_diabetes_second
+			country_event = { id = arg.32 days = 2192 }
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_long
+			name = ARG_democratic_party
+		}
+		add_ideas = { ARG_ucr }
 	}
 
 	option = {
 		name = arg.31.b
 		ai_chance = {
-			factor = 50
+			factor = 30
 		}
-		set_country_flag = ARG_palacios_wins_1947
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ps_long
-			name = ARG_democratic_party_ps
-		}
-		ARG_alfredo_palacios = { promote_character = yes }
 		hidden_effect = {
 			remove_ideas = {
 				ARG_ucr
+				ARG_pdn
 			}
-			add_ideas = {ARG_ps}
+			set_country_flag = ARG_palacios_wins_diabetes_second
+			country_event = { id = arg.33 days = 2192 }
 		}
+		add_ideas = {ARG_ps}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+	}
+	
+	option = {
+		name = arg.31.c
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+				ARG_ps
+			}
+			set_country_flag = ARG_solano_wins_diabetes_second
+			country_event = { id = arg.34 days = 2192 }
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
 	}
 }
 
-country_event = {
-    id = arg.32
-    title = arg.32.t
-    desc = arg.32.d
-    fire_only_once = yes
-    picture = GFX_event_picture_Elecciones_1951
+#DIABETES THIRD ELECTION
+
+
+country_event = { #BALBIN WON DIABETES SECOND
+	id = arg.32
+	title = arg.32.t
+	desc = arg.32.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_balbin_wins_diabetes_second
+	}
 	is_triggered_only = yes
-    trigger = {
-        tag = arg
-        date > 1947.1.1
-        has_country_flag = ARG_palacios_wins_1941
-    }
 
 	option = {
 		name = arg.32.a
 		ai_chance = {
-			factor = 50
+			factor = 60
 		}
-		set_country_flag = ARG_balbin_wins_1947
-		set_party_name = {
-			ideology = democratic
-			long_name = ARG_democratic_party_ucr_long
-			name = ARG_democratic_party_ucr
-		}
-		ARG_ricardo_balbin = { promote_character = yes }
 		hidden_effect = {
-			remove_ideas = {
-				ARG_ps
-			}
-			add_ideas = {ARG_ucr}
+			set_country_flag = ARG_frondizi_wins_diabetes_third
+		}
+		ARG_arturo_frondizi = {
+			promote_character = yes
 		}
 	}
 
 	option = {
 		name = arg.32.b
 		ai_chance = {
-			factor = 50
+			factor = 30
 		}
-		set_country_flag = ARG_moreaujusto_wins_1947
-		ARG_alicia_moreau_de_justo = { promote_character = yes }
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_palacios_wins_diabetes_third
+		}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
+	}
+	
+	option = {
+		name = arg.32.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ucr
+			}
+			set_country_flag = ARG_solano_wins_diabetes_third
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
+	}
+}
+
+country_event = { #PALACIOS WON DIABETES SECOND
+	id = arg.33
+	title = arg.33.t
+	desc = arg.33.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_palacios_wins_diabetes_third
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = arg.33.a
+		ai_chance = {
+			factor = 40
+		}
+		hidden_effect = {
+			set_country_flag = ARG_alicia_wins_diabetes_third
+		}
+		ARG_alicia_moreau_de_justo = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
+	}
+
+	option = {
+		name = arg.33.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			set_country_flag = ARG_balbin_wins_diabetes_third
+			remove_ideas = {
+				ARG_ps
+			}
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+	}
+	
+	option = {
+		name = arg.33.c
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ARG_ps
+			}
+			set_country_flag = ARG_solano_wins_diabetes_third
+		}
+		ARG_vicente_solano_lima = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+		add_ideas = {ARG_pdn}
+	}
+}
+
+country_event = { #SOLANO WON DIABETES SECOND
+	id = arg.34
+	title = arg.34.t
+	desc = arg.34.d
+	fire_only_once = yes
+	picture = GFX_event_picture_Generic_Elections
+	trigger = {
+		tag = arg
+		has_country_flag = ARG_solano_wins_diabetes_third
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = arg.34.a
+		ai_chance = {
+			factor = 40
+		}
+		hidden_effect = {
+			set_country_flag = ARG_vicchi_wins_diabetes_third
+		}
+		ARG_adolfo_vicchi_dem = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_pdn_long
+			name = ARG_democratic_party_pdn
+		}
+	}
+
+	option = {
+		name = arg.34.b
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			set_country_flag = ARG_balbin_wins_diabetes_third
+			remove_ideas = {
+				ARG_pdn
+			}
+		}
+		ARG_ricardo_balbin = {
+			promote_character = yes
+		}
+		add_ideas = {ARG_ucr}
+	}
+
+	option = {
+		name = arg.34.c
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			set_country_flag = ARG_palacios_wins_diabetes_third
+			remove_ideas = {
+				ARG_pdn
+			}
+		}
+		ARG_alfredo_palacios = {
+			promote_character = yes
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ARG_democratic_party_ps_long
+			name = ARG_democratic_party_ps
+		}
+		add_ideas = {ARG_ps}
 	}
 }
 

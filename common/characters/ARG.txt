@@ -377,6 +377,20 @@ characters = {
 			id = -1
 		}
 	}
+	ARG_adolfo_vicchi_dem = {
+		name = "Adolfo Vicchi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ADOLFO_VICCHI_DESC"
+			ideology = conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 	#fash
 	ARG_manuel_fresco = {
 		name = "Manuel Fresco"
