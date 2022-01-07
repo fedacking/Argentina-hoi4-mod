@@ -53,3 +53,13 @@ ARG_the_supply_problem_category = {
 		}
 	}
 }
+
+ARG_liberate_america_category = {
+	allowed = {
+		original_tag = ARG
+	}
+
+	visible = {
+		#has_completed_focus = ARG_south_american_liberation
+	}
+}

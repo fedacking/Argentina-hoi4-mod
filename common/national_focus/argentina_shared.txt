@@ -2358,6 +2358,22 @@
 		}
 	}
 	
+	shared_focus = {
+		id = ARG_south_american_liberation
+		icon = GFX_focus_focus_fra_fascist_threat
+		cost = 8
+		available = {
+		}
+		prerequisite = { focus = ARG_south_american_joint_command_staff }
+		prerequisite = { focus = ARG_south_american_research }
+		relative_position_id = ARG_buenos_aires_conference
+		x = 0
+		y = 2
+		completion_reward = {
+			unlock_decision_category_tooltip = ARG_liberate_america_category
+		}
+	}
+	
 #Allies
 	
 	shared_focus = {

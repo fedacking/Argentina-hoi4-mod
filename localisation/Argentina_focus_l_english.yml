@@ -259,6 +259,8 @@ ARG_south_american_research:0 "The Brightest Minds Of South America"
 ARG_south_american_research_desc:0 "It's time to put our differences aside, and start working on the tech and weaponry needed to weather this storm. With the creation of the Instituto de Ciencia y Tecnología Iberoamericana, we can put our best mind to the task of defending South America."
 ARG_south_american_joint_command_staff:0 "Joint Defence Initiative"
 ARG_south_american_joint_command_staff_desc:0 "The militaries of South America have always been proud rivals of each other. But now that we work under the same banner, it's time to sit down and propose a single coordinated plan of action."
+ARG_south_american_liberation: "South American Freedom"
+ARG_south_american_liberation_desc: "For too long we have left our American brothers live under the totalitarian boot of Fascists, Communists and other anti democratic forces. No longer shall we tolerate this attack on freedom. For us and our brothers, we shall begin planning the liberation of America."
 
 ARG_ask_politely_malvinas:0 "Ask Politely for Malvinas"
 ARG_ask_politely_malvinas_desc:0 "The English are engaged in a war to the death. It's time to make them an offer they can't refuse. In exchange for the Malvinas, we will join their faction, and commit to help them in their war."
