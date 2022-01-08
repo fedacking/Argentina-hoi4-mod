@@ -940,9 +940,9 @@
 		x = -4
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 3
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.8
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -1022,9 +1022,9 @@
 		x = 0
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -1064,9 +1064,9 @@
 		x = 0
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 3
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.8
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1187,9 +1187,9 @@
 		x = 4
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 3
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.8
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1271,9 +1271,9 @@
 		x = 0
 		y = 1
 		completion_reward = {
-		add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 3
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.8
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1332,9 +1332,9 @@
 		
 		completion_reward = {
 			air_experience = 20
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1423,9 +1423,9 @@
                 uses = 1
                 category = air_equipment
             }
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1453,9 +1453,9 @@
 					add_idea = ARG_idea_long_range_planes
 				}
 			}
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1483,9 +1483,9 @@
 					add_idea = ARG_idea_heavy_armament_planes
 				}
 			}
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1513,9 +1513,9 @@
 					add_idea = ARG_idea_agile_planes
 				}
 			}
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1621,9 +1621,9 @@
 		}
 		completion_reward = {
 			navy_experience = 20
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 2
+			add_doctrine_cost_reduction = {
+				name = navy_doc_bonus
+				cost_reduction = 0.75
 				uses = 1
 				category = naval_doctrine
 			}
@@ -2547,6 +2547,38 @@
 		y = 1
 		completion_reward = {
 			add_ideas = ARG_lend_lease
+		}
+	}
+	
+	shared_focus = {
+		id = ARG_the_model_ally
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 8
+		available = {
+		}
+		prerequisite = { 
+			focus = ARG_full_mobilisation 
+			focus = ARG_embrace_lend_lease
+		}
+		relative_position_id = ARG_ask_politely_malvinas
+		x = 0
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = ARG_the_model_ally_tt
+			if = {
+				limit = { has_idea = ARG_increased_conscription }
+				swap_ideas = {
+					remove_idea = ARG_increased_conscription
+					add_idea = ARG_increased_conscription_0
+				}
+			}
+			if = {
+				limit = { has_idea = ARG_lend_lease }
+				swap_ideas = {
+					remove_idea = ARG_lend_lease
+					add_idea = ARG_lend_lease_0
+				}
+			}
 		}
 	}
 	

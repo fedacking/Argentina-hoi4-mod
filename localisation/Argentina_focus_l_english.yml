@@ -276,6 +276,8 @@ ARG_full_mobilisation:0 "All Must Fight for Freedom"
 ARG_full_mobilisation_desc:0 "The world stands at the brink of death, attacked at all sides by communists and fascists alike. In this darkest hour, the world calls for our help. If we respond, the world will remember that this was our finest hour."
 ARG_embrace_lend_lease:0 "Embrace Lend Lease"
 ARG_embrace_lend_lease_desc:0 "The men fighting in the beaches, fighting in the trenches, fighting in the cities, need all the support they can get. They need all the bullets, grenades, bombs and weapons we can give them. So, Praise the Lord, and pass the ammunition."
+ARG_the_model_ally: "The Model Ally"
+ARG_the_model_ally_desc: "We must step up. This will be our legacy, that when the world called for aid against the enemies of freedom, we responded to the call. We will bolster the armies of our allies, and crush the enemies of freedom worlwide."
 
 #Fight for Clay
 ARG_collectivist_diplomacy:0 "The Might of the Argentine People"
