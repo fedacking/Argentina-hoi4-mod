@@ -147,12 +147,12 @@ ARG_integrate_riogrande:0 "Integrate Río Grande"
 ARG_integrate_chile:0 "Integrate Chile"
 ##Resource Decisions
 develop_buenos_aires_aluminium_deposits:0 "Develop Buenos Aires Aluminium"
-develop_buenos_aires_aluminium_deposits2:0 "Pour money into State Aluminium"
-develop_patagonia_aluminium_deposits:0 "Develop Patagonia Aluminium"
-develop_entre_rios_oil_deposits:0 "Further Investments From YPF into Entre Rios"
-develop_patagonia_oil_deposits:0 "Further Investments From YPF into Patagonia"
-develop_mendoza_iron_deposits:0 "Further Investments Into Mendoza Steel"
-develop_chaco_tungsten_deposits:0 "Further Investments Into Chaco Tungsten"
+develop_buenos_aires_aluminium_deposits2:0 "Pour money into state Aluminium"
+develop_patagonia_aluminium_deposits:0 "Develop Patagonian Aluminium"
+develop_entre_rios_oil_deposits:0 "Further Investments from YPF into Entre Rios"
+develop_patagonia_oil_deposits:0 "Further Investments from YPF into Patagonia"
+develop_mendoza_iron_deposits:0 "Further Investments into Mendoza Steel"
+develop_chaco_tungsten_deposits:0 "Further Investments into Chaco Tungsten"
 
 ### Flags ###
 ARG_ortiz_wins_1937:0 "Ortiz won the presidency!"
