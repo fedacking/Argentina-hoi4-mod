@@ -235,4 +235,11 @@ spriteTypes = {
 		name = "GFX_idea_ARG_idea_company_YPF"
 		texturefile = "gfx/interface/ideas/ARG/companies/ypf.dds"
 	}
+
+	# Agency logo
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_arg"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_Argentina.png"
+		noOfFrames = 2
+	}
 }

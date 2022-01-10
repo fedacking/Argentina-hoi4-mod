@@ -1,0 +1,9 @@
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_arg
+	names = { "Secretaría de Inteligencia" }
+
+	default = { tag = ARG }
+	available = { original_tag = ARG }
+}
