@@ -1,0 +1,9 @@
+argentine_immigration_scorer = {
+	targets = {
+		target_array = ARG_immigration_countries
+		score = {
+			base = 0
+			modifier = { add = ARG_migration }
+		}
+	}
+}

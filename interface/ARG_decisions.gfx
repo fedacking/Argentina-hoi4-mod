@@ -7,4 +7,9 @@ spriteTypes = {
 		name = "GFX_decision_cat_provincias_unidas"
 		texturefile = "gfx/interface/decisions/decision_cat_provincias_unidas.tga"
 	}
+
+	spriteType = {
+		name = "GFX_decision_cat_arg_liberty"
+		texturefile = "gfx/interface/decisions/decision_cat_arg_liberty.dds"
+	}
 }

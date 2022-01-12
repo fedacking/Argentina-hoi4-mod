@@ -1,8 +1,20 @@
 on_actions = {
 	# country 
+	on_startup = {
+		effect = {
+			ARG = {
+				ARG_initialize_immigration = yes
+				ARG_reposition_immigration = yes
+			}
+		}
+	}
+
 	on_monthly_ARG = {
 		effect = {
-			log = "ARG"
+			ARG = { 
+				ARG_update_migration = yes
+				ARG_reposition_immigration = yes
+			}
 		}
 	}
 }

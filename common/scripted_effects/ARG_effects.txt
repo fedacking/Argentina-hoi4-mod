@@ -1,16 +1,19 @@
 
 ARG_initialize_immigration = {
 	clear_array = ARG_immigration_countries
-	set_country_flag = ARG_immigration_started_flag
 	add_to_array = { ARG_immigration_countries = SPR }
-	set_variable = { argentine_migration@SPR = 1.175 }
+	set_variable = { argentine_migration@SPR = 3 }
 	add_to_array = { ARG_immigration_countries = ITA }
-	set_variable = { argentine_migration@ITA = 1.175 }
+	set_variable = { argentine_migration@ITA = 2 }
 	ARG_reposition_immigration = yes
 	ARG_update_migration = yes
 }
 
 ARG_reposition_immigration = {
+	get_sorted_scored_countries = {
+		scorer = argentine_immigration_scorer
+		array = ARG_immigration_countries
+	}
 	set_variable = { ARG_next_country = ARG_immigration_countries^0 }
 	set_temp_variable = { position = 0 }
 	set_variable = { ARG_immigration_position = position }
@@ -24,12 +27,61 @@ ARG_reposition_immigration = {
 }
 
 ARG_update_migration = {
+	set_temp_variable = { total_migration = 0 }
+	every_country = {
+		limit = {
+			NOT = { is_in_array = { ARG.ARG_immigration_countries = THIS } }
+			capital_scope = { is_on_continent = europe }
+			check_variable = { max_manpower_k > 13000 }
+		}
+		add_to_array = { ARG.ARG_immigration_countries = THIS }
+		set_variable = { ARG.argentine_migration@THIS = 0.1 }
+
+		if = {
+			limit = { original_tag = SPR }
+
+			set_variable = { ARG.argentine_migration@THIS = 3 }
+		}
+		else_if = {
+			limit = { original_tag = SOV }
+
+			set_variable = { ARG.argentine_migration@THIS = 0.033 }
+		}
+		else_if = {
+			limit = { original_tag = FRA }
+
+			set_variable = { ARG.argentine_migration@THIS = 0.01 }
+		}
+		else_if = {
+			limit = { original_tag = ENG }
+
+			set_variable = { ARG.argentine_migration@THIS = 0.033 }
+		}
+	}
+	for_each_loop = {
+		array = ARG_immigration_countries
+
+		if = {
+			limit = { NOT = { country_exists = v } }
+			remove_from_array = { ARG_immigration_countries = v }
+		}
+	}
 	for_each_scope_loop = {
 		array = ARG_immigration_countries
 		
 		set_variable = { ARG_migration = ARG.argentine_migration@THIS }
 		multiply_variable = { ARG_migration = max_manpower_k }
 		divide_variable = { ARG_migration = 12 }
+
+		if = {
+			limit = { has_civil_war = yes }
+			multiply_variable = { ARG_migration = 2 }
+		}
+
+		add_to_temp_variable = { total_migration = ARG_migration }
+	}
+	278 = {
+		add_manpower = var:total_migration
 	}
 }
 

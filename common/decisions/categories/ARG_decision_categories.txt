@@ -36,9 +36,13 @@ ARG_immigration_category = {
 		original_tag = ARG
 	}
 
+	picture = GFX_decision_cat_arg_liberty
+
 	visible = {
-		has_country_flag = ARG_immigration_started_flag
+		has_completed_focus = ARG_migrant_acceptance
 	}
+
+	visible_when_empty = yes
 }
 
 ARG_the_supply_problem_category = {
@@ -60,6 +64,6 @@ ARG_liberate_america_category = {
 	}
 
 	visible = {
-		#has_completed_focus = ARG_south_american_liberation
+		has_completed_focus = ARG_south_american_liberation
 	}
 }

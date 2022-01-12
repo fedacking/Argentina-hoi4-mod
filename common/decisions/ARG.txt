@@ -275,14 +275,6 @@ ARG_foreign_affairs_category = {
 }
 
 ARG_immigration_category = {
-	ARG_immigration_tooltip = {
-		icon = generic_prepare_civil_war
-		available = { always = no }
-		fire_only_once = yes
-		complete_effect = {
-		}
-		ai_will_do = { factor = 0 }
-	}
 }
 
 ARG_the_supply_problem_category = {
