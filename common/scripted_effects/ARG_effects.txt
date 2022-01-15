@@ -5,8 +5,18 @@ ARG_initialize_immigration = {
 	set_variable = { argentine_migration@SPR = 3 }
 	add_to_array = { ARG_immigration_countries = ITA }
 	set_variable = { argentine_migration@ITA = 2 }
+	ARG_reset_immigration_vars = yes
 	ARG_reposition_immigration = yes
 	ARG_update_migration = yes
+}
+
+ARG_reset_immigration_vars = {
+	set_variable = { migration_multiplier_ba = 0.75 } # Buenos Aires
+	set_variable = { migration_multiplier_er = 0.14 } # Mesopotamia
+	set_variable = { migration_multiplier_me = 0.05 } # Mendoza
+	set_variable = { migration_multiplier_tu = 0.03 } # Tucuman
+	set_variable = { migration_multiplier_ca = 0.02 } # Chaco Austral
+	set_variable = { migration_multiplier_pa = 0.01 } # Patagonia
 }
 
 ARG_reposition_immigration = {
@@ -27,37 +37,47 @@ ARG_reposition_immigration = {
 }
 
 ARG_update_migration = {
-	set_temp_variable = { total_migration = 0 }
+	set_variable = { total_migration = 0 }
 	every_country = {
 		limit = {
 			NOT = { is_in_array = { ARG.ARG_immigration_countries = THIS } }
 			capital_scope = { is_on_continent = europe }
-			check_variable = { max_manpower_k > 13000 }
 		}
-		add_to_array = { ARG.ARG_immigration_countries = THIS }
-		set_variable = { ARG.argentine_migration@THIS = 0.1 }
 
 		if = {
 			limit = { original_tag = SPR }
 
+			add_to_array = { ARG.ARG_immigration_countries = THIS }
 			set_variable = { ARG.argentine_migration@THIS = 3 }
 		}
 		else_if = {
 			limit = { original_tag = SOV }
 
+			add_to_array = { ARG.ARG_immigration_countries = THIS }
 			set_variable = { ARG.argentine_migration@THIS = 0.033 }
 		}
 		else_if = {
 			limit = { original_tag = FRA }
 
+			add_to_array = { ARG.ARG_immigration_countries = THIS }
 			set_variable = { ARG.argentine_migration@THIS = 0.01 }
 		}
 		else_if = {
 			limit = { original_tag = ENG }
 
+			add_to_array = { ARG.ARG_immigration_countries = THIS }
 			set_variable = { ARG.argentine_migration@THIS = 0.033 }
 		}
+		else_if = {
+			limit = { check_variable = { max_manpower_k < 13000 } }
+			# Break
+		}
+		else_if = {
+			add_to_array = { ARG.ARG_immigration_countries = THIS }
+			set_variable = { ARG.argentine_migration@THIS = 0.1 }
+		}
 	}
+
 	for_each_loop = {
 		array = ARG_immigration_countries
 
@@ -78,11 +98,29 @@ ARG_update_migration = {
 			multiply_variable = { ARG_migration = 2 }
 		}
 
-		add_to_temp_variable = { total_migration = ARG_migration }
+		add_to_variable = { ARG.total_migration = ARG_migration }
 	}
-	278 = {
-		add_manpower = var:total_migration
-	}
+	
+	set_variable = { total_migration_ba = migration_multiplier_ba } # Buenos Aires
+	set_variable = { total_migration_er = migration_multiplier_er } # Mesopotamia
+	set_variable = { total_migration_me = migration_multiplier_me } # Mendoza
+	set_variable = { total_migration_tu = migration_multiplier_tu } # Tucuman
+	set_variable = { total_migration_ca = migration_multiplier_ca } # Chaco Austral
+	set_variable = { total_migration_pa = migration_multiplier_pa } # Patagonia
+
+	multiply_variable = { total_migration_ba = total_migration }
+	multiply_variable = { total_migration_er = total_migration }
+	multiply_variable = { total_migration_me = total_migration }
+	multiply_variable = { total_migration_tu = total_migration }
+	multiply_variable = { total_migration_ca = total_migration }
+	multiply_variable = { total_migration_pa = total_migration }
+
+	278 = { add_manpower = var:total_migration_ba }
+	510 = { add_manpower = var:total_migration_er }
+	511 = { add_manpower = var:total_migration_me }
+	508 = { add_manpower = var:total_migration_tu }
+	509 = { add_manpower = var:total_migration_ca }
+	512 = { add_manpower = var:total_migration_pa }
 }
 
 ARG_do_migration = {
