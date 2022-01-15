@@ -50,7 +50,6 @@ form_united_provinces_category = {
 				original_tag = URG
 				original_tag = PAR
 			}
-			has_government = fascism
 			NOT = { has_global_flag = form_uprp_flag }
 		}
 		highlight_states = {
