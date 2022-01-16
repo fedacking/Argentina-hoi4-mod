@@ -5,9 +5,41 @@ ARG_initialize_immigration = {
 	set_variable = { argentine_migration@SPR = 3 }
 	add_to_array = { ARG_immigration_countries = ITA }
 	set_variable = { argentine_migration@ITA = 2 }
+	ARG_calculate_immigration_triggers = yes
+	ARG_calculate_immigration_triggers_display = yes
 	ARG_reset_immigration_vars = yes
 	ARG_reposition_immigration = yes
 	ARG_update_migration = yes
+}
+
+ARG_calculate_immigration_triggers = {
+	set_variable = { migration_limit_ba = 1.15 } # Buenos Aires
+	set_variable = { migration_limit_er = 1.15 } # Mesopotamia
+	set_variable = { migration_limit_me = 1.15 } # Mendoza
+	set_variable = { migration_limit_tu = 1.15 } # Tucuman
+	set_variable = { migration_limit_ca = 1.15 } # Chaco Austral
+	set_variable = { migration_limit_pa = 1.15 } # Patagonia
+	
+	multiply_variable = { migration_limit_ba = 278.state_population_k }
+	multiply_variable = { migration_limit_er = 510.state_population_k }
+	multiply_variable = { migration_limit_me = 511.state_population_k }
+	multiply_variable = { migration_limit_tu = 508.state_population_k }
+	multiply_variable = { migration_limit_ca = 509.state_population_k }
+	multiply_variable = { migration_limit_pa = 512.state_population_k }
+}
+
+ARG_calculate_immigration_triggers_display = {
+	set_variable = { migration_limit_er_display = migration_limit_er } # Mesopotamia
+	set_variable = { migration_limit_me_display = migration_limit_me } # Mendoza
+	set_variable = { migration_limit_tu_display = migration_limit_tu } # Tucuman
+	set_variable = { migration_limit_ca_display = migration_limit_ca } # Chaco Austral
+	set_variable = { migration_limit_pa_display = migration_limit_pa } # Patagonia
+	
+	multiply_variable = { migration_limit_er_display = 1000 }
+	multiply_variable = { migration_limit_me_display = 1000 }
+	multiply_variable = { migration_limit_tu_display = 1000 }
+	multiply_variable = { migration_limit_ca_display = 1000 }
+	multiply_variable = { migration_limit_pa_display = 1000 }
 }
 
 ARG_reset_immigration_vars = {
@@ -15,8 +47,9 @@ ARG_reset_immigration_vars = {
 	set_variable = { migration_multiplier_er = 0.14 } # Mesopotamia
 	set_variable = { migration_multiplier_me = 0.05 } # Mendoza
 	set_variable = { migration_multiplier_tu = 0.03 } # Tucuman
-	set_variable = { migration_multiplier_ca = 0.02 } # Chaco Austral
-	set_variable = { migration_multiplier_pa = 0.01 } # Patagonia
+	set_variable = { migration_multiplier_ca = 0.01 } # Chaco Austral
+	set_variable = { migration_multiplier_pa = 0.02 } # Patagonia
+	custom_effect_tooltip = ARG_reset_immigration_vars_tt
 }
 
 ARG_reposition_immigration = {
@@ -38,6 +71,8 @@ ARG_reposition_immigration = {
 
 ARG_update_migration = {
 	set_variable = { total_migration = 0 }
+
+	# Agrega paises faltantes
 	every_country = {
 		limit = {
 			NOT = { is_in_array = { ARG.ARG_immigration_countries = THIS } }
@@ -78,6 +113,7 @@ ARG_update_migration = {
 		}
 	}
 
+	# Sacar paises muertos
 	for_each_loop = {
 		array = ARG_immigration_countries
 
@@ -86,6 +122,8 @@ ARG_update_migration = {
 			remove_from_array = { ARG_immigration_countries = v }
 		}
 	}
+
+	# Calcula Inmigracion
 	for_each_scope_loop = {
 		array = ARG_immigration_countries
 		
@@ -101,6 +139,7 @@ ARG_update_migration = {
 		add_to_variable = { ARG.total_migration = ARG_migration }
 	}
 	
+	# Suma a las provincias
 	set_variable = { total_migration_ba = migration_multiplier_ba } # Buenos Aires
 	set_variable = { total_migration_er = migration_multiplier_er } # Mesopotamia
 	set_variable = { total_migration_me = migration_multiplier_me } # Mendoza
@@ -115,14 +154,65 @@ ARG_update_migration = {
 	multiply_variable = { total_migration_ca = total_migration }
 	multiply_variable = { total_migration_pa = total_migration }
 
-	278 = { add_manpower = var:total_migration_ba }
-	510 = { add_manpower = var:total_migration_er }
-	511 = { add_manpower = var:total_migration_me }
-	508 = { add_manpower = var:total_migration_tu }
-	509 = { add_manpower = var:total_migration_ca }
-	512 = { add_manpower = var:total_migration_pa }
+	278 = { add_manpower = var:ARG.total_migration_ba }
+	510 = { add_manpower = var:ARG.total_migration_er }
+	511 = { add_manpower = var:ARG.total_migration_me }
+	508 = { add_manpower = var:ARG.total_migration_tu }
+	509 = { add_manpower = var:ARG.total_migration_ca }
+	512 = { add_manpower = var:ARG.total_migration_pa }
+
+	
+	# Aumenta building slots
+	if = {
+		limit = { check_variable = { 278.state_population_k > migration_limit_ba } }
+		278 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_ba = 1.15 }
+	}
+	if = {
+		limit = { check_variable = { 510.state_population_k > migration_limit_ba } }
+		510 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_er = 1.15 }
+	}
+	if = {
+		limit = { check_variable = { 511.state_population_k > migration_limit_ba } }
+		511 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_me = 1.15 }
+	}
+	if = {
+		limit = { check_variable = { 508.state_population_k > migration_limit_ba } }
+		508 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_tu = 1.15 }
+	}
+	if = {
+		limit = { check_variable = { 509.state_population_k > migration_limit_ba } }
+		509 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_ca = 1.15 }
+	}
+	if = {
+		limit = { check_variable = { 512.state_population_k > migration_limit_ba } }
+		512 = { add_extra_state_shared_building_slots = 1 }
+		multiply_variable = { migration_limit_pa = 1.15 }
+	}
+	ARG_calculate_immigration_triggers_display = yes
 }
 
-ARG_do_migration = {
+crashing_effect = {
+    POR = {
+        POR_antonio_de_oliveira_salazar = {
+            remove_country_leader_role = {
+                ideology = despotism
+            }
+            add_country_leader_role = {
+                country_leader = {
+                    expire = "1954.8.24"
+                    ideology = fascism_ideology
+                    traits = {
+                        anti_communist
+                    }
+                }
+                promote_leader = yes
+            }
+        }
 
+    }
 }

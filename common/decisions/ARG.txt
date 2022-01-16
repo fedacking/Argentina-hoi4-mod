@@ -274,6 +274,121 @@ ARG_foreign_affairs_category = {
 }
 
 ARG_immigration_category = {
+	ARG_incentives_er = {
+		visible = {
+			NOT = { has_decision = ARG_incentives_me }
+			NOT = { has_decision = ARG_incentives_tu }
+			NOT = { has_decision = ARG_incentives_ca }
+			NOT = { has_decision = ARG_incentives_pa }
+		}
+        cost = 25
+        fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			set_variable = { migration_multiplier_ba = 0.40 } # Buenos Aires
+			set_variable = { migration_multiplier_er = 0.50 } # Mesopotamia
+			set_variable = { migration_multiplier_me = 0.05 } # Mendoza
+			set_variable = { migration_multiplier_tu = 0.02 } # Tucuman
+			set_variable = { migration_multiplier_ca = 0.01 } # Chaco Austral
+			set_variable = { migration_multiplier_pa = 0.02 } # Patagonia
+			custom_effect_tooltip = ARG_incentives_er_tt
+		}
+		remove_effect = {
+			ARG_reset_immigration_vars = yes
+		}
+	}
+	ARG_incentives_me = {
+		visible = {
+			NOT = { has_decision = ARG_incentives_er }
+			NOT = { has_decision = ARG_incentives_tu }
+			NOT = { has_decision = ARG_incentives_ca }
+			NOT = { has_decision = ARG_incentives_pa }
+		}
+        cost = 25
+        fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			set_variable = { migration_multiplier_ba = 0.40 } # Buenos Aires
+			set_variable = { migration_multiplier_er = 0.07 } # Mesopotamia
+			set_variable = { migration_multiplier_me = 0.50 } # Mendoza
+			set_variable = { migration_multiplier_tu = 0.01 } # Tucuman
+			set_variable = { migration_multiplier_ca = 0.01 } # Chaco Austral
+			set_variable = { migration_multiplier_pa = 0.01 } # Patagonia
+			custom_effect_tooltip = ARG_incentives_me_tt
+		}
+		remove_effect = {
+			ARG_reset_immigration_vars = yes
+		}
+	}
+	ARG_incentives_tu = {
+		visible = {
+			NOT = { has_decision = ARG_incentives_er }
+			NOT = { has_decision = ARG_incentives_me }
+			NOT = { has_decision = ARG_incentives_ca }
+			NOT = { has_decision = ARG_incentives_pa }
+		}
+        cost = 50
+        fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			set_variable = { migration_multiplier_ba = 0.55 } # Buenos Aires
+			set_variable = { migration_multiplier_er = 0.08 } # Mesopotamia
+			set_variable = { migration_multiplier_me = 0.04 } # Mendoza
+			set_variable = { migration_multiplier_tu = 0.40 } # Tucuman
+			set_variable = { migration_multiplier_ca = 0.01 } # Chaco Austral
+			set_variable = { migration_multiplier_pa = 0.02 } # Patagonia
+			custom_effect_tooltip = ARG_incentives_me_tt
+		}
+		remove_effect = {
+			ARG_reset_immigration_vars = yes
+		}
+	}
+	ARG_incentives_ca = {
+		visible = {
+			NOT = { has_decision = ARG_incentives_er }
+			NOT = { has_decision = ARG_incentives_me }
+			NOT = { has_decision = ARG_incentives_tu }
+			NOT = { has_decision = ARG_incentives_pa }
+		}
+        cost = 75
+        fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			set_variable = { migration_multiplier_ba = 0.55 } # Buenos Aires
+			set_variable = { migration_multiplier_er = 0.08 } # Mesopotamia
+			set_variable = { migration_multiplier_me = 0.04 } # Mendoza
+			set_variable = { migration_multiplier_tu = 0.02 } # Tucuman
+			set_variable = { migration_multiplier_ca = 0.30 } # Chaco Austral
+			set_variable = { migration_multiplier_pa = 0.01 } # Patagonia
+			custom_effect_tooltip = ARG_incentives_ca_tt
+		}
+		remove_effect = {
+			ARG_reset_immigration_vars = yes
+		}
+	}
+	ARG_incentives_pa = {
+		visible = {
+			NOT = { has_decision = ARG_incentives_er }
+			NOT = { has_decision = ARG_incentives_me }
+			NOT = { has_decision = ARG_incentives_tu }
+			NOT = { has_decision = ARG_incentives_ca }
+		}
+        cost = 75
+        fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			set_variable = { migration_multiplier_ba = 0.55 } # Buenos Aires
+			set_variable = { migration_multiplier_er = 0.08 } # Mesopotamia
+			set_variable = { migration_multiplier_me = 0.04 } # Mendoza
+			set_variable = { migration_multiplier_tu = 0.02 } # Tucuman
+			set_variable = { migration_multiplier_ca = 0.01 } # Chaco Austral
+			set_variable = { migration_multiplier_pa = 0.30 } # Patagonia
+			custom_effect_tooltip = ARG_incentives_pa_tt
+		}
+		remove_effect = {
+			ARG_reset_immigration_vars = yes
+		}
+	}
 }
 
 ARG_the_supply_problem_category = {
