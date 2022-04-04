@@ -223,9 +223,13 @@ ARG_diplomacy:0 "Foreign Affairs"
 ARG_diplomacy_desc:0 "With the most urgent matters of our country fixed, we can set our eyes to the rest of the world."
 
 #Alone
-ARG_neutrality_diplomacy:0 "VIII Panamerican Conference"
-ARG_neutrality_diplomacy_desc:0 "While the rest of the world tears itself apart, Argentina must not be pulled into a conflict we can't sustain. It's best to steer clear of the tides of war."
-
+ARG_neutrality_diplomacy: "VIII Panamerican Conference"
+ARG_neutrality_diplomacy_desc: "While the rest of the world tears itself apart, Argentina must not be pulled into a conflict we can't sustain. It's best to steer clear of the tides of war. To achieve this we will support a motion of non intervention in the next Panamerican Conference."
+ARG_reassure_allied_diplomats: "Reassure Allied Diplomats"
+ARG_suspend_constitutional_rights: "Suspend Constitutional Rights"
+ARG_suspend_constitutional_rights_desc: "With the war breaking out in Europe, our people have felt that now is the time to protest our most sensible policy of neutrality in the conflict, and a sizable minority wants us to support the Allies in the conflict. If they're going to abuse their rights, it's our utmust duty to sensibly suspend them until the crisis is over."
+ARG_supress_accion_argentina: "Suppress Acción Argentina"
+ARG_supress_accion_argentina_desc: "The traitors inside Acción Argentina are hellbent into turning our citizens against us and our policies. By furiosuly advocating throwing Argentine lives against Germany, they undermine our government. We need to shut them down, something our military will greatly appreciate."
 
 
 ARG_defensive_military_plans:0 "Prepare to Dig In"

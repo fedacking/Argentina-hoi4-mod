@@ -1,9 +1,7 @@
 prospect_for_resources = {
 	develop_buenos_aires_aluminium_deposits = { #278
 		icon = aluminium
-		allowed = {
-			
-		}
+		
 		highlight_states = {
 			state = 278
 		}
@@ -44,9 +42,7 @@ prospect_for_resources = {
 	
 	develop_buenos_aires_aluminium_deposits2 = { #278
 		icon = aluminium
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 278
 		}
@@ -88,9 +84,7 @@ prospect_for_resources = {
 
 	develop_patagonia_aluminium_deposits = { #512
 		icon = aluminium
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 512
 		}
@@ -131,9 +125,7 @@ prospect_for_resources = {
 	
 	develop_entre_rios_oil_deposits = { #510
 		icon = oil
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 510
 		}
@@ -174,9 +166,7 @@ prospect_for_resources = {
 	
 	develop_patagonia_oil_deposits = { #512
 		icon = oil
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 512
 		}
@@ -217,9 +207,7 @@ prospect_for_resources = {
 	
 	develop_mendoza_iron_deposits = { #511
 		icon = steel
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 511
 		}
@@ -261,9 +249,7 @@ prospect_for_resources = {
 	
 	develop_chaco_tungsten_deposits = { #509
 		icon = tungsten
-		allowed = {
-			
-		}
+
 		highlight_states = {
 			state = 509
 		}

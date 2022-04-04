@@ -129,6 +129,16 @@ ARG_commie_threat:0 "Communist Threat in America"
 
 
 ### Decisions Categories ###
+ARG_ww2_balance_category: "World War II"
+ARG_ww2_balance_category_desc: "As war has broken out in the old continent, our nation is sharply divided between the factions supporting the Allies and neutrality. Meanwhile some in our military support Germany against the Allies. If our government is going to survive this foreign conflict, we need to balance the competing pressures of the Allied governments, the population and our own Military.\n\n[ARG_ww2_balance_category_allied_loc]\n[ARG_ww2_balance_category_german_loc]"
+ARG_ww2_balance_category_allied_0: "The §2Allies§! are §Gpleased ([?ARG_allied_opinion|0])§! with our government"
+ARG_ww2_balance_category_allied_1: "The §2Allies§! are §Yambivalent ([?ARG_allied_opinion|0])§! with our government"
+ARG_ww2_balance_category_allied_2: "The §2Allies§! are §Odispleased ([?ARG_allied_opinion|0])§! with our government"
+ARG_ww2_balance_category_allied_3: "The §2Allies§! are §Rfurious ([?ARG_allied_opinion|0])§! with our government"
+ARG_ww2_balance_category_german_0: "The §gGermans§! are §Gpleased ([?ARG_german_opinion|0])§! with our government"
+ARG_ww2_balance_category_german_1: "The §gGermans§! are §Yambivalent ([?ARG_german_opinion|0])§! with our government"
+ARG_ww2_balance_category_german_2: "The §gGermans§! are §Odispleased ([?ARG_german_opinion|0])§! with our government"
+ARG_ww2_balance_category_german_3: "The §gGermans§! are §Rfurious ([?ARG_german_opinion|0])§! with our government"
 ARG_immigration_category: "The Land of Opportunity"
 ARG_immigration_category_desc: "We, the representatives of the people of the Argentine Nation, assembled in General Constituent Congress by the will and election of the provinces which compose it, in fulfillment of pre-existing pacts, with the object of constituting the national union, ensuring justice, preserving domestic peace, providing for the common defense, promoting the general welfare, and securing the blessings of liberty to ourselves, to our posterity, and to ALL MEN IN THE WORLD who wish to dwell on Argentine soil.\n\nImmigration to Argentina last month:[ARG_immigration_countries_loc]\n\nThe [?total_migration|Y0] immigrants that came into our country went to:\n Buenos Aires: [?total_migration_ba|Y0] §W([?migration_multiplier_ba|%0])§!\n Mesopotamia: [?total_migration_er|Y0] §W([?migration_multiplier_er|%0])§!\n Mendoza: [?total_migration_me|Y0] §W([?migration_multiplier_me|%0])§!\n Tucuman: [?total_migration_tu|Y0] §W([?migration_multiplier_tu|%0])§!\n Chaco Austral: [?total_migration_ca|Y0] §W([?migration_multiplier_ca|%0])§!\n Patagonia: [?total_migration_pa|Y0] §W([?migration_multiplier_pa|%0])§!"
 ARG_immigration_country_loc: "\n  [?ARG_next_country.GetNameWithFlag] [?ARG_next_country:ARG_migration|Y0][?ARG_next_country.ARG_immigration_countries_loc_2]"
@@ -186,6 +196,10 @@ ARG_flag_uk_refused:0 "The English have rejected our demands."
 
 ### Tooltips ###
 
+allied_opinion_increase_tt: "The §2Allied§! opinion of our government will §Gimprove§! by [?allied_opinion_temp|Y0]."
+allied_opinion_decrease_tt: "The §2Allied§! opinion of our government will §Rworsen§! by [?allied_opinion_temp|Y0]."
+german_opinion_increase_tt: "The §gGerman§! opinion of our government will §Gimprove§! by [?german_opinion_temp|Y0]."
+german_opinion_decrease_tt: "The §gGerman§! opinion of our government will §Rworsen§! by [?german_opinion_temp|Y0]."
 ARG_incentives_er_tt: "§Y50%§! of immigrants will go to Entre Rios.\n"
 ARG_incentives_me_tt: "§Y50%§! of immigrants will go to Mendoza.\n"
 ARG_incentives_tu_tt: "§Y40%§! of immigrants will go to Tucuman.\n"

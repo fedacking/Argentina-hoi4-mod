@@ -12,4 +12,9 @@ spriteTypes = {
 		name = "GFX_decision_cat_arg_liberty"
 		texturefile = "gfx/interface/decisions/decision_cat_arg_liberty.dds"
 	}
+
+	spriteType = {
+		name = "GFX_decision_cat_arg_gou"
+		texturefile = "gfx/interface/decisions/decision_cat_arg_gou.dds"
+	}
 }

@@ -2,35 +2,6 @@
 ### ARGENTINA ###
 #################
 
-ARG_integrate_territory_category = {
-	allowed = {
-		original_tag = ARG
-	}
-}
-
-ARG_prepare_for_conquest = {
-	allowed = {
-		original_tag = ARG
-	}
-}
-
-form_united_provinces_category = {
-
-	icon = generic_formable_nations
-
-	picture = GFX_decision_cat_provincias_unidas
-
-	allowed = {
-		has_dlc = "Waking the Tiger"
-	}
-}
-
-ARG_foreign_affairs_category = {
-	allowed = {
-		original_tag = ARG
-	}
-}
-
 ARG_immigration_category = {
 	allowed = {
 		original_tag = ARG
@@ -43,6 +14,48 @@ ARG_immigration_category = {
 	}
 
 	visible_when_empty = yes
+}
+
+ARG_ww2_balance_category = {
+	allowed = {
+		original_tag = ARG
+	}
+
+	picture = GFX_decision_cat_arg_gou
+
+	visible = {
+		has_completed_focus = ARG_neutrality_diplomacy
+		OR = { 
+			USA = {
+				has_government = democratic
+				has_war_with = GER
+			}
+			ENG = {
+				has_government = democratic
+				has_war_with = GER
+			}
+		}
+	}
+
+	visible_when_empty = yes
+}
+
+ARG_integrate_territory_category = {
+	allowed = {
+		original_tag = ARG
+	}
+}
+
+ARG_prepare_for_conquest = {
+	allowed = {
+		original_tag = ARG
+	}
+}
+
+ARG_foreign_affairs_category = {
+	allowed = {
+		original_tag = ARG
+	}
 }
 
 ARG_the_supply_problem_category = {
@@ -65,5 +78,16 @@ ARG_liberate_america_category = {
 
 	visible = {
 		has_completed_focus = ARG_south_american_liberation
+	}
+}
+
+form_united_provinces_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_provincias_unidas
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
 	}
 }

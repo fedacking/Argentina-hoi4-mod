@@ -1,3 +1,6 @@
+###################################
+### Inmigrantes papu ###
+###################################
 
 ARG_initialize_immigration = {
 	clear_array = ARG_immigration_countries
@@ -196,23 +199,51 @@ ARG_update_migration = {
 	ARG_calculate_immigration_triggers_display = yes
 }
 
-crashing_effect = {
-    POR = {
-        POR_antonio_de_oliveira_salazar = {
-            remove_country_leader_role = {
-                ideology = despotism
-            }
-            add_country_leader_role = {
-                country_leader = {
-                    expire = "1954.8.24"
-                    ideology = fascism_ideology
-                    traits = {
-                        anti_communist
-                    }
-                }
-                promote_leader = yes
-            }
-        }
+###################################
+### Aliadofilos vs Germanofilos ###
+###################################
 
-    }
+ARG_initialize_allied_vs_germany_conflict = {
+	set_variable = { ARG_allied_opinion = 60 }
+	set_variable = { ARG_german_opinion = 30 }
+}
+
+# How to use, use allied_opinion_temp as a parameter
+ARG_add_allied_opinion = {
+	add_to_variable = { ARG_allied_opinion = allied_opinion_temp }
+	if = {
+		limit = { check_variable = { allied_opinion_temp < 0 } }
+		multiply_temp_variable = { allied_opinion_temp = -1 }
+		custom_effect_tooltip = allied_opinion_decrease_tt
+	} else = {
+		custom_effect_tooltip = allied_opinion_increase_tt
+	}
+	
+	ARG_clamp_avg_opnion = yes
+	ARG_update_avg_events = yes
+}
+
+ARG_add_german_opinion = {
+	add_to_variable = { ARG_german_opinion = german_opinion_temp }
+	if = {
+		limit = { check_variable = { german_opinion_temp < 0 } }
+		multiply_temp_variable = { german_opinion_temp = -1 }
+		custom_effect_tooltip = german_opinion_decrease_tt
+	} else = {
+		custom_effect_tooltip = german_opinion_increase_tt
+	}
+
+	ARG_clamp_avg_opnion = yes
+	ARG_update_avg_events = yes
+}
+
+ARG_clamp_avg_opnion = {
+	clamp_variable = { var = ARG_allied_opinion min = 0 max = 100 }
+	clamp_variable = { var = ARG_german_opinion min = 0 max = 100 }
+}
+
+ARG_update_avg_events = {
+	if = {
+		limit = { check_variable = { ARG_german_opinion < 15 } }
+	}
 }

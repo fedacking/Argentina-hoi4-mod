@@ -1,5 +1,43 @@
 
 defined_text = {
+	name = ARG_ww2_balance_category_allied_loc
+	text = {
+		trigger = {	check_variable = { ARG_allied_opinion > 75 } }
+		localization_key = ARG_ww2_balance_category_allied_0
+    }
+	text = {
+		trigger = {	check_variable = { ARG_allied_opinion > 50 } }
+		localization_key = ARG_ww2_balance_category_allied_1
+    }
+	text = {
+		trigger = {	check_variable = { ARG_allied_opinion > 25 } }
+		localization_key = ARG_ww2_balance_category_allied_2
+    }
+	text = {
+		localization_key = ARG_ww2_balance_category_allied_3
+	}
+}
+defined_text = {
+	name = ARG_ww2_balance_category_german_loc
+	text = {
+		trigger = {	check_variable = { ARG_german_opinion > 75 } }
+		localization_key = ARG_ww2_balance_category_german_0
+    }
+	text = {
+		trigger = {	check_variable = { ARG_german_opinion > 50 } }
+		localization_key = ARG_ww2_balance_category_german_1
+    }
+	text = {
+		trigger = {	check_variable = { ARG_german_opinion > 25 } }
+		localization_key = ARG_ww2_balance_category_german_2
+    }
+	text = {
+		localization_key = ARG_ww2_balance_category_german_3
+	}
+}
+
+
+defined_text = {
 	name = ARG_immigration_countries_loc
 	text = {
 		trigger = {

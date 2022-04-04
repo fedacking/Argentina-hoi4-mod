@@ -45,11 +45,6 @@ form_united_provinces_category = {
 		}
 
 		visible = {
-			OR = {
-				original_tag = ARG
-				original_tag = URG
-				original_tag = PAR
-			}
 			NOT = { has_global_flag = form_uprp_flag }
 		}
 		highlight_states = {
@@ -115,17 +110,11 @@ form_united_provinces_category = {
 ARG_integrate_territory_category = {
 	ARG_integrate_malvinas = {
 		icon = generic_form_nation
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
+		
+		visible = {
+			NOT = { has_country_flag = malvinas_integrated_flag }
 			controls_state = 299
 			controls_state = 720
-		}
-		visible = {
-			original_tag = ARG
-			NOT = { has_global_flag = malvinas_integrated_flag }
 		}
 		highlight_states = {
 			state = 299
@@ -140,24 +129,18 @@ ARG_integrate_territory_category = {
 			299 = { set_state_name = "Islas Malvinas" }
 			720 = { add_core_of = ROOT }
 			720 = { set_state_name = "Isla San Pedro" }
-			set_global_flag = malvinas_integrated_flag
+			set_country_flag = malvinas_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
 	
 	ARG_integrate_magallanes = {
 		icon = generic_form_nation
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-			owns_state = 507
-		}
+		
 		visible = {
-			original_tag = ARG
-			NOT = { has_global_flag = magallanes_integrated_flag }
+			NOT = { has_country_flag = magallanes_integrated_flag }
 			has_government = fascism
+			owns_state = 507
 		}
 		highlight_states = {
 			state = 507
@@ -168,24 +151,18 @@ ARG_integrate_territory_category = {
 		days_remove = 60
 		remove_effect = {
 			507 = { add_core_of = ROOT }
-			set_global_flag = magallanes_integrated_flag
+			set_country_flag = magallanes_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
 	
 	ARG_integrate_riogrande = {
 		icon = generic_form_nation
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-			owns_state = 502
-		}
+
 		visible = {
-			original_tag = ARG
-			NOT = { has_global_flag = riogrande_integrated_flag }
+			NOT = { has_country_flag = riogrande_integrated_flag }
 			has_government = fascism
+			owns_state = 502
 		}
 		highlight_states = {
 			state = 502
@@ -197,7 +174,7 @@ ARG_integrate_territory_category = {
 		remove_effect = {
 			502 = { add_core_of = ROOT }
 			502 = { set_state_name = "Río Grande" }
-			set_global_flag = riogrande_integrated_flag
+			set_country_flag = riogrande_integrated_flag
 		}
 		ai_will_do = { factor = 200 }
 	}
@@ -207,24 +184,16 @@ ARG_foreign_affairs_category = {
 
 	ARG_help_nationalists = {
 		icon = generic_prepare_civil_war
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-		}
+
 		visible = {
-			original_tag = ARG
 			has_government = fascism
-			SPR = {
-				has_civil_war = yes
-			}
+			SPR = { has_civil_war = yes }
 		}
 		fire_only_once = yes
 		complete_effect = {
 			if = {
 				limit = {
-					D01 = { has_war_with = SPR}
+					D01 = { has_war_with = SPR }
 				}
 				send_equipment = {
 					equipment = infantry_equipment
@@ -234,7 +203,7 @@ ARG_foreign_affairs_category = {
 			}
 			if = {
 				limit = {
-					D02 = { has_war_with = SPR}
+					D02 = { has_war_with = SPR }
 				}
 				send_equipment = {
 					equipment = infantry_equipment
@@ -248,20 +217,14 @@ ARG_foreign_affairs_category = {
 	
 	ARG_help_republicans = {
 		icon = generic_prepare_civil_war
-		allowed = {
-			original_tag = ARG
-			has_dlc = "Waking the Tiger"
-		}
-		available = {
-		}
-		fire_only_once = yes
+		
 		visible = {
-			original_tag = ARG
 			has_government = communism
 			SPR = {
 				has_civil_war = yes
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 			send_equipment = {
 				equipment = infantry_equipment

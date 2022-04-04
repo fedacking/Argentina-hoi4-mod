@@ -2018,6 +2018,7 @@
 		cost = 8
 		available = {
 			has_war = no
+			NOT = { has_government = democratic }
 			custom_trigger_tooltip = {
 				tooltip = ARG_allies_at_war_with_germany_tt
 				OR = { 
@@ -2039,6 +2040,12 @@
 		x = -7
 		y = 2
 		completion_reward = {
+			add_war_support = -0.1
+			add_stability = 0.05
+			set_temp_variable = { allied_opinion_temp = -10 }
+			ARG_add_allied_opinion = yes
+			set_temp_variable = { german_opinion_temp = 10 }
+			ARG_add_german_opinion = yes
 		}
 	}
 	
@@ -2056,6 +2063,11 @@
 		x = -8
 		y = 3
 		completion_reward = {
+			add_political_power = -50
+			set_temp_variable = { allied_opinion_temp = 5 }
+			ARG_add_allied_opinion = yes
+			set_temp_variable = { german_opinion_temp = -5 }
+			ARG_add_german_opinion = yes
 		}
 	}
 	
@@ -2107,6 +2119,11 @@
 		x = -6
 		y = 3
 		completion_reward = {
+			add_war_support = -0.05
+			set_temp_variable = { allied_opinion_temp = -15 }
+			ARG_add_allied_opinion = yes
+			set_temp_variable = { german_opinion_temp = 10 }
+			ARG_add_german_opinion = yes
 		}
 	}
 	
